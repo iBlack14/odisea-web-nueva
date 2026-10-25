@@ -1,0 +1,771 @@
+{
+  "company": {
+    "name": "ODISEACLOUD",
+    "slogan": "Tu proyecto, sin límites",
+    "whatsappNumber": "51907959276",
+    "whatsappDisplay": "+51 907 959 276",
+    "email": "contacto@odiseacloud.com",
+    "address": "Lima, Perú",
+    "schedule": "Lunes a Viernes: 9:00 am - 7:00 pm | Sábados: 9:00 am - 1:00 pm",
+    "defaultMessages": {
+      "general": "Hola, equipo de OdiseaCloud. Estoy interesado en sus servicios y quisiera recibir más información.",
+      "quote": "Hola, OdiseaCloud. Quisiera solicitar una cotización para un proyecto digital para mi empresa.",
+      "ecommerce": "Hola, OdiseaCloud. Quisiera solicitar una cotización para desarrollar una tienda virtual.",
+      "elearning": "Hola, OdiseaCloud. Estoy interesado en implementar un aula virtual para mi institución.",
+      "web": "Hola, OdiseaCloud. Quisiera información y cotización para el desarrollo de una página web corporativa.",
+      "hosting": "Hola, OdiseaCloud. Deseo recibir información sobre sus servicios de hosting y dominios.",
+      "custom": "Hola, OdiseaCloud. Tengo en mente un sistema web a medida y quisiera recibir asesoría."
+    }
+  },
+  "categories": [
+    {
+      "id": "desarrollo-web",
+      "name": "Desarrollo Web",
+      "description": "Sitios web modernos, atractivos y orientados a resultados."
+    },
+    {
+      "id": "plataformas-sistemas",
+      "name": "Plataformas y Sistemas",
+      "description": "Aplicaciones a medida y plataformas para potenciar tu modelo de negocio."
+    },
+    {
+      "id": "infraestructura-cloud",
+      "name": "Infraestructura Cloud",
+      "description": "Alojamiento de alto rendimiento, servidores y correos corporativos seguros."
+    },
+    {
+      "id": "seguridad-mantenimiento",
+      "name": "Seguridad y Mantenimiento",
+      "description": "Protección continua, actualizaciones y soporte técnico especializado."
+    },
+    {
+      "id": "optimizacion-digital",
+      "name": "Optimización Digital",
+      "description": "Velocidad máxima, Core Web Vitals y posicionamiento SEO técnico."
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "slug": "desarrollo-web",
+      "number": "01",
+      "name": "Diseño y desarrollo de páginas web",
+      "shortName": "Desarrollo Web",
+      "category": "desarrollo-web",
+      "categoryName": "Desarrollo Web",
+      "featured": true,
+      "shortDesc": "Páginas corporativas e institucionales diseñadas a medida para convertir visitas en clientes reales.",
+      "heroTagline": "Páginas web corporativas con diseño premium y alto impacto comercial",
+      "fullDesc": "Creamos sitios web corporativos y páginas comerciales que reflejan la solidez y profesionalismo de tu marca. Cada sitio es desarrollado con código limpio, arquitectura moderna, diseño responsive impecable y optimización SEO orientada a destacar en tu sector.",
+      "icon": "globe",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera información y cotización para el diseño y desarrollo de una página web corporativa.",
+      "benefits": [
+        "Presencia digital profesional y confiable para tu empresa",
+        "Diseño 100% adaptable a computadoras, tablets y móviles",
+        "Carga ultrarrápida y optimización técnica para buscadores",
+        "Estructura pensada para captar prospectos y facilitar el contacto",
+        "Sin ataduras a plantillas genéricas ni código innecesario"
+      ],
+      "features": [
+        "Páginas corporativas e institucionales",
+        "Landing pages comerciales y de captura",
+        "Portafolios interactivos para empresas",
+        "Diseño UI/UX adaptado a la identidad de tu marca",
+        "Formularios de contacto directos y validados",
+        "Optimización SEO on-page básica",
+        "Integración directa con WhatsApp y correo corporativo",
+        "Cumplimiento de estándares de accesibilidad y rendimiento"
+      ],
+      "technologies": ["HTML5", "CSS3 Moderno", "JavaScript", "PHP", "Tailwind CSS", "APIs REST"],
+      "faqs": [
+        {
+          "q": "¿Qué necesito para comenzar el desarrollo de mi web?",
+          "a": "Solo requerimos la información básica de tu empresa (servicios, logotipo, textos e imágenes de referencia). Nosotros te asesoramos en la estructura y redacción."
+        },
+        {
+          "q": "¿La página será visible y rápida en teléfonos celulares?",
+          "a": "Totalmente. Aplicamos la metodología responsive 'Mobile-First', garantizando una navegación fluida, botones accesibles y tiempos de carga óptimos en smartphones."
+        },
+        {
+          "q": "¿Incluye dominio y alojamiento?",
+          "a": "Podemos proveer el servicio integral que incluye el registro de dominio y el hosting de alto rendimiento, o implementarlo en tu propio proveedor si ya cuentas con uno."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "tiendas-virtuales",
+      "number": "02",
+      "name": "Tiendas virtuales y eCommerce",
+      "shortName": "Tiendas Virtuales",
+      "category": "desarrollo-web",
+      "categoryName": "Desarrollo Web",
+      "featured": true,
+      "shortDesc": "Comercio electrónico completo con catálogos dinámicos, pasarelas de pago y gestión de pedidos.",
+      "heroTagline": "Vende por internet sin límites con tu propia tienda online profesional",
+      "fullDesc": "Desarrollamos tiendas virtuales seguras, intuitivas y optimizadas para ventas. Integramos pasarelas de pago locales e internacionales (Izipay, Yape, Plin, tarjetas de crédito/débito y transferencias), brindando a tus clientes una experiencia de compra ágil y confiable.",
+      "icon": "shopping-bag",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera solicitar una cotización para desarrollar una tienda virtual para mi negocio.",
+      "benefits": [
+        "Ventas activas 24/7 sin comisiones abusivas de marketplaces",
+        "Integración directa con medios de pago preferidos por el mercado",
+        "Control total sobre tu inventario, clientes y pedidos",
+        "Checkout ágil y diseñado para reducir el abandono de carritos",
+        "Adaptable a cualquier volumen de productos y categorías"
+      ],
+      "features": [
+        "Catálogo de productos organizado con filtros y variantes",
+        "Carrito de compras interactivo y checkout sin fricciones",
+        "Integración con Izipay (tarjetas de crédito y débito)",
+        "Cobros con Yape, Plin y transferencias bancarias",
+        "Gestión de inventario y alertas de stock",
+        "Sistema de promociones, descuentos y cupones",
+        "Notificaciones de pedidos vía WhatsApp y correo",
+        "Cálculo y configuración de opciones de envío"
+      ],
+      "technologies": ["WooCommerce", "WordPress", "PHP", "JavaScript", "Izipay API", "Yape/Plin", "MySQL"],
+      "faqs": [
+        {
+          "q": "¿Qué pasarelas de pago se pueden integrar?",
+          "a": "Integramos soluciones como Izipay para cobro con tarjetas Visa/Mastercard, pasarelas directas y métodos instantáneos como Yape y Plin, facilitando el cobro en moneda local o dólares."
+        },
+        {
+          "q": "¿Puedo administrar mis productos y pedidos de forma sencilla?",
+          "a": "Sí, entregamos la tienda configurada con un panel intuitivo y brindamos inducción para que puedas actualizar precios, agregar productos y procesar despachos sin conocimientos técnicos."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "rediseno-web",
+      "number": "03",
+      "name": "Reestructuración y rediseño web",
+      "shortName": "Rediseño Web",
+      "category": "desarrollo-web",
+      "categoryName": "Desarrollo Web",
+      "featured": true,
+      "shortDesc": "Modernización estética, tecnológica y funcional de sitios web existentes para recuperar competitividad.",
+      "heroTagline": "Transforma tu sitio web antiguo en una plataforma moderna y persuasiva",
+      "fullDesc": "Si tu página actual luce desactualizada, carga lento o no genera prospectos, realizamos una reestructuración integral: actualizamos la interfaz gráfica, optimizamos el rendimiento, corregimos fallas técnicas y renovamos la experiencia de usuario.",
+      "icon": "refresh-cw",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera evaluar la reestructuración y rediseño de mi página web actual.",
+      "benefits": [
+        "Renovación inmediata de la imagen de tu empresa",
+        "Mejora radical en la velocidad de carga y experiencia móvil",
+        "Conservación y mejora del posicionamiento SEO adquirido",
+        "Eliminación de código obsoleto y vulnerabilidades de seguridad"
+      ],
+      "features": [
+        "Auditoría previa de usabilidad, diseño y rendimiento",
+        "Diseño de interfaz vanguardista y coherente con tu identidad",
+        "Reorganización inteligente de contenidos y navegación",
+        "Adaptabilidad total a dispositivos móviles actuales",
+        "Corrección de enlaces rotos y redirecciones 301 para SEO",
+        "Actualización del stack tecnológico a versiones seguras"
+      ],
+      "technologies": ["HTML5", "CSS3", "JavaScript", "PHP", "WordPress Moderno"],
+      "faqs": [
+        {
+          "q": "¿Perderé mi posicionamiento en Google al rediseñar mi web?",
+          "a": "No. Implementamos un plan de migración SEO que conserva URLs estratégicas, configura redireccionamientos 301 y optimiza los metadatos para consolidar o mejorar tus rankings."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "sistemas-web",
+      "number": "04",
+      "name": "Sistemas web personalizados",
+      "shortName": "Sistemas a Medida",
+      "category": "plataformas-sistemas",
+      "categoryName": "Plataformas y Sistemas",
+      "featured": true,
+      "shortDesc": "Desarrollo de aplicaciones y paneles administrativos a la medida de los procesos de tu negocio.",
+      "heroTagline": "Software empresarial en la nube adaptado exactamente a tus operaciones",
+      "fullDesc": "Creamos plataformas web a medida que automatizan flujos de trabajo, centralizan la información corporativa y proporcionan herramientas de control en tiempo real para gerentes, colaboradores y clientes.",
+      "icon": "cpu",
+      "whatsappMessage": "Hola, OdiseaCloud. Tengo en mente un sistema web para mi empresa y quisiera cotizar su desarrollo.",
+      "benefits": [
+        "Software 100% ajustado a tus procesos, sin pagar suscripciones por usuario",
+        "Acceso seguro desde cualquier lugar del mundo vía navegador",
+        "Control granular de permisos y confidencialidad de la información",
+        "Escalabilidad garantizada para crecer junto con tu negocio"
+      ],
+      "features": [
+        "Módulos administrativos personalizados",
+        "Control de usuarios con roles y permisos específicos",
+        "Generación de reportes dinámicos y exportables",
+        "Gestión de inventarios, cotizaciones y clientes",
+        "Bases de datos relacionales seguras y optimizadas",
+        "Integración con APIs internas o servicios de terceros"
+      ],
+      "technologies": ["PHP", "Laravel", "JavaScript", "MySQL", "PostgreSQL", "APIs REST"],
+      "faqs": [
+        {
+          "q": "¿Qué tipo de sistemas pueden desarrollar?",
+          "a": "Desde sistemas de gestión interna (CRM, cotizadores, control de citas, control de inventario) hasta portales de clientes y extranets corporativas personalizadas."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "aulas-virtuales",
+      "number": "05",
+      "name": "Aulas virtuales y eLearning",
+      "shortName": "Aulas Virtuales",
+      "category": "plataformas-sistemas",
+      "categoryName": "Plataformas y Sistemas",
+      "featured": true,
+      "shortDesc": "Plataformas educativas para colegios, institutos, academias y empresas que imparten cursos online.",
+      "heroTagline": "Educación online sin barreras con campus virtuales interactivos y seguros",
+      "fullDesc": "Implementamos aulas virtuales completas diseñadas para centros educativos y capacitadores. Con soporte para videoconferencias en vivo (Zoom, Google Meet), materiales descargables, evaluaciones automatizadas y emisión de certificados digitales.",
+      "icon": "book-open",
+      "whatsappMessage": "Hola, OdiseaCloud. Estoy interesado en implementar un aula virtual para mi institución.",
+      "benefits": [
+        "Plataforma propia con la identidad institucional de tu centro",
+        "Gestión centralizada de cursos, alumnos y docentes",
+        "Ahorro de costos operativos y escalabilidad ilimitada",
+        "Emisión de certificados y seguimiento del avance académico"
+      ],
+      "features": [
+        "Gestión completa de cursos, módulos y lecciones",
+        "Integración con Zoom y Google Meet para clases en vivo",
+        "Evaluaciones, tareas y cuestionarios con calificación automática",
+        "Generación de certificados digitales con código de verificación",
+        "Paneles independientes para administradores, docentes y alumnos",
+        "Foros de debate y mensajería interna entre estudiantes y tutores"
+      ],
+      "technologies": ["PHP", "MySQL", "JavaScript", "Zoom API", "Google Meet API", "Moodle / Custom LMS"],
+      "faqs": [
+        {
+          "q": "¿Cuántos estudiantes pueden acceder al mismo tiempo?",
+          "a": "Diseñamos y alojamos la plataforma dimensionando los recursos del servidor según tu cantidad de estudiantes concurrentes para garantizar una experiencia sin caídas."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "integraciones-automatizaciones",
+      "number": "06",
+      "name": "Integraciones y automatizaciones",
+      "shortName": "Integraciones & APIs",
+      "category": "plataformas-sistemas",
+      "categoryName": "Plataformas y Sistemas",
+      "featured": true,
+      "shortDesc": "Conexión entre tiendas, sistemas ERP, facturación, pasarelas de pago y servicios externos.",
+      "heroTagline": "Conecta tus sistemas digitales y automatiza tareas repetitivas",
+      "fullDesc": "Desarrollamos conectores y webhooks que permiten a tus plataformas comunicarse entre sí de forma transparente. Sincroniza stocks entre WooCommerce y Odoo, envía notificaciones automáticas y elimina la duplicidad manual de tareas.",
+      "icon": "git-merge",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera consultar sobre integraciones de sistemas y automatización de procesos.",
+      "benefits": [
+        "Eliminación de errores humanos por ingreso manual de datos",
+        "Ahorro significativo de tiempo y horas de trabajo operativo",
+        "Información sincronizada en tiempo real entre tus canales",
+        "Mayor velocidad en la atención y entrega al cliente final"
+      ],
+      "features": [
+        "Desarrollo y consumo de APIs REST personalizadas",
+        "Integración bidireccional entre WooCommerce y ERP Odoo",
+        "Sincronización automática de inventarios y precios",
+        "Webhooks para recepción de eventos de pasarelas de pago",
+        "Conexión con servicios de facturación electrónica y mensajería",
+        "Automatización de correos transaccionales y alertas"
+      ],
+      "technologies": ["PHP", "JavaScript", "Node.js", "Odoo API", "WooCommerce API", "RESTful APIs"],
+      "faqs": [
+        {
+          "q": "¿Pueden conectar mi tienda virtual con mi sistema administrativo existente?",
+          "a": "Sí, siempre que tu sistema proporcione una API o acceso estructurado, desarrollamos el conector intermedio para sincronizar pedidos, existencias y clientes."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "hosting-web",
+      "number": "07",
+      "name": "Hosting web de alto rendimiento",
+      "shortName": "Hosting Web",
+      "category": "infraestructura-cloud",
+      "categoryName": "Infraestructura Cloud",
+      "featured": true,
+      "shortDesc": "Alojamiento confiable con cPanel, discos SSD NVMe, certificados SSL gratuitos y soporte técnico.",
+      "heroTagline": "Velocidad, estabilidad y seguridad para alojar tus proyectos web",
+      "fullDesc": "Proporcionamos infraestructura de hosting optimizada para sitios corporativos y aplicaciones web. Servidores con hardware de última generación, copias de seguridad automáticas y configuración técnica garantizada.",
+      "icon": "server",
+      "whatsappMessage": "Hola, OdiseaCloud. Deseo recibir información sobre sus planes de hosting y servidores.",
+      "benefits": [
+        "Disponibilidad superior al 99.9% para que tu sitio nunca se detenga",
+        "Velocidad de carga acelerada con unidades de almacenamiento NVMe",
+        "Panel cPanel líder de la industria en español",
+        "Certificados de seguridad SSL instalados y renovados sin costo"
+      ],
+      "features": [
+        "Panel de control cPanel intuitivo y completo",
+        "Discos de alta velocidad SSD NVMe",
+        "Certificados SSL Let's Encrypt gratuitos incluidos",
+        "Copias de seguridad programadas y restaurables",
+        "Soporte para múltiples versiones de PHP y bases de datos MySQL",
+        "Protección contra ataques de denegación de servicio (DDoS)"
+      ],
+      "technologies": ["cPanel", "CloudLinux", "Apache/LiteSpeed", "MySQL", "SSL/TLS"],
+      "faqs": [
+        {
+          "q": "¿Ustedes me ayudan a configurar mi sitio en el hosting?",
+          "a": "Por supuesto. Nos encargamos de la configuración de DNS, creación de bases de datos, instalación de certificados SSL y puesta a punto de tu web."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "correo-corporativo",
+      "number": "08",
+      "name": "Correo corporativo profesional",
+      "shortName": "Correo Corporativo",
+      "category": "infraestructura-cloud",
+      "categoryName": "Infraestructura Cloud",
+      "featured": true,
+      "shortDesc": "Buzones con dominio propio (@tuempresa.com), configuración SPF/DKIM y entrega segura en bandeja de entrada.",
+      "heroTagline": "Comunícate con seriedad y confianza usando correos con tu dominio propio",
+      "fullDesc": "Olvídate de cuentas genéricas de correo gratuito que restan credibilidad a tu negocio. Configuramos casillas de correo personalizadas con tu dominio, asegurando altos estándares de entregabilidad para que tus mensajes no caigan en spam.",
+      "icon": "mail",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera información para habilitar correos corporativos para mi empresa.",
+      "benefits": [
+        "Imagen de seriedad y confianza inmediata ante tus clientes",
+        "Configuración de seguridad para evitar llegar a carpetas de spam",
+        "Acceso desde webmail, Outlook, teléfonos móviles o Mac",
+        "Control total para crear o dar de baja casillas de personal"
+      ],
+      "features": [
+        "Direcciones con tu dominio (ventas@tuempresa.com, contacto@...)",
+        "Configuración estricta de registros SPF, DKIM y DMARC",
+        "Acceso multidispositivo (IMAP / POP3 / SMTP / Webmail)",
+        "Filtros antispam y antivirus activos en el servidor",
+        "Posibilidad de migración de correos desde proveedores anteriores",
+        "Capacitación para la vinculación en teléfonos y Outlook"
+      ],
+      "technologies": ["IMAP/SMTP", "Webmail", "DNS Seguro", "SPF/DKIM/DMARC", "cPanel Mail"],
+      "faqs": [
+        {
+          "q": "¿Puedo sincronizar mis correos en mi celular y computadora?",
+          "a": "Sí. Te proporcionamos las credenciales y guías paso a paso para sincronizar en iPhone, Android, Outlook de escritorio o acceder directamente desde cualquier navegador web."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "dominios",
+      "number": "09",
+      "name": "Registro y gestión de dominios",
+      "shortName": "Dominios",
+      "category": "infraestructura-cloud",
+      "categoryName": "Infraestructura Cloud",
+      "featured": false,
+      "shortDesc": "Registro, renovación y administración técnica de dominios .com, .pe, .org y extensiones globales.",
+      "heroTagline": "Protege y consolida el nombre de tu marca en internet",
+      "fullDesc": "Te asesoramos en la elección del nombre ideal para tu empresa y gestionamos el registro de tus dominios. Configuramos las zonas DNS, servidores de nombres y redireccionamientos para que tu marca esté protegida y vinculada correctamente a tus servicios web.",
+      "icon": "at-sign",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera consultar sobre el registro y configuración de dominios.",
+      "benefits": [
+        "Protección de tu marca frente a competidores",
+        "Configuración DNS experta para evitar caídas de correo o web",
+        "Avisos oportunos antes de la fecha de expiración para evitar pérdidas",
+        "Soporte para dominios locales (.pe, .com.pe) e internacionales (.com, .net)"
+      ],
+      "features": [
+        "Búsqueda y registro de dominios disponibles",
+        "Configuración de servidores DNS primarios y secundarios",
+        "Gestión de registros A, CNAME, MX, TXT y SRV",
+        "Subdominios ilimitados para sistemas y landing pages",
+        "Redireccionamientos permanentes 301 entre dominios",
+        "Privacidad de datos WHOIS cuando aplique"
+      ],
+      "technologies": ["DNS Management", "Cloudflare DNS", "ICANN", "Punto PE"],
+      "faqs": [
+        {
+          "q": "¿El dominio queda registrado a mi nombre?",
+          "a": "Absolutamente. La titularidad legal y propiedad del dominio pertenece 100% al cliente."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "servidores-vps",
+      "number": "10",
+      "name": "Servidores VPS y Cloud",
+      "shortName": "Servidores VPS",
+      "category": "infraestructura-cloud",
+      "categoryName": "Infraestructura Cloud",
+      "featured": false,
+      "shortDesc": "Implementación, configuración y puesta en marcha de servidores privados virtuales Linux para aplicaciones exigentes.",
+      "heroTagline": "Recursos dedicados y rendimiento supremo para proyectos en crecimiento",
+      "fullDesc": "Cuando un hosting compartido se queda corto, desplegamos servidores VPS Cloud con recursos dedicados de CPU y memoria RAM. Configuramos el sistema operativo Linux, endurecemos la seguridad e instalamos el entorno necesario para tus aplicaciones.",
+      "icon": "hard-drive",
+      "whatsappMessage": "Hola, OdiseaCloud. Necesito asesoría y cotización para la configuración de un servidor VPS.",
+      "benefits": [
+        "Recursos de procesamiento y memoria exclusivos para tu proyecto",
+        "Libertad total para instalar dependencias y tecnologías avanzadas",
+        "Mayor velocidad para bases de datos y consultas masivas",
+        "Escalabilidad vertical inmediata ante picos de demanda"
+      ],
+      "features": [
+        "Instalación de distribuciones Linux (Ubuntu, Debian, AlmaLinux)",
+        "Configuración de servidores web (Nginx, Apache, LiteSpeed)",
+        "Configuración de cortafuegos (UFW/CSF) y cierre de puertos vulnerables",
+        "Optimización de bases de datos MySQL/PostgreSQL y Redis",
+        "Implementación de certificados SSL y copias de seguridad",
+        "Monitoreo básico de consumo de recursos y estabilidad"
+      ],
+      "technologies": ["Linux", "Ubuntu", "Nginx", "Docker", "MySQL", "SSL/TLS", "SSH"],
+      "faqs": [
+        {
+          "q": "¿Cuándo conviene migrar de hosting compartido a un VPS?",
+          "a": "Cuando tu sitio supera los 30,000 visitantes mensuales, manejas una tienda con catálogo extenso, necesitas ejecutar scripts pesados o requieres configuraciones personalizadas del servidor."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "mantenimiento-web",
+      "number": "11",
+      "name": "Mantenimiento web continuo",
+      "shortName": "Mantenimiento Web",
+      "category": "seguridad-mantenimiento",
+      "categoryName": "Seguridad y Mantenimiento",
+      "featured": false,
+      "shortDesc": "Actualización periódica de plataformas, plugins, resolución de incidencias y soporte técnico prioritario.",
+      "heroTagline": "Mantén tu sitio web seguro, actualizado y funcionando sin contratiempos",
+      "fullDesc": "Un sitio web sin mantenimiento se vuelve vulnerable a fallas y ataques informáticos. Nuestro servicio preventivo y correctivo se encarga de que tu plataforma esté siempre al día, respaldada y en perfecto estado operativo.",
+      "icon": "shield-check",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera consultar sobre los planes de mantenimiento para mi página web.",
+      "benefits": [
+        "Tranquilidad total delegando la parte técnica en especialistas",
+        "Prevención activa de caídas, errores 500 y virus web",
+        "Soporte técnico rápido para resolver imprevistos",
+        "Copias de respaldo periódicas listas ante cualquier eventualidad"
+      ],
+      "features": [
+        "Actualizaciones de núcleo, temas y plugins de forma controlada",
+        "Respaldos periódicos de bases de datos y archivos",
+        "Supervisión de enlaces rotos y compatibilidad móvil",
+        "Corrección de errores de visualización y funcionamiento",
+        "Optimización de tablas de base de datos",
+        "Soporte directo vía WhatsApp y correo"
+      ],
+      "technologies": ["WordPress", "PHP", "cPanel", "MySQL", "Git"],
+      "faqs": [
+        {
+          "q": "¿Qué pasa si mi web se rompe durante una actualización?",
+          "a": "Siempre realizamos un respaldo previo. Si una actualización genera incompatibilidad, restauramos el estado funcional al instante y corregimos el conflicto."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "seguridad-web",
+      "number": "12",
+      "name": "Seguridad web y desinfección",
+      "shortName": "Seguridad Web",
+      "category": "seguridad-mantenimiento",
+      "categoryName": "Seguridad y Mantenimiento",
+      "featured": false,
+      "shortDesc": "Protección de accesos, blindaje contra ataques, limpieza de malware y auditorías de vulnerabilidad autorizadas.",
+      "heroTagline": "Protege tu plataforma y la información de tus clientes contra amenazas digitales",
+      "fullDesc": "Analizamos tu sitio web para identificar brechas de seguridad, protegemos los puntos de acceso y, en caso de haber sufrido un ataque, limpiamos el código malicioso restaurando la integridad del sitio.",
+      "icon": "lock",
+      "whatsappMessage": "Hola, OdiseaCloud. Necesito ayuda con la seguridad o desinfección de mi página web.",
+      "benefits": [
+        "Evita que Google marque tu web como peligrosa o sitio no seguro",
+        "Protección de los datos confidenciales de tu empresa y clientes",
+        "Mitigación de ataques de fuerza bruta y accesos no autorizados",
+        "Restauración de la reputación digital de tu dominio"
+      ],
+      "features": [
+        "Auditoría técnica de vulnerabilidades y permisos de archivos",
+        "Blindaje de rutas de acceso administrativo (wp-admin, paneles)",
+        "Implementación de doble factor de autenticación (2FA)",
+        "Escaneo profundo y limpieza manual de archivos infectados con malware",
+        "Configuración de cabeceras de seguridad HTTP y cortafuegos web",
+        "Monitoreo de listas negras de motores de búsqueda"
+      ],
+      "technologies": ["Security Headers", "Firewalls WAF", "SSL/TLS", "Wordfence/Sucuri", "SSH"],
+      "faqs": [
+        {
+          "q": "¿Pueden recuperar mi sitio si ya fue hackeado?",
+          "a": "Sí. Realizamos una limpieza exhaustiva de bases de datos y archivos, eliminamos puertas traseras (backdoors) y reforzamos los accesos para evitar reinfecciones."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "slug": "migracion-web",
+      "number": "13",
+      "name": "Migración de páginas web",
+      "shortName": "Migración Web",
+      "category": "seguridad-mantenimiento",
+      "categoryName": "Seguridad y Mantenimiento",
+      "featured": false,
+      "shortDesc": "Traslado seguro de sitios web, tiendas y bases de datos a un nuevo hosting sin pérdida de datos ni caídas.",
+      "heroTagline": "Cambia de hosting sin interrumpir las operaciones de tu negocio",
+      "fullDesc": "Mudar un sitio web entre servidores requiere precisión para no perder correos, pedidos ni posicionamiento. Realizamos la transferencia completa de archivos, bases de datos y configuraciones con cero tiempo de inactividad visible.",
+      "icon": "shuffle",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera solicitar el servicio de migración de mi página web a un nuevo hosting.",
+      "benefits": [
+        "Migración limpia sin que tus clientes noten la transición",
+        "Cero pérdida de correos electrónicos, imágenes o registros",
+        "Verificación de compatibilidad con la nueva versión de PHP",
+        "Acompañamiento en el cambio de DNS"
+      ],
+      "features": [
+        "Clonación completa de archivos, código fuente y medios",
+        "Exportación, importación y optimización de bases de datos",
+        "Configuración y migración de buzones de correo existentes",
+        "Pruebas en entorno temporal antes de propagar DNS",
+        "Actualización de rutas absolutas y certificados SSL",
+        "Revisión post-migración de formularios y transacciones"
+      ],
+      "technologies": ["cPanel Migrations", "FTP/SSH", "rsync", "phpMyAdmin", "DNS Propagation"],
+      "faqs": [
+        {
+          "q": "¿Mi sitio web dejará de funcionar durante la migración?",
+          "a": "No. Preparamos y probamos el sitio en el nuevo servidor mientras el actual sigue activo. La conmutación de DNS es imperceptible para tus usuarios."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "optimizacion-velocidad",
+      "number": "14",
+      "name": "Optimización de velocidad y Core Web Vitals",
+      "shortName": "Optimización Web",
+      "category": "optimizacion-digital",
+      "categoryName": "Optimización Digital",
+      "featured": false,
+      "shortDesc": "Aceleración de tiempos de carga, compresión inteligente de recursos y optimización de rendimiento móvil.",
+      "heroTagline": "Haz que tu sitio cargue en menos de 2 segundos y reduce el rebote de usuarios",
+      "fullDesc": "Un sitio lento pierde visitas y clientes cada segundo. Aplicamos técnicas avanzadas de optimización de código, compresión de imágenes, gestión de caché y eliminación de bloqueo de renderizado para alcanzar métricas sobresalientes en Google PageSpeed.",
+      "icon": "zap",
+      "whatsappMessage": "Hola, OdiseaCloud. Quisiera optimizar la velocidad y rendimiento de mi página web.",
+      "benefits": [
+        "Mayor tasa de conversión: los visitantes no se van por lentitud",
+        "Mejor puntaje en Google PageSpeed Insights y GTmetrix",
+        "Menor consumo de recursos y ancho de banda en tu hosting",
+        "Experiencia impecable para usuarios con conexiones móviles lentas"
+      ],
+      "features": [
+        "Diagnóstico profundo de cuellos de botella con Google Lighthouse",
+        "Compresión y conversión de imágenes a formatos modernos (WebP/AVIF)",
+        "Minificación y combinación de estilos CSS y scripts JavaScript",
+        "Implementación de almacenamiento en caché en servidor y navegador",
+        "Optimización de fuentes web y carga diferida (Lazy loading)",
+        "Cumplimiento de métricas LCP, FID/INP y CLS de Core Web Vitals"
+      ],
+      "technologies": ["Google Lighthouse", "WebP", "Redis/Memcached", "CDN Cloudflare", "Asset Minification"],
+      "faqs": [
+        {
+          "q": "¿Qué velocidad puedo esperar después de la optimización?",
+          "a": "El objetivo es situar el tiempo de carga por debajo de 2 segundos en condiciones normales de navegación y elevar las puntuaciones móviles a rangos verdes en PageSpeed."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "slug": "seo-tecnico",
+      "number": "15",
+      "name": "SEO técnico y posicionamiento web",
+      "shortName": "SEO Técnico",
+      "category": "optimizacion-digital",
+      "categoryName": "Optimización Digital",
+      "featured": false,
+      "shortDesc": "Estructuración de datos, sitemaps, metadatos y optimización técnica para facilitar la indexación en buscadores.",
+      "heroTagline": "Prepara la base técnica de tu sitio para destacar en los resultados de Google",
+      "fullDesc": "El SEO técnico asegura que los motores de búsqueda puedan rastrear, entender e indexar todas las páginas de tu empresa sin errores. Configuramos datos estructurados Schema.org, metadatos precisos, sitemaps XML y jerarquías limpias.",
+      "icon": "trending-up",
+      "whatsappMessage": "Hola, OdiseaCloud. Deseo recibir información sobre sus servicios de SEO técnico para mi web.",
+      "benefits": [
+        "Indexación limpia y completa de tus páginas y servicios en Google",
+        "Mejor visualización en resultados de búsqueda con datos enriquecidos",
+        "Eliminación de errores 404 y contenido duplicado",
+        "Compatibilidad con los últimos algoritmos de rastreo de buscadores"
+      ],
+      "features": [
+        "Auditoría técnica de indexación, rastreo y arquitectura web",
+        "Optimización de etiquetas de título y meta descripciones por página",
+        "Generación y envío automatizado de Sitemap XML a Google Search Console",
+        "Configuración correcta del archivo robots.txt",
+        "Implementación de datos estructurados Schema.org (LocalBusiness, Organization)",
+        "Estructura jerárquica de encabezados (H1, H2, H3) y enlaces internos"
+      ],
+      "technologies": ["Google Search Console", "Schema.org", "XML Sitemaps", "Robots.txt", "OpenGraph"],
+      "faqs": [
+        {
+          "q": "¿Garantizan la primera posición en Google?",
+          "a": "En OdiseaCloud somos éticos y transparentes: ningún profesional serio puede garantizar el primer puesto exacto debido a que los algoritmos de Google consideran cientos de factores. Lo que garantizamos es una arquitectura técnica impecable para competir con la máxima eficacia."
+        }
+      ]
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "aula-virtual",
+      "title": "Campus Virtual & Plataforma Educativa",
+      "category": "aulas-virtuales",
+      "categoryLabel": "Aulas Virtuales",
+      "clientSector": "Educación Superior & Capacitación",
+      "service": "Aulas virtuales y eLearning",
+      "desc": "Implementación de aula virtual personalizada con integración de videoconferencias, módulos de cursos, evaluaciones automatizadas y generación de certificados digitales.",
+      "image": "/assets/images/portfolio-aula-virtual.png",
+      "tags": ["Moodle / Custom LMS", "Zoom API", "MySQL", "PHP", "Responsive UI"],
+      "whatsappMsg": "Hola, OdiseaCloud. Vi su proyecto de Aula Virtual y quisiera algo similar para mi institución."
+    },
+    {
+      "id": "tienda-online",
+      "title": "Tienda Virtual de Comercio Electrónico",
+      "category": "tiendas-virtuales",
+      "categoryLabel": "Comercio Electrónico",
+      "clientSector": "Retail & Moda Comercial",
+      "service": "Tiendas virtuales y eCommerce",
+      "desc": "Plataforma de ventas con catálogo dinámico, carrito de compras optimizado, pasarela Izipay, pagos mediante Yape y Plin, y gestión automatizada de pedidos.",
+      "image": "/assets/images/portfolio-ecommerce.png",
+      "tags": ["WooCommerce", "Izipay", "Yape / Plin", "WordPress", "Optimización Móvil"],
+      "whatsappMsg": "Hola, OdiseaCloud. Me gustó el proyecto de tienda virtual y deseo cotizar una para mi empresa."
+    },
+    {
+      "id": "desarrollo-wordpress",
+      "title": "Sitio Web Corporativo a Medida",
+      "category": "desarrollo-web",
+      "categoryLabel": "Desarrollo Web",
+      "clientSector": "Servicios Profesionales & Consultoría",
+      "service": "Diseño y desarrollo web",
+      "desc": "Sitio web corporativo de alta gama desarrollado a medida con tipografía moderna, secciones dinámicas de captación de leads y velocidad de carga ultrarrápida.",
+      "image": "/assets/images/portfolio-wordpress.png",
+      "tags": ["Desarrollo Web", "HTML5/CSS3", "PHP", "SEO Técnico", "WhatsApp Directo"],
+      "whatsappMsg": "Hola, OdiseaCloud. Vi su trabajo de desarrollo web a medida y quisiera recibir una propuesta para mi negocio."
+    },
+    {
+      "id": "rediseno-web",
+      "title": "Reestructuración y Modernización Web",
+      "category": "rediseno-web",
+      "categoryLabel": "Rediseño Web",
+      "clientSector": "Empresarial & Corporativo",
+      "service": "Reestructuración y rediseño web",
+      "desc": "Modernización de interfaz gráfica, optimización de Core Web Vitals, reestructuración de la experiencia de usuario y conservación de rankings SEO.",
+      "image": "/assets/images/portfolio-rediseno.png",
+      "tags": ["Rediseño UI/UX", "Core Web Vitals", "Migración SEO", "Performance", "Clean Code"],
+      "whatsappMsg": "Hola, OdiseaCloud. Quisiera evaluar el rediseño y modernización de la web de mi empresa."
+    }
+  ],
+  "sectors": [
+    {
+      "id": "empresas",
+      "title": "Empresas y Corporaciones",
+      "icon": "briefcase",
+      "need": "Consolidar una imagen institucional sólida, segura y de liderazgo en el mercado digital.",
+      "solution": "Sitios web corporativos premium, correos con seguridad SPF/DKIM, servidores dedicados y desarrollo de sistemas internos a medida."
+    },
+    {
+      "id": "emprendedores",
+      "title": "Emprendedores",
+      "icon": "rocket",
+      "need": "Lanzar su negocio con una presencia digital profesional sin gastar en infraestructuras sobredimensionadas.",
+      "solution": "Landing pages de alto impacto, vinculación directa a WhatsApp para ventas inmediatas y hosting escalable de bajo costo."
+    },
+    {
+      "id": "tiendas",
+      "title": "Tiendas Comerciales",
+      "icon": "shopping-bag",
+      "need": "Vender por internet 24/7 y aceptar pagos en línea de forma segura y automatizada.",
+      "solution": "Tiendas virtuales completas con catálogo, carrito, cálculo de envíos e integración con Izipay, Yape y transferencias."
+    },
+    {
+      "id": "educativas",
+      "title": "Instituciones Educativas",
+      "icon": "graduation-cap",
+      "need": "Impartir clases virtuales, gestionar estudiantes y entregar material didáctico ordenado.",
+      "solution": "Aulas virtuales personalizadas con clases en vivo por Zoom/Google Meet, evaluaciones y certificados digitales."
+    },
+    {
+      "id": "capacitacion",
+      "title": "Centros de Capacitación",
+      "icon": "book-open",
+      "need": "Monetizar programas formativos, talleres y cursos especializados sin complicaciones técnicas.",
+      "solution": "Plataformas de cursos con acceso restringido tras confirmación de pago, foros de consulta y seguimiento de progreso."
+    },
+    {
+      "id": "profesionales",
+      "title": "Profesionales Independientes",
+      "icon": "user-check",
+      "need": "Mostrar sus credenciales, trayectoria y portafolio para captar clientes de alto valor.",
+      "solution": "Páginas de portafolio y marca personal con testimonios reales, formulario directo y botón de agendamiento por WhatsApp."
+    }
+  ],
+  "values": [
+    {
+      "name": "Innovación",
+      "desc": "Aplicamos tecnologías modernas y probadas para que tu solución se mantenga vigente en el tiempo."
+    },
+    {
+      "name": "Compromiso",
+      "desc": "Acompañamos tu proyecto de inicio a fin con comunicación transparente y cumplimiento de acuerdos."
+    },
+    {
+      "name": "Calidad",
+      "desc": "Código limpio, rendimiento optimizado y atención meticulosa a cada detalle visual y funcional."
+    },
+    {
+      "name": "Seguridad",
+      "desc": "Protección de datos, certificados SSL y buenas prácticas de desarrollo en cada línea de código."
+    },
+    {
+      "name": "Personalización",
+      "desc": "Cada empresa es única. Creamos soluciones adaptadas estrictamente a tus necesidades comerciales."
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Soluciones adaptadas a cada proyecto",
+      "desc": "No te obligamos a encajar en moldes rígidos. Diseñamos la solución exacta para tu modelo de negocio."
+    },
+    {
+      "title": "Diseño y desarrollo profesional",
+      "desc": "Interfaces cuidadas al detalle que transmiten confianza, elegancia y solidez técnica desde el primer vistazo."
+    },
+    {
+      "title": "Tecnología moderna y probada",
+      "desc": "Desarrollamos con estándares web actuales, garantizando estabilidad, velocidad y facilidad de mantenimiento."
+    },
+    {
+      "title": "Optimización y rendimiento real",
+      "desc": "Sitios que cargan rápido, consumen pocos recursos y cumplen las directrices técnicas de los buscadores."
+    },
+    {
+      "title": "Integraciones personalizadas",
+      "desc": "Conectamos tu web con pasarelas de pago, sistemas de facturación, ERPs o videoconferencias."
+    },
+    {
+      "title": "Acompañamiento técnico directo",
+      "desc": "Cuentas con soporte humano, claro y oportuno para resolver dudas y mantener tus servicios en marcha."
+    }
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "Analizamos",
+      "desc": "Entendemos a fondo tus objetivos comerciales, público objetivo y requerimientos técnicos específicos."
+    },
+    {
+      "step": "02",
+      "title": "Diseñamos",
+      "desc": "Estructuramos la arquitectura de información, experiencia de usuario y la línea gráfica moderna de tu proyecto."
+    },
+    {
+      "step": "03",
+      "title": "Desarrollamos",
+      "desc": "Escribimos código limpio, implementamos funcionalidades, configuramos el entorno y realizamos las integraciones."
+    },
+    {
+      "step": "04",
+      "title": "Entregamos",
+      "desc": "Efectuamos pruebas exhaustivas, desplegamos en el hosting definitivo y ponemos el proyecto en marcha con garantía."
+    }
+  ]
+}

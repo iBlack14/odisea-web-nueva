@@ -1,0 +1,7 @@
+node_modules
+.git
+.agents
+.mcp.json
+server.js
+build.js
+*.log

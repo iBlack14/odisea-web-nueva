@@ -1,0 +1,58 @@
+# ==============================================================================
+# ODISEACLOUD — Configuración de Servidor Apache / cPanel
+# URLs Limpias (Sin .html), Compresión Gzip y Caché de Alto Rendimiento
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Redirigir solicitudes que escriban explícitamente .html a la URL limpia (301)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/ [NC]
+  RewriteRule ^([^.]+)\.html$ /$1/ [R=301,L]
+
+  # 2. Redirigir solicitudes que escriban /index o /index.html a la raíz del directorio
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index(\.html)?\ HTTP/ [NC]
+  RewriteRule ^(.*)index(\.html)?$ /$1 [R=301,L]
+
+  # 3. Si se solicita un directorio sin barra final, añadir la barra final
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ $1/ [R=301,L]
+
+  # 4. Si el archivo existe directamente, servirlo
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 5. Si existe un archivo .html con ese nombre, servirlo internamente
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# Página de error 404 amigable
+ErrorDocument 404 /index.html
+
+# Compresión GZIP / Deflate para carga ultrarrápida
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# Caché de Navegador (Optimización Core Web Vitals)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Cabeceras de Seguridad
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

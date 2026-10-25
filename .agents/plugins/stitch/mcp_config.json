@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "stitch": {
+      "command": "node",
+      "args": [
+        "c:/Users/huanc/Downloads/odisea web nueva/node_modules/stitch-mcp/index.js"
+      ],
+      "env": {
+        "GOOGLE_CLOUD_PROJECT": "gen-lang-client-0326829183"
+      }
+    }
+  }
+}
