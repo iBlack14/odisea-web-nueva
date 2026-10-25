@@ -15,7 +15,7 @@ const ODISEA_CONFIG = {
     // Coloca aquí tu ID de Google Analytics 4 (ejemplo: 'G-XXXXXXXXXX')
     googleAnalyticsId: "",
     // Opcional: ID de verificación de Google Search Console
-    googleSearchConsole: ""
+    googleSearchConsole: "nJhV6kLT-MMIeIZoX_NYAXizcUF0q00NihxqmUIM9iw"
   },
   defaultMessages: {
     general: "Hola, equipo de OdiseaCloud. Estoy interesado en sus servicios y quisiera recibir más información.",
