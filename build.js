@@ -36,6 +36,20 @@ function getSvgIcon(name) {
   return icons[name] || icons.globe;
 }
 
+// Helper para Google Analytics 4 y Google Search Console
+function renderHeadAnalytics() {
+  const gaId = (data.company.analytics && data.company.analytics.googleAnalyticsId) ? data.company.analytics.googleAnalyticsId.trim() : '';
+  const gsc = (data.company.analytics && data.company.analytics.googleSearchConsole) ? data.company.analytics.googleSearchConsole.trim() : '';
+  let tags = '';
+  if (gsc) {
+    tags += `\n  <!-- Google Search Console Verification -->\n  <meta name="google-site-verification" content="${gsc}">`;
+  }
+  if (gaId && gaId.startsWith('G-')) {
+    tags += `\n  <!-- Google Analytics 4 (GA4) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=${gaId}"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('js', new Date());\n    gtag('config', '${gaId}');\n  </script>`;
+  }
+  return tags;
+}
+
 // Generador de Header Reutilizable con URLs Limpias
 function renderHeader(activePage = 'inicio', relativePath = '') {
   const homeUrl = relativePath || './';
@@ -275,6 +289,7 @@ data.services.forEach(service => {
     "areaServed": "Global"
   }
   </script>
+  ${renderHeadAnalytics()}
 </head>
 <body>
 
@@ -505,6 +520,7 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
 
   <!-- Estilos Corporativos -->
   <link rel="stylesheet" href="../assets/css/main.css">
+  ${renderHeadAnalytics()}
 </head>
 <body>
 
@@ -600,6 +616,7 @@ const nosotrosHtml = `<!DOCTYPE html>
   <link rel="canonical" href="https://odiseacloud.com/nosotros/">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
   <link rel="stylesheet" href="../assets/css/main.css">
+  ${renderHeadAnalytics()}
 </head>
 <body>
 
@@ -757,6 +774,7 @@ const portafolioHtml = `<!DOCTYPE html>
   <link rel="canonical" href="https://odiseacloud.com/portafolio/">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
   <link rel="stylesheet" href="../assets/css/main.css">
+  ${renderHeadAnalytics()}
 </head>
 <body>
 
@@ -857,6 +875,7 @@ const solucionesHtml = `<!DOCTYPE html>
   <link rel="canonical" href="https://odiseacloud.com/soluciones/">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
   <link rel="stylesheet" href="../assets/css/main.css">
+  ${renderHeadAnalytics()}
 </head>
 <body>
 
@@ -951,6 +970,7 @@ const contactoHtml = `<!DOCTYPE html>
   <link rel="canonical" href="https://odiseacloud.com/contacto/">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
   <link rel="stylesheet" href="../assets/css/main.css">
+  ${renderHeadAnalytics()}
 </head>
 <body>
 
@@ -1198,6 +1218,7 @@ const homeHtml = `<!DOCTYPE html>
     }
   }
   </script>
+  ${renderHeadAnalytics()}
 </head>
 <body>
 

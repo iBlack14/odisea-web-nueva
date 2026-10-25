@@ -11,6 +11,12 @@ const ODISEA_CONFIG = {
   whatsappDisplay: "+51 907 959 276",
   email: "contacto@odiseacloud.com",
   schedule: "Lunes a Viernes de 9:00 a.m. a 7:00 p.m. | Sábados de 9:00 a.m. a 1:00 p.m.",
+  analytics: {
+    // Coloca aquí tu ID de Google Analytics 4 (ejemplo: 'G-XXXXXXXXXX')
+    googleAnalyticsId: "",
+    // Opcional: ID de verificación de Google Search Console
+    googleSearchConsole: ""
+  },
   defaultMessages: {
     general: "Hola, equipo de OdiseaCloud. Estoy interesado en sus servicios y quisiera recibir más información.",
     quote: "Hola, OdiseaCloud. Quisiera solicitar una cotización para un proyecto digital para mi empresa.",
@@ -65,4 +71,50 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.display-email').forEach(el => {
     el.textContent = ODISEA_CONFIG.email;
   });
+
+  // Inicialización de Google Analytics 4 (si se ha configurado el ID)
+  const gaId = ODISEA_CONFIG.analytics && ODISEA_CONFIG.analytics.googleAnalyticsId ? ODISEA_CONFIG.analytics.googleAnalyticsId.trim() : '';
+  if (gaId && gaId.startsWith('G-')) {
+    if (!document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${gaId}"]`)) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', gaId, {
+        send_page_view: true,
+        cookie_flags: 'SameSite=None;Secure'
+      });
+    }
+
+    // Registro de conversiones automáticas al hacer clic en WhatsApp
+    document.querySelectorAll('[data-whatsapp], .floating-whatsapp').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'Conversión',
+            event_label: 'Clic WhatsApp',
+            method: 'WhatsApp'
+          });
+        }
+      });
+    });
+
+    // Registro de conversiones al hacer clic en Email
+    document.querySelectorAll('[data-mailto]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'contact', {
+            event_category: 'Contacto',
+            event_label: 'Clic Correo',
+            method: 'Email'
+          });
+        }
+      });
+    });
+  }
 });

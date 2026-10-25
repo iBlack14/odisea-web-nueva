@@ -7,6 +7,10 @@
     "email": "contacto@odiseacloud.com",
     "address": "Lima, Perú",
     "schedule": "Lunes a Viernes: 9:00 am - 7:00 pm | Sábados: 9:00 am - 1:00 pm",
+    "analytics": {
+      "googleAnalyticsId": "",
+      "googleSearchConsole": ""
+    },
     "defaultMessages": {
       "general": "Hola, equipo de OdiseaCloud. Estoy interesado en sus servicios y quisiera recibir más información.",
       "quote": "Hola, OdiseaCloud. Quisiera solicitar una cotización para un proyecto digital para mi empresa.",
