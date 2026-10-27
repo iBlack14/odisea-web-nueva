@@ -53,14 +53,14 @@
       "id": 1,
       "slug": "desarrollo-web",
       "number": "01",
-      "name": "Diseño y desarrollo de páginas web",
+      "name": "Diseño y creación de páginas web en Perú",
       "shortName": "Desarrollo Web",
       "category": "desarrollo-web",
       "categoryName": "Desarrollo Web",
       "featured": true,
-      "shortDesc": "Páginas corporativas e institucionales diseñadas a medida para convertir visitas en clientes reales.",
-      "heroTagline": "Páginas web corporativas con diseño premium y alto impacto comercial",
-      "fullDesc": "Creamos sitios web corporativos y páginas comerciales que reflejan la solidez y profesionalismo de tu marca. Cada sitio es desarrollado con código limpio, arquitectura moderna, diseño responsive impecable y optimización SEO orientada a destacar en tu sector.",
+      "shortDesc": "Creamos páginas web para empresas y emprendedores en Perú: diseño a medida, adaptación a celulares, formularios de contacto y SEO técnico.",
+      "heroTagline": "Tu página web empresarial, diseñada para presentar tus servicios y facilitar el contacto con tus clientes",
+      "fullDesc": "En OdiseaCloud ofrecemos diseño, creación y desarrollo de páginas web para empresas, profesionales y emprendedores en Perú. Trabajamos desde Lima y atendemos proyectos a distancia. Creamos sitios corporativos, páginas institucionales y landing pages según los objetivos de tu negocio. Organizamos tus servicios, textos e imágenes para que tus visitantes encuentren lo que necesitan y puedan contactarte por formulario, WhatsApp o correo. Cada proyecto contempla adaptación a celulares, rendimiento y una estructura técnica que facilite su lectura por los buscadores.",
       "icon": "globe",
       "whatsappMessage": "Hola, OdiseaCloud. Quisiera información y cotización para el diseño y desarrollo de una página web corporativa.",
       "benefits": [
@@ -80,7 +80,14 @@
         "Integración directa con WhatsApp y correo corporativo",
         "Cumplimiento de estándares de accesibilidad y rendimiento"
       ],
-      "technologies": ["HTML5", "CSS3 Moderno", "JavaScript", "PHP", "Tailwind CSS", "APIs REST"],
+      "technologies": [
+        "HTML5",
+        "CSS3 Moderno",
+        "JavaScript",
+        "PHP",
+        "Tailwind CSS",
+        "APIs REST"
+      ],
       "faqs": [
         {
           "q": "¿Qué necesito para comenzar el desarrollo de mi web?",
@@ -93,8 +100,21 @@
         {
           "q": "¿Incluye dominio y alojamiento?",
           "a": "Podemos proveer el servicio integral que incluye el registro de dominio y el hosting de alto rendimiento, o implementarlo en tu propio proveedor si ya cuentas con uno."
+        },
+        {
+          "q": "¿Cuánto cuesta crear una página web para mi empresa?",
+          "a": "La cotización depende del número de secciones, el contenido y las funciones que necesites. Cuéntanos si buscas una página corporativa, una landing page o una tienda virtual; evaluamos el alcance y te enviamos una propuesta con los servicios incluidos."
+        },
+        {
+          "q": "¿Puedo contratar el diseño web si estoy fuera de Lima?",
+          "a": "Sí. Atendemos proyectos a distancia y coordinamos contigo la información, las revisiones y la publicación de tu página web."
+        },
+        {
+          "q": "¿La creación de la página incluye posicionamiento en Google?",
+          "a": "Incluimos una estructura y optimización SEO técnica básica para facilitar que los buscadores comprendan la web. Esto no garantiza una posición específica. El posicionamiento también depende del contenido, la competencia y la autoridad del sitio. Para un diagnóstico adicional puedes consultar nuestro servicio de SEO técnico."
         }
-      ]
+      ],
+      "seoTitle": "Creación y diseño de páginas web en Perú | OdiseaCloud"
     },
     {
       "id": 2,
@@ -127,7 +147,15 @@
         "Notificaciones de pedidos vía WhatsApp y correo",
         "Cálculo y configuración de opciones de envío"
       ],
-      "technologies": ["WooCommerce", "WordPress", "PHP", "JavaScript", "Izipay API", "Yape/Plin", "MySQL"],
+      "technologies": [
+        "WooCommerce",
+        "WordPress",
+        "PHP",
+        "JavaScript",
+        "Izipay API",
+        "Yape/Plin",
+        "MySQL"
+      ],
       "faqs": [
         {
           "q": "¿Qué pasarelas de pago se pueden integrar?",
@@ -167,7 +195,13 @@
         "Corrección de enlaces rotos y redirecciones 301 para SEO",
         "Actualización del stack tecnológico a versiones seguras"
       ],
-      "technologies": ["HTML5", "CSS3", "JavaScript", "PHP", "WordPress Moderno"],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP",
+        "WordPress Moderno"
+      ],
       "faqs": [
         {
           "q": "¿Perderé mi posicionamiento en Google al rediseñar mi web?",
@@ -203,7 +237,14 @@
         "Bases de datos relacionales seguras y optimizadas",
         "Integración con APIs internas o servicios de terceros"
       ],
-      "technologies": ["PHP", "Laravel", "JavaScript", "MySQL", "PostgreSQL", "APIs REST"],
+      "technologies": [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "MySQL",
+        "PostgreSQL",
+        "APIs REST"
+      ],
       "faqs": [
         {
           "q": "¿Qué tipo de sistemas pueden desarrollar?",
@@ -239,7 +280,14 @@
         "Paneles independientes para administradores, docentes y alumnos",
         "Foros de debate y mensajería interna entre estudiantes y tutores"
       ],
-      "technologies": ["PHP", "MySQL", "JavaScript", "Zoom API", "Google Meet API", "Moodle / Custom LMS"],
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "Zoom API",
+        "Google Meet API",
+        "Moodle / Custom LMS"
+      ],
       "faqs": [
         {
           "q": "¿Cuántos estudiantes pueden acceder al mismo tiempo?",
@@ -275,7 +323,14 @@
         "Conexión con servicios de facturación electrónica y mensajería",
         "Automatización de correos transaccionales y alertas"
       ],
-      "technologies": ["PHP", "JavaScript", "Node.js", "Odoo API", "WooCommerce API", "RESTful APIs"],
+      "technologies": [
+        "PHP",
+        "JavaScript",
+        "Node.js",
+        "Odoo API",
+        "WooCommerce API",
+        "RESTful APIs"
+      ],
       "faqs": [
         {
           "q": "¿Pueden conectar mi tienda virtual con mi sistema administrativo existente?",
@@ -311,7 +366,13 @@
         "Soporte para múltiples versiones de PHP y bases de datos MySQL",
         "Protección contra ataques de denegación de servicio (DDoS)"
       ],
-      "technologies": ["cPanel", "CloudLinux", "Apache/LiteSpeed", "MySQL", "SSL/TLS"],
+      "technologies": [
+        "cPanel",
+        "CloudLinux",
+        "Apache/LiteSpeed",
+        "MySQL",
+        "SSL/TLS"
+      ],
       "faqs": [
         {
           "q": "¿Ustedes me ayudan a configurar mi sitio en el hosting?",
@@ -347,7 +408,13 @@
         "Posibilidad de migración de correos desde proveedores anteriores",
         "Capacitación para la vinculación en teléfonos y Outlook"
       ],
-      "technologies": ["IMAP/SMTP", "Webmail", "DNS Seguro", "SPF/DKIM/DMARC", "cPanel Mail"],
+      "technologies": [
+        "IMAP/SMTP",
+        "Webmail",
+        "DNS Seguro",
+        "SPF/DKIM/DMARC",
+        "cPanel Mail"
+      ],
       "faqs": [
         {
           "q": "¿Puedo sincronizar mis correos en mi celular y computadora?",
@@ -383,7 +450,12 @@
         "Redireccionamientos permanentes 301 entre dominios",
         "Privacidad de datos WHOIS cuando aplique"
       ],
-      "technologies": ["DNS Management", "Cloudflare DNS", "ICANN", "Punto PE"],
+      "technologies": [
+        "DNS Management",
+        "Cloudflare DNS",
+        "ICANN",
+        "Punto PE"
+      ],
       "faqs": [
         {
           "q": "¿El dominio queda registrado a mi nombre?",
@@ -419,7 +491,15 @@
         "Implementación de certificados SSL y copias de seguridad",
         "Monitoreo básico de consumo de recursos y estabilidad"
       ],
-      "technologies": ["Linux", "Ubuntu", "Nginx", "Docker", "MySQL", "SSL/TLS", "SSH"],
+      "technologies": [
+        "Linux",
+        "Ubuntu",
+        "Nginx",
+        "Docker",
+        "MySQL",
+        "SSL/TLS",
+        "SSH"
+      ],
       "faqs": [
         {
           "q": "¿Cuándo conviene migrar de hosting compartido a un VPS?",
@@ -455,7 +535,13 @@
         "Optimización de tablas de base de datos",
         "Soporte directo vía WhatsApp y correo"
       ],
-      "technologies": ["WordPress", "PHP", "cPanel", "MySQL", "Git"],
+      "technologies": [
+        "WordPress",
+        "PHP",
+        "cPanel",
+        "MySQL",
+        "Git"
+      ],
       "faqs": [
         {
           "q": "¿Qué pasa si mi web se rompe durante una actualización?",
@@ -491,7 +577,13 @@
         "Configuración de cabeceras de seguridad HTTP y cortafuegos web",
         "Monitoreo de listas negras de motores de búsqueda"
       ],
-      "technologies": ["Security Headers", "Firewalls WAF", "SSL/TLS", "Wordfence/Sucuri", "SSH"],
+      "technologies": [
+        "Security Headers",
+        "Firewalls WAF",
+        "SSL/TLS",
+        "Wordfence/Sucuri",
+        "SSH"
+      ],
       "faqs": [
         {
           "q": "¿Pueden recuperar mi sitio si ya fue hackeado?",
@@ -527,7 +619,13 @@
         "Actualización de rutas absolutas y certificados SSL",
         "Revisión post-migración de formularios y transacciones"
       ],
-      "technologies": ["cPanel Migrations", "FTP/SSH", "rsync", "phpMyAdmin", "DNS Propagation"],
+      "technologies": [
+        "cPanel Migrations",
+        "FTP/SSH",
+        "rsync",
+        "phpMyAdmin",
+        "DNS Propagation"
+      ],
       "faqs": [
         {
           "q": "¿Mi sitio web dejará de funcionar durante la migración?",
@@ -563,7 +661,13 @@
         "Optimización de fuentes web y carga diferida (Lazy loading)",
         "Cumplimiento de métricas LCP, FID/INP y CLS de Core Web Vitals"
       ],
-      "technologies": ["Google Lighthouse", "WebP", "Redis/Memcached", "CDN Cloudflare", "Asset Minification"],
+      "technologies": [
+        "Google Lighthouse",
+        "WebP",
+        "Redis/Memcached",
+        "CDN Cloudflare",
+        "Asset Minification"
+      ],
       "faqs": [
         {
           "q": "¿Qué velocidad puedo esperar después de la optimización?",
@@ -599,7 +703,13 @@
         "Implementación de datos estructurados Schema.org (LocalBusiness, Organization)",
         "Estructura jerárquica de encabezados (H1, H2, H3) y enlaces internos"
       ],
-      "technologies": ["Google Search Console", "Schema.org", "XML Sitemaps", "Robots.txt", "OpenGraph"],
+      "technologies": [
+        "Google Search Console",
+        "Schema.org",
+        "XML Sitemaps",
+        "Robots.txt",
+        "OpenGraph"
+      ],
       "faqs": [
         {
           "q": "¿Garantizan la primera posición en Google?",
@@ -618,7 +728,13 @@
       "service": "Aulas virtuales y eLearning",
       "desc": "Implementación de aula virtual personalizada con integración de videoconferencias, módulos de cursos, evaluaciones automatizadas y generación de certificados digitales.",
       "image": "/assets/images/portfolio-aula-virtual.png",
-      "tags": ["Moodle / Custom LMS", "Zoom API", "MySQL", "PHP", "Responsive UI"],
+      "tags": [
+        "Moodle / Custom LMS",
+        "Zoom API",
+        "MySQL",
+        "PHP",
+        "Responsive UI"
+      ],
       "whatsappMsg": "Hola, OdiseaCloud. Vi su proyecto de Aula Virtual y quisiera algo similar para mi institución."
     },
     {
@@ -630,7 +746,13 @@
       "service": "Tiendas virtuales y eCommerce",
       "desc": "Plataforma de ventas con catálogo dinámico, carrito de compras optimizado, pasarela Izipay, pagos mediante Yape y Plin, y gestión automatizada de pedidos.",
       "image": "/assets/images/portfolio-ecommerce.png",
-      "tags": ["WooCommerce", "Izipay", "Yape / Plin", "WordPress", "Optimización Móvil"],
+      "tags": [
+        "WooCommerce",
+        "Izipay",
+        "Yape / Plin",
+        "WordPress",
+        "Optimización Móvil"
+      ],
       "whatsappMsg": "Hola, OdiseaCloud. Me gustó el proyecto de tienda virtual y deseo cotizar una para mi empresa."
     },
     {
@@ -642,7 +764,13 @@
       "service": "Diseño y desarrollo web",
       "desc": "Sitio web corporativo de alta gama desarrollado a medida con tipografía moderna, secciones dinámicas de captación de leads y velocidad de carga ultrarrápida.",
       "image": "/assets/images/portfolio-wordpress.png",
-      "tags": ["Desarrollo Web", "HTML5/CSS3", "PHP", "SEO Técnico", "WhatsApp Directo"],
+      "tags": [
+        "Desarrollo Web",
+        "HTML5/CSS3",
+        "PHP",
+        "SEO Técnico",
+        "WhatsApp Directo"
+      ],
       "whatsappMsg": "Hola, OdiseaCloud. Vi su trabajo de desarrollo web a medida y quisiera recibir una propuesta para mi negocio."
     },
     {
@@ -654,7 +782,13 @@
       "service": "Reestructuración y rediseño web",
       "desc": "Modernización de interfaz gráfica, optimización de Core Web Vitals, reestructuración de la experiencia de usuario y conservación de rankings SEO.",
       "image": "/assets/images/portfolio-rediseno.png",
-      "tags": ["Rediseño UI/UX", "Core Web Vitals", "Migración SEO", "Performance", "Clean Code"],
+      "tags": [
+        "Rediseño UI/UX",
+        "Core Web Vitals",
+        "Migración SEO",
+        "Performance",
+        "Clean Code"
+      ],
       "whatsappMsg": "Hola, OdiseaCloud. Quisiera evaluar el rediseño y modernización de la web de mi empresa."
     }
   ],

@@ -259,13 +259,13 @@ data.services.forEach(service => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${service.name} | ODISEACLOUD</title>
+  <title>${service.seoTitle || `${service.name} en Perú | OdiseaCloud`}</title>
   <meta name="description" content="${service.shortDesc}">
   <link rel="canonical" href="https://odiseacloud.com/servicios/${service.slug}/">
   <link rel="icon" type="image/png" href="../../assets/images/logo.png">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="${service.name} — ODISEACLOUD">
+  <meta property="og:title" content="${service.seoTitle || `${service.name} en Perú | OdiseaCloud`}">
   <meta property="og:description" content="${service.shortDesc}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://odiseacloud.com/servicios/${service.slug}/">
@@ -286,7 +286,7 @@ data.services.forEach(service => {
       "url": "https://odiseacloud.com"
     },
     "description": "${service.shortDesc}",
-    "areaServed": "Global"
+    "areaServed": ["Perú", "Global"]
   }
   </script>
   ${renderHeadAnalytics()}
@@ -513,7 +513,7 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo Completo de Servicios Tecnológicos | ODISEACLOUD</title>
+  <title>Servicios web y soluciones tecnológicas en Perú | OdiseaCloud</title>
   <meta name="description" content="Soluciones digitales para cada etapa de tu negocio: desarrollo web, tiendas virtuales, aulas virtuales, hosting, VPS, ciberseguridad y optimización de velocidad.">
   <link rel="canonical" href="https://odiseacloud.com/servicios/">
   <link rel="icon" type="image/png" href="../assets/images/logo.png">
@@ -1184,13 +1184,13 @@ const homeHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ODISEACLOUD — Tu proyecto, sin límites | Desarrollo Web & Soluciones Tecnológicas</title>
-  <meta name="description" content="Desarrollamos páginas web, tiendas virtuales, aulas virtuales y soluciones tecnológicas empresariales que impulsan el crecimiento de tu negocio.">
+  <title>Creación de páginas web en Perú | OdiseaCloud</title>
+  <meta name="description" content="Creación y diseño de páginas web en Perú. Desarrollamos tiendas virtuales, sistemas a medida y aulas virtuales. Consulta tu proyecto con OdiseaCloud.">
   <link rel="canonical" href="https://odiseacloud.com/">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ODISEACLOUD — Tu proyecto, sin límites">
+  <meta property="og:title" content="Creación de páginas web y servicios digitales en Perú | OdiseaCloud">
   <meta property="og:description" content="Desarrollo web corporativo, tiendas virtuales, aulas virtuales e infraestructura cloud profesional.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://odiseacloud.com/">
@@ -1236,11 +1236,11 @@ const homeHtml = `<!DOCTYPE html>
           </div>
 
           <h1 class="hero-title">
-            Transformamos tus ideas en <span class="text-gradient">soluciones digitales.</span>
+            Creamos páginas web y <span class="text-gradient">soluciones digitales.</span>
           </h1>
 
           <p class="hero-desc">
-            Desarrollamos páginas web, tiendas virtuales, aulas virtuales y soluciones tecnológicas que impulsan el crecimiento de tu empresa.
+            Diseño y creación de páginas web para empresas y emprendedores en Perú. Desarrollamos tiendas virtuales, sistemas a medida y aulas virtuales, con atención desde Lima para tu proyecto digital.
           </p>
 
           <div class="hero-buttons">
