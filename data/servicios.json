@@ -340,46 +340,87 @@
       "id": 6,
       "slug": "integraciones-automatizaciones",
       "number": "06",
-      "name": "Integraciones y automatizaciones",
-      "shortName": "Integraciones & APIs",
+      "name": "Automatización de procesos e integración de CRM",
+      "shortName": "Automatización y CRM",
       "category": "plataformas-sistemas",
       "categoryName": "Plataformas y Sistemas",
       "featured": true,
-      "shortDesc": "Conexión entre tiendas, sistemas ERP, facturación, pasarelas de pago y servicios externos.",
-      "heroTagline": "Conecta tus sistemas digitales y automatiza tareas repetitivas",
-      "fullDesc": "Desarrollamos conectores y webhooks que permiten a tus plataformas comunicarse entre sí de forma transparente. Sincroniza stocks entre WooCommerce y Odoo, envía notificaciones automáticas y elimina la duplicidad manual de tareas.",
+      "shortDesc": "Automatización de procesos e integración de CRM para empresas en Perú: conecta formularios, ventas, correo y tienda virtual para reducir tareas manuales.",
+      "heroTagline": "Menos tareas repetitivas. Más tiempo para atender a tus clientes y hacer crecer tu negocio.",
+      "fullDesc": "Implementamos automatizaciones e integraciones de CRM para empresas en Lima y todo el Perú. Conectamos tus herramientas comerciales para que una consulta recibida en tu web pueda registrarse como oportunidad, asignarse a una persona responsable y activar un seguimiento. Evaluamos tus procesos y las APIs disponibles antes de definir la solución. El alcance puede incluir formularios, correo, calendario, tienda virtual, ERP y canales de mensajería. Cada flujo se diseña con reglas claras, control de errores y pruebas antes de ponerse en producción.",
       "icon": "git-merge",
-      "whatsappMessage": "Hola, OdiseaCloud. Quisiera consultar sobre integraciones de sistemas y automatización de procesos.",
+      "whatsappMessage": "Hola, OdiseaCloud. Quiero automatizar procesos e integrar mi CRM con las herramientas de mi negocio. Quisiera una evaluación.",
       "benefits": [
-        "Eliminación de errores humanos por ingreso manual de datos",
-        "Ahorro significativo de tiempo y horas de trabajo operativo",
-        "Información sincronizada en tiempo real entre tus canales",
-        "Mayor velocidad en la atención y entrega al cliente final"
+        "Reduce la digitación repetida y los errores al transferir datos entre sistemas",
+        "Centraliza contactos y oportunidades para que tu equipo pueda darles seguimiento",
+        "Asigna responsables y recordatorios según las reglas de tu negocio",
+        "Consulta reportes con datos sincronizados según la frecuencia definida",
+        "Amplía los flujos por etapas, empezando por las tareas que más tiempo consumen"
       ],
       "features": [
-        "Desarrollo y consumo de APIs REST personalizadas",
-        "Integración bidireccional entre WooCommerce y ERP Odoo",
-        "Sincronización automática de inventarios y precios",
-        "Webhooks para recepción de eventos de pasarelas de pago",
-        "Conexión con servicios de facturación electrónica y mensajería",
-        "Automatización de correos transaccionales y alertas"
+        "Diagnóstico de procesos, herramientas y disponibilidad de APIs",
+        "Captura de consultas desde formularios y creación de contactos en tu CRM",
+        "Asignación de oportunidades, tareas y recordatorios comerciales",
+        "Integración de correo y calendario según los permisos disponibles",
+        "Conexión con WhatsApp Business Platform cuando el proveedor y la cuenta lo permitan",
+        "Sincronización de clientes, pedidos o inventario entre WooCommerce y Odoo",
+        "Webhooks, validación de datos y controles para evitar registros duplicados",
+        "Registros de ejecución, alertas ante errores y documentación del flujo"
       ],
       "technologies": [
-        "PHP",
-        "JavaScript",
-        "Node.js",
+        "APIs REST",
+        "Webhooks",
         "Odoo API",
         "WooCommerce API",
-        "RESTful APIs"
+        "WhatsApp Business Platform",
+        "JavaScript",
+        "PHP"
       ],
       "faqs": [
         {
-          "q": "¿Pueden conectar mi tienda virtual con mi sistema administrativo existente?",
-          "a": "Sí, siempre que tu sistema proporcione una API o acceso estructurado, desarrollamos el conector intermedio para sincronizar pedidos, existencias y clientes."
+          "q": "¿Qué procesos de mi empresa se pueden automatizar?",
+          "a": "Podemos evaluar captura de consultas, registro de clientes, asignación de tareas, avisos, pedidos y sincronización de datos. Conviene empezar por una tarea frecuente con reglas claras y medir su funcionamiento antes de ampliar la automatización."
+        },
+        {
+          "q": "¿Pueden integrar el CRM que ya utilizo?",
+          "a": "Revisamos si cuenta con API, webhooks o conectores y qué permisos ofrece tu plan. La compatibilidad se confirma durante la evaluación; algunas herramientas requieren licencias o desarrollos adicionales."
+        },
+        {
+          "q": "¿Se puede conectar WhatsApp con mi CRM?",
+          "a": "Evaluamos la integración mediante WhatsApp Business Platform o un proveedor compatible. El alcance depende de la cuenta, los permisos y los requisitos del proveedor. La activación y los costos del canal se detallan por separado en la propuesta."
+        },
+        {
+          "q": "¿Cuánto cuesta una automatización o integración de CRM?",
+          "a": "Depende del número de flujos, las herramientas involucradas, la calidad de sus APIs y las reglas de negocio. Para cotizar necesitamos conocer el proceso actual, el volumen aproximado de operaciones y qué resultado esperas. Las licencias y consumos externos se identifican en el presupuesto."
+        },
+        {
+          "q": "¿Qué ocurre si una integración falla?",
+          "a": "Definimos validaciones, registros y alertas según el flujo. También acordamos qué operaciones pueden reintentarse y cuáles necesitan revisión para evitar duplicar contactos, pedidos o mensajes."
+        },
+        {
+          "q": "¿Necesito cambiar todas mis herramientas para empezar?",
+          "a": "No necesariamente. Primero revisamos las herramientas existentes y sus posibilidades de conexión. Podemos implementar una primera automatización acotada y evaluar después otras mejoras."
         }
       ],
-      "seoTitle": "Integración de APIs y automatización de procesos en Perú | OdiseaCloud",
-      "overviewTitle": "Integración de APIs y automatización de procesos en Perú"
+      "seoTitle": "Automatización de procesos y CRM en Perú | OdiseaCloud",
+      "overviewTitle": "Conecta tus herramientas y organiza el seguimiento de tus clientes",
+      "seoDescription": "Automatiza procesos y conecta tu CRM con formularios, WhatsApp, correo y tienda virtual. Integraciones a medida para empresas en Perú. Solicita una evaluación.",
+      "image": "/assets/images/automatizacion-crm.png",
+      "imageAlt": "Ilustración de un CRM conectado con consultas, tareas y canales de atención",
+      "useCases": [
+        {
+          "title": "De una consulta web a una oportunidad",
+          "desc": "Un visitante envía un formulario. El flujo valida sus datos, crea o actualiza el contacto en el CRM y asigna una tarea al equipo comercial."
+        },
+        {
+          "title": "Seguimiento comercial organizado",
+          "desc": "Cuando una oportunidad cambia de etapa, se puede programar un recordatorio o avisar a la persona responsable. Los mensajes y plazos se acuerdan antes de activar el flujo."
+        },
+        {
+          "title": "Pedidos conectados con tu operación",
+          "desc": "Un pedido de la tienda puede enviarse al sistema administrativo para actualizar datos del cliente o existencias, según las funciones y permisos de cada plataforma."
+        }
+      ]
     },
     {
       "id": 7,

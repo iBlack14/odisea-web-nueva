@@ -266,10 +266,10 @@ data.services.forEach(service => {
   
   <!-- Open Graph -->
   <meta property="og:title" content="${service.seoTitle || `${service.name} en Perú | OdiseaCloud`}">
-  <meta property="og:description" content="${service.shortDesc}">
+  <meta property="og:description" content="${service.seoDescription || service.shortDesc}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://odiseacloud.com/servicios/${service.slug}/">
-  <meta property="og:image" content="https://odiseacloud.com/assets/images/logo.png">
+  <meta property="og:image" content="https://odiseacloud.com${service.image || '/assets/images/logo.png'}">
 
   <!-- Estilos Corporativos -->
   <link rel="stylesheet" href="../../assets/css/main.css">
@@ -324,6 +324,9 @@ data.services.forEach(service => {
       </div>
     </section>
 
+    ${service.image ? `<div class="container container-narrow" style="padding-top: 40px;">
+      <img src="../..${service.image}" alt="${service.imageAlt}" width="1536" height="1024" style="display: block; width: 100%; height: auto; border-radius: 20px;" fetchpriority="high">
+    </div>` : ''}
     <!-- DESCRIPCIÓN Y BENEFICIOS -->
     <section class="section">
       <div class="container">
@@ -387,6 +390,14 @@ data.services.forEach(service => {
       </div>
     </section>
 
+    ${service.useCases ? `<section class="section"><div class="container">
+      <div class="section-header"><span class="section-badge">Aplicaciones para tu negocio</span>
+        <h2 class="section-title">Ejemplos de automatización de procesos con CRM</h2>
+        <p class="section-subtitle">Definimos cada conexión según tus herramientas, permisos y forma de trabajar.</p>
+      </div>
+      <div class="services-grid">${service.useCases.map(c => `<article class="service-card"><h3>${c.title}</h3><p>${c.desc}</p></article>`).join('')}</div>
+      <p style="margin-top: 24px;">También puedes conectar este servicio con tu <a href="../desarrollo-web/">página web empresarial</a>, tu <a href="../tiendas-virtuales/">tienda virtual</a> o un <a href="../sistemas-web/">sistema web a medida</a>.</p>
+    </div></section>` : ''}
     <!-- TECNOLOGÍAS COMPATIBLES -->
     <section class="section">
       <div class="container">
