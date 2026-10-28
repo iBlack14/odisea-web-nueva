@@ -6,6 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const renderTech = require('./tech-icons');
+const renderFeatures = require('./service-features');
 
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'servicios.json'), 'utf8'));
 
@@ -381,22 +382,17 @@ data.services.forEach(service => {
     </section>
 
     <!-- CARACTERÍSTICAS Y ALCANCE -->
-    <section class="section section-light">
+    <section class="section service-features-section" aria-labelledby="features-heading">
       <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Alcance y Funcionalidades</span>
-          <h2 class="section-title">Qué incluye este servicio</h2>
-          <p class="section-subtitle">Características diseñadas para ofrecerte una solución integral, estable y sin fisuras técnicas.</p>
+        <div class="features-heading">
+          <div><span class="section-badge">Alcance y funcionalidades</span>
+            <h2 id="features-heading">Qué incluye este servicio</h2>
+            <p>Funciones pensadas para tu proyecto de ${service.shortName.toLowerCase()}, con una estructura clara desde el inicio.</p>
+          </div>
+          <div class="features-summary"><span>${String(service.features.length).padStart(2, '0')}</span><div>funcionalidades<br><strong>para tu proyecto</strong></div></div>
         </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-          ${service.features.map(f => `
-            <div style="padding: 24px; background-color: var(--color-white); border-radius: var(--radius-md); border: 1px solid var(--color-border); display: flex; align-items: flex-start; gap: 14px; box-shadow: var(--shadow-sm);">
-              <span style="color: var(--color-primary); flex-shrink: 0; margin-top: 2px;">${getSvgIcon('check')}</span>
-              <span style="font-size: 0.95rem; font-weight: 600; color: var(--color-navy);">${f}</span>
-            </div>
-          `).join('')}
-        </div>
+        ${renderFeatures(service)}
+        <div class="features-closing"><p>Revisamos contigo las funciones y prioridades para definir el alcance de tu propuesta.</p><a href="#" data-whatsapp="${service.whatsappMessage}">Conversemos sobre tu proyecto ${getSvgIcon('arrowRight')}</a></div>
       </div>
     </section>
 
