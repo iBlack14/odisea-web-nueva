@@ -1461,13 +1461,18 @@ const homeHtml = `<!DOCTYPE html>
 
         <div class="tech-cloud">
           ${[
-            'HTML5 Semántico', 'CSS3 Moderno', 'JavaScript', 'PHP Moderno', 'Laravel', 
-            'MySQL', 'PostgreSQL', 'WordPress', 'WooCommerce', 'Elementor', 
-            'Odoo ERP', 'Izipay API', 'Google Meet API', 'Zoom API', 'APIs REST'
-          ].map(t => `
+            ['html5', 'HTML5'], ['css3', 'CSS3'], ['javascript', 'JavaScript'],
+            ['php', 'PHP'], ['laravel', 'Laravel'], ['mysql', 'MySQL'],
+            ['postgresql', 'PostgreSQL'], ['wordpress', 'WordPress'],
+            ['woocommerce', 'WooCommerce'], ['elementor', 'Elementor'],
+            ['odoo', 'Odoo ERP'], ['izipay', 'Izipay API'],
+            ['googlemeet', 'Google Meet API'], ['zoom', 'Zoom API'], ['rest', 'APIs REST']
+          ].map(([logo, label]) => ` 
             <div class="tech-badge">
-              <span style="color: var(--color-primary);">${getSvgIcon('check')}</span>
-              <span>${t}</span>
+              ${logo === 'rest'
+                ? '<span class="tech-logo tech-logo-rest" aria-hidden="true">' + getSvgIcon('globe') + '</span>'
+                : '<img class="tech-logo' + (logo === 'izipay' || logo === 'odoo' ? ' tech-logo-wide' : '') + '" src="assets/images/tech/' + logo + '.svg" alt="" width="28" height="28" loading="lazy" decoding="async">'}
+              <span>${label}</span>
             </div>
           `).join('')}
         </div>
