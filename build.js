@@ -9,6 +9,11 @@ const renderTech = require('./tech-icons');
 
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'servicios.json'), 'utf8'));
 
+function renderServiceArt(service, prefix = '') {
+  const mascot = service.mascot;
+  return `<div class="service-card-art"><img src="${prefix}${mascot.image.replace(/^\//, '')}" alt="${mascot.alt}" width="${mascot.width}" height="${mascot.height}" loading="lazy" decoding="async"></div>`;
+}
+
 // Helper para iconos SVG oficiales y limpios
 function getSvgIcon(name) {
   const icons = {
@@ -255,8 +260,6 @@ data.services.forEach(service => {
   fs.mkdirSync(serviceDir, { recursive: true });
 
   const mascotOnLeft = service.id % 2 === 0;
-  const heroMascot = mascotOnLeft ? 'derecha' : 'izquierda';
-  const guideMascot = mascotOnLeft ? 'izquierda' : 'derecha';
   const related = data.services.filter(s => s.id !== service.id && (s.category === service.category || s.featured)).slice(0, 3);
 
   const html = `<!DOCTYPE html>
@@ -325,7 +328,7 @@ data.services.forEach(service => {
         </div>
         <div class="service-intro-art">
           <span class="mascot-orbit" aria-hidden="true"></span>
-          <img src="../../assets/images/mascota-${heroMascot}.webp" alt="Mascota de OdiseaCloud presentando el servicio de ${service.shortName}" width="${heroMascot === 'izquierda' ? 1213 : 1024}" height="${heroMascot === 'izquierda' ? 1296 : 1536}" fetchpriority="high">
+          <img src="../..${service.mascot.image}" alt="${service.mascot.alt}" width="${service.mascot.width}" height="${service.mascot.height}" fetchpriority="high">
           <span class="mascot-service-label">${getSvgIcon(service.icon)} ${service.shortName}</span>
         </div>
       </div>
@@ -421,7 +424,7 @@ data.services.forEach(service => {
     </section>
 
     <section class="section service-guide-section"><div class="container service-guide ${mascotOnLeft ? 'guide-art-right' : ''}">
-      <div class="service-guide-visual"><img src="../../assets/images/mascota-${guideMascot}.webp" alt="Robot de OdiseaCloud" width="${guideMascot === 'izquierda' ? 1213 : 1024}" height="${guideMascot === 'izquierda' ? 1296 : 1536}" loading="lazy"></div>
+      <div class="service-guide-visual"><img src="../..${service.mascot.image}" alt="" width="${service.mascot.width}" height="${service.mascot.height}" loading="lazy"></div>
       <div><span class="section-badge">Tecnología con acompañamiento</span><h2>Tu proyecto, con un equipo que te acompaña</h2>
         <p>Te ayudamos a definir el alcance de ${service.shortName.toLowerCase()}, resolver dudas y elegir una solución acorde con tu negocio.</p>
         <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
@@ -583,7 +586,7 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
           ${data.services.map(s => `
             <div class="service-card" data-category="${s.category}">
               <span class="service-card-number">SERVICIO ${s.number} &bull; ${s.categoryName.toUpperCase()}</span>
-              <div class="service-card-icon">${getSvgIcon(s.icon)}</div>
+              ${renderServiceArt(s, '../')}
               <h3 class="service-card-title">${s.name}</h3>
               <p class="service-card-desc">${s.shortDesc}</p>
               <div style="margin-top: auto; pt: 16px;">
@@ -1343,7 +1346,7 @@ const homeHtml = `<!DOCTYPE html>
           ${data.services.filter(s => s.featured).map(s => `
             <div class="service-card">
               <span class="service-card-number">SERVICIO ${s.number}</span>
-              <div class="service-card-icon">${getSvgIcon(s.icon)}</div>
+              ${renderServiceArt(s)}
               <h3 class="service-card-title">${s.name}</h3>
               <p class="service-card-desc">${s.shortDesc}</p>
               <div style="margin-top: auto;">

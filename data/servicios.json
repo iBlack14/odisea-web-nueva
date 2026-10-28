@@ -123,7 +123,13 @@
         }
       ],
       "seoTitle": "Diseño y desarrollo de páginas web en Lima, Perú | OdiseaCloud",
-      "overviewTitle": "Diseño y desarrollo de páginas web en Lima, Perú"
+      "overviewTitle": "Diseño y desarrollo de páginas web en Lima, Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/desarrollo-web.webp",
+        "alt": "Robot de OdiseaCloud programando una página web en su laptop",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 2,
@@ -184,7 +190,13 @@
         }
       ],
       "seoTitle": "Creación de tiendas virtuales en Perú | OdiseaCloud",
-      "overviewTitle": "Creación de tiendas virtuales en Perú"
+      "overviewTitle": "Creación de tiendas virtuales en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/tiendas-virtuales.webp",
+        "alt": "Robot de OdiseaCloud con una cesta, bolsas de compra y un paquete",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 3,
@@ -228,7 +240,13 @@
         }
       ],
       "seoTitle": "Rediseño de páginas web en Perú | OdiseaCloud",
-      "overviewTitle": "Rediseño de páginas web en Perú"
+      "overviewTitle": "Rediseño de páginas web en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/rediseno-web.webp",
+        "alt": "Robot de OdiseaCloud rediseñando una interfaz con una tableta y un lápiz digital",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 4,
@@ -281,7 +299,13 @@
         }
       ],
       "seoTitle": "Desarrollo de sistemas web a medida en Perú | OdiseaCloud",
-      "overviewTitle": "Desarrollo de sistemas web a medida en Perú"
+      "overviewTitle": "Desarrollo de sistemas web a medida en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/sistemas-web.webp",
+        "alt": "Robot de OdiseaCloud organizando módulos de un sistema a medida",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 5,
@@ -334,7 +358,13 @@
         }
       ],
       "seoTitle": "Implementación de aulas virtuales en Perú | OdiseaCloud",
-      "overviewTitle": "Implementación de aulas virtuales en Perú"
+      "overviewTitle": "Implementación de aulas virtuales en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/aulas-virtuales.webp",
+        "alt": "Robot de OdiseaCloud leyendo un libro para representar las aulas virtuales",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 6,
@@ -420,7 +450,13 @@
           "title": "Pedidos conectados con tu operación",
           "desc": "Un pedido de la tienda puede enviarse al sistema administrativo para actualizar datos del cliente o existencias, según las funciones y permisos de cada plataforma."
         }
-      ]
+      ],
+      "mascot": {
+        "image": "/assets/images/mascotas/integraciones-automatizaciones.webp",
+        "alt": "Robot de OdiseaCloud conectando herramientas y flujos de automatización",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 7,
@@ -464,7 +500,13 @@
         }
       ],
       "seoTitle": "Hosting web para empresas en Perú | OdiseaCloud",
-      "overviewTitle": "Hosting web para empresas en Perú"
+      "overviewTitle": "Hosting web para empresas en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/hosting-web.webp",
+        "alt": "Robot de OdiseaCloud junto a un servidor de hosting web",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 8,
@@ -508,7 +550,13 @@
         }
       ],
       "seoTitle": "Correo corporativo con dominio propio en Perú | OdiseaCloud",
-      "overviewTitle": "Correo corporativo con dominio propio en Perú"
+      "overviewTitle": "Correo corporativo con dominio propio en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/correo-corporativo.webp",
+        "alt": "Robot de OdiseaCloud con un sobre y una bandeja de correo",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 9,
@@ -551,7 +599,13 @@
         }
       ],
       "seoTitle": "Registro y configuración de dominios en Perú | OdiseaCloud",
-      "overviewTitle": "Registro y configuración de dominios en Perú"
+      "overviewTitle": "Registro y configuración de dominios en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/dominios.webp",
+        "alt": "Robot de OdiseaCloud presentando un globo y una dirección web",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 10,
@@ -597,7 +651,13 @@
         }
       ],
       "seoTitle": "Servidores VPS para empresas en Perú | OdiseaCloud",
-      "overviewTitle": "Servidores VPS para empresas en Perú"
+      "overviewTitle": "Servidores VPS para empresas en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/servidores-vps.webp",
+        "alt": "Robot de OdiseaCloud administrando un servidor virtual desde una terminal",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 11,
@@ -641,7 +701,13 @@
         }
       ],
       "seoTitle": "Mantenimiento de páginas web en Perú | OdiseaCloud",
-      "overviewTitle": "Mantenimiento de páginas web en Perú"
+      "overviewTitle": "Mantenimiento de páginas web en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/mantenimiento-web.webp",
+        "alt": "Robot de OdiseaCloud ajustando una página web con una herramienta",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 12,
@@ -685,7 +751,13 @@
         }
       ],
       "seoTitle": "Seguridad y protección de sitios web en Perú | OdiseaCloud",
-      "overviewTitle": "Seguridad y protección de sitios web en Perú"
+      "overviewTitle": "Seguridad y protección de sitios web en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/seguridad-web.webp",
+        "alt": "Robot de OdiseaCloud protegiendo un sitio web con un escudo y un candado",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 13,
@@ -729,7 +801,13 @@
         }
       ],
       "seoTitle": "Migración de páginas web y hosting en Perú | OdiseaCloud",
-      "overviewTitle": "Migración de páginas web y hosting en Perú"
+      "overviewTitle": "Migración de páginas web y hosting en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/migracion-web.webp",
+        "alt": "Robot de OdiseaCloud trasladando datos entre dos servidores",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 14,
@@ -773,7 +851,13 @@
         }
       ],
       "seoTitle": "Optimización de velocidad de páginas web en Perú | OdiseaCloud",
-      "overviewTitle": "Optimización de velocidad de páginas web en Perú"
+      "overviewTitle": "Optimización de velocidad de páginas web en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/optimizacion-velocidad.webp",
+        "alt": "Robot de OdiseaCloud mostrando un indicador de velocidad",
+        "width": 960,
+        "height": 1200
+      }
     },
     {
       "id": 15,
@@ -817,7 +901,13 @@
         }
       ],
       "seoTitle": "Servicio de SEO técnico en Perú | OdiseaCloud",
-      "overviewTitle": "Servicio de SEO técnico en Perú"
+      "overviewTitle": "Servicio de SEO técnico en Perú",
+      "mascot": {
+        "image": "/assets/images/mascotas/seo-tecnico.webp",
+        "alt": "Robot de OdiseaCloud analizando una página web con una lupa",
+        "width": 960,
+        "height": 1200
+      }
     }
   ],
   "portfolio": [

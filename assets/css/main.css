@@ -800,6 +800,22 @@ p {
   letter-spacing: 0.05em;
 }
 
+.service-card-art {
+  height: 200px;
+  margin: 0 0 24px;
+  padding: 6px 16px;
+  border-radius: 18px;
+  background: radial-gradient(ellipse, #e1f1ff 0%, #f3f9ff99 58%, transparent 76%);
+}
+
+.service-card-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px #0866f510);
+}
+
 .service-card-icon {
   width: 52px;
   height: 52px;
