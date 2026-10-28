@@ -60,7 +60,7 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
     <div class="container navbar">
       <!-- Logotipo Oficial OdiseaCloud -->
       <a href="${homeUrl}" class="nav-brand" aria-label="OdiseaCloud - Inicio">
-        <img src="${relativePath}assets/images/logo.png" alt="Logotipo OdiseaCloud" class="brand-logo" width="180" height="48">
+        <img src="${relativePath}assets/images/logo.webp" alt="Logotipo OdiseaCloud" class="brand-logo" width="180" height="48">
       </a>
 
       <!-- Menú de Navegación de Escritorio -->
@@ -130,7 +130,7 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
   <div class="mobile-menu-backdrop"></div>
   <aside class="mobile-menu" aria-label="Menú móvil">
     <div class="mobile-menu-header">
-      <img src="${relativePath}assets/images/logo.png" alt="OdiseaCloud Logo" style="height: 38px; width: auto;">
+      <img src="${relativePath}assets/images/logo.webp" alt="OdiseaCloud Logo" style="height: 38px; width: auto;">
       <button class="mobile-close-btn" aria-label="Cerrar menú">
         ${getSvgIcon('x')}
       </button>
@@ -164,7 +164,7 @@ function renderFooter(relativePath = '') {
     <div class="container footer-grid">
       <!-- Columna 1: Marca y Misión -->
       <div class="footer-brand">
-        <img src="${relativePath}assets/images/logo.png" alt="OdiseaCloud" class="footer-logo" width="170" height="44">
+        <img src="${relativePath}assets/images/logo.webp" alt="OdiseaCloud" class="footer-logo" width="170" height="44">
         <p class="footer-slogan">${data.company.slogan}</p>
         <p class="footer-desc">
           Desarrollamos soluciones digitales, plataformas cloud y herramientas tecnológicas diseñadas para potenciar el crecimiento y solidez de tu empresa.
@@ -264,14 +264,14 @@ data.services.forEach(service => {
   <title>${service.seoTitle || `${service.name} en Perú | OdiseaCloud`}</title>
   <meta name="description" content="${service.seoDescription || service.shortDesc}">
   <link rel="canonical" href="https://odiseacloud.com/servicios/${service.slug}/">
-  <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+  <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
   
   <!-- Open Graph -->
   <meta property="og:title" content="${service.seoTitle || `${service.name} en Perú | OdiseaCloud`}">
   <meta property="og:description" content="${service.seoDescription || service.shortDesc}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://odiseacloud.com/servicios/${service.slug}/">
-  <meta property="og:image" content="https://odiseacloud.com${service.image || '/assets/images/logo.png'}">
+  <meta property="og:image" content="https://odiseacloud.com${service.image || '/assets/images/social-preview.jpg'}">
 
   <!-- Estilos Corporativos -->
   <link rel="stylesheet" href="../../assets/css/main.css">
@@ -416,7 +416,7 @@ data.services.forEach(service => {
     </section>
 
     <section class="section service-guide-section"><div class="container service-guide">
-      <div class="service-guide-visual"><img src="../../assets/images/robot-asistente.png" alt="Robot de OdiseaCloud" width="1024" height="1536" loading="lazy"></div>
+      <div class="service-guide-visual"><img src="../../assets/images/robot-asistente.webp" alt="Robot de OdiseaCloud" width="1200" height="1290" loading="lazy"></div>
       <div><span class="section-badge">Tecnología con acompañamiento</span><h2>Tu proyecto, con un equipo que te acompaña</h2>
         <p>Te ayudamos a definir el alcance de ${service.shortName.toLowerCase()}, resolver dudas y elegir una solución acorde con tu negocio.</p>
         <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
@@ -538,7 +538,7 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
   <title>Servicios web y soluciones tecnológicas en Perú | OdiseaCloud</title>
   <meta name="description" content="Soluciones digitales para cada etapa de tu negocio: desarrollo web, tiendas virtuales, aulas virtuales, hosting, VPS, ciberseguridad y optimización de velocidad.">
   <link rel="canonical" href="https://odiseacloud.com/servicios/">
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
 
   <!-- Estilos Corporativos -->
   <link rel="stylesheet" href="../assets/css/main.css">
@@ -636,7 +636,7 @@ const nosotrosHtml = `<!DOCTYPE html>
   <title>Sobre Nosotros | ODISEACLOUD</title>
   <meta name="description" content="Conoce la filosofía, enfoque, valores y compromiso de ODISEACLOUD. Tecnología, creatividad y soluciones digitales que generan valor empresarial.">
   <link rel="canonical" href="https://odiseacloud.com/nosotros/">
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
   ${renderHeadAnalytics()}
 </head>
@@ -794,7 +794,7 @@ const portafolioHtml = `<!DOCTYPE html>
   <title>Portafolio de Proyectos | ODISEACLOUD</title>
   <meta name="description" content="Proyectos reales desarrollados por ODISEACLOUD: aulas virtuales, plataformas de comercio electrónico, sitios web a medida y reestructuraciones corporativas.">
   <link rel="canonical" href="https://odiseacloud.com/portafolio/">
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
   ${renderHeadAnalytics()}
 </head>
@@ -829,7 +829,7 @@ const portafolioHtml = `<!DOCTYPE html>
           ${data.portfolio.map(p => `
             <div class="portfolio-card" data-category="${p.category}">
               <div class="portfolio-img-wrapper">
-                <img src="..${p.image}" alt="${p.title}" class="portfolio-img" loading="lazy">
+                <img src="..${p.image}" alt="${p.title}" class="portfolio-img" width="1536" height="1024" loading="lazy">
                 <span class="portfolio-category-tag">${p.categoryLabel}</span>
               </div>
               <div class="portfolio-body">
@@ -895,7 +895,7 @@ const solucionesHtml = `<!DOCTYPE html>
   <title>Soluciones Tecnológicas por Sector | ODISEACLOUD</title>
   <meta name="description" content="Soluciones tecnológicas a la medida de empresas, emprendedores, tiendas comerciales, centros educativos, institutos y profesionales independientes.">
   <link rel="canonical" href="https://odiseacloud.com/soluciones/">
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
   ${renderHeadAnalytics()}
 </head>
@@ -990,7 +990,7 @@ const contactoHtml = `<!DOCTYPE html>
   <title>Contacto Comercial | ODISEACLOUD</title>
   <meta name="description" content="Comunícate directamente con el equipo de ODISEACLOUD por WhatsApp o correo electrónico para solicitar cotizaciones y asesoría en proyectos digitales.">
   <link rel="canonical" href="https://odiseacloud.com/contacto/">
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
   ${renderHeadAnalytics()}
 </head>
@@ -1210,14 +1210,14 @@ const homeHtml = `<!DOCTYPE html>
   <title>Diseño de páginas web en Perú | OdiseaCloud</title>
   <meta name="description" content="Creación y diseño de páginas web en Perú. Desarrollamos tiendas virtuales, sistemas a medida y aulas virtuales. Consulta tu proyecto con OdiseaCloud.">
   <link rel="canonical" href="https://odiseacloud.com/">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Creación de páginas web y servicios digitales en Perú | OdiseaCloud">
   <meta property="og:description" content="Desarrollo web corporativo, tiendas virtuales, aulas virtuales e infraestructura cloud profesional.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://odiseacloud.com/">
-  <meta property="og:image" content="https://odiseacloud.com/assets/images/logo.png">
+  <meta property="og:image" content="https://odiseacloud.com/assets/images/social-preview.jpg">
 
   <!-- Estilos Corporativos -->
   <link rel="stylesheet" href="assets/css/main.css">
@@ -1299,7 +1299,7 @@ const homeHtml = `<!DOCTYPE html>
         <!-- Columna Derecha: Mascota Robótica Oficial en el Espacio con Elementos Tecnológicos -->
         <div class="hero-visual">
           <div class="hero-mascot-container">
-            <img src="assets/images/mascota.png" alt="Mascota robótica de OdiseaCloud explorando la nube tecnológica" class="hero-mascot-img" width="460" height="460">
+            <img src="assets/images/mascota.webp" alt="Mascota robótica de OdiseaCloud explorando la nube tecnológica" class="hero-mascot-img" width="1536" height="1024" fetchpriority="high">
             
             <!-- Tarjeta Flotante 1: Cloud & Web -->
             <div class="floating-card floating-card-1">
@@ -1617,6 +1617,8 @@ const sitemapUrls = [
   ...data.services.map(s => `https://odiseacloud.com/servicios/${s.slug}/`)
 ];
 
+require('./seo-output')(sitemapUrls);
+
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls.map(url => `  <url>
@@ -1628,3 +1630,5 @@ ${sitemapUrls.map(url => `  <url>
 `;
 fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml, 'utf8');
 console.log(`✅ Generados robots.txt y sitemap.xml con URLs limpias.`);
+
+fs.writeFileSync(path.join(__dirname, '404.html'), `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, follow"><title>Página no encontrada | OdiseaCloud</title><link rel="stylesheet" href="/assets/css/main.css"></head><body>${renderHeader('', '/')}<main class="section section-soft-blue"><div class="container container-narrow" style="text-align:center"><span class="section-badge">Error 404</span><h1>No encontramos esta página</h1><p style="margin:24px 0">La dirección puede haber cambiado. Puedes volver al inicio o explorar nuestros servicios.</p><a class="btn btn-primary" href="/">Ir al inicio</a> <a class="btn btn-outline" href="/servicios/">Ver servicios</a></div></main>${renderFooter('/')}</body></html>`);

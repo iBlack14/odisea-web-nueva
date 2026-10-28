@@ -405,7 +405,7 @@
       "seoTitle": "Automatización de procesos y CRM en Perú | OdiseaCloud",
       "overviewTitle": "Conecta tus herramientas y organiza el seguimiento de tus clientes",
       "seoDescription": "Automatiza procesos y conecta tu CRM con formularios, WhatsApp, correo y tienda virtual. Integraciones a medida para empresas en Perú. Solicita una evaluación.",
-      "image": "/assets/images/automatizacion-crm.png",
+      "image": "/assets/images/automatizacion-crm.webp",
       "imageAlt": "Ilustración de un CRM conectado con consultas, tareas y canales de atención",
       "useCases": [
         {
@@ -829,7 +829,7 @@
       "clientSector": "Educación Superior & Capacitación",
       "service": "Aulas virtuales y eLearning",
       "desc": "Implementación de aula virtual personalizada con integración de videoconferencias, módulos de cursos, evaluaciones automatizadas y generación de certificados digitales.",
-      "image": "/assets/images/portfolio-campus-ui.png",
+      "image": "/assets/images/portfolio-campus-ui.webp",
       "tags": [
         "Moodle / Custom LMS",
         "Zoom API",
@@ -847,7 +847,7 @@
       "clientSector": "Retail & Moda Comercial",
       "service": "Tiendas virtuales y eCommerce",
       "desc": "Plataforma de ventas con catálogo dinámico, carrito de compras optimizado, pasarela Izipay, pagos mediante Yape y Plin, y gestión automatizada de pedidos.",
-      "image": "/assets/images/portfolio-tienda-ui.png",
+      "image": "/assets/images/portfolio-tienda-ui.webp",
       "tags": [
         "WooCommerce",
         "Izipay",
@@ -865,7 +865,7 @@
       "clientSector": "Servicios Profesionales & Consultoría",
       "service": "Diseño y desarrollo web",
       "desc": "Sitio web corporativo de alta gama desarrollado a medida con tipografía moderna, secciones dinámicas de captación de leads y velocidad de carga ultrarrápida.",
-      "image": "/assets/images/portfolio-corporativa-ui.png",
+      "image": "/assets/images/portfolio-corporativa-ui.webp",
       "tags": [
         "Desarrollo Web",
         "HTML5/CSS3",
@@ -883,7 +883,7 @@
       "clientSector": "Empresarial & Corporativo",
       "service": "Reestructuración y rediseño web",
       "desc": "Modernización de interfaz gráfica, optimización de Core Web Vitals, reestructuración de la experiencia de usuario y conservación de rankings SEO.",
-      "image": "/assets/images/portfolio-rediseno.png",
+      "image": "/assets/images/portfolio-rediseno.webp",
       "tags": [
         "Rediseño UI/UX",
         "Core Web Vitals",

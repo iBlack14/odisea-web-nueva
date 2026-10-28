@@ -6,6 +6,7 @@
 
 require_once __DIR__ . '/mailer.php';
 header('Content-Type: application/json; charset=UTF-8');
+header('X-Robots-Tag: noindex');
 
 // Configuración de destino
 $destinatario = getenv('CONTACT_TO') ?: 'contacto@odiseacloud.com';

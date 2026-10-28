@@ -7,13 +7,16 @@
   RewriteEngine On
   RewriteBase /
 
-  # 1. Redirigir solicitudes que escriban explícitamente .html a la URL limpia (301)
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/ [NC]
-  RewriteRule ^([^.]+)\.html$ /$1/ [R=301,L]
+  # Normalizar index ANTES de la regla general .html para evitar /index/ y bucles.
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index(?:\.html)?(?:[?\s]) [NC]
+  RewriteRule ^(.*/)?index(?:\.html)?$ /$1 [R=301,L,NE]
 
-  # 2. Redirigir solicitudes que escriban /index o /index.html a la raíz del directorio
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index(\.html)?\ HTTP/ [NC]
-  RewriteRule ^(.*)index(\.html)?$ /$1 [R=301,L]
+  # Corregir también las variantes /index/ que pudieron quedar enlazadas.
+  RewriteRule ^(.*/)?index/?$ /$1 [R=301,L,NE]
+
+  # 1. Redirigir solicitudes que escriban explícitamente .html a la URL limpia (301)
+  RewriteCond %{THE_REQUEST} \s/+[^?\s]+\.html(?:[?\s]) [NC]
+  RewriteRule ^([^.]+)\.html$ /$1/ [R=301,L]
 
   # 3. Si se solicita un directorio sin barra final, añadir la barra final
   RewriteCond %{REQUEST_FILENAME} -d
@@ -30,7 +33,7 @@
 </IfModule>
 
 # Página de error 404 amigable
-ErrorDocument 404 /index.html
+ErrorDocument 404 /404.html
 
 # Compresión GZIP / Deflate para carga ultrarrápida
 <IfModule mod_deflate.c>
@@ -44,6 +47,7 @@ ErrorDocument 404 /index.html
   ExpiresByType text/html "access plus 0 seconds"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"

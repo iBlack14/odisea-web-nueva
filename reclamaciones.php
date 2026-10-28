@@ -3,6 +3,7 @@ require_once __DIR__ . '/mailer.php';
 header('Content-Type: application/json; charset=UTF-8');
 header('Cache-Control: no-store');
 header('X-Content-Type-Options: nosniff');
+header('X-Robots-Tag: noindex');
 ini_set('session.use_strict_mode', '1');
 session_set_cookie_params(['httponly' => true, 'secure' => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https', 'samesite' => 'Lax', 'path' => '/']);
 session_start();
