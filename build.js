@@ -260,7 +260,7 @@ data.services.forEach(service => {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${service.seoTitle || `${service.name} en Perú | OdiseaCloud`}</title>
-  <meta name="description" content="${service.shortDesc}">
+  <meta name="description" content="${service.seoDescription || service.shortDesc}">
   <link rel="canonical" href="https://odiseacloud.com/servicios/${service.slug}/">
   <link rel="icon" type="image/png" href="../../assets/images/logo.png">
   
@@ -274,20 +274,22 @@ data.services.forEach(service => {
   <!-- Estilos Corporativos -->
   <link rel="stylesheet" href="../../assets/css/main.css">
 
-  <!-- Schema.org Service JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "${service.name}",
-    "provider": {
-      "@type": "Organization",
-      "name": "ODISEACLOUD",
-      "url": "https://odiseacloud.com"
-    },
-    "description": "${service.shortDesc}",
-    "areaServed": ["Perú", "Global"]
-  }
+  ${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {'@type': 'Service', '@id': 'https://odiseacloud.com/servicios/' + service.slug + '/#service',
+       name: service.name, serviceType: service.shortName,
+       url: 'https://odiseacloud.com/servicios/' + service.slug + '/',
+       description: service.shortDesc, areaServed: {'@type': 'Country', name: 'Perú'},
+       provider: {'@type': 'Organization', '@id': 'https://odiseacloud.com/#organization', name: 'OdiseaCloud', url: 'https://odiseacloud.com/'}},
+      {'@type': 'BreadcrumbList', itemListElement: [
+        {'@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://odiseacloud.com/'},
+        {'@type': 'ListItem', position: 2, name: 'Servicios', item: 'https://odiseacloud.com/servicios/'},
+        {'@type': 'ListItem', position: 3, name: service.shortName, item: 'https://odiseacloud.com/servicios/' + service.slug + '/'}
+      ]}
+    ]
+  }).replace(/</g, '\u003c')}
   </script>
   ${renderHeadAnalytics()}
 </head>
@@ -296,6 +298,11 @@ data.services.forEach(service => {
   ${renderHeader('servicios', '../../')}
 
   <main>
+    <nav class="container" aria-label="Ruta de navegación" style="padding-top: 24px; font-size: 0.9rem;">
+      <a href="../../">Inicio</a> <span aria-hidden="true"> / </span>
+      <a href="../">Servicios</a> <span aria-hidden="true"> / </span>
+      <span aria-current="page">${service.shortName}</span>
+    </nav>
     <!-- HERO DEL SERVICIO -->
     <section class="section section-soft-blue" style="padding: 72px 0 60px 0;">
       <div class="container container-narrow" style="text-align: center;">
@@ -323,7 +330,7 @@ data.services.forEach(service => {
         <div class="about-grid">
           <div>
             <span class="section-badge">Visión General</span>
-            <h2 style="margin-bottom: 20px;">Solución tecnológica orientada a resultados reales</h2>
+            <h2 style="margin-bottom: 20px;">${service.overviewTitle || service.name}</h2>
             <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 28px;">
               ${service.fullDesc}
             </p>
@@ -1184,7 +1191,7 @@ const homeHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creación de páginas web en Perú | OdiseaCloud</title>
+  <title>Diseño de páginas web en Perú | OdiseaCloud</title>
   <meta name="description" content="Creación y diseño de páginas web en Perú. Desarrollamos tiendas virtuales, sistemas a medida y aulas virtuales. Consulta tu proyecto con OdiseaCloud.">
   <link rel="canonical" href="https://odiseacloud.com/">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
@@ -1204,7 +1211,10 @@ const homeHtml = `<!DOCTYPE html>
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://odiseacloud.com/#organization",
     "name": "ODISEACLOUD",
+    "email": "${data.company.email}",
+    "areaServed": {"@type": "Country", "name": "Perú"},
     "url": "https://odiseacloud.com",
     "logo": "https://odiseacloud.com/assets/images/logo.png",
     "slogan": "Tu proyecto, sin límites",
@@ -1606,7 +1616,6 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls.map(url => `  <url>
     <loc>${url}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${url === 'https://odiseacloud.com/' ? '1.0' : '0.8'}</priority>
   </url>`).join('\n')}

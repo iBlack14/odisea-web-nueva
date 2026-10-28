@@ -112,9 +112,18 @@
         {
           "q": "¿La creación de la página incluye posicionamiento en Google?",
           "a": "Incluimos una estructura y optimización SEO técnica básica para facilitar que los buscadores comprendan la web. Esto no garantiza una posición específica. El posicionamiento también depende del contenido, la competencia y la autoridad del sitio. Para un diagnóstico adicional puedes consultar nuestro servicio de SEO técnico."
+        },
+        {
+          "q": "¿Me conviene una página corporativa, una landing page o una tienda virtual?",
+          "a": "Una página corporativa presenta tu empresa y sus servicios. Una landing page se concentra en una oferta y una acción, como solicitar una cotización. Una tienda virtual permite explorar productos, añadirlos al carrito y realizar pedidos. Elegimos la estructura según cómo compran tus clientes."
+        },
+        {
+          "q": "¿Una página web nueva aparece de inmediato en Google?",
+          "a": "Publicar la web no garantiza aparecer inmediatamente ni ocupar una posición concreta. Preparamos su estructura, títulos, enlaces y sitemap para facilitar el rastreo. Después se revisan la indexación y las consultas en Google Search Console para decidir nuevas mejoras."
         }
       ],
-      "seoTitle": "Creación y diseño de páginas web en Perú | OdiseaCloud"
+      "seoTitle": "Diseño y desarrollo de páginas web en Lima, Perú | OdiseaCloud",
+      "overviewTitle": "Diseño y desarrollo de páginas web en Lima, Perú"
     },
     {
       "id": 2,
@@ -164,8 +173,18 @@
         {
           "q": "¿Puedo administrar mis productos y pedidos de forma sencilla?",
           "a": "Sí, entregamos la tienda configurada con un panel intuitivo y brindamos inducción para que puedas actualizar precios, agregar productos y procesar despachos sin conocimientos técnicos."
+        },
+        {
+          "q": "¿Qué necesito para crear una tienda virtual en Perú?",
+          "a": "Necesitas un catálogo con nombres, fotografías, precios y stock, además de definir medios de pago, zonas de envío, costos de entrega y políticas de compra. Con esta información podemos organizar las categorías y el proceso de pedido."
+        },
+        {
+          "q": "¿Se pueden integrar Izipay, Yape o Plin?",
+          "a": "Evaluamos la integración según el proveedor, las condiciones de tu cuenta y el flujo de compra. Una confirmación manual de transferencia funciona de forma distinta a una pasarela con confirmación automática. La propuesta especifica el método elegido y los requisitos de activación."
         }
-      ]
+      ],
+      "seoTitle": "Creación de tiendas virtuales en Perú | OdiseaCloud",
+      "overviewTitle": "Creación de tiendas virtuales en Perú"
     },
     {
       "id": 3,
@@ -207,7 +226,9 @@
           "q": "¿Perderé mi posicionamiento en Google al rediseñar mi web?",
           "a": "No. Implementamos un plan de migración SEO que conserva URLs estratégicas, configura redireccionamientos 301 y optimiza los metadatos para consolidar o mejorar tus rankings."
         }
-      ]
+      ],
+      "seoTitle": "Rediseño de páginas web en Perú | OdiseaCloud",
+      "overviewTitle": "Rediseño de páginas web en Perú"
     },
     {
       "id": 4,
@@ -249,8 +270,18 @@
         {
           "q": "¿Qué tipo de sistemas pueden desarrollar?",
           "a": "Desde sistemas de gestión interna (CRM, cotizadores, control de citas, control de inventario) hasta portales de clientes y extranets corporativas personalizadas."
+        },
+        {
+          "q": "¿Cuándo necesita mi empresa un sistema web a medida?",
+          "a": "Puede ser útil cuando tus procesos requieren permisos, reportes o flujos que una herramienta existente no resuelve bien. Revisamos cómo trabajas actualmente, qué tareas se repiten y qué datos necesitas centralizar antes de definir los módulos."
+        },
+        {
+          "q": "¿Cómo se define el alcance del desarrollo de un sistema?",
+          "a": "Partimos de los usuarios, sus tareas y las reglas del negocio. La propuesta detalla módulos, integraciones, entregables y criterios de aceptación. Esto permite priorizar una primera versión y evaluar ampliaciones con un alcance claro."
         }
-      ]
+      ],
+      "seoTitle": "Desarrollo de sistemas web a medida en Perú | OdiseaCloud",
+      "overviewTitle": "Desarrollo de sistemas web a medida en Perú"
     },
     {
       "id": 5,
@@ -292,8 +323,18 @@
         {
           "q": "¿Cuántos estudiantes pueden acceder al mismo tiempo?",
           "a": "Diseñamos y alojamos la plataforma dimensionando los recursos del servidor según tu cantidad de estudiantes concurrentes para garantizar una experiencia sin caídas."
+        },
+        {
+          "q": "¿Qué puede incluir un aula virtual para una institución?",
+          "a": "El alcance puede contemplar matrícula de estudiantes, cursos, materiales, tareas, evaluaciones, seguimiento y certificados. Antes de implementar definimos los perfiles de acceso, la cantidad esperada de usuarios y las herramientas de videoconferencia que se utilizarán."
+        },
+        {
+          "q": "¿Cómo se elige el hosting para un campus virtual?",
+          "a": "Importan los usuarios conectados al mismo tiempo, el almacenamiento de materiales y el uso de videos o evaluaciones. Revisamos esos datos para proponer recursos, copias de seguridad y un plan de mantenimiento acordes con la operación."
         }
-      ]
+      ],
+      "seoTitle": "Implementación de aulas virtuales en Perú | OdiseaCloud",
+      "overviewTitle": "Implementación de aulas virtuales en Perú"
     },
     {
       "id": 6,
@@ -336,7 +377,9 @@
           "q": "¿Pueden conectar mi tienda virtual con mi sistema administrativo existente?",
           "a": "Sí, siempre que tu sistema proporcione una API o acceso estructurado, desarrollamos el conector intermedio para sincronizar pedidos, existencias y clientes."
         }
-      ]
+      ],
+      "seoTitle": "Integración de APIs y automatización de procesos en Perú | OdiseaCloud",
+      "overviewTitle": "Integración de APIs y automatización de procesos en Perú"
     },
     {
       "id": 7,
@@ -378,7 +421,9 @@
           "q": "¿Ustedes me ayudan a configurar mi sitio en el hosting?",
           "a": "Por supuesto. Nos encargamos de la configuración de DNS, creación de bases de datos, instalación de certificados SSL y puesta a punto de tu web."
         }
-      ]
+      ],
+      "seoTitle": "Hosting web para empresas en Perú | OdiseaCloud",
+      "overviewTitle": "Hosting web para empresas en Perú"
     },
     {
       "id": 8,
@@ -420,7 +465,9 @@
           "q": "¿Puedo sincronizar mis correos en mi celular y computadora?",
           "a": "Sí. Te proporcionamos las credenciales y guías paso a paso para sincronizar en iPhone, Android, Outlook de escritorio o acceder directamente desde cualquier navegador web."
         }
-      ]
+      ],
+      "seoTitle": "Correo corporativo con dominio propio en Perú | OdiseaCloud",
+      "overviewTitle": "Correo corporativo con dominio propio en Perú"
     },
     {
       "id": 9,
@@ -461,7 +508,9 @@
           "q": "¿El dominio queda registrado a mi nombre?",
           "a": "Absolutamente. La titularidad legal y propiedad del dominio pertenece 100% al cliente."
         }
-      ]
+      ],
+      "seoTitle": "Registro y configuración de dominios en Perú | OdiseaCloud",
+      "overviewTitle": "Registro y configuración de dominios en Perú"
     },
     {
       "id": 10,
@@ -505,7 +554,9 @@
           "q": "¿Cuándo conviene migrar de hosting compartido a un VPS?",
           "a": "Cuando tu sitio supera los 30,000 visitantes mensuales, manejas una tienda con catálogo extenso, necesitas ejecutar scripts pesados o requieres configuraciones personalizadas del servidor."
         }
-      ]
+      ],
+      "seoTitle": "Servidores VPS para empresas en Perú | OdiseaCloud",
+      "overviewTitle": "Servidores VPS para empresas en Perú"
     },
     {
       "id": 11,
@@ -547,7 +598,9 @@
           "q": "¿Qué pasa si mi web se rompe durante una actualización?",
           "a": "Siempre realizamos un respaldo previo. Si una actualización genera incompatibilidad, restauramos el estado funcional al instante y corregimos el conflicto."
         }
-      ]
+      ],
+      "seoTitle": "Mantenimiento de páginas web en Perú | OdiseaCloud",
+      "overviewTitle": "Mantenimiento de páginas web en Perú"
     },
     {
       "id": 12,
@@ -589,7 +642,9 @@
           "q": "¿Pueden recuperar mi sitio si ya fue hackeado?",
           "a": "Sí. Realizamos una limpieza exhaustiva de bases de datos y archivos, eliminamos puertas traseras (backdoors) y reforzamos los accesos para evitar reinfecciones."
         }
-      ]
+      ],
+      "seoTitle": "Seguridad y protección de sitios web en Perú | OdiseaCloud",
+      "overviewTitle": "Seguridad y protección de sitios web en Perú"
     },
     {
       "id": 13,
@@ -631,7 +686,9 @@
           "q": "¿Mi sitio web dejará de funcionar durante la migración?",
           "a": "No. Preparamos y probamos el sitio en el nuevo servidor mientras el actual sigue activo. La conmutación de DNS es imperceptible para tus usuarios."
         }
-      ]
+      ],
+      "seoTitle": "Migración de páginas web y hosting en Perú | OdiseaCloud",
+      "overviewTitle": "Migración de páginas web y hosting en Perú"
     },
     {
       "id": 14,
@@ -673,7 +730,9 @@
           "q": "¿Qué velocidad puedo esperar después de la optimización?",
           "a": "El objetivo es situar el tiempo de carga por debajo de 2 segundos en condiciones normales de navegación y elevar las puntuaciones móviles a rangos verdes en PageSpeed."
         }
-      ]
+      ],
+      "seoTitle": "Optimización de velocidad de páginas web en Perú | OdiseaCloud",
+      "overviewTitle": "Optimización de velocidad de páginas web en Perú"
     },
     {
       "id": 15,
@@ -715,7 +774,9 @@
           "q": "¿Garantizan la primera posición en Google?",
           "a": "En OdiseaCloud somos éticos y transparentes: ningún profesional serio puede garantizar el primer puesto exacto debido a que los algoritmos de Google consideran cientos de factores. Lo que garantizamos es una arquitectura técnica impecable para competir con la máxima eficacia."
         }
-      ]
+      ],
+      "seoTitle": "Servicio de SEO técnico en Perú | OdiseaCloud",
+      "overviewTitle": "Servicio de SEO técnico en Perú"
     }
   ],
   "portfolio": [
