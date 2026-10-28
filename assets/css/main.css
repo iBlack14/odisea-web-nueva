@@ -1085,6 +1085,53 @@ p {
   width: 48px;
 }
 
+.tech-symbol { color: var(--color-primary); }
+.service-guide-section { background: linear-gradient(130deg, #f1f8ff, #fff 75%); }
+.service-guide { display: grid; grid-template-columns: minmax(200px, .7fr) 1.3fr; gap: 60px; align-items: center; max-width: 1040px; }
+.service-guide-visual { height: 360px; display: flex; justify-content: center; background: radial-gradient(ellipse, #d7eeff 0%, transparent 68%); }
+.service-guide-visual img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 18px 20px #0069dc18); }
+.service-guide h2 { margin-bottom: 20px; }
+.service-guide-points { list-style: disc; padding-left: 20px; margin: 22px 0 28px; line-height: 1.9; }
+.footer-legal-links { flex-wrap: wrap; }
+.footer-claims { border: 1px solid currentColor; border-radius: 8px; padding: 6px 12px; }
+.legal-page { max-width: 900px; background: #fff; padding: clamp(24px, 5vw, 56px); border: 1px solid var(--color-border); border-radius: 20px; }
+.legal-page h1 { font-size: clamp(2rem, 5vw, 3rem); overflow-wrap: anywhere; }
+.legal-page h2 { font-size: 1.4rem; margin: 30px 0 12px; }
+.legal-page p { margin-bottom: 18px; line-height: 1.8; }
+.legal-page a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+.legal-date { color: var(--color-text-muted); font-size: .9rem; margin-top: 12px; }
+.legal-form fieldset { border: 1px solid var(--color-border); border-radius: 12px; margin: 24px 0; padding: 22px; min-width: 0; }
+.legal-form legend { font-weight: 700; padding: 0 8px; }
+.legal-form label { display: flex; flex-direction: column; gap: 8px; margin: 14px 0; font-size: .95rem; font-weight: 600; }
+.legal-form input:not([type=checkbox]), .legal-form select, .legal-form textarea { width: 100%; min-width: 0; padding: 12px; border: 1px solid #bccbdf; border-radius: 8px; background: #fff; font: inherit; color: var(--color-navy); }
+.legal-form textarea { resize: vertical; }
+.legal-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.legal-form .legal-check { flex-direction: row; align-items: flex-start; font-weight: 400; }
+.legal-check input { margin-top: 5px; flex: 0 0 auto; }
+.legal-form [hidden] { display: none; }
+.form-trap { position: absolute; left: -10000px; }
+#claims-status { margin-top: 24px; }
+#claims-copy { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; background: #f3f7fc; padding: 20px; border-radius: 12px; }
+#claims-receipt button { margin: 12px 8px 0 0; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+@media (max-width: 700px) {
+  .service-guide { grid-template-columns: 1fr; gap: 24px; }
+  .service-guide-visual { height: 240px; }
+  .legal-form-row { grid-template-columns: 1fr; gap: 0; }
+  .legal-form fieldset { padding: 14px; }
+}
+@media print {
+  body:has(#claims-receipt:not([hidden])) .site-header,
+  body:has(#claims-receipt:not([hidden])) .site-footer,
+  body:has(#claims-receipt:not([hidden])) .floating-whatsapp,
+  body:has(#claims-receipt:not([hidden])) .mobile-menu,
+  body:has(#claims-receipt:not([hidden])) .mobile-menu-backdrop,
+  body:has(#claims-receipt:not([hidden])) .legal-page > :not(#claims-receipt),
+  #claims-receipt button { display: none !important; }
+  .legal-page { border: 0; padding: 0; }
+  #claims-copy { background: #fff; padding: 0; }
+}
+
 .tech-logo-rest {
   display: inline-flex;
   align-items: center;

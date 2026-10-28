@@ -5,6 +5,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const renderTech = require('./tech-icons');
 
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'servicios.json'), 'utf8'));
 
@@ -229,9 +230,10 @@ function renderFooter(relativePath = '') {
         &copy; 2026 <strong>ODISEACLOUD</strong>. Todos los derechos reservados.
       </div>
       <div class="footer-legal-links">
-        <a href="${relativePath}contacto/" class="footer-link">Términos de servicio</a>
-        <a href="${relativePath}contacto/" class="footer-link">Política de privacidad</a>
-        <a href="${relativePath}contacto/" class="footer-link">Soporte</a>
+        <a href="${relativePath}terminos/" class="footer-link">Términos de servicio</a>
+        <a href="${relativePath}privacidad/" class="footer-link">Política de privacidad</a>
+        <a href="${relativePath}cookies/" class="footer-link">Política de cookies</a>
+        <a href="${relativePath}libro-de-reclamaciones/" class="footer-link footer-claims">Libro de Reclamaciones</a>
       </div>
     </div>
   </footer>
@@ -408,16 +410,18 @@ data.services.forEach(service => {
         </div>
 
         <div class="tech-cloud">
-          ${service.technologies.map(t => `
-            <div class="tech-badge">
-              <span style="color: var(--color-primary);">${getSvgIcon('check')}</span>
-              <span>${t}</span>
-            </div>
-          `).join('')}
+          ${service.technologies.map(t => renderTech(t, '../../')).join('')}
         </div>
       </div>
     </section>
 
+    <section class="section service-guide-section"><div class="container service-guide">
+      <div class="service-guide-visual"><img src="../../assets/images/robot-asistente.png" alt="Robot de OdiseaCloud" width="1024" height="1536" loading="lazy"></div>
+      <div><span class="section-badge">Tecnología con acompañamiento</span><h2>Tu proyecto, con un equipo que te acompaña</h2>
+        <p>Te ayudamos a definir el alcance de ${service.shortName.toLowerCase()}, resolver dudas y elegir una solución acorde con tu negocio.</p>
+        <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
+        <a href="#" class="btn btn-primary" data-whatsapp="${service.whatsappMessage}">Conversemos sobre tu proyecto</a>
+      </div></div></section>
     <!-- PROCESO DE TRABAJO -->
     <section class="section section-dark">
       <div class="container">
@@ -1126,6 +1130,7 @@ const contactoHtml = `<!DOCTYPE html>
                   ${getSvgIcon('whatsapp')}
                   <span>Consultar este servicio por WhatsApp</span>
                 </a>
+                <p style="font-size: .9rem; margin-bottom: 16px;">Usaremos tus datos para responder tu consulta. Consulta nuestra <a href="../privacidad/">Política de privacidad</a>.</p>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">
                   ${getSvgIcon('mail')}
                   <span>Enviar mensaje por correo</span>
@@ -1605,6 +1610,8 @@ const homeHtml = `<!DOCTYPE html>
 fs.writeFileSync(path.join(__dirname, 'index.html'), homeHtml, 'utf8');
 console.log(`✅ Generada página de inicio: /`);
 
+require('./legal-pages')({renderHeader, renderFooter, renderHeadAnalytics});
+
 // 8. Generación de robots.txt y sitemap.xml con URLs limpias
 const robotsTxt = `User-agent: *
 Allow: /
@@ -1620,6 +1627,7 @@ const sitemapUrls = [
   'https://odiseacloud.com/portafolio/',
   'https://odiseacloud.com/soluciones/',
   'https://odiseacloud.com/contacto/',
+  ...['privacidad', 'terminos', 'cookies', 'libro-de-reclamaciones'].map(s => `https://odiseacloud.com/${s}/`),
   ...data.services.map(s => `https://odiseacloud.com/servicios/${s.slug}/`)
 ];
 

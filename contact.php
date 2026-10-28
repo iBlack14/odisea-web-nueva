@@ -4,10 +4,11 @@
  * Envía las consultas directamente al correo corporativo sin base de datos
  */
 
+require_once __DIR__ . '/mailer.php';
 header('Content-Type: application/json; charset=UTF-8');
 
 // Configuración de destino
-$destinatario = 'contacto@odiseacloud.com';
+$destinatario = getenv('CONTACT_TO') ?: 'contacto@odiseacloud.com';
 $asunto_prefijo = '[Consulta Web OdiseaCloud]';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -31,7 +32,7 @@ $servicio = trim(filter_input(INPUT_POST, 'servicio', FILTER_SANITIZE_FULL_SPECI
 $mensaje = trim(filter_input(INPUT_POST, 'mensaje', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 
 // 3. Validaciones obligatorias
-if (empty($nombre) || mb_strlen($nombre) < 2) {
+if (empty($nombre) || strlen($nombre) < 2) {
     http_response_code(422);
     echo json_encode(['success' => false, 'message' => 'Por favor, ingresa tu nombre completo.']);
     exit;
@@ -78,7 +79,9 @@ foreach ($headers as $k => $v) {
 }
 
 // 5. Envío mediante mail()
-$enviado = @mail($destinatario, $asunto, $cuerpo_correo, $headers_str);
+$enviado = getenv('RESEND_API_KEY')
+    ? send_transactional_email($destinatario, $asunto, $cuerpo_correo, 'contact-' . bin2hex(random_bytes(12)), $email)
+    : @mail($destinatario, $asunto, $cuerpo_correo, $headers_str);
 
 if ($enviado) {
     echo json_encode([

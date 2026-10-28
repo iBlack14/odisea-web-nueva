@@ -7,8 +7,21 @@ services:
       dockerfile: Dockerfile
     container_name: odiseacloud-app
     restart: always
+    volumes:
+      - reclamaciones:/var/lib/odisea
     ports:
       - "80:80"
     environment:
       - APACHE_RUN_USER=www-data
       - APACHE_RUN_GROUP=www-data
+      - RESEND_API_KEY=${RESEND_API_KEY:-}
+      - RESEND_FROM=${RESEND_FROM:-}
+      - CLAIMS_TO=${CLAIMS_TO:-reclamos@odiseacloud.com}
+      - CONTACT_TO=${CONTACT_TO:-contacto@odiseacloud.com}
+      - CLAIMS_ENABLED=${CLAIMS_ENABLED:-false}
+      - LEGAL_NAME=${LEGAL_NAME:-}
+      - LEGAL_RUC=${LEGAL_RUC:-}
+      - LEGAL_ADDRESS=${LEGAL_ADDRESS:-}
+
+volumes:
+  reclamaciones:

@@ -1,5 +1,10 @@
 # Dependencias y paquetes locales
 node_modules/
+.env
+.env.*
+!.env.example
+.playwright-cli/
+output/playwright/
 
 # Configuración de agentes y MCP local
 .agents/

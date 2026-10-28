@@ -26,6 +26,12 @@ RUN rm -rf /var/www/html/node_modules \
     && chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
+# Reclamaciones fuera del directorio público. Montar almacenamiento persistente
+# en /var/lib/odisea antes de habilitar el registro en Easypanel.
+RUN mkdir -p /var/lib/odisea/claims \
+    && chown -R www-data:www-data /var/lib/odisea \
+    && chmod 700 /var/lib/odisea/claims
+
 # Puerto HTTP estándar
 EXPOSE 80
 
