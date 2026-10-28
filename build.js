@@ -300,11 +300,6 @@ data.services.forEach(service => {
   ${renderHeader('servicios', '../../')}
 
   <main>
-    <nav class="container" aria-label="Ruta de navegación" style="padding-top: 24px; font-size: 0.9rem;">
-      <a href="../../">Inicio</a> <span aria-hidden="true"> / </span>
-      <a href="../">Servicios</a> <span aria-hidden="true"> / </span>
-      <span aria-current="page">${service.shortName}</span>
-    </nav>
     <!-- HERO DEL SERVICIO -->
     <section class="section section-soft-blue" style="padding: 72px 0 60px 0;">
       <div class="container container-narrow" style="text-align: center;">
