@@ -254,6 +254,9 @@ data.services.forEach(service => {
   const serviceDir = path.join(__dirname, 'servicios', service.slug);
   fs.mkdirSync(serviceDir, { recursive: true });
 
+  const mascotOnLeft = service.id % 2 === 0;
+  const heroMascot = mascotOnLeft ? 'derecha' : 'izquierda';
+  const guideMascot = mascotOnLeft ? 'izquierda' : 'derecha';
   const related = data.services.filter(s => s.id !== service.id && (s.category === service.category || s.featured)).slice(0, 3);
 
   const html = `<!DOCTYPE html>
@@ -301,14 +304,15 @@ data.services.forEach(service => {
 
   <main>
     <!-- HERO DEL SERVICIO -->
-    <section class="section section-soft-blue" style="padding: 72px 0 60px 0;">
-      <div class="container container-narrow" style="text-align: center;">
+    <section class="section section-soft-blue service-intro">
+      <div class="container service-intro-grid ${mascotOnLeft ? 'mascot-on-left' : ''}">
+        <div class="service-intro-copy">
         <span class="section-badge">${service.categoryName} &bull; Servicio ${service.number}</span>
         <h1 style="margin-bottom: 20px;">${service.name}</h1>
-        <p class="section-subtitle" style="max-width: 760px; margin: 0 auto 32px auto;">
+        <p class="section-subtitle" style="margin: 0 0 32px;">
           ${service.heroTagline}
         </p>
-        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <div class="service-intro-actions">
           <a href="#" class="btn btn-whatsapp" data-whatsapp="${service.whatsappMessage}">
             ${getSvgIcon('whatsapp')}
             <span>Consultar por WhatsApp</span>
@@ -317,6 +321,12 @@ data.services.forEach(service => {
             ${getSvgIcon('mail')}
             <span>Solicitar propuesta por correo</span>
           </a>
+        </div>
+        </div>
+        <div class="service-intro-art">
+          <span class="mascot-orbit" aria-hidden="true"></span>
+          <img src="../../assets/images/mascota-${heroMascot}.webp" alt="Mascota de OdiseaCloud presentando el servicio de ${service.shortName}" width="${heroMascot === 'izquierda' ? 1213 : 1024}" height="${heroMascot === 'izquierda' ? 1296 : 1536}" fetchpriority="high">
+          <span class="mascot-service-label">${getSvgIcon(service.icon)} ${service.shortName}</span>
         </div>
       </div>
     </section>
@@ -410,8 +420,8 @@ data.services.forEach(service => {
       </div>
     </section>
 
-    <section class="section service-guide-section"><div class="container service-guide">
-      <div class="service-guide-visual"><img src="../../assets/images/robot-asistente.webp" alt="Robot de OdiseaCloud" width="1200" height="1290" loading="lazy"></div>
+    <section class="section service-guide-section"><div class="container service-guide ${mascotOnLeft ? 'guide-art-right' : ''}">
+      <div class="service-guide-visual"><img src="../../assets/images/mascota-${guideMascot}.webp" alt="Robot de OdiseaCloud" width="${guideMascot === 'izquierda' ? 1213 : 1024}" height="${guideMascot === 'izquierda' ? 1296 : 1536}" loading="lazy"></div>
       <div><span class="section-badge">Tecnología con acompañamiento</span><h2>Tu proyecto, con un equipo que te acompaña</h2>
         <p>Te ayudamos a definir el alcance de ${service.shortName.toLowerCase()}, resolver dudas y elegir una solución acorde con tu negocio.</p>
         <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
@@ -1294,7 +1304,7 @@ const homeHtml = `<!DOCTYPE html>
         <!-- Columna Derecha: Mascota Robótica Oficial en el Espacio con Elementos Tecnológicos -->
         <div class="hero-visual">
           <div class="hero-mascot-container">
-            <img src="assets/images/mascota.webp" alt="Mascota robótica de OdiseaCloud explorando la nube tecnológica" class="hero-mascot-img" width="1536" height="1024" fetchpriority="high">
+            <img src="assets/images/mascota-izquierda.webp" alt="Mascota de OdiseaCloud presentando nuestras soluciones digitales" class="hero-mascot-img" width="1213" height="1296" fetchpriority="high">
             
             <!-- Tarjeta Flotante 1: Cloud & Web -->
             <div class="floating-card floating-card-1">
@@ -1310,7 +1320,7 @@ const homeHtml = `<!DOCTYPE html>
               <div class="floating-icon">${getSvgIcon('zap')}</div>
               <div>
                 <p class="floating-title">Alta Velocidad</p>
-                <p class="floating-subtitle">Core Web Vitals verdes</p>
+                <p class="floating-subtitle">Rendimiento cuidado</p>
               </div>
             </div>
           </div>
