@@ -5,6 +5,7 @@ node_modules/
 !.env.example
 .playwright-cli/
 output/playwright/
+output/seo-*/
 
 # Configuración de agentes y MCP local
 .agents/
