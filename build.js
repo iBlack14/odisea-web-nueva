@@ -136,7 +136,7 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
   <div class="mobile-menu-backdrop"></div>
   <aside class="mobile-menu" aria-label="Menú móvil">
     <div class="mobile-menu-header">
-      <img src="${relativePath}assets/images/logo.webp" alt="OdiseaCloud Logo" style="height: 38px; width: auto;">
+      <img src="${relativePath}assets/images/logo.webp" alt="OdiseaCloud Logo" width="143" height="38" style="height: 38px; width: auto;">
       <button class="mobile-close-btn" aria-label="Cerrar menú">
         ${getSvgIcon('x')}
       </button>
@@ -1555,7 +1555,7 @@ const homeHtml = `<!DOCTYPE html>
           ${data.portfolio.slice(0, 3).map(p => `
             <div class="portfolio-card">
               <div class="portfolio-img-wrapper">
-                <img src="${p.image.replace(/^\//, '')}" alt="${p.title}" class="portfolio-img" loading="lazy">
+                <img src="${p.image.replace(/^\//, '')}" alt="${p.title}" class="portfolio-img" width="1536" height="1024" loading="lazy">
                 <span class="portfolio-category-tag">${p.categoryLabel}</span>
               </div>
               <div class="portfolio-body">

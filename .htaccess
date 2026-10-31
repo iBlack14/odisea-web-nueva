@@ -1,48 +1,71 @@
 # ==============================================================================
-# ODISEACLOUD — Configuración de Servidor Apache / cPanel
-# URLs Limpias (Sin .html), Compresión Gzip y Caché de Alto Rendimiento
+# ODISEACLOUD — Configuración de Servidor Apache / cPanel / Docker
+# URLs Limpias (Sin .html), Canonical 301, Compresión Gzip y Caché WebVitals
 # ==============================================================================
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
+  # 1. Redirigir www al dominio canónico sin www (301)
+  RewriteCond %{HTTP_HOST} ^www\.odiseacloud\.com$ [NC]
+  RewriteRule ^(.*)$ https://odiseacloud.com/$1 [R=301,L]
+
+  # 2. Forzar HTTPS en producción (soporta proxy inverso con X-Forwarded-Proto)
+  RewriteCond %{HTTP_HOST} ^odiseacloud\.com$ [NC]
+  RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://odiseacloud.com/$1 [R=301,L]
+
   # El proxy termina TLS: usar el origen HTTPS canónico solo en el dominio público.
   # En localhost y otros entornos se conservan los destinos relativos.
   RewriteCond %{HTTP_HOST} ^(?:www\.)?odiseacloud\.com(?::[0-9]+)?$ [NC]
   RewriteRule ^ - [E=SEO_REDIRECT_ORIGIN:https://odiseacloud.com]
 
-  # Normalizar index ANTES de la regla general .html para evitar /index/ y bucles.
+  # 3. Normalizar index ANTES de la regla general .html para evitar /index/ y bucles.
   RewriteCond %{THE_REQUEST} \s/+(.*/)?index(?:\.html)?(?:[?\s]) [NC]
   RewriteRule ^(.*/)?index(?:\.html)?$ %{ENV:SEO_REDIRECT_ORIGIN}/$1 [R=301,L,NE]
 
   # Corregir también las variantes /index/ que pudieron quedar enlazadas.
   RewriteRule ^(.*/)?index/?$ %{ENV:SEO_REDIRECT_ORIGIN}/$1 [R=301,L,NE]
 
-  # 1. Redirigir solicitudes que escriban explícitamente .html a la URL limpia (301)
+  # 4. Redirigir solicitudes que escriban explícitamente .html a la URL limpia (301)
   RewriteCond %{THE_REQUEST} \s/+[^?\s]+\.html(?:[?\s]) [NC]
   RewriteRule ^([^.]+)\.html$ %{ENV:SEO_REDIRECT_ORIGIN}/$1/ [R=301,L]
 
-  # 3. Si se solicita un directorio sin barra final, añadir la barra final
+  # 5. Si se solicita un directorio sin barra final, añadir la barra final
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteRule ^(.*)$ %{ENV:SEO_REDIRECT_ORIGIN}/$1/ [R=301,L]
 
-  # 4. Si el archivo existe directamente, servirlo
+  # 6. Si el archivo existe directamente, servirlo
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # 5. Si existe un archivo .html con ese nombre, servirlo internamente
+  # 7. Si existe un archivo .html con ese nombre, servirlo internamente
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
+
+# Bloquear acceso a archivos sensibles o de configuración oculta
+<FilesMatch "^\.(git|env|docker|htaccess)">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Directiva noindex para scripts de procesamiento backend
+<FilesMatch "\.(php)$">
+  <IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow, noarchive"
+  </IfModule>
+</FilesMatch>
 
 # Página de error 404 amigable
 ErrorDocument 404 /404.html
 
 # Compresión GZIP / Deflate para carga ultrarrápida
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml font/woff2
 </IfModule>
 
 # Caché de Navegador (Optimización Core Web Vitals)
@@ -56,9 +79,11 @@ ErrorDocument 404 /404.html
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
 </IfModule>
 
-# Cabeceras de Seguridad
+# Cabeceras de Seguridad y Control de Rastreo
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
