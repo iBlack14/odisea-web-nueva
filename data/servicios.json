@@ -129,7 +129,10 @@
         "alt": "Robot de OdiseaCloud programando una página web en su laptop",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Cotiza tu página web empresarial",
+      "targetAudience": "Empresas en crecimiento, firmas de servicios profesionales y emprendedores en Perú que necesitan transmitir solidez corporativa y captar clientes calificados.",
+      "clientReceives": "Página web corporativa personalizada, 100% responsiva (móviles y escritorio), integración directa a WhatsApp y correo corporativo, optimización SEO on-page y puesta en producción."
     },
     {
       "id": 2,
@@ -196,7 +199,10 @@
         "alt": "Robot de OdiseaCloud con una cesta, bolsas de compra y un paquete",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Quiero empezar a vender online",
+      "targetAudience": "Marcas comerciales, importadores, distribuidores y negocios de retail que buscan vender sus productos por internet de forma automática 24/7.",
+      "clientReceives": "Tienda virtual con catálogo autogestionable, pasarela de pago configurada (tarjetas, Yape y Plin), carrito de compras sin fricciones y panel de control de inventario."
     },
     {
       "id": 3,
@@ -246,7 +252,10 @@
         "alt": "Robot de OdiseaCloud rediseñando una interfaz con una tableta y un lápiz digital",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Moderniza tu sitio web actual",
+      "targetAudience": "Empresas con sitios web antiguos, lentos o no adaptados a celulares que necesitan renovar su imagen sin perder su posicionamiento en Google.",
+      "clientReceives": "Nueva interfaz gráfica SaaS moderna, optimización integral de velocidad (Core Web Vitals), navegación intuitiva y preservación de enlaces y rankings."
     },
     {
       "id": 4,
@@ -305,7 +314,10 @@
         "alt": "Robot de OdiseaCloud organizando módulos de un sistema a medida",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Cuéntanos qué sistema necesitas",
+      "targetAudience": "Empresas que requieren digitalizar operaciones internas, portales de clientes, cotizadores dinámicos o flujos de trabajo que un software comercial genérico no resuelve.",
+      "clientReceives": "Aplicación web a medida con base de datos segura, gestión de usuarios por roles, panel de control administrativo y código escalable documentado."
     },
     {
       "id": 5,
@@ -364,7 +376,10 @@
         "alt": "Robot de OdiseaCloud leyendo un libro para representar las aulas virtuales",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Implementa tu aula virtual hoy",
+      "targetAudience": "Instituciones educativas, academias, centros de capacitación profesional y empresas con programas continuos de formación interna.",
+      "clientReceives": "Plataforma LMS personalizada con soporte para cursos, lecciones en video, exámenes automáticos, emisión de certificados con código QR e integración con Zoom/Meet."
     },
     {
       "id": 6,
@@ -456,7 +471,10 @@
         "alt": "Robot de OdiseaCloud conectando herramientas y flujos de automatización",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Quiero automatizar procesos de mi negocio",
+      "targetAudience": "Empresas con tareas repetitivas entre formularios web, WhatsApp, hojas de cálculo, sistemas de facturación y plataformas CRM.",
+      "clientReceives": "Flujos de sincronización automatizados en tiempo real, reducción de errores manuales y conexión transparente entre tus aplicaciones de negocio."
     },
     {
       "id": 7,
@@ -506,7 +524,10 @@
         "alt": "Robot de OdiseaCloud junto a un servidor de hosting web",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Contrata tu hosting empresarial",
+      "targetAudience": "Empresas y profesionales que buscan máxima estabilidad, certificados SSL incluidos y soporte técnico en español sin caídas inesperadas.",
+      "clientReceives": "Alojamiento web en servidores de alta velocidad (NVMe), copias de seguridad periódicas, cPanel intuitivo y soporte técnico directo."
     },
     {
       "id": 8,
@@ -556,7 +577,10 @@
         "alt": "Robot de OdiseaCloud con un sobre y una bandeja de correo",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Activa tus correos corporativos",
+      "targetAudience": "Empresas y profesionales que desean proyectar formalidad utilizando direcciones de correo con su propio dominio (@tuempresa.com).",
+      "clientReceives": "Cuentas de correo corporativo configuradas con filtros antispam avanzados, acceso webmail seguro y sincronización en Outlook, Gmail y celulares."
     },
     {
       "id": 9,
@@ -605,7 +629,10 @@
         "alt": "Robot de OdiseaCloud presentando un globo y una dirección web",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Registra o traslada tu dominio",
+      "targetAudience": "Negocios que van a lanzar su marca o desean asegurar y proteger extensiones estratégicas (.com, .pe, .com.pe) para su presencia en internet.",
+      "clientReceives": "Registro oficial a nombre de tu empresa, panel de administración de DNS y configuración de registros de correo y hosting."
     },
     {
       "id": 10,
@@ -657,7 +684,10 @@
         "alt": "Robot de OdiseaCloud administrando un servidor virtual desde una terminal",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Configura tu servidor Cloud VPS",
+      "targetAudience": "Proyectos de alta demanda, sistemas web exigentes o agencias que requieren recursos dedicados de procesamiento, memoria y control total del servidor.",
+      "clientReceives": "Servidor virtual privado aprovisionado, configuración de entorno web (Nginx/Apache, PHP, base de datos), firewall de seguridad y monitoreo."
     },
     {
       "id": 11,
@@ -707,7 +737,10 @@
         "alt": "Robot de OdiseaCloud ajustando una página web con una herramienta",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Asegura soporte continuo para tu web",
+      "targetAudience": "Empresas que no cuentan con un equipo técnico interno y necesitan mantener su web actualizada, respaldada y libre de fallos.",
+      "clientReceives": "Monitoreo continuo de disponibilidad, actualización periódica de plugins y CMS, copias de seguridad externas y bolsa de horas para ajustes."
     },
     {
       "id": 12,
@@ -757,7 +790,10 @@
         "alt": "Robot de OdiseaCloud protegiendo un sitio web con un escudo y un candado",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Protege y limpia tu sitio web",
+      "targetAudience": "Sitios web vulnerados, infectados con malware, bloqueados por Google o empresas que desean prevenir ataques cibernéticos.",
+      "clientReceives": "Desinfección profunda de archivos y base de datos, endurecimiento de seguridad (hardening), remoción de listas negras y firewall perimetral."
     },
     {
       "id": 13,
@@ -807,7 +843,10 @@
         "alt": "Robot de OdiseaCloud trasladando datos entre dos servidores",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Migra tu web sin perder datos",
+      "targetAudience": "Dueños de sitios web descontentos con su proveedor actual de hosting que desean cambiar de servidor con cero tiempo de inactividad.",
+      "clientReceives": "Traslado completo de archivos, bases de datos y buzones de correo, verificación exhaustiva y cambio de DNS sin interrupción del servicio."
     },
     {
       "id": 14,
@@ -857,7 +896,10 @@
         "alt": "Robot de OdiseaCloud mostrando un indicador de velocidad",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Acelera la velocidad de tu web",
+      "targetAudience": "Páginas web que cargan con lentitud, sufren alta tasa de rebote o no aprueban las métricas de Core Web Vitals de Google.",
+      "clientReceives": "Diagnóstico profundo, compresión y conversión de recursos, optimización de caché, minificación de código y reducción del tiempo LCP."
     },
     {
       "id": 15,
@@ -907,7 +949,10 @@
         "alt": "Robot de OdiseaCloud analizando una página web con una lupa",
         "width": 960,
         "height": 1200
-      }
+      },
+      "primaryCta": "Audita el SEO de tu sitio web",
+      "targetAudience": "Negocios que buscan incrementar su visibilidad orgánica en Google solucionando problemas de indexación, arquitectura y metadatos.",
+      "clientReceives": "Auditoría SEO completa, corrección de rastreo e indexabilidad, optimización de datos estructurados Schema.org y reporte de recomendaciones."
     }
   ],
   "portfolio": [
@@ -916,7 +961,7 @@
       "title": "Campus Virtual & Plataforma Educativa",
       "category": "aulas-virtuales",
       "categoryLabel": "Aulas Virtuales",
-      "clientSector": "Educación Superior & Capacitación",
+      "clientSector": "Educación Superior & Capacitación — Perú",
       "service": "Aulas virtuales y eLearning",
       "desc": "Implementación de aula virtual personalizada con integración de videoconferencias, módulos de cursos, evaluaciones automatizadas y generación de certificados digitales.",
       "image": "/assets/images/portfolio-campus-ui.webp",
@@ -927,14 +972,17 @@
         "PHP",
         "Responsive UI"
       ],
-      "whatsappMsg": "Hola, OdiseaCloud. Vi su proyecto de Aula Virtual y quisiera algo similar para mi institución."
+      "whatsappMsg": "Hola, OdiseaCloud. Vi su proyecto de Aula Virtual y quisiera algo similar para mi institución.",
+      "challenge": "La institución requería centralizar sus programas académicos a distancia, garantizando disponibilidad durante evaluaciones masivas simultáneas y eliminando la carga manual en la emisión de diplomas.",
+      "solution": "Implementación de arquitectura LMS multi-rol de alta concurrencia, integración con aulas Zoom API, banco de exámenes con calificación instantánea y generador de certificados digitales con validación QR.",
+      "deliverables": "Campus virtual seguro para alumnos y docentes, pasarela para matrículas online, panel de analítica académica y soporte técnico continuo."
     },
     {
       "id": "tienda-online",
       "title": "Tienda Virtual de Comercio Electrónico",
       "category": "tiendas-virtuales",
       "categoryLabel": "Comercio Electrónico",
-      "clientSector": "Retail & Moda Comercial",
+      "clientSector": "Retail & Moda Comercial — Lima, Perú",
       "service": "Tiendas virtuales y eCommerce",
       "desc": "Plataforma de ventas con catálogo dinámico, carrito de compras optimizado, pasarela Izipay, pagos mediante Yape y Plin, y gestión automatizada de pedidos.",
       "image": "/assets/images/portfolio-tienda-ui.webp",
@@ -945,14 +993,17 @@
         "WordPress",
         "Optimización Móvil"
       ],
-      "whatsappMsg": "Hola, OdiseaCloud. Me gustó el proyecto de tienda virtual y deseo cotizar una para mi empresa."
+      "whatsappMsg": "Hola, OdiseaCloud. Me gustó el proyecto de tienda virtual y deseo cotizar una para mi empresa.",
+      "challenge": "El negocio dependía de cierres manuales por WhatsApp y redes sociales, con demoras en confirmación de pagos y carritos abandonados en horario no laboral.",
+      "solution": "Desarrollo de tienda virtual moderna optimizada para móviles, catálogo estructurado por variantes, checkout ultrarrápido y cobros automáticos mediante pasarela Izipay, tarjetas de crédito, Yape y Plin.",
+      "deliverables": "Plataforma eCommerce autogestionable, pasarela de pagos integrada, sincronización automática de stock y notificaciones de pedidos por WhatsApp y correo."
     },
     {
       "id": "desarrollo-wordpress",
       "title": "Sitio Web Corporativo a Medida",
       "category": "desarrollo-web",
       "categoryLabel": "Desarrollo Web",
-      "clientSector": "Servicios Profesionales & Consultoría",
+      "clientSector": "Servicios Profesionales & Consultoría — Lima, Perú",
       "service": "Diseño y desarrollo web",
       "desc": "Sitio web corporativo de alta gama desarrollado a medida con tipografía moderna, secciones dinámicas de captación de leads y velocidad de carga ultrarrápida.",
       "image": "/assets/images/portfolio-corporativa-ui.webp",
@@ -963,14 +1014,17 @@
         "SEO Técnico",
         "WhatsApp Directo"
       ],
-      "whatsappMsg": "Hola, OdiseaCloud. Vi su trabajo de desarrollo web a medida y quisiera recibir una propuesta para mi negocio."
+      "whatsappMsg": "Hola, OdiseaCloud. Vi su trabajo de desarrollo web a medida y quisiera recibir una propuesta para mi negocio.",
+      "challenge": "Proyectar una presencia corporativa sólida frente a clientes B2B exigentes y canalizar las visitas hacia cotizaciones formales y contacto directo por WhatsApp.",
+      "solution": "Desarrollo web corporativo en código limpio y ligero (sin constructores lentos), diseño UI/UX enfocado en credibilidad y arquitectura de conversión orientada a generar oportunidades comerciales.",
+      "deliverables": "Sitio web corporativo responsivo, formularios corporativos con validación antispam, enlace preferencial a WhatsApp y velocidad de carga optimizada."
     },
     {
       "id": "rediseno-web",
       "title": "Reestructuración y Modernización Web",
       "category": "rediseno-web",
       "categoryLabel": "Rediseño Web",
-      "clientSector": "Empresarial & Corporativo",
+      "clientSector": "Distribución & Servicios Empresariales — Perú",
       "service": "Reestructuración y rediseño web",
       "desc": "Modernización de interfaz gráfica, optimización de Core Web Vitals, reestructuración de la experiencia de usuario y conservación de rankings SEO.",
       "image": "/assets/images/portfolio-rediseno.webp",
@@ -981,7 +1035,10 @@
         "Performance",
         "Clean Code"
       ],
-      "whatsappMsg": "Hola, OdiseaCloud. Quisiera evaluar el rediseño y modernización de la web de mi empresa."
+      "whatsappMsg": "Hola, OdiseaCloud. Quisiera evaluar el rediseño y modernización de la web de mi empresa.",
+      "challenge": "El sitio web original tardaba más de 5 segundos en cargar, fallaba en pantallas de smartphones y sufría pérdida de tráfico orgánico por mala experiencia de usuario.",
+      "solution": "Rediseño integral de interfaz con estética SaaS moderna, optimización profunda de Core Web Vitals (LCP < 1.5s) y preservación estricta de la estructura de URLs y posicionamiento SEO existente.",
+      "deliverables": "Nueva web corporativa de alto rendimiento, 100% adaptable a teléfonos móviles, migración sin tiempo de inactividad y cero pérdida de enlaces indexados."
     }
   ],
   "sectors": [

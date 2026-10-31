@@ -72,6 +72,46 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = ODISEA_CONFIG.email;
   });
 
+  // Helper universal para eventos y conversiones
+  window.dataLayer = window.dataLayer || [];
+  function trackEvent(eventName, params = {}) {
+    const payload = {
+      event: eventName,
+      page_path: window.location.pathname,
+      ...params
+    };
+    window.dataLayer.push(payload);
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params);
+    }
+  }
+  window.odiseaTrackEvent = trackEvent;
+
+  // Registro de conversiones automáticas al hacer clic en WhatsApp
+  document.querySelectorAll('[data-whatsapp], .floating-whatsapp').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ctaText = btn.getAttribute('data-cta') || (btn.querySelector('span') ? btn.querySelector('span').textContent.trim() : 'WhatsApp');
+      trackEvent('generate_lead', {
+        event_category: 'Conversión',
+        event_label: `WhatsApp: ${ctaText}`,
+        method: 'WhatsApp',
+        cta_text: ctaText
+      });
+    });
+  });
+
+  // Registro de conversiones al hacer clic en Email
+  document.querySelectorAll('[data-mailto]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const subject = btn.getAttribute('data-subject') || 'Contacto General';
+      trackEvent('contact', {
+        event_category: 'Contacto',
+        event_label: subject,
+        method: 'Email'
+      });
+    });
+  });
+
   // Inicialización de Google Analytics 4 (si se ha configurado el ID)
   const gaId = ODISEA_CONFIG.analytics && ODISEA_CONFIG.analytics.googleAnalyticsId ? ODISEA_CONFIG.analytics.googleAnalyticsId.trim() : '';
   if (gaId && gaId.startsWith('G-')) {
@@ -81,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
       script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
       document.head.appendChild(script);
 
-      window.dataLayer = window.dataLayer || [];
       function gtag() { window.dataLayer.push(arguments); }
       window.gtag = gtag;
       gtag('js', new Date());
@@ -90,31 +129,5 @@ document.addEventListener('DOMContentLoaded', () => {
         cookie_flags: 'SameSite=None;Secure'
       });
     }
-
-    // Registro de conversiones automáticas al hacer clic en WhatsApp
-    document.querySelectorAll('[data-whatsapp], .floating-whatsapp').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', 'generate_lead', {
-            event_category: 'Conversión',
-            event_label: 'Clic WhatsApp',
-            method: 'WhatsApp'
-          });
-        }
-      });
-    });
-
-    // Registro de conversiones al hacer clic en Email
-    document.querySelectorAll('[data-mailto]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', 'contact', {
-            event_category: 'Contacto',
-            event_label: 'Clic Correo',
-            method: 'Email'
-          });
-        }
-      });
-    });
   }
 });

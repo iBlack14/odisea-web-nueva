@@ -317,9 +317,9 @@ data.services.forEach(service => {
           ${service.heroTagline}
         </p>
         <div class="service-intro-actions">
-          <a href="#" class="btn btn-whatsapp" data-whatsapp="${service.whatsappMessage}">
+          <a href="#" class="btn btn-whatsapp" data-whatsapp="${service.whatsappMessage}" data-cta="${service.primaryCta || 'Consultar por WhatsApp'}">
             ${getSvgIcon('whatsapp')}
-            <span>Consultar por WhatsApp</span>
+            <span>${service.primaryCta || 'Consultar por WhatsApp'}</span>
           </a>
           <a href="#" class="btn btn-outline" data-mailto="${service.whatsappMessage}" data-subject="Consulta sobre ${service.name} - ODISEACLOUD">
             ${getSvgIcon('mail')}
@@ -345,9 +345,25 @@ data.services.forEach(service => {
           <div>
             <span class="section-badge">Visión General</span>
             <h2 style="margin-bottom: 20px;">${service.overviewTitle || service.name}</h2>
-            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 28px;">
+            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
               ${service.fullDesc}
             </p>
+            ${service.targetAudience ? `
+            <div class="service-meta-box">
+              <h4 class="service-meta-title">
+                ${getSvgIcon('check')} ¿A quién va dirigido este servicio?
+              </h4>
+              <p class="service-meta-desc">${service.targetAudience}</p>
+            </div>
+            ` : ''}
+            ${service.clientReceives ? `
+            <div class="service-meta-box receives">
+              <h4 class="service-meta-title">
+                ${getSvgIcon('check')} ¿Qué recibe tu empresa al finalizar?
+              </h4>
+              <p class="service-meta-desc">${service.clientReceives}</p>
+            </div>
+            ` : ''}
             <h3 style="margin-bottom: 16px; font-size: 1.3rem;">Beneficios clave para tu empresa:</h3>
             <ul style="display: flex; flex-direction: column; gap: 14px;">
               ${service.benefits.map(b => `
@@ -371,9 +387,9 @@ data.services.forEach(service => {
                 <p style="font-size: 0.9rem; color: var(--color-white); margin-bottom: 4px;"><strong>Canal preferencial de atención:</strong></p>
                 <p style="font-size: 0.85rem; color: var(--color-tech);">Respuesta ágil por WhatsApp en horario comercial.</p>
               </div>
-              <a href="#" class="btn btn-whatsapp" style="width: 100%;" data-whatsapp="${service.whatsappMessage}">
+              <a href="#" class="btn btn-whatsapp" style="width: 100%;" data-whatsapp="${service.whatsappMessage}" data-cta="${service.primaryCta || 'Iniciar consulta técnica'}">
                 ${getSvgIcon('whatsapp')}
-                <span>Iniciar consulta técnica</span>
+                <span>${service.primaryCta || 'Iniciar consulta técnica'}</span>
               </a>
             </div>
           </div>
@@ -424,7 +440,7 @@ data.services.forEach(service => {
       <div><span class="section-badge">Tecnología con acompañamiento</span><h2>Tu proyecto, con un equipo que te acompaña</h2>
         <p>Te ayudamos a definir el alcance de ${service.shortName.toLowerCase()}, resolver dudas y elegir una solución acorde con tu negocio.</p>
         <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
-        <a href="#" class="btn btn-primary" data-whatsapp="${service.whatsappMessage}">Conversemos sobre tu proyecto</a>
+        <a href="#" class="btn btn-primary" data-whatsapp="${service.whatsappMessage}" data-cta="${service.primaryCta || 'Conversemos sobre tu proyecto'}">${service.primaryCta || 'Conversemos sobre tu proyecto'}</a>
       </div></div></section>
     <!-- PROCESO DE TRABAJO -->
     <section class="section section-dark">
@@ -507,9 +523,9 @@ data.services.forEach(service => {
               Conversemos sobre los requerimientos específicos de tu empresa y recibe una propuesta profesional adaptada a tus metas.
             </p>
             <div class="cta-buttons">
-              <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp="${service.whatsappMessage}">
+              <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp="${service.whatsappMessage}" data-cta="${service.primaryCta || 'Consultar por WhatsApp'}">
                 ${getSvgIcon('whatsapp')}
-                <span>Consultar por WhatsApp</span>
+                <span>${service.primaryCta || 'Consultar por WhatsApp'}</span>
               </a>
               <a href="#" class="btn btn-outline-white btn-lg" data-mailto="${service.whatsappMessage}" data-subject="Propuesta de ${service.name} - ODISEACLOUD">
                 ${getSvgIcon('mail')}
@@ -587,7 +603,7 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
               <p class="service-card-desc">${s.shortDesc}</p>
               <div style="margin-top: auto; pt: 16px;">
                 <a href="../servicios/${s.slug}/" class="service-card-link">
-                  <span>Conocer más y cotizar</span>
+                  <span>${s.primaryCta || 'Conocer más y cotizar'}</span>
                   ${getSvgIcon('arrowRight')}
                 </a>
               </div>
@@ -840,11 +856,36 @@ const portafolioHtml = `<!DOCTYPE html>
                 <span class="portfolio-sector">${p.clientSector}</span>
                 <h3 class="portfolio-title">${p.title}</h3>
                 <p class="portfolio-desc">${p.desc}</p>
+                ${p.challenge ? `
+                <div class="portfolio-case-study">
+                  <div class="case-study-block">
+                    <div class="case-study-label challenge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      <span>El Reto</span>
+                    </div>
+                    <p>${p.challenge}</p>
+                  </div>
+                  <div class="case-study-block">
+                    <div class="case-study-label solution">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 22v-4"/><path d="m19.07 19.07-2.83-2.83"/><path d="M22 12h-4"/><path d="m19.07 4.93-2.83 2.83"/></svg>
+                      <span>Solución Implementada</span>
+                    </div>
+                    <p>${p.solution}</p>
+                  </div>
+                  <div class="case-study-block">
+                    <div class="case-study-label deliverables">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Entregables Verificables</span>
+                    </div>
+                    <p>${p.deliverables}</p>
+                  </div>
+                </div>
+                ` : ''}
                 <div class="portfolio-tags">
                   ${p.tags.map(t => `<span class="portfolio-tag">${t}</span>`).join('')}
                 </div>
                 <div style="margin-top: auto;">
-                  <a href="#" class="btn btn-whatsapp portfolio-btn" data-whatsapp="${p.whatsappMsg}">
+                  <a href="#" class="btn btn-whatsapp portfolio-btn" data-whatsapp="${p.whatsappMsg}" data-cta="Cotizar proyecto similar">
                     ${getSvgIcon('whatsapp')}
                     <span>Cotizar proyecto similar</span>
                   </a>
@@ -1262,25 +1303,25 @@ const homeHtml = `<!DOCTYPE html>
         <div class="hero-content">
           <div class="hero-badge">
             <span class="hero-badge-pulse"></span>
-            <span>Soluciones digitales para empresas</span>
+            <span>Soluciones digitales para empresas en Perú</span>
           </div>
 
           <h1 class="hero-title">
-            Creamos páginas web y <span class="text-gradient">soluciones digitales.</span>
+            Diseño de páginas web y <span class="text-gradient">software a medida en Perú.</span>
           </h1>
 
           <p class="hero-desc">
-            Diseño y creación de páginas web para empresas y emprendedores en Perú. Desarrollamos tiendas virtuales, sistemas a medida y aulas virtuales, con atención desde Lima para tu proyecto digital.
+            Ayudamos a empresas y negocios a digitalizar sus ventas y automatizar procesos. Desarrollamos páginas web de carga ultrarrápida, tiendas virtuales y sistemas personalizados con código limpio y soporte continuo desde Lima.
           </p>
 
           <div class="hero-buttons">
-            <a href="servicios/" class="btn btn-primary btn-lg">
-              <span>Explorar servicios</span>
+            <a href="servicios/desarrollo-web/" class="btn btn-primary btn-lg" data-cta="Cotiza tu página web empresarial">
+              <span>Cotiza tu página web</span>
               ${getSvgIcon('arrowRight')}
             </a>
-            <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp="${data.company.name}: Hola, quisiera conversar sobre un proyecto digital para mi empresa.">
+            <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp="${data.company.name}: Hola, quisiera conversar sobre un proyecto digital para mi empresa." data-cta="Habla con un asesor por WhatsApp">
               ${getSvgIcon('whatsapp')}
-              <span>Hablemos de tu proyecto</span>
+              <span>Hablar con un asesor</span>
             </a>
           </div>
 
@@ -1347,7 +1388,7 @@ const homeHtml = `<!DOCTYPE html>
               <p class="service-card-desc">${s.shortDesc}</p>
               <div style="margin-top: auto;">
                 <a href="servicios/${s.slug}/" class="service-card-link">
-                  <span>Conocer más</span>
+                  <span>${s.primaryCta || 'Conocer más'}</span>
                   ${getSvgIcon('arrowRight')}
                 </a>
               </div>
@@ -1521,11 +1562,36 @@ const homeHtml = `<!DOCTYPE html>
                 <span class="portfolio-sector">${p.clientSector}</span>
                 <h3 class="portfolio-title">${p.title}</h3>
                 <p class="portfolio-desc">${p.desc}</p>
+                ${p.challenge ? `
+                <div class="portfolio-case-study">
+                  <div class="case-study-block">
+                    <div class="case-study-label challenge">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      <span>El Reto</span>
+                    </div>
+                    <p>${p.challenge}</p>
+                  </div>
+                  <div class="case-study-block">
+                    <div class="case-study-label solution">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 22v-4"/><path d="m19.07 19.07-2.83-2.83"/><path d="M22 12h-4"/><path d="m19.07 4.93-2.83 2.83"/></svg>
+                      <span>Solución Implementada</span>
+                    </div>
+                    <p>${p.solution}</p>
+                  </div>
+                  <div class="case-study-block">
+                    <div class="case-study-label deliverables">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Entregables Verificables</span>
+                    </div>
+                    <p>${p.deliverables}</p>
+                  </div>
+                </div>
+                ` : ''}
                 <div class="portfolio-tags">
                   ${p.tags.map(t => `<span class="portfolio-tag">${t}</span>`).join('')}
                 </div>
                 <div style="margin-top: auto;">
-                  <a href="#" class="btn btn-whatsapp portfolio-btn" data-whatsapp="${p.whatsappMsg}">
+                  <a href="#" class="btn btn-whatsapp portfolio-btn" data-whatsapp="${p.whatsappMsg}" data-cta="Cotizar proyecto similar">
                     ${getSvgIcon('whatsapp')}
                     <span>Cotizar proyecto similar</span>
                   </a>
