@@ -13,7 +13,8 @@
 
   # 2. Forzar HTTPS en producción (soporta proxy inverso con X-Forwarded-Proto)
   RewriteCond %{HTTP_HOST} ^odiseacloud\.com$ [NC]
-  RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+  # No redirigir si el proxy ya recibió HTTPS, aunque Apache reciba HTTP interno.
+  RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://odiseacloud.com/$1 [R=301,L]
 
