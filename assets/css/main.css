@@ -679,23 +679,62 @@ p {
 .hero-mascot-container {
   position: relative;
   width: 100%;
-  max-width: 460px;
+  max-width: 440px;
+  margin: 0 auto;
   border-radius: 28px;
-  padding: 12px;
-  background: linear-gradient(135deg, rgba(8, 102, 245, 0.12), rgba(0, 157, 255, 0.04));
-  box-shadow: 0 30px 60px -15px rgba(8, 102, 245, 0.22);
+  padding: 24px 20px 18px;
+  background: linear-gradient(180deg, #F0F7FF 0%, rgba(240, 247, 255, 0.6) 100%);
+  border: 1px solid rgba(8, 102, 245, 0.14);
+  box-shadow: 0 20px 45px -15px rgba(8, 102, 245, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-mascot-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(0, 157, 255, 0.16) 0%, rgba(8, 102, 245, 0.04) 60%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-mascot-img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  position: relative;
+  z-index: 2;
+  width: auto;
+  height: 410px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(8, 102, 245, 0.14));
+  transition: transform 0.4s ease;
 }
 
 .hero-mascot-container:hover .hero-mascot-img {
-  transform: scale(1.02);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.hero-mascot-status {
+  position: relative;
+  z-index: 3;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(8, 102, 245, 0.15);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(8, 102, 245, 0.08);
 }
 
 /* Tarjetas flotantes sobre la mascota */
@@ -1164,15 +1203,14 @@ p {
 .mascot-service-label svg { flex-shrink: 0; color: var(--color-primary); }
 .service-guide.guide-art-right { grid-template-columns: 1.3fr minmax(200px, .7fr); }
 .guide-art-right .service-guide-visual { order: 2; }
-.hero-mascot-container { background: radial-gradient(ellipse, #d3eaff 0%, #eff8ff88 55%, transparent 70%); box-shadow: none; padding: 12px 28px; }
-.hero-mascot-img { height: 470px; object-fit: contain; filter: drop-shadow(0 20px 22px #0866f51a); }
+/* hero mascot configurado limpiamente */
 @media (max-width: 900px) {
   .service-intro-grid, .service-intro-grid.mascot-on-left { grid-template-columns: 1fr; gap: 28px; }
   .service-intro-copy, .service-intro-copy .section-subtitle { text-align: center; }
   .service-intro-actions { justify-content: center; }
   .service-intro-art, .mascot-on-left .service-intro-art { order: 1; height: 310px; max-width: 360px; width: 100%; margin: 0 auto; }
   .service-intro { padding: 44px 0; }
-  .hero-mascot-img { height: 360px; }
+  
 }
 .footer-legal-links { flex-wrap: wrap; }
 .footer-claims { border: 1px solid currentColor; border-radius: 8px; padding: 6px 12px; }
@@ -2574,8 +2612,64 @@ button:disabled { opacity: .55; cursor: not-allowed; }
     justify-content: center;
   }
 
+  .hero-mascot-container {
+    max-width: 330px;
+    padding: 16px 12px 14px;
+    margin: 20px auto 0;
+    border-radius: 22px;
+  }
+
+  .hero-mascot-halo {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-mascot-img {
+    height: 270px;
+  }
+
   .floating-card {
-    display: none;
+    display: flex !important;
+    padding: 8px 12px;
+    gap: 8px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(6, 18, 43, 0.12);
+  }
+
+  .floating-card-1 {
+    top: -5px;
+    left: -10px;
+  }
+
+  .floating-card-2 {
+    bottom: 24px;
+    right: -10px;
+  }
+
+  .floating-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .floating-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .floating-title {
+    font-size: 0.78rem;
+    margin: 0;
+  }
+
+  .floating-subtitle {
+    font-size: 0.68rem;
+    margin: 0;
+  }
+
+  .hero-mascot-status {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    margin-top: 8px;
   }
 }
 
@@ -2599,5 +2693,49 @@ button:disabled { opacity: .55; cursor: not-allowed; }
   .footer-cta-metrics {
     flex-direction: column;
     gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-mascot-container {
+    max-width: 295px;
+    padding: 14px 10px 12px;
+  }
+
+  .hero-mascot-img {
+    height: 235px;
+  }
+
+  .floating-card-1 {
+    top: -8px;
+    left: -6px;
+  }
+
+  .floating-card-2 {
+    bottom: 20px;
+    right: -6px;
+  }
+
+  .floating-card {
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .floating-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .floating-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .floating-title {
+    font-size: 0.74rem;
+  }
+
+  .floating-subtitle {
+    font-size: 0.64rem;
   }
 }

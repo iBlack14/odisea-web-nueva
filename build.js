@@ -1419,6 +1419,7 @@ const homeHtml = `<!DOCTYPE html>
         <!-- Columna Derecha: Mascota Robótica Oficial en el Espacio con Elementos Tecnológicos -->
         <div class="hero-visual">
           <div class="hero-mascot-container">
+            <div class="hero-mascot-halo"></div>
             <img src="assets/images/mascota-izquierda.webp" alt="Mascota de OdiseaCloud presentando nuestras soluciones digitales" class="hero-mascot-img" width="1213" height="1296" fetchpriority="high">
             
             <!-- Tarjeta Flotante 1: Cloud & Web -->
@@ -1438,7 +1439,14 @@ const homeHtml = `<!DOCTYPE html>
                 <p class="floating-subtitle">Rendimiento cuidado</p>
               </div>
             </div>
+
+            <!-- Badge de Estado de la Mascota -->
+            <div class="hero-mascot-status">
+              <span class="status-pulse-dot"></span>
+              <span>Asistente digital • 100% en línea</span>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
