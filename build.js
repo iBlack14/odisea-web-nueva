@@ -168,52 +168,11 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
   `;
 }
 
-// Generador de Footer Reutilizable con URLs Limpias y Diseño Corporativo de Alto Nivel
+// Generador de Footer Reutilizable con URLs Limpias y Diseño Corporativo Equilibrado
 function renderFooter(relativePath = '') {
   return `
   <!-- FOOTER CORPORATIVO OFICIAL ODISEACLOUD -->
   <footer class="site-footer">
-    <!-- 1. Pre-Footer Banner CTA & Propuesta de Valor -->
-    <div class="container footer-cta-container">
-      <div class="footer-cta-card">
-        <div class="footer-cta-content">
-          <div class="footer-cta-badge">
-            ${getSvgIcon('sparkles')}
-            <span>¿Listo para dar el siguiente paso digital?</span>
-          </div>
-          <h3 class="footer-cta-title">Desarrollamos soluciones tecnológicas a la medida de tu empresa</h3>
-          <p class="footer-cta-desc">
-            Diseño web estratégico, tiendas online de alta conversión, servidores cloud y automatización de procesos con asesoría técnica personalizada y soporte continuo.
-          </p>
-          <div class="footer-cta-metrics">
-            <div class="footer-metric-pill">
-              ${getSvgIcon('check')}
-              <span>Despliegue ágil & escalable</span>
-            </div>
-            <div class="footer-metric-pill">
-              ${getSvgIcon('check')}
-              <span>99.9% Uptime garantizado</span>
-            </div>
-            <div class="footer-metric-pill">
-              ${getSvgIcon('check')}
-              <span>Soporte técnico directo en Perú</span>
-            </div>
-          </div>
-        </div>
-        <div class="footer-cta-actions">
-          <a href="#" class="btn btn-footer-wa" data-whatsapp="${data.company.name}: Hola, quisiera solicitar una cotización y asesoría técnica para mi proyecto digital." data-cta="Footer Pre-CTA">
-            ${getSvgIcon('whatsapp')}
-            <span>Cotizar por WhatsApp</span>
-          </a>
-          <a href="${relativePath}contacto/" class="btn btn-footer-contact">
-            <span>Solicitar Cotización</span>
-            ${getSvgIcon('arrowRight')}
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2. Grid Principal del Footer -->
     <div class="container footer-grid">
       <!-- Columna 1: Marca, Misión y Medios de Pago -->
       <div class="footer-brand-col">
@@ -335,7 +294,7 @@ function renderFooter(relativePath = '') {
       </div>
     </div>
 
-    <!-- 3. Barra Inferior de Derechos & Enlaces Legales -->
+    <!-- Barra Inferior de Derechos & Enlaces Legales -->
     <div class="footer-bottom-bar">
       <div class="container footer-bottom-flex">
         <div class="footer-copyright">
@@ -1833,116 +1792,114 @@ fs.writeFileSync(path.join(__dirname, '404.html'), `<!DOCTYPE html>
   ${renderHeader('', '/')}
 
   <main>
-    <!-- HERO ERROR 404 CON MASCOTA ESPACIAL -->
-    <section class="page-404-section">
+    <!-- HERO ERROR 404: COMPOSICIÓN LIMPIA Y LUMINOSA CON MASCOTA -->
+    <section class="page-404-hero">
       <div class="container page-404-grid">
-        <!-- Columna de texto y rescate -->
+        <!-- Columna Izquierda: Información y Acciones -->
         <div class="page-404-content">
-          <div class="page-404-badge">
+          <span class="section-badge">
             ${getSvgIcon('sparkles')}
-            <span>Error 404 • Fuera de Órbita</span>
-          </div>
+            Error 404
+          </span>
 
-          <div class="page-404-big-number">404</div>
-          <h1 class="page-404-title">¡Houston, nos salimos de la órbita digital!</h1>
+          <div class="page-404-number">404</div>
+          <h1 class="page-404-title">No encontramos esta página</h1>
           <p class="page-404-desc">
-            La coordenada o página que buscas no existe, ha cambiado de dirección o fue absorbida por un agujero negro en la nube. ¡No te preocupes, nuestra mascota y tripulación están listas para ayudarte a regresar a tierra firme!
+            La dirección que buscas no existe, cambió de lugar o no está disponible en este momento. ¡Nuestra mascota Odisea está aquí para ayudarte a retomar el rumbo!
           </p>
 
-          <div class="page-404-buttons">
-            <a href="/" class="btn-404-primary">
+          <div class="page-404-actions">
+            <a href="/" class="btn btn-primary btn-lg">
+              <span>Ir a la página de inicio</span>
               ${getSvgIcon('arrowRight')}
-              <span>Volver a Tierra Firme (Inicio)</span>
             </a>
-            <a href="/servicios/" class="btn-404-outline">
-              ${getSvgIcon('globe')}
-              <span>Explorar 15 Servicios Cloud</span>
+            <a href="/servicios/" class="btn btn-outline btn-lg">
+              <span>Explorar servicios (15)</span>
             </a>
           </div>
 
-          <a href="#" class="btn-404-wa" data-whatsapp="${data.company.name}: Hola equipo de OdiseaCloud, me encontré con un Error 404 al buscar un servicio y necesito asistencia personalizada.">
+          <a href="#" class="page-404-wa-link" data-whatsapp="${data.company.name}: Hola, intenté acceder a una página no encontrada (Error 404) y necesito ayuda comercial sobre sus servicios.">
             ${getSvgIcon('whatsapp')}
             <span>¿Buscabas algo específico? Escríbenos por WhatsApp</span>
           </a>
         </div>
 
-        <!-- Columna de la Mascota Oficial en el Espacio -->
-        <div class="page-404-mascot-wrapper">
-          <div class="mascot-glow-bg"></div>
+        <!-- Columna Derecha: Mascota Oficial en Composición Luminosa -->
+        <div class="page-404-mascot-box">
+          <div class="mascot-halo-glow"></div>
           <div class="mascot-orbit-ring mascot-orbit-ring-1"></div>
           <div class="mascot-orbit-ring mascot-orbit-ring-2"></div>
 
-          <!-- Badges flotantes de estado espacial -->
-          <div class="floating-404-badge badge-pos-1">
-            <span class="badge-dot red"></span>
-            <span>🛰️ Ruta 404 no encontrada</span>
+          <!-- Badges flotantes en tema limpio -->
+          <div class="mascot-float-badge badge-top-left">
+            <span class="float-badge-dot alert"></span>
+            <span>Ruta no encontrada</span>
           </div>
-          <div class="floating-404-badge badge-pos-2">
-            <span class="badge-dot cyan"></span>
-            <span>📡 Buscando señal del servidor...</span>
-          </div>
-          <div class="floating-404-badge badge-pos-3">
-            <span class="badge-dot green"></span>
-            <span>🛸 Mascota lista para el rescate</span>
+          <div class="mascot-float-badge badge-bottom-right">
+            <span class="float-badge-dot success"></span>
+            <span>Mascota Odisea al rescate</span>
           </div>
 
           <!-- Mascota Oficial -->
-          <img src="/assets/images/mascota-derecha.webp" alt="Mascota oficial de OdiseaCloud explorando el espacio" class="mascot-404-image" width="480" height="720" fetchpriority="high">
+          <img src="/assets/images/mascota-derecha.webp" alt="Mascota oficial de OdiseaCloud" class="mascot-404-img" width="480" height="720" fetchpriority="high">
         </div>
       </div>
     </section>
 
-    <!-- RUTAS POPULARES DE RECUPERACIÓN -->
-    <section class="page-404-routes-section">
+    <!-- SECCIÓN DE RUTAS FRECUENTES (LIGHT THEME) -->
+    <section class="section section-light">
       <div class="container">
-        <h2 class="page-404-routes-title">¿Buscabas alguno de nuestros servicios principales?</h2>
-        <p class="page-404-routes-sub">Recupera el rumbo con las soluciones más solicitadas por nuestros clientes:</p>
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+          <span class="section-badge">Rutas populares</span>
+          <h2 class="section-title">¿Buscabas alguno de nuestros servicios?</h2>
+          <p class="section-desc">Aquí tienes los accesos directos a las soluciones más consultadas:</p>
+        </div>
 
         <div class="page-404-routes-grid">
-          <a href="/servicios/desarrollo-web/" class="route-card">
-            <div class="route-icon">${getSvgIcon('globe')}</div>
-            <div class="route-info">
+          <a href="/servicios/desarrollo-web/" class="route-card-clean">
+            <div class="route-card-icon">${getSvgIcon('globe')}</div>
+            <div class="route-card-text">
               <strong>Diseño & Desarrollo Web</strong>
-              <span>Páginas corporativas modernas y optimizadas</span>
+              <span>Sitios corporativos modernos y optimizados</span>
             </div>
           </a>
 
-          <a href="/servicios/tiendas-virtuales/" class="route-card">
-            <div class="route-icon">${getSvgIcon('shopping-bag')}</div>
-            <div class="route-info">
+          <a href="/servicios/tiendas-virtuales/" class="route-card-clean">
+            <div class="route-card-icon">${getSvgIcon('shopping-bag')}</div>
+            <div class="route-card-text">
               <strong>Tiendas Virtuales</strong>
               <span>eCommerce con pagos seguros en soles y dólares</span>
             </div>
           </a>
 
-          <a href="/servicios/hosting-web/" class="route-card">
-            <div class="route-icon">${getSvgIcon('server')}</div>
-            <div class="route-info">
+          <a href="/servicios/hosting-web/" class="route-card-clean">
+            <div class="route-card-icon">${getSvgIcon('server')}</div>
+            <div class="route-card-text">
               <strong>Hosting SSD NVMe</strong>
               <span>Alojamiento ultrarrápido con cPanel y SSL gratis</span>
             </div>
           </a>
 
-          <a href="/servicios/correo-corporativo/" class="route-card">
-            <div class="route-icon">${getSvgIcon('mail')}</div>
-            <div class="route-info">
+          <a href="/servicios/correo-corporativo/" class="route-card-clean">
+            <div class="route-card-icon">${getSvgIcon('mail')}</div>
+            <div class="route-card-text">
               <strong>Correo Corporativo</strong>
               <span>Cuentas seguras antispam con tu propio dominio</span>
             </div>
           </a>
 
-          <a href="/portafolio/" class="route-card">
-            <div class="route-icon">${getSvgIcon('cpu')}</div>
-            <div class="route-info">
-              <strong>Portafolio de Trabajos</strong>
-              <span>Proyectos reales y casos de éxito desarrollados</span>
+          <a href="/portafolio/" class="route-card-clean">
+            <div class="route-card-icon">${getSvgIcon('cpu')}</div>
+            <div class="route-card-text">
+              <strong>Portafolio de Proyectos</strong>
+              <span>Casos de éxito y plataformas desarrolladas</span>
             </div>
           </a>
 
-          <a href="/contacto/" class="route-card">
-            <div class="route-icon">${getSvgIcon('zap')}</div>
-            <div class="route-info">
-              <strong>Cotizaciones & Contacto</strong>
+          <a href="/contacto/" class="route-card-clean">
+            <div class="route-card-icon">${getSvgIcon('zap')}</div>
+            <div class="route-card-text">
+              <strong>Contacto & Cotizaciones</strong>
               <span>Asesoría personalizada directa con nuestro equipo</span>
             </div>
           </a>
