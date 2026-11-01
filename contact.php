@@ -7,6 +7,8 @@
 require_once __DIR__ . '/mailer.php';
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Robots-Tag: noindex');
+header('Cache-Control: no-store');
+date_default_timezone_set('America/Lima');
 
 // Configuración de destino
 $destinatario = getenv('CONTACT_TO') ?: 'contacto@odiseacloud.com';
@@ -25,12 +27,22 @@ if (!empty($_POST['website_hp'])) {
     exit;
 }
 
-// 2. Sanitización y captura de datos
-$nombre = trim(filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
-$email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
-$telefono = trim(filter_input(INPUT_POST, 'telefono', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
-$servicio = trim(filter_input(INPUT_POST, 'servicio', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
-$mensaje = trim(filter_input(INPUT_POST, 'mensaje', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+// Datos de texto plano: no alterar el correo antes de validarlo.
+function contact_field(string $name): string {
+    $value = $_POST[$name] ?? '';
+    return is_string($value) ? trim($value) : '';
+}
+$nombre = contact_field('nombre');
+$email = contact_field('email');
+$telefono = contact_field('telefono');
+$servicio = contact_field('servicio');
+$mensaje = contact_field('mensaje');
+if (strlen($nombre) > 200 || strlen($email) > 254 || strlen($telefono) > 60 || strlen($servicio) > 200 || strlen($mensaje) > 20000
+    || preg_match('/[\r\n]/', $nombre . $email . $telefono . $servicio)) {
+    http_response_code(422);
+    echo json_encode(['success' => false, 'message' => 'Revisa la longitud y el formato de los campos.']);
+    exit;
+}
 
 // 3. Validaciones obligatorias
 if (empty($nombre) || strlen($nombre) < 2) {
@@ -45,7 +57,7 @@ if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-if (empty($mensaje) || mb_strlen($mensaje) < 10) {
+if (empty($mensaje) || preg_match_all('/./us', $mensaje) < 10) {
     http_response_code(422);
     echo json_encode(['success' => false, 'message' => 'El mensaje debe contener al menos 10 caracteres.']);
     exit;
@@ -67,24 +79,12 @@ $cuerpo_correo .= "---------------- MENSAJE ----------------\n";
 $cuerpo_correo .= "$mensaje\n";
 $cuerpo_correo .= "-----------------------------------------\n";
 
-$headers = [
-    'From' => 'no-reply@odiseacloud.com',
-    'Reply-To' => $email,
-    'X-Mailer' => 'PHP/' . phpversion(),
-    'Content-Type' => 'text/plain; charset=UTF-8'
-];
-
-$headers_str = '';
-foreach ($headers as $k => $v) {
-    $headers_str .= "$k: $v\r\n";
-}
-
-// 5. Envío mediante mail()
-$enviado = getenv('RESEND_API_KEY')
-    ? send_transactional_email($destinatario, $asunto, $cuerpo_correo, 'contact-' . bin2hex(random_bytes(12)), $email)
-    : @mail($destinatario, $asunto, $cuerpo_correo, $headers_str);
+// Resend es el único transporte de correo del formulario.
+$enviado = send_transactional_email($destinatario, $asunto, $cuerpo_correo, 'contact-' . bin2hex(random_bytes(12)), $email);
 
 if ($enviado) {
+    require_once __DIR__ . '/contact-automation.php';
+    notify_contact_automation(['nombre' => $nombre, 'email' => $email, 'telefono' => $telefono, 'servicio' => $servicio, 'mensaje' => $mensaje, 'origen' => 'odiseacloud.com/contacto', 'recibido_en' => date(DATE_ATOM)]);
     echo json_encode([
         'success' => true,
         'message' => '¡Tu mensaje ha sido enviado exitosamente! Nos pondremos en contacto contigo a la brevedad.'

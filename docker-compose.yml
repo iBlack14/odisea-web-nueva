@@ -18,6 +18,8 @@ services:
       - RESEND_FROM=${RESEND_FROM:-}
       - CLAIMS_TO=${CLAIMS_TO:-reclamos@odiseacloud.com}
       - CONTACT_TO=${CONTACT_TO:-contacto@odiseacloud.com}
+      - N8N_CONTACT_WEBHOOK_URL=${N8N_CONTACT_WEBHOOK_URL:-}
+      - N8N_CONTACT_WEBHOOK_TOKEN=${N8N_CONTACT_WEBHOOK_TOKEN:-}
       - CLAIMS_ENABLED=${CLAIMS_ENABLED:-false}
       - LEGAL_NAME=${LEGAL_NAME:-}
       - LEGAL_RUC=${LEGAL_RUC:-}

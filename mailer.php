@@ -3,7 +3,10 @@
 function send_transactional_email(string $to, string $subject, string $text, string $idempotency, ?string $replyTo = null): bool {
     $key = getenv('RESEND_API_KEY');
     $from = getenv('RESEND_FROM');
-    if (!$key || !$from || !filter_var($to, FILTER_VALIDATE_EMAIL)) return false;
+    if (!$key || !$from || !filter_var($to, FILTER_VALIDATE_EMAIL)) {
+        error_log('Resend: missing configuration or invalid recipient.');
+        return false;
+    }
     $payload = ['from' => $from, 'to' => [$to], 'subject' => $subject, 'text' => $text];
     if ($replyTo && filter_var($replyTo, FILTER_VALIDATE_EMAIL)) $payload['reply_to'] = $replyTo;
     $context = stream_context_create(['http' => [
@@ -13,7 +16,11 @@ function send_transactional_email(string $to, string $subject, string $text, str
     ]]);
     $response = @file_get_contents('https://api.resend.com/emails', false, $context);
     $status = $http_response_header[0] ?? '';
-    if ($response === false || !preg_match('/\s2\d\d\s/', $status)) return false;
+    if ($response === false || !preg_match('/\s2\d\d\s/', $status)) {
+        preg_match('/\s(\d{3})\s/', $status, $matches);
+        error_log('Resend: email request failed; HTTP ' . ($matches[1] ?? 'unavailable'));
+        return false;
+    }
     $result = json_decode($response, true);
     return !empty($result['id']);
 }

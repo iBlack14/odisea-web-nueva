@@ -108,9 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
 
+  let contactSubmitting = false;
   if (contactForm && formFeedback) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (contactSubmitting) return;
+      contactSubmitting = true;
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
@@ -170,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formFeedback.style.border = '1px solid #ef4444';
         formFeedback.textContent = 'Ocurrió un error al conectar con el servidor. Por favor, contáctanos directamente por WhatsApp.';
       } finally {
+        contactSubmitting = false;
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalBtnHtml;
