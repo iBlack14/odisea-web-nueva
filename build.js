@@ -28,6 +28,12 @@ function getSvgIcon(name) {
     mail: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`,
     'at-sign': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>`,
     'hard-drive': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="2" y1="12" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" x2="6.01" y1="16" y2="16"/><line x1="10" x2="10.01" y1="16" y2="16"/></svg>`,
+    sparkles: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>`,
+    arrowUp: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>`,
+    clock: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    mapPin: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>`,
+    book: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>`,
+    shieldCheck: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
     'shield-check': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>`,
     lock: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`,
     shuffle: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 5 5-5 5"/><path d="M4 20L21 3"/><path d="m21 16-5 5-5-5"/><path d="M15 15l-5 5H4"/></svg>`,
@@ -162,84 +168,194 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
   `;
 }
 
-// Generador de Footer Reutilizable con URLs Limpias
+// Generador de Footer Reutilizable con URLs Limpias y Diseño Corporativo de Alto Nivel
 function renderFooter(relativePath = '') {
   return `
-  <!-- FOOTER CORPORATIVO OFICIAL -->
+  <!-- FOOTER CORPORATIVO OFICIAL ODISEACLOUD -->
   <footer class="site-footer">
+    <!-- 1. Pre-Footer Banner CTA & Propuesta de Valor -->
+    <div class="container footer-cta-container">
+      <div class="footer-cta-card">
+        <div class="footer-cta-content">
+          <div class="footer-cta-badge">
+            ${getSvgIcon('sparkles')}
+            <span>¿Listo para dar el siguiente paso digital?</span>
+          </div>
+          <h3 class="footer-cta-title">Desarrollamos soluciones tecnológicas a la medida de tu empresa</h3>
+          <p class="footer-cta-desc">
+            Diseño web estratégico, tiendas online de alta conversión, servidores cloud y automatización de procesos con asesoría técnica personalizada y soporte continuo.
+          </p>
+          <div class="footer-cta-metrics">
+            <div class="footer-metric-pill">
+              ${getSvgIcon('check')}
+              <span>Despliegue ágil & escalable</span>
+            </div>
+            <div class="footer-metric-pill">
+              ${getSvgIcon('check')}
+              <span>99.9% Uptime garantizado</span>
+            </div>
+            <div class="footer-metric-pill">
+              ${getSvgIcon('check')}
+              <span>Soporte técnico directo en Perú</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="#" class="btn btn-footer-wa" data-whatsapp="${data.company.name}: Hola, quisiera solicitar una cotización y asesoría técnica para mi proyecto digital." data-cta="Footer Pre-CTA">
+            ${getSvgIcon('whatsapp')}
+            <span>Cotizar por WhatsApp</span>
+          </a>
+          <a href="${relativePath}contacto/" class="btn btn-footer-contact">
+            <span>Solicitar Cotización</span>
+            ${getSvgIcon('arrowRight')}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Grid Principal del Footer -->
     <div class="container footer-grid">
-      <!-- Columna 1: Marca y Misión -->
-      <div class="footer-brand">
-        <img src="${relativePath}assets/images/logo.webp" alt="OdiseaCloud" class="footer-logo" width="170" height="44">
-        <p class="footer-slogan">${data.company.slogan}</p>
+      <!-- Columna 1: Marca, Misión y Medios de Pago -->
+      <div class="footer-brand-col">
+        <a href="${relativePath || './'}" class="footer-logo-link" aria-label="OdiseaCloud - Inicio">
+          <img src="${relativePath}assets/images/logo.webp" alt="OdiseaCloud" class="footer-logo" width="170" height="44" loading="lazy">
+        </a>
+        <p class="footer-slogan">✦ ${data.company.slogan}</p>
         <p class="footer-desc">
-          Desarrollamos soluciones digitales, plataformas cloud y herramientas tecnológicas diseñadas para potenciar el crecimiento y solidez de tu empresa.
+          Agencia tecnológica especializada en desarrollo web de alto rendimiento, comercio electrónico, sistemas cloud y automatización de procesos para empresas en Perú y Latinoamérica.
         </p>
+
+        <!-- Indicador de Estado Operativo en Vivo -->
+        <div class="footer-status-indicator">
+          <span class="status-pulse-dot"></span>
+          <span class="status-text">Sistemas & Cloud: <strong>100% Operativos</strong></span>
+        </div>
+
+        <!-- Métodos de Pago y Seguridad -->
+        <div class="footer-trust-box">
+          <span class="footer-trust-label">Medios de pago & transferencias:</span>
+          <div class="footer-payments-list">
+            <span class="pay-badge" title="Yape"><img src="${relativePath}assets/images/yape.png" alt="Yape" width="26" height="26" loading="lazy"><span>Yape</span></span>
+            <span class="pay-badge" title="Plin"><img src="${relativePath}assets/images/plin.png" alt="Plin" width="26" height="26" loading="lazy"><span>Plin</span></span>
+            <span class="pay-badge" title="Visa"><img src="${relativePath}assets/images/visa.svg" alt="Visa" width="32" height="20" loading="lazy"></span>
+            <span class="pay-badge" title="Mastercard"><img src="${relativePath}assets/images/mastercard.svg" alt="Mastercard" width="30" height="20" loading="lazy"></span>
+          </div>
+        </div>
       </div>
 
-      <!-- Columna 2: Servicios Principales -->
-      <div class="footer-column">
-        <h4 class="footer-column-title">Servicios Principales</h4>
+      <!-- Columna 2: Servicios de Desarrollo & Software -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Desarrollo Web & Apps</h4>
         <ul class="footer-links">
           <li><a href="${relativePath}servicios/desarrollo-web/" class="footer-link">Diseño y desarrollo web</a></li>
-          <li><a href="${relativePath}servicios/tiendas-virtuales/" class="footer-link">Tiendas virtuales y eCommerce</a></li>
-          <li><a href="${relativePath}servicios/aulas-virtuales/" class="footer-link">Aulas virtuales y eLearning</a></li>
+          <li><a href="${relativePath}servicios/tiendas-virtuales/" class="footer-link">Tiendas virtuales (eCommerce) <span class="footer-pill-tag">Top</span></a></li>
           <li><a href="${relativePath}servicios/sistemas-web/" class="footer-link">Sistemas web a medida</a></li>
-          <li><a href="${relativePath}servicios/hosting-web/" class="footer-link">Hosting y servidores VPS</a></li>
-          <li><a href="${relativePath}servicios/correo-corporativo/" class="footer-link">Correo corporativo seguro</a></li>
-          <li><a href="${relativePath}servicios/" class="footer-link" style="color: var(--color-tech); font-weight: 600;">Ver los 15 servicios &rarr;</a></li>
+          <li><a href="${relativePath}servicios/aulas-virtuales/" class="footer-link">Aulas virtuales y eLearning</a></li>
+          <li><a href="${relativePath}servicios/rediseno-web/" class="footer-link">Rediseño y modernización</a></li>
+          <li><a href="${relativePath}servicios/integraciones-automatizaciones/" class="footer-link">Automatización y CRM</a></li>
         </ul>
       </div>
 
-      <!-- Columna 3: Enlaces de Navegación -->
-      <div class="footer-column">
-        <h4 class="footer-column-title">Navegación</h4>
+      <!-- Columna 3: Servicios Cloud & Optimización -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Cloud & Infraestructura</h4>
+        <ul class="footer-links">
+          <li><a href="${relativePath}servicios/hosting-web/" class="footer-link">Hosting web SSD NVMe <span class="footer-pill-cloud">NVMe</span></a></li>
+          <li><a href="${relativePath}servicios/servidores-vps/" class="footer-link">Servidores VPS y Cloud</a></li>
+          <li><a href="${relativePath}servicios/correo-corporativo/" class="footer-link">Correo corporativo seguro</a></li>
+          <li><a href="${relativePath}servicios/dominios/" class="footer-link">Registro de dominios</a></li>
+          <li><a href="${relativePath}servicios/seguridad-web/" class="footer-link">Seguridad web & SSL</a></li>
+          <li><a href="${relativePath}servicios/optimizacion-velocidad/" class="footer-link">Optimización Core Web Vitals</a></li>
+          <li><a href="${relativePath}servicios/seo-tecnico/" class="footer-link">SEO técnico y visibilidad</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Navegación & Empresa -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Compañía</h4>
         <ul class="footer-links">
           <li><a href="${relativePath || './'}" class="footer-link">Inicio</a></li>
           <li><a href="${relativePath}nosotros/" class="footer-link">Sobre Nosotros</a></li>
-          <li><a href="${relativePath}portafolio/" class="footer-link">Portafolio de Trabajos</a></li>
+          <li><a href="${relativePath}portafolio/" class="footer-link">Portafolio de Proyectos</a></li>
           <li><a href="${relativePath}soluciones/" class="footer-link">Soluciones por Sector</a></li>
-          <li><a href="${relativePath}contacto/" class="footer-link">Canales de Contacto</a></li>
+          <li><a href="${relativePath}servicios/" class="footer-link footer-link-highlight">Catálogo de 15 servicios &rarr;</a></li>
+          <li><a href="${relativePath}contacto/" class="footer-link">Cotizaciones y Contacto</a></li>
         </ul>
+
+        <!-- Acceso al Libro de Reclamaciones Oficial -->
+        <div class="footer-libro-wrap">
+          <a href="${relativePath}libro-de-reclamaciones/" class="footer-libro-card" title="Libro de Reclamaciones OdiseaCloud - Conforme a Ley N° 29571">
+            <span class="libro-card-icon">${getSvgIcon('book')}</span>
+            <div class="libro-card-text">
+              <strong>Libro de Reclamaciones</strong>
+              <small>Conforme a Ley N° 29571</small>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <!-- Columna 4: Canales Directos -->
-      <div class="footer-column">
-        <h4 class="footer-column-title">Contacto Directo</h4>
-        <div class="footer-contact-item">
-          <span class="footer-contact-icon">${getSvgIcon('whatsapp')}</span>
-          <div>
-            <strong>WhatsApp Oficial:</strong><br>
-            <a href="#" class="footer-link" data-whatsapp="${data.company.name}: Hola, quisiera hacer una consulta comercial."><span class="display-whatsapp">${data.company.whatsappDisplay}</span></a>
+      <!-- Columna 5: Contacto Directo & Atención -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Atención & Contacto</h4>
+        <div class="footer-contact-cards">
+          <a href="#" class="footer-contact-box" data-whatsapp="${data.company.name}: Hola, quisiera hacer una consulta comercial sobre sus servicios.">
+            <span class="footer-contact-icon-box wa-accent">${getSvgIcon('whatsapp')}</span>
+            <div class="footer-contact-info">
+              <span class="contact-card-sub">WhatsApp Inmediato</span>
+              <strong class="contact-card-main display-whatsapp">${data.company.whatsappDisplay}</strong>
+              <span class="contact-card-badge">Respuesta promedio &lt; 15 min</span>
+            </div>
+          </a>
+
+          <a href="#" class="footer-contact-box" data-mailto="${data.company.name}: Consulta comercial desde el sitio web.">
+            <span class="footer-contact-icon-box mail-accent">${getSvgIcon('mail')}</span>
+            <div class="footer-contact-info">
+              <span class="contact-card-sub">Correo Oficial</span>
+              <strong class="contact-card-main display-email">${data.company.email}</strong>
+              <span class="contact-card-badge">Atención a empresas</span>
+            </div>
+          </a>
+
+          <div class="footer-info-item">
+            <span class="info-icon">${getSvgIcon('clock')}</span>
+            <div class="info-text">
+              <strong>Horario de atención:</strong>
+              <p>${data.company.schedule}</p>
+            </div>
           </div>
-        </div>
-        <div class="footer-contact-item">
-          <span class="footer-contact-icon">${getSvgIcon('mail')}</span>
-          <div>
-            <strong>Correo Electrónico:</strong><br>
-            <a href="#" class="footer-link" data-mailto="${data.company.name}: Consulta comercial desde el sitio web."><span class="display-email">${data.company.email}</span></a>
-          </div>
-        </div>
-        <div class="footer-contact-item">
-          <span class="footer-contact-icon">${getSvgIcon('globe')}</span>
-          <div>
-            <strong>Horario de Atención:</strong><br>
-            <span style="font-size: 0.85rem;">${data.company.schedule}</span>
+
+          <div class="footer-info-item">
+            <span class="info-icon">${getSvgIcon('mapPin')}</span>
+            <div class="info-text">
+              <strong>Sede principal:</strong>
+              <p>Lima, Perú 🇵🇪 • Cobertura en toda Latinoamérica</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Barra Inferior de Derechos -->
-    <div class="container footer-bottom">
-      <div>
-        &copy; 2026 <strong>ODISEACLOUD</strong>. Todos los derechos reservados.
-      </div>
-      <div class="footer-legal-links">
-        <a href="${relativePath}terminos/" class="footer-link">Términos de servicio</a>
-        <a href="${relativePath}privacidad/" class="footer-link">Política de privacidad</a>
-        <a href="${relativePath}cookies/" class="footer-link">Política de cookies</a>
-        <a href="${relativePath}libro-de-reclamaciones/" class="footer-link footer-claims">Libro de Reclamaciones</a>
+    <!-- 3. Barra Inferior de Derechos & Enlaces Legales -->
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-flex">
+        <div class="footer-copyright">
+          &copy; 2026 <strong>ODISEACLOUD</strong>. Todos los derechos reservados. Desarrollado con tecnología web y cloud de alto rendimiento.
+        </div>
+        <div class="footer-legal-nav">
+          <a href="${relativePath}terminos/" class="footer-legal-link">Términos de servicio</a>
+          <span class="legal-separator">•</span>
+          <a href="${relativePath}privacidad/" class="footer-legal-link">Política de privacidad</a>
+          <span class="legal-separator">•</span>
+          <a href="${relativePath}cookies/" class="footer-legal-link">Política de cookies</a>
+          <span class="legal-separator">•</span>
+          <a href="${relativePath}libro-de-reclamaciones/" class="footer-legal-link">Libro de Reclamaciones</a>
+        </div>
+        <div class="footer-scroll-top">
+          <button type="button" class="btn-scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'});" aria-label="Volver arriba">
+            <span>Subir</span>
+            ${getSvgIcon('arrowUp')}
+          </button>
+        </div>
       </div>
     </div>
   </footer>
