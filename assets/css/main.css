@@ -1731,6 +1731,116 @@ button:disabled { opacity: .55; cursor: not-allowed; }
 }
 
 /* ==========================================================================
+   POLÍTICAS Y COMPROMISOS CORPORATIVOS
+   ========================================================================== */
+.company-policies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.company-policy-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 34px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.company-policy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(8, 102, 245, 0.35);
+}
+
+.policy-card-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.policy-card-icon-wrap.icon-warranty {
+  background-color: rgba(5, 150, 105, 0.12);
+  color: #059669;
+}
+
+.policy-card-icon-wrap.icon-payment {
+  background-color: rgba(8, 102, 245, 0.12);
+  color: var(--color-primary);
+}
+
+.policy-card-icon-wrap.icon-ownership {
+  background-color: rgba(14, 165, 233, 0.12);
+  color: #0284c7;
+}
+
+.policy-card-icon-wrap.icon-security {
+  background-color: rgba(99, 102, 241, 0.12);
+  color: #6366f1;
+}
+
+.policy-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.policy-title {
+  font-size: 1.25rem;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.policy-desc {
+  font-size: 0.93rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.policy-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--color-border);
+  padding-top: 18px;
+  margin-top: auto;
+}
+
+.policy-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.45;
+}
+
+.policy-checklist li svg {
+  color: #059669;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
    PROCESO DE TRABAJO
    ========================================================================== */
 .workflow-grid {

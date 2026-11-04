@@ -981,6 +981,97 @@ const nosotrosHtml = `<!DOCTYPE html>
       </div>
     </section>
 
+    <!-- POLÍTICAS Y COMPROMISOS CORPORATIVOS -->
+    <section class="section section-soft-blue" id="politicas-servicio">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 48px auto;">
+          <span class="section-badge">Compromiso y Transparencia</span>
+          <h2 class="section-title">Políticas de servicio y garantías para tu empresa</h2>
+          <p class="section-subtitle">
+            Establecemos reglas de juego claras desde el primer día. Sin letras pequeñas, sin sorpresas técnicas ni sobrecostos imprevistos.
+          </p>
+        </div>
+
+        <div class="company-policies-grid">
+          <!-- Política 1: Garantía Técnica -->
+          <div class="company-policy-card">
+            <div class="policy-card-icon-wrap icon-warranty">
+              ${getSvgIcon('shield-check')}
+            </div>
+            <div class="policy-card-body">
+              <span class="policy-tag">Garantía Asegurada</span>
+              <h3 class="policy-title">Garantía Técnica Post-Entrega</h3>
+              <p class="policy-desc">
+                Tras la publicación oficial de tu página web, tienda virtual o sistema, cuentas con <strong>30 días calendario de garantía de soporte técnico sin costo adicional</strong> para resolver cualquier ajuste, incidencia o detalle imprevisto del alcance acordado.
+              </p>
+              <ul class="policy-checklist">
+                <li>${getSvgIcon('check')} <span>Corrección inmediata de errores de código o diseño.</span></li>
+                <li>${getSvgIcon('check')} <span>Pruebas de funcionamiento y navegación asistidas.</span></li>
+                <li>${getSvgIcon('check')} <span>Acompañamiento en el lanzamiento a producción.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Política 2: Pagos e Hitos -->
+          <div class="company-policy-card">
+            <div class="policy-card-icon-wrap icon-payment">
+              ${getSvgIcon('trending-up')}
+            </div>
+            <div class="policy-card-body">
+              <span class="policy-tag">Presupuesto Cerrado</span>
+              <h3 class="policy-title">Modalidad de Pagos por Hitos (50 / 50)</h3>
+              <p class="policy-desc">
+                Cuidamos tu inversión dividiendo el pago en dos momentos justos: <strong>50% de anticipo</strong> para iniciar la arquitectura técnica y el <strong>50% final contra entrega y conformidad</strong> tras probar tu web en el entorno privado.
+              </p>
+              <ul class="policy-checklist">
+                <li>${getSvgIcon('check')} <span>Transferencia bancaria directa (BCP, BBVA, Interbank).</span></li>
+                <li>${getSvgIcon('check')} <span>Facilidad inmediata con billeteras digitales Yape y Plin.</span></li>
+                <li>${getSvgIcon('check')} <span>Sin cobros sorpresa: el precio acordado en la propuesta no cambia.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Política 3: Propiedad Intelectual -->
+          <div class="company-policy-card">
+            <div class="policy-card-icon-wrap icon-ownership">
+              ${getSvgIcon('lock')}
+            </div>
+            <div class="policy-card-body">
+              <span class="policy-tag">Cero Ataduras</span>
+              <h3 class="policy-title">100% Titularidad y Propiedad del Cliente</h3>
+              <p class="policy-desc">
+                Tu proyecto es tuyo. Al finalizar y cancelar el saldo de tu desarrollo, te entregamos todas las <strong>credenciales maestras, archivos fuente y accesos administrativos</strong>. No encriptamos código ni retenemos tus dominios.
+              </p>
+              <ul class="policy-checklist">
+                <li>${getSvgIcon('check')} <span>Código limpio, modular y completamente transferible.</span></li>
+                <li>${getSvgIcon('check')} <span>Registro y titularidad de dominios a nombre de tu empresa.</span></li>
+                <li>${getSvgIcon('check')} <span>Libertad total para gestionar tu infraestructura digital.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Política 4: Confidencialidad -->
+          <div class="company-policy-card">
+            <div class="policy-card-icon-wrap icon-security">
+              ${getSvgIcon('mail')}
+            </div>
+            <div class="policy-card-body">
+              <span class="policy-tag">Privacidad Estricta</span>
+              <h3 class="policy-title">Confidencialidad y Protección de Datos</h3>
+              <p class="policy-desc">
+                Tratamos tus contraseñas, bases de datos comerciales, catálogos de clientes y estrategias con estricta reserva profesional. Nunca compartimos ni comercializamos información de nuestros clientes con terceros.
+              </p>
+              <ul class="policy-checklist">
+                <li>${getSvgIcon('check')} <span>Canales cifrados y seguros para el intercambio de accesos.</span></li>
+                <li>${getSvgIcon('check')} <span>Tratamiento conforme a la Ley de Protección de Datos Personales.</span></li>
+                <li>${getSvgIcon('check')} <span>Compromiso formal de no divulgación en cada propuesta.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA FINAL -->
     <section class="section section-dark">
       <div class="container">
