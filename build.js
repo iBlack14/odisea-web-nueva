@@ -517,6 +517,141 @@ data.services.forEach(service => {
         <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
         <a href="#" class="btn btn-primary" data-whatsapp="${service.whatsappMessage}" data-cta="${service.primaryCta || 'Conversemos sobre tu proyecto'}">${service.primaryCta || 'Conversemos sobre tu proyecto'}</a>
       </div></div></section>
+    ${service.guideContent ? `
+    <!-- GUÍA PASO A PASO Y BENEFICIO DE MIGRACIÓN GRATIS CON HOSTING -->
+    <section class="section section-soft-blue service-step-guide-section">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 48px auto;">
+          <span class="section-badge">${service.guideContent.badge}</span>
+          <h2 class="section-title">${service.guideContent.title}</h2>
+          <p class="section-subtitle">${service.guideContent.subtitle}</p>
+        </div>
+
+        <!-- TARJETA DESTACADA: MIGRACIÓN TÉCNICA GRATIS CON HOSTING -->
+        <div class="migration-promo-card">
+          <div class="migration-promo-badge">
+            ${getSvgIcon('shield-check')}
+            <span>${service.guideContent.promo.tag}</span>
+          </div>
+          <h3 class="migration-promo-headline">${service.guideContent.promo.headline}</h3>
+          <p class="migration-promo-desc">${service.guideContent.promo.description}</p>
+          
+          <div class="migration-promo-highlight">
+            <div class="promo-highlight-item">
+              <div class="promo-highlight-icon">${getSvgIcon('check')}</div>
+              <div>
+                <strong>Mano de obra y migración técnica:</strong>
+                <span>S/. 0 (100% GRATIS)</span>
+              </div>
+            </div>
+            <div class="promo-highlight-item">
+              <div class="promo-highlight-icon">${getSvgIcon('server')}</div>
+              <div>
+                <strong>Tu única inversión:</strong>
+                <span>Tu plan de Hosting Web y/o Dominio</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp="${service.guideContent.promo.ctaMsg}" data-cta="${service.guideContent.promo.ctaText}">
+              ${getSvgIcon('whatsapp')}
+              <span>${service.guideContent.promo.ctaText}</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PASOS DE LA GUÍA -->
+        <div class="guide-steps-grid">
+          ${service.guideContent.steps.map(step => `
+            <div class="guide-step-card">
+              <div class="guide-step-number">${step.number}</div>
+              <h4 class="guide-step-title">${step.title}</h4>
+              <p class="guide-step-desc">${step.desc}</p>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- COMPARATIVO: HACERLO SOLO VS CON ODISEACLOUD -->
+        ${service.guideContent.comparison ? `
+        <div class="guide-comparison-card">
+          <h3 style="text-align: center; margin-bottom: 28px; color: var(--color-navy); font-size: 1.35rem;">
+            ${service.guideContent.comparison.title}
+          </h3>
+          <div class="guide-comparison-grid">
+            <div class="comparison-column risks">
+              <h4 class="comparison-col-title risks">
+                ${getSvgIcon('x')} Riesgos de intentar migrar solo:
+              </h4>
+              <ul>
+                ${service.guideContent.comparison.risks.map(r => `
+                  <li>${getSvgIcon('x')} <span>${r}</span></li>
+                `).join('')}
+              </ul>
+            </div>
+            <div class="comparison-column benefits">
+              <h4 class="comparison-col-title benefits">
+                ${getSvgIcon('check')} Migrando con OdiseaCloud:
+              </h4>
+              <ul>
+                ${service.guideContent.comparison.odiseaBenefits.map(b => `
+                  <li>${getSvgIcon('check')} <span>${b}</span></li>
+                `).join('')}
+              </ul>
+            </div>
+          </div>
+        </div>
+        ` : ''}
+      </div>
+    </section>
+    ` : ''}
+
+    ${service.migrationOffer ? `
+    <!-- BANNER DESTACADO MIGRACIÓN GRATIS EN HOSTING -->
+    <section class="section">
+      <div class="container">
+        <div class="migration-banner-inline">
+          <div class="migration-banner-copy">
+            <span class="section-badge">${service.migrationOffer.badge}</span>
+            <h2>${service.migrationOffer.title}</h2>
+            <p>${service.migrationOffer.desc}</p>
+            <div style="margin-top: 24px;">
+              <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp="${service.migrationOffer.ctaMsg}" data-cta="${service.migrationOffer.ctaText}">
+                ${getSvgIcon('whatsapp')}
+                <span>${service.migrationOffer.ctaText}</span>
+              </a>
+            </div>
+          </div>
+          <div class="migration-banner-art">
+            <img src="../../assets/images/mascotas/migracion-web.webp" alt="Migración gratuita de hosting OdiseaCloud" width="400" height="500" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    ` : ''}
+
+    ${service.transferGuide ? `
+    <!-- GUÍA DE TRANSFERENCIA DE DOMINIO -->
+    <section class="section section-soft-blue">
+      <div class="container">
+        <div class="section-header" style="text-align: center; max-width: 750px; margin: 0 auto 40px auto;">
+          <span class="section-badge">${service.transferGuide.badge}</span>
+          <h2 class="section-title">${service.transferGuide.title}</h2>
+          <p class="section-subtitle">${service.transferGuide.desc}</p>
+        </div>
+        <div class="workflow-grid">
+          ${service.transferGuide.steps.map(s => `
+            <div class="workflow-card">
+              <div class="workflow-step-badge">Paso ${s.step}</div>
+              <h3 class="workflow-title">${s.title}</h3>
+              <p class="workflow-desc">${s.desc}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+    ` : ''}
+
     <!-- PROCESO DE TRABAJO -->
     <section class="section section-dark">
       <div class="container">

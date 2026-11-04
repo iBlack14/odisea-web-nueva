@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../automatizacion"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "odisea web nueva"
+	}
+}

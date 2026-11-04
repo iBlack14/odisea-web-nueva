@@ -515,6 +515,10 @@
         {
           "q": "¿Ustedes me ayudan a configurar mi sitio en el hosting?",
           "a": "Por supuesto. Nos encargamos de la configuración de DNS, creación de bases de datos, instalación de certificados SSL y puesta a punto de tu web."
+        },
+        {
+          "q": "¿Si contrato hosting con ustedes, me ayudan a migrar mi web actual?",
+          "a": "Sí, la migración técnica es 100% gratuita. Tú solo abonas tu plan de hosting y nosotros trasladamos tus archivos, bases de datos y correos sin cortes de servicio."
         }
       ],
       "seoTitle": "Hosting web para empresas en Perú | OdiseaCloud",
@@ -527,7 +531,14 @@
       },
       "primaryCta": "Contrata tu hosting empresarial",
       "targetAudience": "Empresas y profesionales que buscan máxima estabilidad, certificados SSL incluidos y soporte técnico en español sin caídas inesperadas.",
-      "clientReceives": "Alojamiento web en servidores de alta velocidad (NVMe), copias de seguridad periódicas, cPanel intuitivo y soporte técnico directo."
+      "clientReceives": "Alojamiento web en servidores de alta velocidad (NVMe), copias de seguridad periódicas, cPanel intuitivo y soporte técnico directo.",
+      "migrationOffer": {
+        "badge": "Beneficio Exclusivo",
+        "title": "¿Ya tienes tu página en otro proveedor? Te la migramos GRATIS a OdiseaCloud",
+        "desc": "Si sufres por servidores lentos, caídas frecuentes o soporte deficiente, cámbiate a OdiseaCloud. Al contratar tu plan de Hosting Empresarial, nuestro equipo técnico realiza la migración completa de tu web, base de datos y cuentas de correo sin costo adicional de mano de obra.",
+        "ctaText": "Quiero migrar mi web a OdiseaCloud",
+        "ctaMsg": "Hola, OdiseaCloud. Tengo mi página web en otro proveedor y quisiera migrarla gratis a su hosting."
+      }
     },
     {
       "id": 8,
@@ -620,6 +631,10 @@
         {
           "q": "¿El dominio queda registrado a mi nombre?",
           "a": "Absolutamente. La titularidad legal y propiedad del dominio pertenece 100% al cliente."
+        },
+        {
+          "q": "¿Cómo puedo transferir mi dominio .com o .pe a OdiseaCloud?",
+          "a": "Solo debes solicitar el código de transferencia (EPP/Auth-Code) a tu registrador actual y asegurarte de que el dominio esté desbloqueado. Nosotros gestionamos el traspaso y configuramos las DNS correctamente."
         }
       ],
       "seoTitle": "Registro y configuración de dominios en Perú | OdiseaCloud",
@@ -632,7 +647,29 @@
       },
       "primaryCta": "Registra o traslada tu dominio",
       "targetAudience": "Negocios que van a lanzar su marca o desean asegurar y proteger extensiones estratégicas (.com, .pe, .com.pe) para su presencia en internet.",
-      "clientReceives": "Registro oficial a nombre de tu empresa, panel de administración de DNS y configuración de registros de correo y hosting."
+      "clientReceives": "Registro oficial a nombre de tu empresa, panel de administración de DNS y configuración de registros de correo y hosting.",
+      "transferGuide": {
+        "badge": "Traslado Fácil",
+        "title": "¿Cómo transferir tu dominio actual a OdiseaCloud?",
+        "desc": "Unifica tu dominio, hosting y correos corporativos con un solo proveedor en Perú. Olvídate de tratar con intermediarios extranjeros.",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Solicita tu código EPP / Auth-Code",
+            "desc": "Desde el panel de tu registrador actual solicita el código de autorización y desbloquea el dominio para transferencia."
+          },
+          {
+            "step": "2",
+            "title": "Inicia el traslado con nosotros",
+            "desc": "Nos proporcionas el nombre del dominio y el código EPP. Gestionamos la solicitud formal ante ICANN o Punto.pe."
+          },
+          {
+            "step": "3",
+            "title": "Acepta la validación por correo",
+            "desc": "Recibirás un enlace de confirmación por email para autorizar el traspaso. La transferencia se completa sin alterar el funcionamiento de tu web."
+          }
+        ]
+      }
     },
     {
       "id": 10,
@@ -805,7 +842,7 @@
       "categoryName": "Seguridad y Mantenimiento",
       "featured": false,
       "shortDesc": "Traslado seguro de sitios web, tiendas y bases de datos a un nuevo hosting sin pérdida de datos ni caídas.",
-      "heroTagline": "Cambia de hosting sin interrumpir las operaciones de tu negocio",
+      "heroTagline": "Cambia de hosting y traslada tu dominio sin perder correos, ventas ni caídas técnicas",
       "fullDesc": "Mudar un sitio web entre servidores requiere precisión para no perder correos, pedidos ni posicionamiento. Realizamos la transferencia completa de archivos, bases de datos y configuraciones con cero tiempo de inactividad visible.",
       "icon": "shuffle",
       "whatsappMessage": "Hola, OdiseaCloud. Quisiera solicitar el servicio de migración de mi página web a un nuevo hosting.",
@@ -832,8 +869,24 @@
       ],
       "faqs": [
         {
-          "q": "¿Mi sitio web dejará de funcionar durante la migración?",
-          "a": "No. Preparamos y probamos el sitio en el nuevo servidor mientras el actual sigue activo. La conmutación de DNS es imperceptible para tus usuarios."
+          "q": "¿La migración es realmente gratuita o tiene costos ocultos?",
+          "a": "El trabajo técnico de migración es 100% gratuito. No cobramos honorarios por clonar, mover ni configurar tu web. El único pago que realizas es la contratación de tu plan anual de Hosting Web o Cloud en OdiseaCloud (y tu dominio si decides registrarlo o renovarlo con nosotros)."
+        },
+        {
+          "q": "¿Mi página web se caerá o dejará de recibir visitas durante la mudanza?",
+          "a": "No. Aplicamos una metodología de conmutación en caliente: tu sitio antiguo permanece activo mientras nosotros preparamos y probamos todo en el nuevo servidor. La transición de DNS se realiza sin que los usuarios perciban ninguna interrupción."
+        },
+        {
+          "q": "¿Qué pasará con mis correos corporativos y mensajes antiguos?",
+          "a": "Migramos todos tus buzones con su historial completo de mensajes recibidos, enviados y carpetas. Además, te asesoramos en la configuración en Outlook, Gmail o en tus teléfonos para que no pierdas comunicación."
+        },
+        {
+          "q": "¿Qué necesito entregarles para que inicien la migración?",
+          "a": "Solo necesitamos los accesos a tu panel de hosting actual (como cPanel, Plesk o acceso FTP) o credenciales de administrador de WordPress. Nosotros nos encargamos de todo el proceso técnico."
+        },
+        {
+          "q": "¿Puedo conservar mi dominio si está registrado en otra empresa?",
+          "a": "Sí, totalmente. Puedes mantener tu dominio donde está y solo apuntar los DNS a OdiseaCloud, o si lo prefieres, te ayudamos a transferir la administración técnica de tu dominio (.com, .pe) a OdiseaCloud para gestionar todo en un solo lugar."
         }
       ],
       "seoTitle": "Migración de páginas web y hosting en Perú | OdiseaCloud",
@@ -846,7 +899,61 @@
       },
       "primaryCta": "Migra tu web sin perder datos",
       "targetAudience": "Dueños de sitios web descontentos con su proveedor actual de hosting que desean cambiar de servidor con cero tiempo de inactividad.",
-      "clientReceives": "Traslado completo de archivos, bases de datos y buzones de correo, verificación exhaustiva y cambio de DNS sin interrupción del servicio."
+      "clientReceives": "Traslado completo de archivos, bases de datos y buzones de correo, verificación exhaustiva y cambio de DNS sin interrupción del servicio.",
+      "guideContent": {
+        "badge": "Guía Práctica & Beneficio Exclusivo",
+        "title": "Cómo migrar tu dominio y hosting sin caídas (Paso a Paso)",
+        "subtitle": "Mudar tu sitio web no tiene por qué ser una pesadilla técnica. Descubre el proceso real y aprovecha nuestra propuesta: tú solo adquieres tu hosting/dominio con nosotros y nosotros hacemos todo el trabajo técnico de migración 100% gratis.",
+        "promo": {
+          "tag": "Beneficio Especial OdiseaCloud",
+          "headline": "Migración Técnica 100% GRATIS al contratar tu Hosting y Dominio",
+          "description": "Cero costo de mano de obra. Al contratar tu plan de Hosting Web o Servidor Cloud con OdiseaCloud (y tu dominio), nuestro equipo se encarga de trasladar tu página web, bases de datos y correos corporativos sin costo adicional.",
+          "ctaText": "Solicitar migración gratis con hosting",
+          "ctaMsg": "Hola, OdiseaCloud. Tengo mi web en otro proveedor y quisiera migrarla gratis al contratar su hosting y dominio."
+        },
+        "steps": [
+          {
+            "number": "01",
+            "title": "Relevamiento de tu web y accesos actuales",
+            "desc": "Nos proporcionas los datos de acceso de tu hosting o panel actual (cPanel, WordPress, FTP). Evaluamos el tamaño de tu sitio, bases de datos y la cantidad de correos corporativos activos."
+          },
+          {
+            "number": "02",
+            "title": "Respaldo completo sin tocar tu web en vivo",
+            "desc": "Generamos una copia espejo de todos tus archivos, código, imágenes, bases de datos MySQL y buzones de correo. Tu sitio web actual sigue 100% operativo para tus clientes sin alteraciones."
+          },
+          {
+            "number": "03",
+            "title": "Montaje y pruebas en servidores OdiseaCloud",
+            "desc": "Instalamos la copia en nuestros servidores de alta velocidad NVMe. Probamos en un enlace temporal que los formularios, plugins, enlaces y pasarelas de pago funcionen a la perfección antes de cualquier cambio público."
+          },
+          {
+            "number": "04",
+            "title": "Traslado de dominio y conmutación de DNS sin cortes",
+            "desc": "Te asesoramos con el código EPP/Auth-Code para transferir tu dominio a OdiseaCloud o actualizamos las zonas DNS con propagación acelerada. La transición es inmediata e imperceptible para tus usuarios."
+          },
+          {
+            "number": "05",
+            "title": "Certificación SSL y entrega de correos operativos",
+            "desc": "Instalamos el certificado de seguridad SSL HTTPS gratuito, sincronizamos los correos de última hora para que no se pierda ningún mensaje y te entregamos tu web más rápida, segura y estable."
+          }
+        ],
+        "comparison": {
+          "title": "¿Intentar migrar por tu cuenta o dejarlo en manos de OdiseaCloud?",
+          "risks": [
+            "Caída de tu sitio web por horas o días debido a configuraciones erróneas de DNS.",
+            "Pérdida irreversible de correos corporativos y conversaciones históricas.",
+            "Incompatibilidad de versiones de PHP o bases de datos corruptas con error 500.",
+            "Caída de posicionamiento en Google por enlaces rotos o SSL mal configurado."
+          ],
+          "odiseaBenefits": [
+            "Cero tiempo de inactividad: tus clientes siguen comprando y navegando con normalidad.",
+            "Buzones de correo 100% conservados con carpetas, contactos y contraseñas intactas.",
+            "Mejora inmediata en velocidad de carga al migrar a almacenamiento SSD NVMe.",
+            "Mano de obra técnica 100% gratuita incluida al contratar tu plan de hosting."
+          ]
+        }
+      }
     },
     {
       "id": 14,

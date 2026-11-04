@@ -1466,6 +1466,271 @@ button:disabled { opacity: .55; cursor: not-allowed; }
 }
 
 /* ==========================================================================
+   GUÍA PASO A PASO Y OFERTA DE MIGRACIÓN
+   ========================================================================== */
+.migration-promo-card {
+  background: linear-gradient(135deg, #06122b 0%, #0d2861 100%);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 48px;
+  border: 1px solid rgba(8, 102, 245, 0.3);
+}
+
+.migration-promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(8, 102, 245, 0.25);
+  color: var(--color-tech);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.migration-promo-headline {
+  font-size: 1.65rem;
+  color: var(--color-white);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.migration-promo-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+  max-width: 820px;
+  margin-bottom: 24px;
+}
+
+.migration-promo-highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+
+.promo-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.promo-highlight-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(5, 150, 105, 0.25);
+  color: #34d399;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.promo-highlight-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-highlight-item strong {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.promo-highlight-item span {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.guide-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.guide-step-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(8, 102, 245, 0.3);
+}
+
+.guide-step-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  opacity: 0.85;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.guide-step-title {
+  font-size: 1.15rem;
+  color: var(--color-navy);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.guide-step-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.guide-comparison-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.guide-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .guide-comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.comparison-column {
+  padding: 24px;
+  border-radius: var(--radius-md);
+}
+
+.comparison-column.risks {
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.comparison-column.benefits {
+  background-color: rgba(5, 150, 105, 0.06);
+  border: 1px solid rgba(5, 150, 105, 0.25);
+}
+
+.comparison-col-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.comparison-col-title.risks {
+  color: #b91c1c;
+}
+
+.comparison-col-title.benefits {
+  color: #047857;
+}
+
+.comparison-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.comparison-column li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.comparison-column.risks li svg {
+  color: #ef4444;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.comparison-column.benefits li svg {
+  color: #059669;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.migration-banner-inline {
+  background: linear-gradient(135deg, #06122b 0%, #0d2861 100%);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  color: var(--color-white);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(8, 102, 245, 0.25);
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .migration-banner-inline {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 32px 24px;
+  }
+  .migration-banner-inline .migration-banner-art {
+    display: none;
+  }
+}
+
+.migration-banner-copy h2 {
+  color: var(--color-white);
+  font-size: 1.8rem;
+  margin: 12px 0 16px 0;
+  line-height: 1.3;
+}
+
+.migration-banner-copy p {
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.migration-banner-art img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
    PROCESO DE TRABAJO
    ========================================================================== */
 .workflow-grid {
