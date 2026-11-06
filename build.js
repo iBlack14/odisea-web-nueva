@@ -511,7 +511,7 @@ data.services.forEach(service => {
     </section>
 
     <section class="section service-guide-section"><div class="container service-guide ${mascotOnLeft ? 'guide-art-right' : ''}">
-      <div class="service-guide-visual"><img src="../..${service.mascot.image}" alt="" width="${service.mascot.width}" height="${service.mascot.height}" loading="lazy"></div>
+      <div class="service-guide-visual"><img src="../..${service.mascot.image}" alt="${service.mascot.alt}" width="${service.mascot.width}" height="${service.mascot.height}" loading="lazy"></div>
       <div><span class="section-badge">Tecnología con acompañamiento</span><h2>Tu proyecto, con un equipo que te acompaña</h2>
         <p>Te ayudamos a definir el alcance de ${service.shortName.toLowerCase()}, resolver dudas y elegir una solución acorde con tu negocio.</p>
         <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
@@ -1981,9 +1981,73 @@ require('./legal-pages')({renderHeader, renderFooter, renderHeadAnalytics});
 const robotsTxt = `User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 Sitemap: https://odiseacloud.com/sitemap.xml
 `;
 fs.writeFileSync(path.join(__dirname, 'robots.txt'), robotsTxt, 'utf8');
+
+const llmsTxt = `# ${data.company.name}
+
+> ${data.company.slogan}. Agencia de desarrollo web y soluciones cloud en ${data.company.address}.
+
+${data.company.name} ofrece diseño y creación de páginas web, tiendas virtuales (eCommerce), sistemas web personalizados, aulas virtuales y eLearning, automatización de procesos e integración de CRM, hosting web, correo corporativo, registro de dominios, servidores VPS, migración web, optimización de velocidad, rediseño web, SEO técnico y seguridad web.
+
+## Servicios
+${data.services.map(s => `- [${s.shortName}](https://odiseacloud.com/servicios/${s.slug}/): ${s.shortDesc || ''}`).join('\n')}
+
+## Páginas
+- [Inicio](https://odiseacloud.com/)
+- [Nosotros](https://odiseacloud.com/nosotros/)
+- [Servicios](https://odiseacloud.com/servicios/)
+- [Portafolio](https://odiseacloud.com/portafolio/)
+- [Soluciones](https://odiseacloud.com/soluciones/)
+- [Contacto](https://odiseacloud.com/contacto/)
+
+## Contacto
+- WhatsApp: ${data.company.whatsappDisplay}
+- Email: ${data.company.email}
+- Ubicación: ${data.company.address}
+- Horario: ${data.company.schedule}
+`;
+fs.writeFileSync(path.join(__dirname, 'llms.txt'), llmsTxt, 'utf8');
 
 const sitemapUrls = [
   'https://odiseacloud.com/',

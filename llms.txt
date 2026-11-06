@@ -1,0 +1,36 @@
+# ODISEACLOUD
+
+> Tu proyecto, sin límites. Agencia de desarrollo web y soluciones cloud en Lima, Perú.
+
+ODISEACLOUD ofrece diseño y creación de páginas web, tiendas virtuales (eCommerce), sistemas web personalizados, aulas virtuales y eLearning, automatización de procesos e integración de CRM, hosting web, correo corporativo, registro de dominios, servidores VPS, migración web, optimización de velocidad, rediseño web, SEO técnico y seguridad web.
+
+## Servicios
+- [Desarrollo Web](https://odiseacloud.com/servicios/desarrollo-web/): Creamos páginas web para empresas y emprendedores en Perú: diseño a medida, adaptación a celulares, formularios de contacto y SEO técnico.
+- [Tiendas Virtuales](https://odiseacloud.com/servicios/tiendas-virtuales/): Comercio electrónico completo con catálogos dinámicos, pasarelas de pago y gestión de pedidos.
+- [Rediseño Web](https://odiseacloud.com/servicios/rediseno-web/): Modernización estética, tecnológica y funcional de sitios web existentes para recuperar competitividad.
+- [Sistemas a Medida](https://odiseacloud.com/servicios/sistemas-web/): Desarrollo de aplicaciones y paneles administrativos a la medida de los procesos de tu negocio.
+- [Aulas Virtuales](https://odiseacloud.com/servicios/aulas-virtuales/): Plataformas educativas para colegios, institutos, academias y empresas que imparten cursos online.
+- [Automatización y CRM](https://odiseacloud.com/servicios/integraciones-automatizaciones/): Automatización de procesos e integración de CRM para empresas en Perú: conecta formularios, ventas, correo y tienda virtual para reducir tareas manuales.
+- [Hosting Web](https://odiseacloud.com/servicios/hosting-web/): Alojamiento confiable con cPanel, discos SSD NVMe, certificados SSL gratuitos y soporte técnico.
+- [Correo Corporativo](https://odiseacloud.com/servicios/correo-corporativo/): Buzones con dominio propio (@tuempresa.com), configuración SPF/DKIM y entrega segura en bandeja de entrada.
+- [Dominios](https://odiseacloud.com/servicios/dominios/): Registro, renovación y administración técnica de dominios .com, .pe, .org y extensiones globales.
+- [Servidores VPS](https://odiseacloud.com/servicios/servidores-vps/): Implementación, configuración y puesta en marcha de servidores privados virtuales Linux para aplicaciones exigentes.
+- [Mantenimiento Web](https://odiseacloud.com/servicios/mantenimiento-web/): Actualización periódica de plataformas, plugins, resolución de incidencias y soporte técnico prioritario.
+- [Seguridad Web](https://odiseacloud.com/servicios/seguridad-web/): Protección de accesos, blindaje contra ataques, limpieza de malware y auditorías de vulnerabilidad autorizadas.
+- [Migración Web](https://odiseacloud.com/servicios/migracion-web/): Traslado seguro de sitios web, tiendas y bases de datos a un nuevo hosting sin pérdida de datos ni caídas.
+- [Optimización Web](https://odiseacloud.com/servicios/optimizacion-velocidad/): Aceleración de tiempos de carga, compresión inteligente de recursos y optimización de rendimiento móvil.
+- [SEO Técnico](https://odiseacloud.com/servicios/seo-tecnico/): Estructuración de datos, sitemaps, metadatos y optimización técnica para facilitar la indexación en buscadores.
+
+## Páginas
+- [Inicio](https://odiseacloud.com/)
+- [Nosotros](https://odiseacloud.com/nosotros/)
+- [Servicios](https://odiseacloud.com/servicios/)
+- [Portafolio](https://odiseacloud.com/portafolio/)
+- [Soluciones](https://odiseacloud.com/soluciones/)
+- [Contacto](https://odiseacloud.com/contacto/)
+
+## Contacto
+- WhatsApp: +51 994 282 396
+- Email: contacto@odiseacloud.com
+- Ubicación: Lima, Perú
+- Horario: Lunes a Viernes: 9:00 am - 7:00 pm | Sábados: 9:00 am - 1:00 pm

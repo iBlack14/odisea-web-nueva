@@ -13,6 +13,45 @@ const brands = {
   'Redis/Memcached': 'redis', phpMyAdmin: 'phpmyadmin', 'Google Lighthouse': 'lighthouse',
   'Google Search Console': 'googlesearchconsole'
 };
+const altTexts = {
+  'HTML5': 'Logo de HTML5, lenguaje de marcado para desarrollo web',
+  'CSS3 Moderno': 'Logo de CSS3, hojas de estilo para diseño web responsive',
+  'CSS3': 'Logo de CSS3, hojas de estilo para diseño web responsive',
+  'JavaScript': 'Logo de JavaScript, lenguaje de programación para sitios web interactivos',
+  'PHP': 'Logo de PHP, lenguaje de programación para desarrollo web',
+  'Tailwind CSS': 'Logo de Tailwind CSS, framework de utilidades para diseño web',
+  'Elementor': 'Logo de Elementor, maquetador visual para WordPress',
+  'Odoo ERP': 'Logo de Odoo ERP, sistema de planificación de recursos empresariales',
+  'WooCommerce': 'Logo de WooCommerce, plugin de comercio electrónico para WordPress',
+  'WooCommerce API': 'Logo de WooCommerce API, integración de tienda virtual',
+  'WordPress': 'Logo de WordPress, CMS para creación de páginas web y tiendas virtuales',
+  'WordPress Moderno': 'Logo de WordPress, CMS para creación de páginas web y tiendas virtuales',
+  'Izipay API': 'Logo de Izipay, pasarela de pagos en línea para eCommerce',
+  'MySQL': 'Logo de MySQL, sistema de gestión de bases de datos',
+  'Laravel': 'Logo de Laravel, framework PHP para desarrollo de sistemas web',
+  'PostgreSQL': 'Logo de PostgreSQL, base de datos relacional de alto rendimiento',
+  'Zoom API': 'Logo de Zoom, integración de videoconferencias',
+  'Google Meet API': 'Logo de Google Meet, integración de videollamadas',
+  'Moodle / Custom LMS': 'Logo de Moodle, plataforma de aulas virtuales y eLearning',
+  'Odoo API': 'Logo de Odoo API, integración con ERP empresarial',
+  'WhatsApp Business Platform': 'Logo de WhatsApp Business, integración de mensajería empresarial',
+  'cPanel': 'Logo de cPanel, panel de control de hosting web',
+  'cPanel Mail': 'Logo de cPanel Mail, correo corporativo y webmail',
+  'cPanel Migrations': 'Logo de cPanel, migración de sitios web y correos',
+  'CloudLinux': 'Logo de CloudLinux, optimización de servidores compartidos',
+  'Apache/LiteSpeed': 'Logo de Apache y LiteSpeed, servidores web de alto rendimiento',
+  'Linux': 'Logo de Linux, sistema operativo para servidores',
+  'Ubuntu': 'Logo de Ubuntu, sistema operativo para servidores VPS',
+  'Nginx': 'Logo de Nginx, servidor web y proxy inverso',
+  'Docker': 'Logo de Docker, contenedores para despliegue de aplicaciones',
+  'Git': 'Logo de Git, control de versiones para desarrollo de software',
+  'Cloudflare DNS': 'Logo de Cloudflare, DNS y protección DDoS para dominios web',
+  'CDN Cloudflare': 'Logo de Cloudflare CDN, red de entrega de contenido',
+  'Redis/Memcached': 'Logo de Redis, caché en memoria para acelerar sitios web',
+  'phpMyAdmin': 'Logo de phpMyAdmin, administración de bases de datos MySQL',
+  'Google Lighthouse': 'Logo de Google Lighthouse, auditoría de rendimiento web',
+  'Google Search Console': 'Logo de Google Search Console, monitoreo SEO de sitios web'
+};
 const paths = {
   server: '<rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6"/>',
   shield: '<path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7z"/><path d="m8 12 3 3 5-6"/>',
@@ -47,7 +86,7 @@ module.exports = function renderTech(label, prefix) {
   if (keys) {
     icon = [].concat(keys).map(k => {
       if (!fs.existsSync(path.join(__dirname, 'assets/images/tech', k + '.svg'))) throw Error('Missing logo: ' + k);
-      return `<img class="tech-logo${['izipay','cloudlinux','litespeed','cpanel','odoo'].includes(k) ? ' tech-logo-wide' : ''}" src="${prefix}assets/images/tech/${k}.svg" alt="" width="28" height="28" loading="lazy" decoding="async">`;
+      return `<img class="tech-logo${['izipay','cloudlinux','litespeed','cpanel','odoo'].includes(k) ? ' tech-logo-wide' : ''}" src="${prefix}assets/images/tech/${k}.svg" alt="${altTexts[label] || `Logo de ${label}`}" width="28" height="28" loading="lazy" decoding="async">`;
     }).join('');
   } else {
     const type = symbols[label];
