@@ -92,4 +92,4 @@ Si prefieres usar la opción de Compose de Easypanel:
 
 1. **URLs Limpias:** Comprueba que al ingresar a `https://odiseacloud.com/nosotros/` o `https://odiseacloud.com/servicios/` cargue sin mostrar `.html`.
 2. **Formulario de Contacto:** Verifica que el formulario en `/contacto/` procese mediante `contact.php` o active el fallback dinámico a WhatsApp / correo.
-3. **Botones de WhatsApp:** Prueba hacer clic en el botón flotante y en los botones de cotización para verificar que abran chat directo con el número oficial `+51 907 959 276`.
+3. **Botones de WhatsApp:** Prueba hacer clic en el botón flotante y en los botones de cotización para verificar que abran chat directo con el número oficial `+51 994 282 396`.

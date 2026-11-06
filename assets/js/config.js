@@ -7,8 +7,8 @@
 const ODISEA_CONFIG = {
   name: "ODISEACLOUD",
   slogan: "Tu proyecto, sin límites",
-  whatsappNumber: "51907959276",
-  whatsappDisplay: "+51 907 959 276",
+  whatsappNumber: "51994282396",
+  whatsappDisplay: "+51 994 282 396",
   email: "contacto@odiseacloud.com",
   schedule: "Lunes a Viernes de 9:00 a.m. a 7:00 p.m. | Sábados de 9:00 a.m. a 1:00 p.m.",
   analytics: {
