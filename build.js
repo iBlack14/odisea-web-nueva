@@ -53,7 +53,7 @@ function getSvgIcon(name) {
 function renderHeadAnalytics() {
   const gaId = (data.company.analytics && data.company.analytics.googleAnalyticsId) ? data.company.analytics.googleAnalyticsId.trim() : '';
   const gsc = (data.company.analytics && data.company.analytics.googleSearchConsole) ? data.company.analytics.googleSearchConsole.trim() : '';
-  let tags = '';
+  let tags = `\n  <!-- Preconnect para recursos externos (mejora LCP) -->\n  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>\n  <link rel="dns-prefetch" href="https://wa.me">\n  <link rel="dns-prefetch" href="https://api.whatsapp.com">`;
   if (gsc) {
     tags += `\n  <!-- Google Search Console Verification -->\n  <meta name="google-site-verification" content="${gsc}">`;
   }
@@ -2047,7 +2047,7 @@ ${data.services.map(s => `- [${s.shortName}](https://odiseacloud.com/servicios/$
 - Ubicación: ${data.company.address}
 - Horario: ${data.company.schedule}
 `;
-fs.writeFileSync(path.join(__dirname, 'llms.txt'), llmsTxt, 'utf8');
+fs.writeFileSync(path.join(__dirname, 'llms.txt'), '﻿' + llmsTxt, 'utf8');
 
 const sitemapUrls = [
   'https://odiseacloud.com/',
