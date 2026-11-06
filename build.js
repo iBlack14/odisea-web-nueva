@@ -371,7 +371,15 @@ data.services.forEach(service => {
         {'@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://odiseacloud.com/'},
         {'@type': 'ListItem', position: 2, name: 'Servicios', item: 'https://odiseacloud.com/servicios/'},
         {'@type': 'ListItem', position: 3, name: service.shortName, item: 'https://odiseacloud.com/servicios/' + service.slug + '/'}
-      ]}
+      ]},
+      ...(service.faqs && service.faqs.length ? [{
+        '@type': 'FAQPage',
+        mainEntity: service.faqs.map(f => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: {'@type': 'Answer', text: f.a}
+        }))
+      }] : [])
     ]
   }).replace(/</g, '\u003c')}
   </script>
