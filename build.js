@@ -1431,10 +1431,18 @@ const contactoHtml = `<!DOCTYPE html>
             </p>
 
             <form id="contact-form" action="../contact.php" method="POST">
-              <!-- Honeypot anti-spam oculto -->
-              <div style="display: none;">
+              <!-- Trampas Honeypot anti-spam multicapa (invisibles para humanos) -->
+              <div style="display: none;" aria-hidden="true">
                 <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
               </div>
+              <div class="form-antispam-trap" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; opacity: 0; pointer-events: none; width: 0; height: 0; overflow: hidden;">
+                <label for="business_fax">Si eres humano, deja este campo vacío</label>
+                <input type="text" id="business_fax" name="business_fax" tabindex="-1" autocomplete="new-password">
+              </div>
+
+              <!-- Tokens de seguridad y firma de tiempo anti-bot -->
+              <input type="hidden" name="form_timestamp" id="form_timestamp" value="">
+              <input type="hidden" name="form_security_token" id="form_security_token" value="">
 
               <div class="form-group">
                 <label for="nombre" class="form-label">Nombre completo o Empresa *</label>
@@ -1501,53 +1509,6 @@ const contactoHtml = `<!DOCTYPE html>
 
   ${renderFooter('../')}
 
-  <!-- Script de validación asíncrona del formulario con fallback -->
-  <script>
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = this;
-    const feedback = document.getElementById('form-feedback');
-    const submitBtn = form.querySelector('button[type="submit"]');
-
-    feedback.style.display = 'block';
-    feedback.style.backgroundColor = '#EAF5FF';
-    feedback.style.color = '#0866F5';
-    feedback.textContent = 'Enviando tu consulta al servidor...';
-    submitBtn.disabled = true;
-
-    try {
-      const formData = new FormData(form);
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: formData
-      });
-      const data = await res.json();
-
-      if (data.success) {
-        feedback.style.backgroundColor = '#DCFCE7';
-        feedback.style.color = '#166534';
-        feedback.textContent = data.message;
-        form.reset();
-      } else {
-        feedback.style.backgroundColor = '#FEE2E2';
-        feedback.style.color = '#991B1B';
-        feedback.textContent = data.message || 'Ocurrió un error al procesar el mensaje.';
-      }
-    } catch (err) {
-      const email = document.getElementById('email').value;
-      const nombre = document.getElementById('nombre').value;
-      const servicio = document.getElementById('contact-service-select').value;
-      const mensaje = document.getElementById('mensaje').value;
-      const mailtoFallback = getMailtoUrl('Consulta desde web: ' + servicio, 'Nombre: ' + nombre + '\\nCorreo: ' + email + '\\n\\nMensaje:\\n' + mensaje);
-
-      feedback.style.backgroundColor = '#FEF3C7';
-      feedback.style.color = '#92400E';
-      feedback.innerHTML = 'Para enviar tu consulta directamente, <a href="' + mailtoFallback + '" style="text-decoration: underline; font-weight: bold;">haz clic aquí para abrir tu gestor de correo</a> o comunícate vía WhatsApp.';
-    } finally {
-      submitBtn.disabled = false;
-    }
-  });
-  </script>
 
 </body>
 </html>`;
