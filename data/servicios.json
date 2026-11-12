@@ -8,7 +8,7 @@
     "address": "Lima, Perú",
     "schedule": "Lunes a Viernes: 9:00 am - 7:00 pm | Sábados: 9:00 am - 1:00 pm",
     "analytics": {
-      "googleAnalyticsId": "",
+      "googleAnalyticsId": "G-Q2XZR2ZQEZ",
       "googleSearchConsole": "nJhV6kLT-MMIeIZoX_NYAXizcUF0q00NihxqmUIM9iw"
     },
     "defaultMessages": {
@@ -133,7 +133,12 @@
       },
       "primaryCta": "Cotiza tu página web empresarial",
       "targetAudience": "Empresas en crecimiento, firmas de servicios profesionales y emprendedores en Perú que necesitan transmitir solidez corporativa y captar clientes calificados.",
-      "clientReceives": "Página web corporativa personalizada, 100% responsiva (móviles y escritorio), integración directa a WhatsApp y correo corporativo, optimización SEO on-page y puesta en producción."
+      "clientReceives": "Página web corporativa personalizada, 100% responsiva (móviles y escritorio), integración directa a WhatsApp y correo corporativo, optimización SEO on-page y puesta en producción.",
+      "relatedSlugs": [
+        "dominios",
+        "hosting-web",
+        "seo-tecnico"
+      ]
     },
     {
       "id": 2,
@@ -204,7 +209,12 @@
       },
       "primaryCta": "Quiero empezar a vender online",
       "targetAudience": "Marcas comerciales, importadores, distribuidores y negocios de retail que buscan vender sus productos por internet de forma automática 24/7.",
-      "clientReceives": "Tienda virtual con catálogo autogestionable, pasarela de pago configurada (tarjetas, Yape y Plin), carrito de compras sin fricciones y panel de control de inventario."
+      "clientReceives": "Tienda virtual con catálogo autogestionable, pasarela de pago configurada (tarjetas, Yape y Plin), carrito de compras sin fricciones y panel de control de inventario.",
+      "relatedSlugs": [
+        "integraciones-automatizaciones",
+        "hosting-web",
+        "correo-corporativo"
+      ]
     },
     {
       "id": 3,
@@ -244,11 +254,19 @@
       "faqs": [
         {
           "q": "¿Perderé mi posicionamiento en Google al rediseñar mi web?",
-          "a": "No. Implementamos un plan de migración SEO que conserva URLs estratégicas, configura redireccionamientos 301 y optimiza los metadatos para consolidar o mejorar tus rankings."
+          "a": "Un rediseño puede afectar el tráfico si cambia contenido o URLs sin control. Revisamos las páginas que reciben visitas, conservamos rutas útiles, definimos redirecciones cuando corresponda y comprobamos metadatos, enlaces y sitemap. Las posiciones pueden variar y se deben monitorizar después de publicar."
+        },
+        {
+          "q": "¿Se puede mantener mi dominio al renovar la página?",
+          "a": "Sí. Rediseñar el sitio no exige cambiar el dominio. Antes de publicar revisamos el alojamiento, las rutas actuales y el acceso a DNS para planificar la actualización."
+        },
+        {
+          "q": "¿Qué necesitan para evaluar el rediseño?",
+          "a": "La URL actual, los objetivos del negocio y las funciones que quieres conservar o añadir. Si dispones de Search Console o analítica, sus datos ayudan a identificar páginas y consultas que conviene preservar."
         }
       ],
       "seoTitle": "Rediseño de páginas web en Perú | OdiseaCloud",
-      "seoDescription": "Rediseño de páginas web en Perú: modernizamos diseño, velocidad y SEO de tu sitio actual sin perder posicionamiento en Google. Recupera clientes.",
+      "seoDescription": "Renueva el diseño y rendimiento de tu web en Perú. Revisamos URLs, contenido, redirecciones y SEO antes de publicar. Solicita una evaluación con OdiseaCloud.",
       "overviewTitle": "Rediseño de páginas web en Perú",
       "mascot": {
         "image": "/assets/images/mascotas/rediseno-web.webp",
@@ -258,7 +276,12 @@
       },
       "primaryCta": "Moderniza tu sitio web actual",
       "targetAudience": "Empresas con sitios web antiguos, lentos o no adaptados a celulares que necesitan renovar su imagen sin perder su posicionamiento en Google.",
-      "clientReceives": "Nueva interfaz gráfica SaaS moderna, optimización integral de velocidad (Core Web Vitals), navegación intuitiva y preservación de enlaces y rankings."
+      "clientReceives": "Interfaz renovada y adaptable, mejoras de rendimiento y plan de revisión de URLs, enlaces y metadatos antes y después de publicar.",
+      "relatedSlugs": [
+        "seo-tecnico",
+        "optimizacion-velocidad",
+        "migracion-web"
+      ]
     },
     {
       "id": 4,
@@ -271,7 +294,7 @@
       "featured": true,
       "shortDesc": "Desarrollo de aplicaciones y paneles administrativos a la medida de los procesos de tu negocio.",
       "heroTagline": "Software empresarial en la nube adaptado exactamente a tus operaciones",
-      "fullDesc": "Creamos plataformas web a medida que automatizan flujos de trabajo, centralizan la información corporativa y proporcionan herramientas de control en tiempo real para gerentes, colaboradores y clientes.",
+      "fullDesc": "Desarrollamos sistemas web para empresas que necesitan organizar clientes, cotizaciones, inventarios, citas o reportes. Partimos de tus procesos para definir usuarios, permisos, módulos e integraciones. La aplicación se utiliza desde un navegador y puede conectarse con tu página web, un CRM o servicios externos cuando disponen de APIs compatibles. Acordamos una primera versión, criterios de aceptación y pruebas con usuarios antes de la puesta en marcha.",
       "icon": "cpu",
       "whatsappMessage": "Hola, OdiseaCloud. Tengo en mente un sistema web para mi empresa y quisiera cotizar su desarrollo.",
       "benefits": [
@@ -308,6 +331,18 @@
         {
           "q": "¿Cómo se define el alcance del desarrollo de un sistema?",
           "a": "Partimos de los usuarios, sus tareas y las reglas del negocio. La propuesta detalla módulos, integraciones, entregables y criterios de aceptación. Esto permite priorizar una primera versión y evaluar ampliaciones con un alcance claro."
+        },
+        {
+          "q": "¿Cuánto cuesta desarrollar un sistema web para una empresa?",
+          "a": "El presupuesto depende de módulos, perfiles de usuario, reglas, integraciones y migración de datos. Primero definimos una versión inicial con alcance y entregables; hosting, licencias y mantenimiento se identifican por separado."
+        },
+        {
+          "q": "¿Se puede conectar el sistema con mi web o CRM?",
+          "a": "Sí, cuando las herramientas ofrecen APIs, webhooks o un mecanismo de intercambio compatible. Revisamos permisos, límites y documentación antes de confirmar la integración."
+        },
+        {
+          "q": "¿Quién administra el sistema después de la entrega?",
+          "a": "Acordamos los accesos de administración, la documentación y la capacitación incluidas. También definimos quién se ocupa del hosting, backups, actualizaciones y soporte. Los cambios funcionales posteriores se presupuestan según su alcance."
         }
       ],
       "seoTitle": "Desarrollo de sistemas web a medida en Perú | OdiseaCloud",
@@ -321,7 +356,17 @@
       },
       "primaryCta": "Cuéntanos qué sistema necesitas",
       "targetAudience": "Empresas que requieren digitalizar operaciones internas, portales de clientes, cotizadores dinámicos o flujos de trabajo que un software comercial genérico no resuelve.",
-      "clientReceives": "Aplicación web a medida con base de datos segura, gestión de usuarios por roles, panel de control administrativo y código escalable documentado."
+      "clientReceives": "Aplicación web a medida con base de datos segura, gestión de usuarios por roles, panel de control administrativo y código escalable documentado.",
+      "heroTitle": "Desarrollo de sistemas web a medida en Perú",
+      "selectionAdvice": {
+        "title": "¿Sistema a medida o software ya existente?",
+        "text": "Si una herramienta comercial resuelve tu proceso y su costo es adecuado, puede ser suficiente. El desarrollo a medida cobra sentido cuando necesitas reglas, permisos o integraciones particulares. Para evaluar tu proyecto, describe quién usará el sistema, cómo trabaja hoy, qué datos maneja y qué operación deseas mejorar."
+      },
+      "relatedSlugs": [
+        "integraciones-automatizaciones",
+        "servidores-vps",
+        "mantenimiento-web"
+      ]
     },
     {
       "id": 5,
@@ -362,7 +407,7 @@
       "faqs": [
         {
           "q": "¿Cuántos estudiantes pueden acceder al mismo tiempo?",
-          "a": "Diseñamos y alojamos la plataforma dimensionando los recursos del servidor según tu cantidad de estudiantes concurrentes para garantizar una experiencia sin caídas."
+          "a": "La concurrencia depende del software, los recursos del servidor y el tipo de actividad. Dimensionamos el entorno según estudiantes simultáneos, evaluaciones, videos y almacenamiento; las pruebas de carga se acuerdan en el alcance."
         },
         {
           "q": "¿Qué puede incluir un aula virtual para una institución?",
@@ -371,6 +416,10 @@
         {
           "q": "¿Cómo se elige el hosting para un campus virtual?",
           "a": "Importan los usuarios conectados al mismo tiempo, el almacenamiento de materiales y el uso de videos o evaluaciones. Revisamos esos datos para proponer recursos, copias de seguridad y un plan de mantenimiento acordes con la operación."
+        },
+        {
+          "q": "¿Qué información necesitan para cotizar un aula virtual?",
+          "a": "Cantidad de estudiantes y docentes, usuarios simultáneos, cursos, tipos de evaluación, almacenamiento y herramientas existentes. También revisamos si necesitas migrar contenidos o integrar matrículas y pagos."
         }
       ],
       "seoTitle": "Implementación de aulas virtuales en Perú | OdiseaCloud",
@@ -384,7 +433,12 @@
       },
       "primaryCta": "Implementa tu aula virtual hoy",
       "targetAudience": "Instituciones educativas, academias, centros de capacitación profesional y empresas con programas continuos de formación interna.",
-      "clientReceives": "Plataforma LMS personalizada con soporte para cursos, lecciones en video, exámenes automáticos, emisión de certificados con código QR e integración con Zoom/Meet."
+      "clientReceives": "Plataforma LMS personalizada con soporte para cursos, lecciones en video, exámenes automáticos, emisión de certificados con código QR e integración con Zoom/Meet.",
+      "relatedSlugs": [
+        "hosting-web",
+        "servidores-vps",
+        "mantenimiento-web"
+      ]
     },
     {
       "id": 6,
@@ -479,7 +533,12 @@
       },
       "primaryCta": "Quiero automatizar procesos de mi negocio",
       "targetAudience": "Empresas con tareas repetitivas entre formularios web, WhatsApp, hojas de cálculo, sistemas de facturación y plataformas CRM.",
-      "clientReceives": "Flujos de sincronización automatizados en tiempo real, reducción de errores manuales y conexión transparente entre tus aplicaciones de negocio."
+      "clientReceives": "Flujos de sincronización automatizados en tiempo real, reducción de errores manuales y conexión transparente entre tus aplicaciones de negocio.",
+      "relatedSlugs": [
+        "sistemas-web",
+        "desarrollo-web",
+        "tiendas-virtuales"
+      ]
     },
     {
       "id": 7,
@@ -492,7 +551,7 @@
       "featured": true,
       "shortDesc": "Alojamiento confiable con cPanel, discos SSD NVMe, certificados SSL gratuitos y soporte técnico.",
       "heroTagline": "Velocidad, estabilidad y seguridad para alojar tus proyectos web",
-      "fullDesc": "Proporcionamos infraestructura de hosting optimizada para sitios corporativos y aplicaciones web. Servidores con hardware de última generación, copias de seguridad automáticas y configuración técnica garantizada.",
+      "fullDesc": "Ofrecemos alojamiento web para páginas corporativas, tiendas virtuales y aplicaciones de empresas en Perú. Revisamos el espacio ocupado, el consumo de recursos, las versiones de PHP y bases de datos y la frecuencia de respaldo que requiere tu proyecto. La propuesta especifica recursos, acceso al panel, certificado SSL y soporte. Si vienes de otro proveedor, evaluamos la migración de archivos, base de datos y correo antes de coordinar el cambio de DNS.",
       "icon": "server",
       "whatsappMessage": "Hola, OdiseaCloud. Deseo recibir información sobre sus planes de hosting y servidores.",
       "benefits": [
@@ -523,11 +582,27 @@
         },
         {
           "q": "¿Si contrato hosting con ustedes, me ayudan a migrar mi web actual?",
-          "a": "Sí, la migración técnica es 100% gratuita. Tú solo abonas tu plan de hosting y nosotros trasladamos tus archivos, bases de datos y correos sin cortes de servicio."
+          "a": "La propuesta de hosting puede incluir la migración técnica sin honorarios adicionales, según compatibilidad, tamaño y alcance acordado. Revisamos el sitio y el correo antes de confirmar las condiciones, hacemos pruebas y coordinamos el cambio para reducir interrupciones."
+        },
+        {
+          "q": "¿Cómo comparar un hosting económico para empresas?",
+          "a": "Revisa el costo inicial y de renovación, límites de almacenamiento y recursos, backups incluidos, recuperación y soporte. Un precio bajo no indica por sí solo qué capacidad necesita tu web. Definimos la propuesta según tu aplicación y su uso."
+        },
+        {
+          "q": "¿El hosting incluye dominio y correo corporativo?",
+          "a": "Son servicios diferentes. La propuesta indica si incluye registro o renovación del dominio y cuentas de correo, con sus límites. Puedes conservar un dominio registrado en otra empresa y configurar los DNS para usar el alojamiento."
+        },
+        {
+          "q": "¿Qué diferencia hay entre hosting compartido y VPS?",
+          "a": "El hosting compartido agrupa varios sitios en un entorno administrado. Un VPS permite mayor control de configuración y recursos asignados, pero requiere administración. La elección depende del consumo, la compatibilidad y la operación de tu aplicación."
+        },
+        {
+          "q": "¿Cómo se acuerdan las copias de seguridad?",
+          "a": "Antes de contratar confirmamos frecuencia, retención, qué archivos y bases de datos se respaldan y cómo se solicita una restauración. Conviene mantener también una copia independiente de los datos importantes."
         }
       ],
       "seoTitle": "Hosting web para empresas en Perú | OdiseaCloud",
-      "seoDescription": "Hosting web en Perú con cPanel, discos SSD NVMe, certificados SSL gratis y soporte técnico. Alojamiento rápido y seguro para tu web o tienda.",
+      "seoDescription": "Hosting para páginas web y tiendas de empresas en Perú. Revisa recursos, SSL, backups, soporte y opciones de migración. Solicita un plan según tu proyecto.",
       "overviewTitle": "Hosting web para empresas en Perú",
       "mascot": {
         "image": "/assets/images/mascotas/hosting-web.webp",
@@ -544,7 +619,17 @@
         "desc": "Si sufres por servidores lentos, caídas frecuentes o soporte deficiente, cámbiate a OdiseaCloud. Al contratar tu plan de Hosting Empresarial, nuestro equipo técnico realiza la migración completa de tu web, base de datos y cuentas de correo sin costo adicional de mano de obra.",
         "ctaText": "Quiero migrar mi web a OdiseaCloud",
         "ctaMsg": "Hola, OdiseaCloud. Tengo mi página web en otro proveedor y quisiera migrarla gratis a su hosting."
-      }
+      },
+      "heroTitle": "Hosting web para empresas en Perú",
+      "selectionAdvice": {
+        "title": "Cómo elegir un hosting para tu negocio",
+        "text": "Compara recursos y límites del plan, no solo el precio anunciado. Revisa almacenamiento, CPU y memoria, cantidad de sitios, backups y recuperación, compatibilidad con tu aplicación, soporte y precio de renovación. Un hosting compartido puede servir a una web corporativa; una aplicación con procesos exigentes puede necesitar un VPS. Atender desde Perú no significa que el centro de datos esté ubicado en Perú: confirmamos la región del alojamiento en la propuesta."
+      },
+      "relatedSlugs": [
+        "dominios",
+        "correo-corporativo",
+        "migracion-web"
+      ]
     },
     {
       "id": 8,
@@ -557,7 +642,7 @@
       "featured": true,
       "shortDesc": "Buzones con dominio propio (@tuempresa.com), configuración SPF/DKIM y entrega segura en bandeja de entrada.",
       "heroTagline": "Comunícate con seriedad y confianza usando correos con tu dominio propio",
-      "fullDesc": "Olvídate de cuentas genéricas de correo gratuito que restan credibilidad a tu negocio. Configuramos casillas de correo personalizadas con tu dominio, asegurando altos estándares de entregabilidad para que tus mensajes no caigan en spam.",
+      "fullDesc": "Creamos y configuramos correo corporativo con el dominio de tu empresa, como ventas@tuempresa.com o contacto@tuempresa.com. También se conoce como correo empresarial, profesional o personalizado. Revisamos cuántas cuentas necesitas, el espacio de cada buzón y los dispositivos que utilizarás. Configuramos el servicio, el acceso webmail y los registros de autenticación SPF, DKIM y DMARC según las posibilidades del proveedor. Si ya tienes correo, evaluamos la migración del historial y coordinamos el cambio de DNS.",
       "icon": "mail",
       "whatsappMessage": "Hola, OdiseaCloud. Quisiera información para habilitar correos corporativos para mi empresa.",
       "benefits": [
@@ -583,12 +668,32 @@
       ],
       "faqs": [
         {
-          "q": "¿Puedo sincronizar mis correos en mi celular y computadora?",
-          "a": "Sí. Te proporcionamos las credenciales y guías paso a paso para sincronizar en iPhone, Android, Outlook de escritorio o acceder directamente desde cualquier navegador web."
+          "q": "¿Qué diferencia hay entre correo corporativo, empresarial y personalizado?",
+          "a": "En este servicio describen cuentas que usan el dominio de tu negocio, por ejemplo ventas@tuempresa.com. La diferencia con una cuenta gratuita está en el dominio y en las funciones de administración, almacenamiento y acceso que ofrece el plan contratado."
+        },
+        {
+          "q": "¿Cuánto cuesta crear correo corporativo para mi empresa?",
+          "a": "Depende del número de buzones, su almacenamiento, el proveedor elegido y si se requiere migrar mensajes. Confirmamos por separado las cuentas, el dominio y las licencias aplicables. Solicita una propuesta indicando cuántas personas usarán el correo."
+        },
+        {
+          "q": "¿Necesito tener una página web para usar correo con mi dominio?",
+          "a": "No. Puedes utilizar correo con tu dominio aunque todavía no tengas una página web. Necesitas el registro del dominio y un servicio de correo, además de configurar los registros DNS correspondientes."
+        },
+        {
+          "q": "¿Puedo usar mis correos en Outlook y el celular?",
+          "a": "Revisamos el cliente, el plan y los protocolos compatibles. Podemos configurar aplicaciones compatibles en computadora o celular y acceso mediante webmail. Las licencias de aplicaciones como Outlook se confirman por separado."
+        },
+        {
+          "q": "¿Pueden migrar mis correos anteriores?",
+          "a": "Evaluamos el proveedor de origen, el tamaño de los buzones, los accesos y el método de exportación. Acordamos qué mensajes y carpetas se migrarán, realizamos pruebas y coordinamos el cambio de DNS."
+        },
+        {
+          "q": "¿La configuración evita que todos los mensajes lleguen a spam?",
+          "a": "SPF, DKIM y DMARC ayudan a autenticar los envíos, pero no garantizan la bandeja de entrada. También influyen la reputación del dominio, el contenido, el volumen y las políticas del destinatario."
         }
       ],
       "seoTitle": "Correo corporativo con dominio propio en Perú | OdiseaCloud",
-      "seoDescription": "Correo corporativo profesional en Perú con tu dominio (@tuempresa.com), configuración SPF/DKIM y webmail. Imagen empresarial y entrega segura.",
+      "seoDescription": "Crea correo corporativo y empresarial con tu dominio en Perú. Configuración de cuentas, webmail, Outlook y autenticación SPF/DKIM. Solicita una propuesta.",
       "overviewTitle": "Correo corporativo con dominio propio en Perú",
       "mascot": {
         "image": "/assets/images/mascotas/correo-corporativo.webp",
@@ -598,7 +703,17 @@
       },
       "primaryCta": "Activa tus correos corporativos",
       "targetAudience": "Empresas y profesionales que desean proyectar formalidad utilizando direcciones de correo con su propio dominio (@tuempresa.com).",
-      "clientReceives": "Cuentas de correo corporativo configuradas con filtros antispam avanzados, acceso webmail seguro y sincronización en Outlook, Gmail y celulares."
+      "clientReceives": "Cuentas de correo corporativo configuradas con filtros antispam avanzados, acceso webmail seguro y sincronización en Outlook, Gmail y celulares.",
+      "heroTitle": "Correo corporativo con dominio propio para tu empresa",
+      "selectionAdvice": {
+        "title": "¿Qué necesitas para crear tu correo empresarial?",
+        "text": "Un dominio propio y un servicio de correo donde alojar las cuentas. Si aún no tienes dominio, podemos ayudarte a registrarlo; si ya existe, revisamos el acceso a sus DNS. Para cotizar, indica el número de usuarios, el almacenamiento aproximado y si necesitas conservar correos anteriores. El dominio, las licencias y el servicio de correo se detallan en la propuesta."
+      },
+      "relatedSlugs": [
+        "dominios",
+        "hosting-web",
+        "migracion-web"
+      ]
     },
     {
       "id": 9,
@@ -693,7 +808,12 @@
             "desc": "Completa las autorizaciones que solicite el proveedor. Verificamos el estado del traslado y la configuración DNS al finalizar; el plazo depende del registro y de las aprobaciones."
           }
         ]
-      }
+      },
+      "relatedSlugs": [
+        "hosting-web",
+        "correo-corporativo",
+        "migracion-web"
+      ]
     },
     {
       "id": 10,
@@ -735,7 +855,15 @@
       "faqs": [
         {
           "q": "¿Cuándo conviene migrar de hosting compartido a un VPS?",
-          "a": "Cuando tu sitio supera los 30,000 visitantes mensuales, manejas una tienda con catálogo extenso, necesitas ejecutar scripts pesados o requieres configuraciones personalizadas del servidor."
+          "a": "Cuando necesitas controlar el entorno, ejecutar procesos propios o superar límites de recursos del hosting actual. No existe un número único de visitas que determine el cambio: revisamos CPU, memoria, base de datos, concurrencia y comportamiento de la aplicación."
+        },
+        {
+          "q": "¿Qué incluye la administración de un VPS?",
+          "a": "Se define en la propuesta: instalación, actualizaciones, accesos, backups, monitoreo y soporte pueden tener alcances diferentes. Un servidor contratado no implica administración completa si no se ha acordado."
+        },
+        {
+          "q": "¿Cómo se eligen CPU, RAM y almacenamiento?",
+          "a": "Revisamos la aplicación, la base de datos, el volumen de archivos y los usuarios simultáneos. Partimos de una configuración justificada y acordamos cómo monitorizar y ampliar recursos si cambia el uso."
         }
       ],
       "seoTitle": "Servidores VPS para empresas en Perú | OdiseaCloud",
@@ -749,7 +877,12 @@
       },
       "primaryCta": "Configura tu servidor Cloud VPS",
       "targetAudience": "Proyectos de alta demanda, sistemas web exigentes o agencias que requieren recursos dedicados de procesamiento, memoria y control total del servidor.",
-      "clientReceives": "Servidor virtual privado aprovisionado, configuración de entorno web (Nginx/Apache, PHP, base de datos), firewall de seguridad y monitoreo."
+      "clientReceives": "Servidor virtual privado aprovisionado, configuración de entorno web (Nginx/Apache, PHP, base de datos), firewall de seguridad y monitoreo.",
+      "relatedSlugs": [
+        "sistemas-web",
+        "seguridad-web",
+        "mantenimiento-web"
+      ]
     },
     {
       "id": 11,
@@ -789,7 +922,15 @@
       "faqs": [
         {
           "q": "¿Qué pasa si mi web se rompe durante una actualización?",
-          "a": "Siempre realizamos un respaldo previo. Si una actualización genera incompatibilidad, restauramos el estado funcional al instante y corregimos el conflicto."
+          "a": "Antes de actualizar revisamos la compatibilidad y preparamos un respaldo según el alcance. Si aparece un fallo, evaluamos restaurar el estado anterior y corregir el conflicto. El tiempo de recuperación depende del sistema y de la disponibilidad del respaldo."
+        },
+        {
+          "q": "¿Qué incluye un mantenimiento web mensual?",
+          "a": "El alcance puede incluir actualizaciones, backups, revisión de formularios, enlaces y errores. Definimos frecuencia, horas de soporte y tiempos de atención. Añadir páginas o funciones nuevas puede requerir una cotización independiente."
+        },
+        {
+          "q": "¿Pueden mantener una web desarrollada por otra empresa?",
+          "a": "Primero revisamos la plataforma, los accesos, licencias y estado del código. Con esa evaluación confirmamos qué tareas podemos asumir y si hace falta una puesta a punto antes del mantenimiento periódico."
         }
       ],
       "seoTitle": "Mantenimiento de páginas web en Perú | OdiseaCloud",
@@ -803,7 +944,12 @@
       },
       "primaryCta": "Asegura soporte continuo para tu web",
       "targetAudience": "Empresas que no cuentan con un equipo técnico interno y necesitan mantener su web actualizada, respaldada y libre de fallos.",
-      "clientReceives": "Monitoreo continuo de disponibilidad, actualización periódica de plugins y CMS, copias de seguridad externas y bolsa de horas para ajustes."
+      "clientReceives": "Monitoreo continuo de disponibilidad, actualización periódica de plugins y CMS, copias de seguridad externas y bolsa de horas para ajustes.",
+      "relatedSlugs": [
+        "seguridad-web",
+        "optimizacion-velocidad",
+        "hosting-web"
+      ]
     },
     {
       "id": 12,
@@ -844,6 +990,14 @@
         {
           "q": "¿Pueden recuperar mi sitio si ya fue hackeado?",
           "a": "Sí. Realizamos una limpieza exhaustiva de bases de datos y archivos, eliminamos puertas traseras (backdoors) y reforzamos los accesos para evitar reinfecciones."
+        },
+        {
+          "q": "¿Cómo se evalúa una página web comprometida?",
+          "a": "Revisamos los síntomas, los accesos disponibles, archivos, base de datos y respaldos. Definimos la limpieza y las medidas de recuperación según la plataforma y la evidencia encontrada; ningún servicio elimina todos los riesgos futuros."
+        },
+        {
+          "q": "¿La limpieza incluye el mantenimiento posterior?",
+          "a": "La recuperación y el mantenimiento son alcances diferentes. La propuesta indica pruebas, cambios de acceso y medidas de protección incluidas, además del soporte y las revisiones posteriores que se contraten."
         }
       ],
       "seoTitle": "Seguridad y protección de sitios web en Perú | OdiseaCloud",
@@ -857,7 +1011,12 @@
       },
       "primaryCta": "Protege y limpia tu sitio web",
       "targetAudience": "Sitios web vulnerados, infectados con malware, bloqueados por Google o empresas que desean prevenir ataques cibernéticos.",
-      "clientReceives": "Desinfección profunda de archivos y base de datos, endurecimiento de seguridad (hardening), remoción de listas negras y firewall perimetral."
+      "clientReceives": "Desinfección profunda de archivos y base de datos, endurecimiento de seguridad (hardening), remoción de listas negras y firewall perimetral.",
+      "relatedSlugs": [
+        "mantenimiento-web",
+        "hosting-web",
+        "servidores-vps"
+      ]
     },
     {
       "id": 13,
@@ -870,7 +1029,7 @@
       "featured": false,
       "shortDesc": "Traslado seguro de sitios web, tiendas y bases de datos a un nuevo hosting sin pérdida de datos ni caídas.",
       "heroTagline": "Cambia de hosting y traslada tu dominio sin perder correos, ventas ni caídas técnicas",
-      "fullDesc": "Mudar un sitio web entre servidores requiere precisión para no perder correos, pedidos ni posicionamiento. Realizamos la transferencia completa de archivos, bases de datos y configuraciones con cero tiempo de inactividad visible.",
+      "fullDesc": "Migramos páginas web entre proveedores de hosting, revisando archivos, bases de datos, versiones, correo y DNS. Preparamos un entorno de destino, probamos el sitio y acordamos el momento del cambio. Buscamos reducir interrupciones y conservar las rutas útiles; el alcance y los riesgos dependen de la plataforma y de los accesos disponibles.",
       "icon": "shuffle",
       "whatsappMessage": "Hola, OdiseaCloud. Quisiera solicitar el servicio de migración de mi página web a un nuevo hosting.",
       "benefits": [
@@ -901,7 +1060,7 @@
         },
         {
           "q": "¿Mi página web se caerá o dejará de recibir visitas durante la mudanza?",
-          "a": "No. Aplicamos una metodología de conmutación en caliente: tu sitio antiguo permanece activo mientras nosotros preparamos y probamos todo en el nuevo servidor. La transición de DNS se realiza sin que los usuarios perciban ninguna interrupción."
+          "a": "Probamos el destino antes del cambio y coordinamos los DNS para reducir interrupciones. Puede ser necesaria una ventana de mantenimiento, especialmente en tiendas o sistemas que reciben datos durante la migración. Acordamos cómo sincronizar la información y verificar el resultado."
         },
         {
           "q": "¿Qué pasará con mis correos corporativos y mensajes antiguos?",
@@ -917,7 +1076,7 @@
         }
       ],
       "seoTitle": "Migración de páginas web y hosting en Perú | OdiseaCloud",
-      "seoDescription": "Migración web en Perú sin pérdida de datos: trasladamos tu sitio, tienda virtual y correos a un nuevo hosting de forma segura y sin caídas.",
+      "seoDescription": "Migración de páginas web, bases de datos y correo a otro hosting en Perú. Pruebas previas, coordinación de DNS y revisión posterior. Consulta el alcance.",
       "overviewTitle": "Migración de páginas web y hosting en Perú",
       "mascot": {
         "image": "/assets/images/mascotas/migracion-web.webp",
@@ -981,7 +1140,12 @@
             "Mano de obra técnica 100% gratuita incluida al contratar tu plan de hosting."
           ]
         }
-      }
+      },
+      "relatedSlugs": [
+        "hosting-web",
+        "dominios",
+        "correo-corporativo"
+      ]
     },
     {
       "id": 14,
@@ -1009,7 +1173,7 @@
         "Minificación y combinación de estilos CSS y scripts JavaScript",
         "Implementación de almacenamiento en caché en servidor y navegador",
         "Optimización de fuentes web y carga diferida (Lazy loading)",
-        "Cumplimiento de métricas LCP, FID/INP y CLS de Core Web Vitals"
+        "Medición y optimización de LCP, INP y CLS de Core Web Vitals"
       ],
       "technologies": [
         "Google Lighthouse",
@@ -1021,7 +1185,15 @@
       "faqs": [
         {
           "q": "¿Qué velocidad puedo esperar después de la optimización?",
-          "a": "El objetivo es situar el tiempo de carga por debajo de 2 segundos en condiciones normales de navegación y elevar las puntuaciones móviles a rangos verdes en PageSpeed."
+          "a": "Medimos el punto de partida y priorizamos imágenes, fuentes, caché, scripts y respuesta del servidor según los cuellos de botella. El resultado depende del sitio, el dispositivo, la conexión y servicios externos; comparamos mediciones antes y después sin prometer una puntuación fija."
+        },
+        {
+          "q": "¿Qué diferencia hay entre PageSpeed y Core Web Vitals reales?",
+          "a": "Una prueba de laboratorio analiza una carga en condiciones definidas. Los datos de campo resumen experiencias reales cuando existe suficiente tráfico. Usamos ambas perspectivas y no interpretamos una sola puntuación como garantía del rendimiento de todos los usuarios."
+        },
+        {
+          "q": "¿Qué necesitan para revisar la velocidad de mi web?",
+          "a": "La URL, la plataforma y los problemas observados. Según el alcance, podemos necesitar acceso al hosting o al código. Comprobamos también imágenes, fuentes y servicios externos antes de proponer cambios."
         }
       ],
       "seoTitle": "Optimización de velocidad de páginas web en Perú | OdiseaCloud",
@@ -1035,7 +1207,12 @@
       },
       "primaryCta": "Acelera la velocidad de tu web",
       "targetAudience": "Páginas web que cargan con lentitud, sufren alta tasa de rebote o no aprueban las métricas de Core Web Vitals de Google.",
-      "clientReceives": "Diagnóstico profundo, compresión y conversión de recursos, optimización de caché, minificación de código y reducción del tiempo LCP."
+      "clientReceives": "Diagnóstico profundo, compresión y conversión de recursos, optimización de caché, minificación de código y reducción del tiempo LCP.",
+      "relatedSlugs": [
+        "hosting-web",
+        "rediseno-web",
+        "seo-tecnico"
+      ]
     },
     {
       "id": 15,
@@ -1048,19 +1225,19 @@
       "featured": false,
       "shortDesc": "Estructuración de datos, sitemaps, metadatos y optimización técnica para facilitar la indexación en buscadores.",
       "heroTagline": "Prepara la base técnica de tu sitio para destacar en los resultados de Google",
-      "fullDesc": "El SEO técnico asegura que los motores de búsqueda puedan rastrear, entender e indexar todas las páginas de tu empresa sin errores. Configuramos datos estructurados Schema.org, metadatos precisos, sitemaps XML y jerarquías limpias.",
+      "fullDesc": "Revisamos si los buscadores pueden descubrir, rastrear e interpretar las páginas importantes de tu negocio. Analizamos respuestas HTTP, canonical, robots, sitemap, metadatos, enlaces y datos estructurados, además de los informes de Search Console cuando se dispone de acceso. Priorizamos correcciones y contenido según los servicios y las consultas reales; indexar una página y conseguir una posición son resultados diferentes.",
       "icon": "trending-up",
       "whatsappMessage": "Hola, OdiseaCloud. Deseo recibir información sobre sus servicios de SEO técnico para mi web.",
       "benefits": [
-        "Indexación limpia y completa de tus páginas y servicios en Google",
-        "Mejor visualización en resultados de búsqueda con datos enriquecidos",
-        "Eliminación de errores 404 y contenido duplicado",
-        "Compatibilidad con los últimos algoritmos de rastreo de buscadores"
+        "Detección de bloqueos de rastreo e indexación en páginas prioritarias",
+        "Datos estructurados coherentes con el contenido visible",
+        "Revisión de errores 404, duplicados y redirecciones",
+        "Priorización de mejoras con datos de Search Console cuando estén disponibles"
       ],
       "features": [
         "Auditoría técnica de indexación, rastreo y arquitectura web",
         "Optimización de etiquetas de título y meta descripciones por página",
-        "Generación y envío automatizado de Sitemap XML a Google Search Console",
+        "Generación y revisión del sitemap XML y su envío a Search Console con acceso autorizado",
         "Configuración correcta del archivo robots.txt",
         "Implementación de datos estructurados Schema.org (LocalBusiness, Organization)",
         "Estructura jerárquica de encabezados (H1, H2, H3) y enlaces internos"
@@ -1075,11 +1252,19 @@
       "faqs": [
         {
           "q": "¿Garantizan la primera posición en Google?",
-          "a": "En OdiseaCloud somos éticos y transparentes: ningún profesional serio puede garantizar el primer puesto exacto debido a que los algoritmos de Google consideran cientos de factores. Lo que garantizamos es una arquitectura técnica impecable para competir con la máxima eficacia."
+          "a": "No se puede garantizar una posición concreta. Corregimos los problemas incluidos en el alcance y medimos cambios en indexación, impresiones, consultas y clics. La competencia, el contenido, la reputación del negocio y las decisiones del buscador influyen en el resultado."
+        },
+        {
+          "q": "¿Qué diferencia hay entre rastreo, indexación y posicionamiento?",
+          "a": "Rastrear es visitar una URL; indexar es incorporarla al índice del buscador; posicionar es mostrarla para una consulta concreta. Una página puede responder 200 y permitir el rastreo sin estar indexada ni recibir visitas."
+        },
+        {
+          "q": "¿Necesitan acceso a Google Search Console?",
+          "a": "La revisión pública permite detectar problemas técnicos. Con acceso a Search Console se puede comprobar la indexación declarada por Google, sus canonical elegidos y las consultas e impresiones por página. El acceso se acuerda con el titular de la propiedad."
         }
       ],
       "seoTitle": "Servicio de SEO técnico en Perú | OdiseaCloud",
-      "seoDescription": "SEO técnico en Perú: sitemap XML, robots.txt, datos estructurados y optimización on-page para que Google indexe y posicione tu sitio web.",
+      "seoDescription": "Auditoría y corrección de SEO técnico en Perú: rastreo, canonical, sitemap, enlaces y datos estructurados. Revisión de Search Console y prioridades por página.",
       "overviewTitle": "Servicio de SEO técnico en Perú",
       "mascot": {
         "image": "/assets/images/mascotas/seo-tecnico.webp",
@@ -1089,7 +1274,12 @@
       },
       "primaryCta": "Audita el SEO de tu sitio web",
       "targetAudience": "Negocios que buscan incrementar su visibilidad orgánica en Google solucionando problemas de indexación, arquitectura y metadatos.",
-      "clientReceives": "Auditoría SEO completa, corrección de rastreo e indexabilidad, optimización de datos estructurados Schema.org y reporte de recomendaciones."
+      "clientReceives": "Auditoría SEO completa, corrección de rastreo e indexabilidad, optimización de datos estructurados Schema.org y reporte de recomendaciones.",
+      "relatedSlugs": [
+        "desarrollo-web",
+        "rediseno-web",
+        "optimizacion-velocidad"
+      ]
     }
   ],
   "portfolio": [
@@ -1174,8 +1364,8 @@
       ],
       "whatsappMsg": "Hola, OdiseaCloud. Quisiera evaluar el rediseño y modernización de la web de mi empresa.",
       "challenge": "El sitio web original tardaba más de 5 segundos en cargar, fallaba en pantallas de smartphones y sufría pérdida de tráfico orgánico por mala experiencia de usuario.",
-      "solution": "Rediseño integral de interfaz con estética SaaS moderna, optimización profunda de Core Web Vitals (LCP < 1.5s) y preservación estricta de la estructura de URLs y posicionamiento SEO existente.",
-      "deliverables": "Nueva web corporativa de alto rendimiento, 100% adaptable a teléfonos móviles, migración sin tiempo de inactividad y cero pérdida de enlaces indexados."
+      "solution": "Rediseño integral de interfaz con estética SaaS moderna, revisión de Core Web Vitals, preservación de URLs útiles y configuración de redirecciones para páginas cuyo destino cambió.",
+      "deliverables": "Nueva web corporativa adaptable a teléfonos móviles, plan de migración y redirecciones 301 para las URLs que tengan un reemplazo equivalente."
     }
   ],
   "sectors": [

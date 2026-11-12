@@ -343,7 +343,12 @@ data.services.forEach(service => {
   fs.mkdirSync(serviceDir, { recursive: true });
 
   const mascotOnLeft = service.id % 2 === 0;
-  const related = data.services.filter(s => s.id !== service.id && (s.category === service.category || s.featured)).slice(0, 3);
+  const explicitRelated = Array.isArray(service.relatedSlugs)
+    ? service.relatedSlugs.map(slug => data.services.find(item => item.slug === slug)).filter(Boolean)
+    : [];
+  const related = explicitRelated.length
+    ? explicitRelated.slice(0, 3)
+    : data.services.filter(s => s.id !== service.id && (s.category === service.category || s.featured)).slice(0, 3);
 
   const html = `<!DOCTYPE html>
 <html lang="es">
@@ -402,7 +407,7 @@ data.services.forEach(service => {
       <div class="container service-intro-grid ${mascotOnLeft ? 'mascot-on-left' : ''}">
         <div class="service-intro-copy">
         <span class="section-badge">${service.categoryName} &bull; Servicio ${service.number}</span>
-        <h1 style="margin-bottom: 20px;">${service.slug === 'dominios' ? 'Encuentra tu dominio ideal' : service.name}</h1>
+        <h1 style="margin-bottom: 20px;">${service.slug === 'dominios' ? 'Encuentra tu dominio ideal' : (service.heroTitle || service.name)}</h1>
         <p class="section-subtitle" style="margin: 0 0 32px;">
           ${service.slug === 'dominios' ? 'Registro y gestión de dominios para tu marca. Escribe un nombre y consulta su registro.' : service.heroTagline}
         </p>
@@ -448,6 +453,12 @@ data.services.forEach(service => {
             <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
               ${service.fullDesc}
             </p>
+            ${service.selectionAdvice ? `
+            <aside class="service-meta-box service-selection-advice">
+              <h3 class="service-meta-title">${service.selectionAdvice.title}</h3>
+              <p class="service-meta-desc">${service.selectionAdvice.text}</p>
+            </aside>
+            ` : ''}
             ${service.targetAudience ? `
             <div class="service-meta-box">
               <h4 class="service-meta-title">
@@ -1156,7 +1167,7 @@ const portafolioHtml = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Proyectos | ODISEACLOUD</title>
-  <meta name="description" content="Proyectos reales desarrollados por ODISEACLOUD: aulas virtuales, plataformas de comercio electrónico, sitios web a medida y reestructuraciones corporativas.">
+  <meta name="description" content="Conoce proyectos de aulas virtuales, tiendas virtuales, sitios web y rediseños desarrollados por OdiseaCloud. Revisa soluciones y tecnologías aplicadas.">
   <link rel="canonical" href="https://odiseacloud.com/portafolio/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
@@ -1173,7 +1184,7 @@ const portafolioHtml = `<!DOCTYPE html>
         <span class="section-badge">Casos y Desarrollos</span>
         <h1 style="margin-bottom: 20px;">Proyectos que reflejan nuestro trabajo</h1>
         <p class="section-subtitle">
-          Presentamos proyectos reales desarrollados con altos estándares de diseño UI/UX, arquitectura tecnológica sólida y orientación a resultados empresariales.
+          Ejemplos de soluciones digitales, tecnologías aplicadas y entregables posibles para distintos tipos de negocio.
         </p>
       </div>
     </section>
@@ -1851,7 +1862,7 @@ const homeHtml = `<!DOCTYPE html>
           <span class="section-badge">Trabajos Realizados</span>
           <h2 class="section-title">Proyectos que reflejan nuestro trabajo</h2>
           <p class="section-subtitle">
-            Una muestra de desarrollos implementados con atención minuciosa al diseño, rendimiento y conversión comercial.
+            Ejemplos de soluciones digitales, tecnologías aplicadas y entregables posibles para distintos tipos de negocio.
           </p>
         </div>
 

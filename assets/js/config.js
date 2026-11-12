@@ -13,7 +13,7 @@ const ODISEA_CONFIG = {
   schedule: "Lunes a Viernes de 9:00 a.m. a 7:00 p.m. | Sábados de 9:00 a.m. a 1:00 p.m.",
   analytics: {
     // Coloca aquí tu ID de Google Analytics 4 (ejemplo: 'G-XXXXXXXXXX')
-    googleAnalyticsId: "",
+    googleAnalyticsId: "G-Q2XZR2ZQEZ",
     // Opcional: ID de verificación de Google Search Console
     googleSearchConsole: "nJhV6kLT-MMIeIZoX_NYAXizcUF0q00NihxqmUIM9iw"
   },

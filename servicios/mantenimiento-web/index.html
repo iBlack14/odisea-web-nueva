@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../../assets/css/main.css?v=a4b6c537da">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://odiseacloud.com/servicios/mantenimiento-web/#service","name":"Mantenimiento web continuo","serviceType":"Mantenimiento Web","url":"https://odiseacloud.com/servicios/mantenimiento-web/","description":"Actualización periódica de plataformas, plugins, resolución de incidencias y soporte técnico prioritario.","areaServed":{"@type":"Country","name":"Perú"},"provider":{"@type":"Organization","@id":"https://odiseacloud.com/#organization","name":"OdiseaCloud","url":"https://odiseacloud.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://odiseacloud.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://odiseacloud.com/servicios/"},{"@type":"ListItem","position":3,"name":"Mantenimiento Web","item":"https://odiseacloud.com/servicios/mantenimiento-web/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué pasa si mi web se rompe durante una actualización?","acceptedAnswer":{"@type":"Answer","text":"Siempre realizamos un respaldo previo. Si una actualización genera incompatibilidad, restauramos el estado funcional al instante y corregimos el conflicto."}}]}]}
+  {"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://odiseacloud.com/servicios/mantenimiento-web/#service","name":"Mantenimiento web continuo","serviceType":"Mantenimiento Web","url":"https://odiseacloud.com/servicios/mantenimiento-web/","description":"Actualización periódica de plataformas, plugins, resolución de incidencias y soporte técnico prioritario.","areaServed":{"@type":"Country","name":"Perú"},"provider":{"@type":"Organization","@id":"https://odiseacloud.com/#organization","name":"OdiseaCloud","url":"https://odiseacloud.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://odiseacloud.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://odiseacloud.com/servicios/"},{"@type":"ListItem","position":3,"name":"Mantenimiento Web","item":"https://odiseacloud.com/servicios/mantenimiento-web/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué pasa si mi web se rompe durante una actualización?","acceptedAnswer":{"@type":"Answer","text":"Antes de actualizar revisamos la compatibilidad y preparamos un respaldo según el alcance. Si aparece un fallo, evaluamos restaurar el estado anterior y corregir el conflicto. El tiempo de recuperación depende del sistema y de la disponibilidad del respaldo."}},{"@type":"Question","name":"¿Qué incluye un mantenimiento web mensual?","acceptedAnswer":{"@type":"Answer","text":"El alcance puede incluir actualizaciones, backups, revisión de formularios, enlaces y errores. Definimos frecuencia, horas de soporte y tiempos de atención. Añadir páginas o funciones nuevas puede requerir una cotización independiente."}},{"@type":"Question","name":"¿Pueden mantener una web desarrollada por otra empresa?","acceptedAnswer":{"@type":"Answer","text":"Primero revisamos la plataforma, los accesos, licencias y estado del código. Con esa evaluación confirmamos qué tareas podemos asumir y si hace falta una puesta a punto antes del mantenimiento periódico."}}]}]}
   </script>
   
   <!-- Preconnect para recursos externos (mejora LCP) -->
@@ -28,6 +28,14 @@
   <link rel="dns-prefetch" href="https://api.whatsapp.com">
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="nJhV6kLT-MMIeIZoX_NYAXizcUF0q00NihxqmUIM9iw">
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2XZR2ZQEZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q2XZR2ZQEZ');
+  </script>
 <meta property="og:locale" content="es_PE">
 <meta property="og:site_name" content="OdiseaCloud">
 <meta name="twitter:card" content="summary_large_image">
@@ -185,6 +193,7 @@
             <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
               Un sitio web sin mantenimiento se vuelve vulnerable a fallas y ataques informáticos. Nuestro servicio preventivo y correctivo se encarga de que tu plataforma esté siempre al día, respaldada y en perfecto estado operativo.
             </p>
+            
             
             <div class="service-meta-box">
               <h4 class="service-meta-title">
@@ -373,7 +382,27 @@
                 <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
               </button>
               <div class="faq-answer">
-                <p>Siempre realizamos un respaldo previo. Si una actualización genera incompatibilidad, restauramos el estado funcional al instante y corregimos el conflicto.</p>
+                <p>Antes de actualizar revisamos la compatibilidad y preparamos un respaldo según el alcance. Si aparece un fallo, evaluamos restaurar el estado anterior y corregir el conflicto. El tiempo de recuperación depende del sistema y de la disponibilidad del respaldo.</p>
+              </div>
+            </div>
+          
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>¿Qué incluye un mantenimiento web mensual?</span>
+                <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <p>El alcance puede incluir actualizaciones, backups, revisión de formularios, enlaces y errores. Definimos frecuencia, horas de soporte y tiempos de atención. Añadir páginas o funciones nuevas puede requerir una cotización independiente.</p>
+              </div>
+            </div>
+          
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>¿Pueden mantener una web desarrollada por otra empresa?</span>
+                <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <p>Primero revisamos la plataforma, los accesos, licencias y estado del código. Con esa evaluación confirmamos qué tareas podemos asumir y si hace falta una puesta a punto antes del mantenimiento periódico.</p>
               </div>
             </div>
           
@@ -392,33 +421,33 @@
         <div class="services-grid">
           
             <div class="service-card">
-              <span class="service-card-number">SERVICIO 01</span>
-              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-              <h3 class="service-card-title">Diseño y creación de páginas web en Perú</h3>
-              <p class="service-card-desc">Creamos páginas web para empresas y emprendedores en Perú: diseño a medida, adaptación a celulares, formularios de contacto y SEO técnico.</p>
-              <a href="../../servicios/desarrollo-web/" class="service-card-link">
+              <span class="service-card-number">SERVICIO 12</span>
+              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <h3 class="service-card-title">Seguridad web y desinfección</h3>
+              <p class="service-card-desc">Protección de accesos, blindaje contra ataques, limpieza de malware y auditorías de vulnerabilidad autorizadas.</p>
+              <a href="../../servicios/seguridad-web/" class="service-card-link">
                 <span>Conocer detalles</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
             </div>
           
             <div class="service-card">
-              <span class="service-card-number">SERVICIO 02</span>
-              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-              <h3 class="service-card-title">Tiendas virtuales y eCommerce</h3>
-              <p class="service-card-desc">Comercio electrónico completo con catálogos dinámicos, pasarelas de pago y gestión de pedidos.</p>
-              <a href="../../servicios/tiendas-virtuales/" class="service-card-link">
+              <span class="service-card-number">SERVICIO 14</span>
+              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+              <h3 class="service-card-title">Optimización de velocidad y Core Web Vitals</h3>
+              <p class="service-card-desc">Aceleración de tiempos de carga, compresión inteligente de recursos y optimización de rendimiento móvil.</p>
+              <a href="../../servicios/optimizacion-velocidad/" class="service-card-link">
                 <span>Conocer detalles</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
             </div>
           
             <div class="service-card">
-              <span class="service-card-number">SERVICIO 03</span>
-              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div>
-              <h3 class="service-card-title">Reestructuración y rediseño web</h3>
-              <p class="service-card-desc">Modernización estética, tecnológica y funcional de sitios web existentes para recuperar competitividad.</p>
-              <a href="../../servicios/rediseno-web/" class="service-card-link">
+              <span class="service-card-number">SERVICIO 07</span>
+              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></div>
+              <h3 class="service-card-title">Hosting web de alto rendimiento</h3>
+              <p class="service-card-desc">Alojamiento confiable con cPanel, discos SSD NVMe, certificados SSL gratuitos y soporte técnico.</p>
+              <a href="../../servicios/hosting-web/" class="service-card-link">
                 <span>Conocer detalles</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>

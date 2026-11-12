@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../../assets/css/main.css?v=a4b6c537da">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://odiseacloud.com/servicios/aulas-virtuales/#service","name":"Aulas virtuales y eLearning","serviceType":"Aulas Virtuales","url":"https://odiseacloud.com/servicios/aulas-virtuales/","description":"Plataformas educativas para colegios, institutos, academias y empresas que imparten cursos online.","areaServed":{"@type":"Country","name":"Perú"},"provider":{"@type":"Organization","@id":"https://odiseacloud.com/#organization","name":"OdiseaCloud","url":"https://odiseacloud.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://odiseacloud.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://odiseacloud.com/servicios/"},{"@type":"ListItem","position":3,"name":"Aulas Virtuales","item":"https://odiseacloud.com/servicios/aulas-virtuales/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuántos estudiantes pueden acceder al mismo tiempo?","acceptedAnswer":{"@type":"Answer","text":"Diseñamos y alojamos la plataforma dimensionando los recursos del servidor según tu cantidad de estudiantes concurrentes para garantizar una experiencia sin caídas."}},{"@type":"Question","name":"¿Qué puede incluir un aula virtual para una institución?","acceptedAnswer":{"@type":"Answer","text":"El alcance puede contemplar matrícula de estudiantes, cursos, materiales, tareas, evaluaciones, seguimiento y certificados. Antes de implementar definimos los perfiles de acceso, la cantidad esperada de usuarios y las herramientas de videoconferencia que se utilizarán."}},{"@type":"Question","name":"¿Cómo se elige el hosting para un campus virtual?","acceptedAnswer":{"@type":"Answer","text":"Importan los usuarios conectados al mismo tiempo, el almacenamiento de materiales y el uso de videos o evaluaciones. Revisamos esos datos para proponer recursos, copias de seguridad y un plan de mantenimiento acordes con la operación."}}]}]}
+  {"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://odiseacloud.com/servicios/aulas-virtuales/#service","name":"Aulas virtuales y eLearning","serviceType":"Aulas Virtuales","url":"https://odiseacloud.com/servicios/aulas-virtuales/","description":"Plataformas educativas para colegios, institutos, academias y empresas que imparten cursos online.","areaServed":{"@type":"Country","name":"Perú"},"provider":{"@type":"Organization","@id":"https://odiseacloud.com/#organization","name":"OdiseaCloud","url":"https://odiseacloud.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://odiseacloud.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://odiseacloud.com/servicios/"},{"@type":"ListItem","position":3,"name":"Aulas Virtuales","item":"https://odiseacloud.com/servicios/aulas-virtuales/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuántos estudiantes pueden acceder al mismo tiempo?","acceptedAnswer":{"@type":"Answer","text":"La concurrencia depende del software, los recursos del servidor y el tipo de actividad. Dimensionamos el entorno según estudiantes simultáneos, evaluaciones, videos y almacenamiento; las pruebas de carga se acuerdan en el alcance."}},{"@type":"Question","name":"¿Qué puede incluir un aula virtual para una institución?","acceptedAnswer":{"@type":"Answer","text":"El alcance puede contemplar matrícula de estudiantes, cursos, materiales, tareas, evaluaciones, seguimiento y certificados. Antes de implementar definimos los perfiles de acceso, la cantidad esperada de usuarios y las herramientas de videoconferencia que se utilizarán."}},{"@type":"Question","name":"¿Cómo se elige el hosting para un campus virtual?","acceptedAnswer":{"@type":"Answer","text":"Importan los usuarios conectados al mismo tiempo, el almacenamiento de materiales y el uso de videos o evaluaciones. Revisamos esos datos para proponer recursos, copias de seguridad y un plan de mantenimiento acordes con la operación."}},{"@type":"Question","name":"¿Qué información necesitan para cotizar un aula virtual?","acceptedAnswer":{"@type":"Answer","text":"Cantidad de estudiantes y docentes, usuarios simultáneos, cursos, tipos de evaluación, almacenamiento y herramientas existentes. También revisamos si necesitas migrar contenidos o integrar matrículas y pagos."}}]}]}
   </script>
   
   <!-- Preconnect para recursos externos (mejora LCP) -->
@@ -28,6 +28,14 @@
   <link rel="dns-prefetch" href="https://api.whatsapp.com">
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="nJhV6kLT-MMIeIZoX_NYAXizcUF0q00NihxqmUIM9iw">
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2XZR2ZQEZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q2XZR2ZQEZ');
+  </script>
 <meta property="og:locale" content="es_PE">
 <meta property="og:site_name" content="OdiseaCloud">
 <meta name="twitter:card" content="summary_large_image">
@@ -185,6 +193,7 @@
             <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
               Implementamos aulas virtuales completas diseñadas para centros educativos y capacitadores. Con soporte para videoconferencias en vivo (Zoom, Google Meet), materiales descargables, evaluaciones automatizadas y emisión de certificados digitales.
             </p>
+            
             
             <div class="service-meta-box">
               <h4 class="service-meta-title">
@@ -373,7 +382,7 @@
                 <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
               </button>
               <div class="faq-answer">
-                <p>Diseñamos y alojamos la plataforma dimensionando los recursos del servidor según tu cantidad de estudiantes concurrentes para garantizar una experiencia sin caídas.</p>
+                <p>La concurrencia depende del software, los recursos del servidor y el tipo de actividad. Dimensionamos el entorno según estudiantes simultáneos, evaluaciones, videos y almacenamiento; las pruebas de carga se acuerdan en el alcance.</p>
               </div>
             </div>
           
@@ -397,6 +406,16 @@
               </div>
             </div>
           
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>¿Qué información necesitan para cotizar un aula virtual?</span>
+                <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+              </button>
+              <div class="faq-answer">
+                <p>Cantidad de estudiantes y docentes, usuarios simultáneos, cursos, tipos de evaluación, almacenamiento y herramientas existentes. También revisamos si necesitas migrar contenidos o integrar matrículas y pagos.</p>
+              </div>
+            </div>
+          
         </div>
       </div>
     </section>
@@ -412,33 +431,33 @@
         <div class="services-grid">
           
             <div class="service-card">
-              <span class="service-card-number">SERVICIO 01</span>
-              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-              <h3 class="service-card-title">Diseño y creación de páginas web en Perú</h3>
-              <p class="service-card-desc">Creamos páginas web para empresas y emprendedores en Perú: diseño a medida, adaptación a celulares, formularios de contacto y SEO técnico.</p>
-              <a href="../../servicios/desarrollo-web/" class="service-card-link">
+              <span class="service-card-number">SERVICIO 07</span>
+              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></div>
+              <h3 class="service-card-title">Hosting web de alto rendimiento</h3>
+              <p class="service-card-desc">Alojamiento confiable con cPanel, discos SSD NVMe, certificados SSL gratuitos y soporte técnico.</p>
+              <a href="../../servicios/hosting-web/" class="service-card-link">
                 <span>Conocer detalles</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
             </div>
           
             <div class="service-card">
-              <span class="service-card-number">SERVICIO 02</span>
-              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-              <h3 class="service-card-title">Tiendas virtuales y eCommerce</h3>
-              <p class="service-card-desc">Comercio electrónico completo con catálogos dinámicos, pasarelas de pago y gestión de pedidos.</p>
-              <a href="../../servicios/tiendas-virtuales/" class="service-card-link">
+              <span class="service-card-number">SERVICIO 10</span>
+              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="2" y1="12" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" x2="6.01" y1="16" y2="16"/><line x1="10" x2="10.01" y1="16" y2="16"/></svg></div>
+              <h3 class="service-card-title">Servidores VPS y Cloud</h3>
+              <p class="service-card-desc">Implementación, configuración y puesta en marcha de servidores privados virtuales Linux para aplicaciones exigentes.</p>
+              <a href="../../servicios/servidores-vps/" class="service-card-link">
                 <span>Conocer detalles</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
             </div>
           
             <div class="service-card">
-              <span class="service-card-number">SERVICIO 03</span>
-              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div>
-              <h3 class="service-card-title">Reestructuración y rediseño web</h3>
-              <p class="service-card-desc">Modernización estética, tecnológica y funcional de sitios web existentes para recuperar competitividad.</p>
-              <a href="../../servicios/rediseno-web/" class="service-card-link">
+              <span class="service-card-number">SERVICIO 11</span>
+              <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+              <h3 class="service-card-title">Mantenimiento web continuo</h3>
+              <p class="service-card-desc">Actualización periódica de plataformas, plugins, resolución de incidencias y soporte técnico prioritario.</p>
+              <a href="../../servicios/mantenimiento-web/" class="service-card-link">
                 <span>Conocer detalles</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
