@@ -611,7 +611,7 @@
       "featured": true,
       "shortDesc": "Registro, renovación y administración técnica de dominios .com, .pe, .org y extensiones globales.",
       "heroTagline": "Protege y consolida el nombre de tu marca en internet",
-      "fullDesc": "Te asesoramos en la elección del nombre ideal para tu empresa y gestionamos el registro de tus dominios. Configuramos las zonas DNS, servidores de nombres y redireccionamientos para que tu marca esté protegida y vinculada correctamente a tus servicios web.",
+      "fullDesc": "Te ayudamos a elegir y registrar un dominio para tu empresa y a administrar su renovación y DNS. Si ya tienes un dominio, revisamos si puede trasladarse al proveedor de destino y coordinamos el proceso contigo. El dominio, el hosting y el correo son servicios diferentes: antes de cambiar servidores de nombres, revisamos los registros que utiliza tu web y tu correo para planificar la continuidad del servicio.",
       "icon": "at-sign",
       "whatsappMessage": "Hola, OdiseaCloud. Quisiera consultar sobre el registro y configuración de dominios.",
       "benefits": [
@@ -636,17 +636,33 @@
       ],
       "faqs": [
         {
-          "q": "¿El dominio queda registrado a mi nombre?",
-          "a": "Absolutamente. La titularidad legal y propiedad del dominio pertenece 100% al cliente."
+          "q": "¿Cómo funciona el buscador de dominios?",
+          "a": "Si escribes solo el nombre de tu marca, consultamos diez opciones de extensión mediante Spaceship. Si escribes un dominio completo, consultamos ese nombre exacto. Un resultado disponible puede cambiar hasta completar el registro; si no podemos comprobarlo o la extensión no está soportada, mostramos Sin verificar."
         },
         {
-          "q": "¿Cómo puedo transferir mi dominio .com o .pe a OdiseaCloud?",
-          "a": "Solo debes solicitar el código de transferencia (EPP/Auth-Code) a tu registrador actual y asegurarte de que el dominio esté desbloqueado. Nosotros gestionamos el traspaso y configuramos las DNS correctamente."
+          "q": "¿El dominio queda registrado a mi nombre?",
+          "a": "El registro se prepara con los datos del titular acordado contigo. Confirmamos la información de contacto, la administración y las condiciones de renovación antes de completar el servicio."
+        },
+        {
+          "q": "¿Qué necesito para trasladar un dominio .com?",
+          "a": "Revisamos la elegibilidad del dominio, el acceso al correo del titular, su desbloqueo y el código EPP o Auth-Code. Pueden existir bloqueos por registro, traslado o cambios recientes del titular. Las condiciones dependen de la extensión y del proveedor de destino."
+        },
+        {
+          "q": "¿Trasladar el dominio también mueve mi página web y mis correos?",
+          "a": "No. El traslado cambia el proveedor que administra el registro del dominio. Migrar archivos, bases de datos o buzones requiere un trabajo separado. Antes del traslado revisamos los DNS y coordinamos los cambios necesarios para tu web y tu correo."
+        },
+        {
+          "q": "¿Puedo consultar o trasladar un dominio .pe o .com.pe?",
+          "a": "Puedes escribir el dominio completo en el buscador. Si el proveedor no permite comprobar esa extensión, te ayudamos a revisarla por otra vía. La posibilidad y los requisitos del traslado se confirman para cada extensión y proveedor."
+        },
+        {
+          "q": "¿Cuánto cuesta registrar, renovar o trasladar un dominio?",
+          "a": "Depende de la extensión, el plazo, la disponibilidad y de si el dominio tiene precio premium. Confirmamos el importe del registro o traslado y las condiciones de renovación en la propuesta antes de realizar la operación."
         }
       ],
-      "seoTitle": "Registro y configuración de dominios en Perú | OdiseaCloud",
-      "seoDescription": "Registro y gestión de dominios web en Perú: .com, .pe, .org y más. Renovación, DNS y transferencias con soporte técnico incluido.",
-      "overviewTitle": "Registro y configuración de dominios en Perú",
+      "seoTitle": "Registro y traslado de dominios en Perú | OdiseaCloud",
+      "seoDescription": "Busca la disponibilidad de tu dominio, solicita su registro o traslada el que ya tienes. Gestión de DNS, renovación y soporte desde Perú con OdiseaCloud.",
+      "overviewTitle": "Registro, renovación y traslado de dominios en Perú",
       "mascot": {
         "image": "/assets/images/mascotas/dominios.webp",
         "alt": "Robot de OdiseaCloud presentando un globo y una dirección web",
@@ -659,22 +675,22 @@
       "transferGuide": {
         "badge": "Traslado Fácil",
         "title": "¿Cómo transferir tu dominio actual a OdiseaCloud?",
-        "desc": "Unifica tu dominio, hosting y correos corporativos con un solo proveedor en Perú. Olvídate de tratar con intermediarios extranjeros.",
+        "desc": "¿Ya tienes un dominio? Revisamos su elegibilidad y te ayudamos a trasladar su administración. Los requisitos cambian según la extensión y el proveedor.",
         "steps": [
           {
             "step": "1",
             "title": "Solicita tu código EPP / Auth-Code",
-            "desc": "Desde el panel de tu registrador actual solicita el código de autorización y desbloquea el dominio para transferencia."
+            "desc": "Revisamos los bloqueos de traslado y el acceso del titular. Cuando corresponda, solicita el código de autorización y desbloquea el dominio en tu proveedor actual."
           },
           {
             "step": "2",
             "title": "Inicia el traslado con nosotros",
-            "desc": "Nos proporcionas el nombre del dominio y el código EPP. Gestionamos la solicitud formal ante ICANN o Punto.pe."
+            "desc": "Confirmamos la extensión, el proveedor de destino y las condiciones. Antes de iniciar el traslado revisamos la configuración DNS de la web y del correo."
           },
           {
             "step": "3",
             "title": "Acepta la validación por correo",
-            "desc": "Recibirás un enlace de confirmación por email para autorizar el traspaso. La transferencia se completa sin alterar el funcionamiento de tu web."
+            "desc": "Completa las autorizaciones que solicite el proveedor. Verificamos el estado del traslado y la configuración DNS al finalizar; el plazo depende del registro y de las aprobaciones."
           }
         ]
       }

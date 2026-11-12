@@ -650,7 +650,7 @@ data.services.forEach(service => {
 
     ${service.transferGuide ? `
     <!-- GUÍA DE TRANSFERENCIA DE DOMINIO -->
-    <section class="section section-soft-blue">
+    <section class="section section-soft-blue" id="traslado-dominio">
       <div class="container">
         <div class="section-header" style="text-align: center; max-width: 750px; margin: 0 auto 40px auto;">
           <span class="section-badge">${service.transferGuide.badge}</span>

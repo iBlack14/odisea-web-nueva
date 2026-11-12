@@ -17,7 +17,10 @@ module.exports = function finalizeSeo(urls) {
       'og:url': url, 'og:image': 'https://odiseacloud.com/assets/images/social-preview.jpg',
       'og:locale': 'es_PE', 'og:site_name': 'OdiseaCloud'
     })) {
-      if (!html.includes(`property="${property}"`)) tags.push(`<meta property="${property}" content="${content}">`);
+      const tag = `<meta property="${property}" content="${content}">`;
+      const existing = new RegExp(`<meta property="${property}" content="[^"]*">`);
+      if (existing.test(html)) html = html.replace(existing, () => tag);
+      else tags.push(tag);
     }
     const socialImage = html.match(/property="og:image" content="([^"]+)"/);
     tags.push('<meta name="twitter:card" content="summary_large_image">',

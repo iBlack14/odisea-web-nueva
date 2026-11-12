@@ -995,6 +995,9 @@ p {
 .home-slider .about-slide-copy h2 { font-size: clamp(2.1rem, 4.2vw, 3.5rem); line-height: 1.12; letter-spacing: -.035em; margin: 8px 0 24px; color: #11243b; }
 .home-slider .about-slide-copy h2 span { color: #5b7189; }
 .home-slide-domains { background: linear-gradient(110deg, #f4f7fa, #eaf2f6); }
+.home-service-shortcuts { padding: 20px 0; border-bottom: 1px solid var(--color-border); background: #fff; }
+.home-service-shortcuts > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; }
+.home-service-shortcuts a { font-size: .88rem; color: #285d86; text-decoration: underline; text-underline-offset: 4px; }
 .home-slide-mascot { display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .home-slide-mascot img { width: 100%; max-width: 350px; height: 380px; object-fit: contain; }
 .home-slide-mascot > span { font-size: .8rem; color: #53687e; margin-top: 8px; }

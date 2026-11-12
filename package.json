@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "node build.js",
+    "audit:seo": "node scripts/audit-seo.cjs",
     "start": "node server.js"
   },
   "keywords": [],
