@@ -391,14 +391,23 @@ data.services.forEach(service => {
 
   <main>
     <!-- HERO DEL SERVICIO -->
-    <section class="section section-soft-blue service-intro">
+    <section class="section section-soft-blue service-intro ${service.slug === 'dominios' ? 'domain-search-hero' : ''}">
       <div class="container service-intro-grid ${mascotOnLeft ? 'mascot-on-left' : ''}">
         <div class="service-intro-copy">
         <span class="section-badge">${service.categoryName} &bull; Servicio ${service.number}</span>
-        <h1 style="margin-bottom: 20px;">${service.name}</h1>
+        <h1 style="margin-bottom: 20px;">${service.slug === 'dominios' ? 'Encuentra tu dominio ideal' : service.name}</h1>
         <p class="section-subtitle" style="margin: 0 0 32px;">
-          ${service.heroTagline}
+          ${service.slug === 'dominios' ? 'Registro y gestión de dominios para tu marca. Escribe un nombre y consulta su registro.' : service.heroTagline}
         </p>
+        ${service.slug === 'dominios' ? `        <form id="domain-search-form" class="domain-search-form">
+          <div><label for="domain-name">Nombre o dominio</label><input id="domain-name" name="domain" type="text" placeholder="miempresa.com" required maxlength="253" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="domain-search-hint"></div>
+          <button class="btn btn-primary" type="submit">Buscar dominio</button>
+        </form>
+        <p id="domain-search-hint" class="domain-search-hint">Escribe tu marca y te sugerimos 10 opciones con su disponibilidad. Si escribes un dominio completo, consultamos solo ese dominio.</p>
+        <div id="domain-search-result" class="domain-search-result" role="status" aria-live="polite" hidden></div>
+        <a id="domain-search-contact" class="domain-help-link" target="_blank" rel="noopener noreferrer" hidden>Consultar este dominio por WhatsApp</a>
+` : ''}
+        ${service.slug !== 'dominios' ? `
         <div class="service-intro-actions">
           <a href="#" class="btn btn-whatsapp" data-whatsapp="${service.whatsappMessage}" data-cta="${service.primaryCta || 'Consultar por WhatsApp'}">
             ${getSvgIcon('whatsapp')}
@@ -408,7 +417,7 @@ data.services.forEach(service => {
             ${getSvgIcon('mail')}
             <span>Solicitar propuesta por correo</span>
           </a>
-        </div>
+        </div>` : ''}
         </div>
         <div class="service-intro-art">
           <span class="mascot-orbit" aria-hidden="true"></span>
@@ -418,6 +427,7 @@ data.services.forEach(service => {
       </div>
     </section>
 
+    ${service.slug === 'dominios' ? '<script src="../../assets/js/domain-search.js" defer></script>' : ''}
     ${service.image ? `<div class="container container-narrow" style="padding-top: 40px;">
       <img src="../..${service.image}" alt="${service.imageAlt}" width="1536" height="1024" style="display: block; width: 100%; height: auto; border-radius: 20px;" fetchpriority="high">
     </div>` : ''}
@@ -884,18 +894,36 @@ const nosotrosHtml = `<!DOCTYPE html>
 
   <main>
     <!-- HERO NOSOTROS -->
-    <section class="section section-soft-blue" style="padding: 72px 0 60px 0;">
-      <div class="container container-narrow" style="text-align: center;">
-        <span class="section-badge">Identidad Corporativa</span>
-        <h1 style="margin-bottom: 20px;">Tecnología, creatividad y soluciones que generan valor</h1>
-        <p class="section-subtitle">
-          En OdiseaCloud desarrollamos soluciones digitales que ayudan a empresas, emprendedores e instituciones a fortalecer su presencia en internet, optimizar sus procesos y aprovechar nuevas oportunidades tecnológicas.
-        </p>
+    <section class="about-slider" aria-label="Conoce OdiseaCloud" aria-roledescription="carrusel" tabindex="0">
+      <div class="about-slide about-slide-split" role="group" aria-roledescription="diapositiva" aria-label="1 de 2">
+        <div class="container about-slide-layout">
+          <div class="about-slide-copy">
+            <span class="section-badge">Somos OdiseaCloud</span>
+            <h1>Tecnología con propósito.<br><span>Un equipo contigo.</span></h1>
+            <p>Diseñamos y desarrollamos soluciones web y cloud que acompañan a tu empresa, desde la primera idea hasta su siguiente etapa.</p>
+            <a class="btn btn-primary" href="#nuestro-enfoque">Conoce nuestro enfoque ${getSvgIcon('arrowRight')}</a>
+          </div>
+          <div class="about-slide-photo"><img src="../assets/images/infra-datacenter.webp" alt="Infraestructura tecnológica como representación de nuestros servicios cloud" width="1024" height="1024" fetchpriority="high"><span>Diseño · Desarrollo · Cloud</span></div>
+        </div>
+      </div>
+      <div class="about-slide about-slide-centered" role="group" aria-roledescription="diapositiva" aria-label="2 de 2" hidden>
+        <div class="container about-slide-center-copy">
+          <span class="section-badge">Nuestra forma de trabajar</span>
+          <h2>Tu proyecto, sin límites.<br><span>Con bases para crecer.</span></h2>
+          <p>Escuchamos lo que necesitas, definimos un alcance claro y construimos tecnología que pueda evolucionar junto a tu negocio.</p>
+          <div class="about-slide-principles"><span>${getSvgIcon('check')} Código propio</span><span>${getSvgIcon('check')} Comunicación directa</span><span>${getSvgIcon('check')} Visión a futuro</span></div>
+          <a class="about-slide-link" href="../contacto/">Conversemos sobre tu proyecto ${getSvgIcon('arrowRight')}</a>
+        </div>
+      </div>
+      <div class="container about-slider-controls">
+        <div class="about-slider-pagination"><button type="button" data-about-slide="0" aria-label="Ver diapositiva 1" aria-current="true"></button><button type="button" data-about-slide="1" aria-label="Ver diapositiva 2" aria-current="false"></button><span class="about-slide-counter" aria-live="off">01 / 02</span></div>
+        <div class="about-slider-arrows"><button type="button" data-about-prev aria-label="Diapositiva anterior">${getSvgIcon('arrowRight')}</button><button type="button" data-about-pause aria-label="Pausar cambio automático">Pausar</button><button type="button" data-about-next aria-label="Siguiente diapositiva">${getSvgIcon('arrowRight')}</button></div>
       </div>
     </section>
+    <script src="../assets/js/about-slider.js" defer></script>
 
     <!-- COMPOSICIÓN 2 COLUMNAS -->
-    <section class="section">
+    <section class="section" id="nuestro-enfoque">
       <div class="container">
         <div class="about-grid">
           <div>
@@ -1523,7 +1551,7 @@ const homeHtml = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diseño de páginas web en Perú | OdiseaCloud</title>
-  <meta name="description" content="Creación y diseño de páginas web en Perú. Desarrollamos tiendas virtuales, sistemas a medida y aulas virtuales. Consulta tu proyecto con OdiseaCloud.">
+  <meta name="description" content="Diseño de páginas web en Perú, tiendas virtuales y sistemas a medida. Busca, registra o traslada tu dominio con OdiseaCloud.">
   <link rel="canonical" href="https://odiseacloud.com/">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
@@ -1567,86 +1595,51 @@ const homeHtml = `<!DOCTYPE html>
 
   <main>
     <!-- SECCIÓN 1 — HERO PRINCIPAL -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <!-- Columna Izquierda: Mensaje Comercial -->
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="hero-badge-pulse"></span>
-            <span>Soluciones digitales para empresas en Perú</span>
+    <section class="about-slider home-slider" aria-label="Soluciones digitales de OdiseaCloud" aria-roledescription="carrusel" tabindex="0">
+      <div class="about-slide about-slide-split" role="group" aria-roledescription="diapositiva" aria-label="1 de 3">
+        <div class="container about-slide-layout">
+          <div class="about-slide-copy">
+            <span class="section-badge">Desarrollo web en Perú · OdiseaCloud</span>
+            <h1>Diseño de páginas web y <span>software a medida en Perú.</span></h1>
+            <p>Desarrollamos páginas web empresariales, tiendas virtuales y sistemas personalizados para digitalizar tus ventas y automatizar procesos, con código propio y soporte desde Lima.</p>
+            <a class="btn btn-primary" href="servicios/desarrollo-web/">Diseña tu página web ${getSvgIcon('arrowRight')}</a>
+            <div class="home-slide-links"><a href="servicios/tiendas-virtuales/">Tiendas virtuales</a><a href="servicios/sistemas-web/">Sistemas a medida</a></div>
           </div>
-
-          <h1 class="hero-title">
-            Diseño de páginas web y <span class="text-gradient">software a medida en Perú.</span>
-          </h1>
-
-          <p class="hero-desc">
-            Ayudamos a empresas y negocios a digitalizar sus ventas y automatizar procesos. Desarrollamos páginas web de carga ultrarrápida, tiendas virtuales y sistemas personalizados con código limpio y soporte continuo desde Lima.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="servicios/desarrollo-web/" class="btn btn-primary btn-lg" data-cta="Cotiza tu página web empresarial">
-              <span>Cotiza tu página web</span>
-              ${getSvgIcon('arrowRight')}
-            </a>
-            <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp="${data.company.name}: Hola, quisiera conversar sobre un proyecto digital para mi empresa." data-cta="Habla con un asesor por WhatsApp">
-              ${getSvgIcon('whatsapp')}
-              <span>Hablar con un asesor</span>
-            </a>
-          </div>
-
-          <div class="hero-features-list">
-            <div class="hero-feature-item">
-              <span class="hero-feature-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 4-4 16"/></svg></span>
-              <span>Código propio y limpio</span>
-            </div>
-            <div class="hero-feature-item">
-              <span class="hero-feature-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M9 9v11"/><path d="M6 6.5h.01M9 6.5h.01"/></svg></span>
-              <span>Diseño SaaS Premium</span>
-            </div>
-            <div class="hero-feature-item">
-              <span class="hero-feature-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/><path d="M8 12h8M8 8h5"/></svg></span>
-              <span>Atención personalizada</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna Derecha: Mascota Robótica Oficial en el Espacio con Elementos Tecnológicos -->
-        <div class="hero-visual">
-          <div class="hero-mascot-container">
-            <div class="hero-mascot-halo"></div>
-            <img src="assets/images/mascota-izquierda.webp" alt="Mascota de OdiseaCloud presentando nuestras soluciones digitales" class="hero-mascot-img" width="1213" height="1296" fetchpriority="high">
-            
-            <!-- Tarjeta Flotante 1: Cloud & Web -->
-            <div class="floating-card floating-card-1">
-              <div class="floating-icon">${getSvgIcon('cpu')}</div>
-              <div>
-                <p class="floating-title">Cloud & Software</p>
-                <p class="floating-subtitle">Arquitectura escalable</p>
-              </div>
-            </div>
-
-            <!-- Tarjeta Flotante 2: Rendimiento -->
-            <div class="floating-card floating-card-2">
-              <div class="floating-icon">${getSvgIcon('zap')}</div>
-              <div>
-                <p class="floating-title">Alta Velocidad</p>
-                <p class="floating-subtitle">Rendimiento cuidado</p>
-              </div>
-            </div>
-
-            <!-- Badge de Estado de la Mascota -->
-            <div class="hero-mascot-status">
-              <span class="status-pulse-dot"></span>
-              <span>Asistente digital • 100% en línea</span>
-            </div>
-          </div>
-        </div>
+          <div class="home-slide-mascot"><img src="assets/images/mascota-izquierda.webp" alt="Mascota de OdiseaCloud presentando nuestras soluciones digitales" width="1213" height="1296" fetchpriority="high"><span>Diseño · Desarrollo · Cloud</span></div>
         </div>
       </div>
+      <div class="about-slide about-slide-centered" role="group" aria-roledescription="diapositiva" aria-label="2 de 3" hidden>
+        <div class="container about-slide-center-copy">
+          <span class="section-badge">Sistemas web y automatización</span>
+          <h2>Menos tareas repetitivas.<br><span>Más control de tu negocio.</span></h2>
+          <p>Creamos sistemas web a medida e integramos CRM y herramientas digitales para organizar información, conectar procesos y acompañar el crecimiento de tu empresa.</p>
+          <div class="about-slide-principles"><span>${getSvgIcon('check')} Desarrollo personalizado</span><span>${getSvgIcon('check')} Integración de CRM</span><span>${getSvgIcon('check')} Soporte continuo</span></div>
+          <a class="btn btn-primary" href="servicios/sistemas-web/">Explora los sistemas a medida ${getSvgIcon('arrowRight')}</a>
+          <div class="home-slide-links"><a href="servicios/integraciones-automatizaciones/">Automatización de procesos e integración de CRM</a></div>
+        </div>
+      </div>
+      <div class="about-slide home-slide-domains" role="group" aria-roledescription="diapositiva" aria-label="3 de 3" hidden>
+        <div class="container about-slide-layout">
+          <div class="about-slide-copy">
+            <span class="section-badge">Registro y traslado de dominios</span>
+            <h2>Tu marca empieza<br><span>con un buen dominio.</span></h2>
+            <p>Busca la disponibilidad de tu dominio y solicita su registro. Si ya tienes uno, te acompañamos en su traslado y en la configuración de DNS, hosting y correo corporativo.</p>
+            <a class="btn btn-primary" href="servicios/dominios/">Busca o traslada tu dominio ${getSvgIcon('arrowRight')}</a>
+            <div class="home-slide-links"><a href="servicios/hosting-web/">Hosting web</a><a href="servicios/correo-corporativo/">Correo corporativo</a></div>
+          </div>
+          <div class="home-slide-mascot"><img src="assets/images/mascotas/dominios.webp" alt="Robot de OdiseaCloud con un globo y una dirección web" width="960" height="1200" loading="lazy"><span>Registro · Traslado · Configuración DNS</span></div>
+        </div>
+      </div>
+      <div class="container about-slider-controls">
+        <div class="about-slider-pagination"><button type="button" data-about-slide="0" aria-label="Ver páginas web" aria-current="true"></button><button type="button" data-about-slide="1" aria-label="Ver sistemas web" aria-current="false"></button><button type="button" data-about-slide="2" aria-label="Ver dominios" aria-current="false"></button><span class="about-slide-counter" aria-live="off">01 / 03</span></div>
+        <div class="about-slider-arrows"><button type="button" data-about-prev aria-label="Diapositiva anterior">${getSvgIcon('arrowRight')}</button><button type="button" data-about-pause aria-label="Pausar cambio automático">Pausar</button><button type="button" data-about-next aria-label="Siguiente diapositiva">${getSvgIcon('arrowRight')}</button></div>
+      </div>
     </section>
+    <script src="assets/js/about-slider.js" defer></script>
 
-    <!-- SECCIÓN 2 — SERVICIOS PRINCIPALES (8 Destacados) -->
+    <nav class="home-service-shortcuts" aria-label="Servicios principales"><div class="container"><a href="servicios/desarrollo-web/">Diseño de páginas web en Perú</a><a href="servicios/sistemas-web/">Desarrollo de sistemas a medida</a><a href="servicios/dominios/">Buscar y registrar dominios</a><a href="servicios/dominios/#traslado-dominio">Trasladar un dominio</a></div></nav>
+
+    <!-- SECCIÓN 2 — SERVICIOS PRINCIPALES (9 Destacados) -->
     <section class="section section-light" id="servicios-destacados">
       <div class="container">
         <div class="section-header">

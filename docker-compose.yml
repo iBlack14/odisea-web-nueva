@@ -14,6 +14,8 @@ services:
     environment:
       - APACHE_RUN_USER=www-data
       - APACHE_RUN_GROUP=www-data
+      - SPACESHIP_API_KEY=${SPACESHIP_API_KEY:-}
+      - SPACESHIP_API_SECRET=${SPACESHIP_API_SECRET:-}
       - RESEND_API_KEY=${RESEND_API_KEY:-}
       - RESEND_FROM=${RESEND_FROM:-}
       - CLAIMS_TO=${CLAIMS_TO:-reclamos@odiseacloud.com}

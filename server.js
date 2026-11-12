@@ -2,6 +2,17 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+// Optional, ignored credentials file for local development.
+for (const envName of ['.env', '.env.spaceship']) {
+const spaceshipEnv = path.join(__dirname, envName);
+if (fs.existsSync(spaceshipEnv)) {
+  for (const line of fs.readFileSync(spaceshipEnv, 'utf8').split(/\r?\n/)) {
+    const match = line.match(/^(SPACESHIP_API_KEY|SPACESHIP_API_SECRET)=(.*)$/);
+    if (match && !process.env[match[1]]) process.env[match[1]] = match[2].trim();
+  }
+}
+}
+
 const PORT = 3000;
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
@@ -20,6 +31,25 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
+
+  if (reqPath.split(/[\\/]/).some(part => part.startsWith('.'))) {
+    res.writeHead(404);
+    res.end('404 No encontrado');
+    return;
+  }
+
+  if (reqPath === '/domain-check.php') {
+    require('./domain-check')(req, res);
+    return;
+  }
+
+  // Feed de comentarios del antiguo WordPress (igual que en Apache).
+  const queryString = req.url.split('?')[1] || '';
+  if (reqPath === '/' && /(^|&)feed=comments-rss2(&|$)/i.test(queryString)) {
+    res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' });
+    fs.createReadStream(path.join(__dirname, '404.html')).pipe(res);
+    return;
+  }
 
   // 1. Redirigir si alguien escribe .html en la URL directamente
   if (reqPath.endsWith('.html') && !reqPath.endsWith('index.html')) {

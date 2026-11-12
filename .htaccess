@@ -7,6 +7,10 @@
   RewriteEngine On
   RewriteBase /
 
+  # Feed de comentarios del antiguo WordPress: devolver un 404 real.
+  RewriteCond %{QUERY_STRING} (^|&)feed=comments-rss2(&|$) [NC]
+  RewriteRule ^$ - [R=404,L]
+
   # 1. Redirigir www al dominio canónico sin www (301)
   RewriteCond %{HTTP_HOST} ^www\.odiseacloud\.com$ [NC]
   RewriteRule ^(.*)$ https://odiseacloud.com/$1 [R=301,L]

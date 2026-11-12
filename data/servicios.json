@@ -608,7 +608,7 @@
       "shortName": "Dominios",
       "category": "infraestructura-cloud",
       "categoryName": "Infraestructura Cloud",
-      "featured": false,
+      "featured": true,
       "shortDesc": "Registro, renovación y administración técnica de dominios .com, .pe, .org y extensiones globales.",
       "heroTagline": "Protege y consolida el nombre de tu marca en internet",
       "fullDesc": "Te asesoramos en la elección del nombre ideal para tu empresa y gestionamos el registro de tus dominios. Configuramos las zonas DNS, servidores de nombres y redireccionamientos para que tu marca esté protegida y vinculada correctamente a tus servicios web.",
