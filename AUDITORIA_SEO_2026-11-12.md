@@ -20,7 +20,7 @@ La validación JSON comprueba sintaxis, no elegibilidad para resultados enriquec
 
 ## Cambios preparados
 
-- Tres slides en inicio con texto y enlaces generados en HTML. Un solo H1 principal. Enlaces permanentes fuera del carrusel a desarrollo web, sistemas, dominios y traslado: su descubrimiento no depende de cambiar de slide.
+- Tres slides en inicio con texto y enlaces generados en HTML. Un solo H1 principal. Los enlaces del carrusel se complementan con las tarjetas de servicios visibles. La franja independiente de enlaces se retiró por diseño; el acceso a la guía de traslado permanece en el slide de Dominios.
 - Página de Dominios orientada a registro, renovación y traslado: título, descripción y contenido específicos. Seis respuestas útiles sobre buscador, titularidad, requisitos, DNS, hosting, extensiones y cotización. El JSON-LD de preguntas se genera desde las mismas respuestas visibles.
 - Guía de traslado con ancla `#traslado-dominio`; requisitos sujetos a extensión y proveedor. Se corrigió la afirmación de que el traslado se solicita directamente ante ICANN y se evitó prometer continuidad automática sin revisar DNS.
 - Metadatos Open Graph sincronizados con título y descripción de cada página; antes el inicio conservaba valores antiguos.

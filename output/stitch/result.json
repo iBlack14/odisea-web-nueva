@@ -1,0 +1,561 @@
+{
+  "projectId": "16495016585719256247",
+  "sessionId": "16135452356968307304",
+  "outputComponents": [
+    {
+      "designSystem": {
+        "name": "assets/d5c76df5d75b43eabbdf31f2a46e9ea9",
+        "designSystem": {
+          "displayName": "Luminous Andean Cloud",
+          "styleGuidelines": "## Brand & Style\n\nThis design system defines an elite, modern cloud and web engineering agency rooted in Peru and operating globally. The visual identity breaks firmly away from cold, gloomy cyberpunk tropes and unapproachable enterprise monotony. Instead, it balances high-performance technical competence with optimism, radiant clarity, and warm human hospitality.\n\n### Target Audience & Emotional Impact\n- **Audience:** Forward-thinking founders, enterprise CTOs, Latin American tech leaders, and international scale-ups seeking premier cloud architecture and bespoke web craftsmanship.\n- **Tone:** Architecturally sound, luminous, precise, transparent, and effortlessly welcoming.\n- **Emotional Response:** Confidence, clarity of thought, momentum, and refined modern luxury.\n\n### Visual Style\nA tailored hybrid of **Luminous Minimalism** and **Tactile Glass-White Layers**. The interface utilizes a pristine canvas, generous airy whitespace, surgical line-work, vibrant electric blue energy, deliberate conversational triggers (such as WhatsApp green integrations), and gentle chromatic ambient washes (lavender, warm coral, and fresh mint) to signal optimism and boundless altitude.\n\n## Layout & Spacing\n\nThe layout is built upon an intentional, spacious 12-column responsive fluid grid structured inside a maximum content width of 1280px.\n\n### Spatial Rhythm\n- **Rhythm Model:** An 8px base unit drives all component padding and vertical margins, preventing micro-misalignments across technical dashboards and public agency pages.\n- **Air & Altitude:** Generous padding around feature blocks reinforces an uncluttered, modern cloud perspective. Containers breathe through wide internal padding (`space-xl` on desktop).\n- **Responsive Adaptations:**\n  - **Desktop (>= 1024px):** 12 columns, 24px gutters, 48px outer canvas margin. Complex cloud architecture diagrams and client results run side-by-side.\n  - **Tablet (768px - 1023px):** 8 columns, 20px gutters, 32px canvas margins. 3-column service cards wrap into balanced 2x2 grids.\n  - **Mobile (< 768px):** 4 columns, 16px gutters, 20px canvas margins. Linear, single-column vertical flow with full-width conversational CTAs docked or floating safely.\n\n## Elevation & Depth\n\nVisual hierarchy rejects heavy, murky drops and chaotic cyber overlays in favor of **Luminous Air & Crisp Ghost Borders**.\n\n### Depth Layers\n- **Level 0 (Canvas):** Ultra-clean, non-distracting `#F8FAFC` base.\n- **Level 1 (Card & Module Layer):** Pure white (`#FFFFFF`) surfaces defined by ultra-fine border definition (`1px solid #E2E8F0`) and diffused atmospheric lift: `0 4px 20px -2px rgba(17, 36, 59, 0.04)`.\n- **Level 2 (Hover & Active States):** Enhanced focus, translating -2px on the Y-axis with a subtle chromatic aura: `0 12px 32px -4px rgba(0, 102, 254, 0.08)`.\n- **Level 3 (Overlays, Modals, & Conversational Trays):** Semi-opaque floating surfaces with backdrop filter blur (`backdrop-filter: blur(12px)`) and crisp borders (`rgba(255, 255, 255, 0.8)`), backed by clean ambient shadow: `0 24px 48px -12px rgba(17, 36, 59, 0.12)`.\n\n## Components\n\n### Buttons\n- **Primary Electric Action:** Filled `#0066FE`, crisp white text, fully rounded pill shape (`border-radius: 9999px`), `font-weight: 600`. Hover state triggers a subtle elevation glow and an electric brightness shift (`#0056D6`).\n- **Secondary Agency Action:** White fill, `1.5px solid #11243B`, dark ink text. Sharp, high-contrast, confident.\n- **WhatsApp Concierge Action:** Tertiary green fill (`#25D366`), white typography and icon, pill-shaped. Accompanied by a gentle live ping indicator to denote immediate human availability.\n\n### Chips & Pill Badges\n- **Status & Tech Tags:** 9999px pill shapes, `space-xs` vertical by `space-sm` horizontal padding.\n- **Theme Accents:**\n  - *Cloud Metric Chip:* Soft lavender surface (`#F1EFFF`), Deep navy text (`#11243B`), border: `1px solid rgba(0, 102, 254, 0.1)`.\n  - *SLA Uptime Chip:* Soft mint surface (`#E8FBF2`), WhatsApp green text (`#1EAA52`), pulsing status dot.\n  - *Innovation Chip:* Soft coral tint (`#FFF0EE`), coral ink (`#FF6B57`).\n\n### Input Fields & Controls\n- **Form Fields:** Crisp white background, `1.5px` border in `#E2E8F0`, 8px corner radius. Focused state: Border transitions to `#0066FE` accompanied by an electric ring `0 0 0 3px rgba(0, 102, 254, 0.15)`.\n- **Checkboxes & Radios:** High-contrast Nautical Ink borders, snapping to filled `#0066FE` with crisp white check marks when selected.\n\n### Cards & Case Studies\n- **Architecture Showcase Cards:** Built on pure white base layers, framed with low-contrast borders (`#E2E8F0`). Cards feature soft lavender or mint geometric backdrops behind tech diagrams, avoiding cluttered screenshots.\n- **Interactive Metrics Cards:** Featuring large Outfit figures (`headline-lg`) in Deep Nautical Ink, accompanied by an electric blue micro-accent line along the top border.\n\n### Direct WhatsApp Floating Trigger\n- A permanent, unobtrusive floating pill stationed at the bottom-right viewport margin: `#25D366` background, luminous drop shadow (`0 8px 24px rgba(37, 211, 102, 0.3)`), providing instant access to cloud architects with clear micro-copy: \"Talk with an Engineer\".",
+          "theme": {
+            "colorMode": "LIGHT",
+            "font": "OUTFIT",
+            "roundness": "ROUND_EIGHT",
+            "customColor": "#0066fe",
+            "headlineFont": "OUTFIT",
+            "bodyFont": "PLUS_JAKARTA_SANS",
+            "labelFont": "PLUS_JAKARTA_SANS",
+            "namedColors": {
+              "tertiary": "#00672c",
+              "surface_container_lowest": "#ffffff",
+              "on_tertiary": "#ffffff",
+              "on_primary_fixed": "#001849",
+              "on_background": "#191c1e",
+              "primary_fixed_dim": "#b3c5ff",
+              "primary_fixed": "#dae1ff",
+              "tertiary_container": "#00833a",
+              "tertiary_fixed": "#66ff8e",
+              "inverse_surface": "#2d3133",
+              "background": "#f7f9fb",
+              "surface_bright": "#f7f9fb",
+              "surface_container_low": "#f2f4f6",
+              "secondary_fixed": "#d3e3ff",
+              "on_primary_container": "#f8f7ff",
+              "on_secondary_fixed_variant": "#364860",
+              "on_primary": "#ffffff",
+              "on_error": "#ffffff",
+              "surface_dim": "#d8dadc",
+              "on_primary_fixed_variant": "#003fa4",
+              "on_secondary_fixed": "#081c33",
+              "on_surface": "#191c1e",
+              "surface_tint": "#0055d5",
+              "outline": "#727687",
+              "primary": "#0050ca",
+              "surface": "#f7f9fb",
+              "on_secondary_container": "#50627c",
+              "on_tertiary_fixed": "#002109",
+              "on_tertiary_container": "#e1ffe0",
+              "tertiary_fixed_dim": "#3de273",
+              "on_surface_variant": "#424655",
+              "inverse_on_surface": "#eff1f3",
+              "surface_variant": "#e0e3e5",
+              "on_error_container": "#93000a",
+              "surface_container": "#eceef0",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "on_tertiary_fixed_variant": "#005322",
+              "on_secondary": "#ffffff",
+              "outline_variant": "#c2c6d8",
+              "primary_container": "#0066fe",
+              "secondary": "#4e5f79",
+              "surface_container_highest": "#e0e3e5",
+              "inverse_primary": "#b3c5ff",
+              "secondary_container": "#cbdefd",
+              "secondary_fixed_dim": "#b5c8e6",
+              "surface_container_high": "#e6e8ea"
+            },
+            "designMd": "---\nname: Luminous Andean Cloud\ncolors:\n  surface: '#f7f9fb'\n  surface-dim: '#d8dadc'\n  surface-bright: '#f7f9fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f2f4f6'\n  surface-container: '#eceef0'\n  surface-container-high: '#e6e8ea'\n  surface-container-highest: '#e0e3e5'\n  on-surface: '#191c1e'\n  on-surface-variant: '#424655'\n  inverse-surface: '#2d3133'\n  inverse-on-surface: '#eff1f3'\n  outline: '#727687'\n  outline-variant: '#c2c6d8'\n  surface-tint: '#0055d5'\n  primary: '#0050ca'\n  on-primary: '#ffffff'\n  primary-container: '#0066fe'\n  on-primary-container: '#f8f7ff'\n  inverse-primary: '#b3c5ff'\n  secondary: '#4e5f79'\n  on-secondary: '#ffffff'\n  secondary-container: '#cbdefd'\n  on-secondary-container: '#50627c'\n  tertiary: '#00672c'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#00833a'\n  on-tertiary-container: '#e1ffe0'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dae1ff'\n  primary-fixed-dim: '#b3c5ff'\n  on-primary-fixed: '#001849'\n  on-primary-fixed-variant: '#003fa4'\n  secondary-fixed: '#d3e3ff'\n  secondary-fixed-dim: '#b5c8e6'\n  on-secondary-fixed: '#081c33'\n  on-secondary-fixed-variant: '#364860'\n  tertiary-fixed: '#66ff8e'\n  tertiary-fixed-dim: '#3de273'\n  on-tertiary-fixed: '#002109'\n  on-tertiary-fixed-variant: '#005322'\n  background: '#f7f9fb'\n  on-background: '#191c1e'\n  surface-variant: '#e0e3e5'\ntypography:\n  display-hero:\n    fontFamily: Outfit\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: 64px\n    letterSpacing: -0.03em\n  display-hero-mobile:\n    fontFamily: Outfit\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Outfit\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: 48px\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Outfit\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n    letterSpacing: -0.015em\n  headline-md:\n    fontFamily: Outfit\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Outfit\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: 0em\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: -0.01em\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: -0.005em\n  body-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n    letterSpacing: 0em\n  label-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.01em\n  label-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 11px\n    fontWeight: '700'\n    lineHeight: 14px\n    letterSpacing: 0.04em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 1.5rem\n  gutter-mobile: 1rem\n  margin: 3rem\n  margin-mobile: 1.25rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.5rem\n---\n\n## Brand & Style\n\nThis design system defines an elite, modern cloud and web engineering agency rooted in Peru and operating globally. The visual identity breaks firmly away from cold, gloomy cyberpunk tropes and unapproachable enterprise monotony. Instead, it balances high-performance technical competence with optimism, radiant clarity, and warm human hospitality.\n\n### Target Audience & Emotional Impact\n- **Audience:** Forward-thinking founders, enterprise CTOs, Latin American tech leaders, and international scale-ups seeking premier cloud architecture and bespoke web craftsmanship.\n- **Tone:** Architecturally sound, luminous, precise, transparent, and effortlessly welcoming.\n- **Emotional Response:** Confidence, clarity of thought, momentum, and refined modern luxury.\n\n### Visual Style\nA tailored hybrid of **Luminous Minimalism** and **Tactile Glass-White Layers**. The interface utilizes a pristine canvas, generous airy whitespace, surgical line-work, vibrant electric blue energy, deliberate conversational triggers (such as WhatsApp green integrations), and gentle chromatic ambient washes (lavender, warm coral, and fresh mint) to signal optimism and boundless altitude.\n\n## Colors\n\nThe palette relies on absolute optical clarity. Pure light underpins the system, anchored by deep nautical navy ink for unyielding contrast and electric blue for digital momentum.\n\n### Roles & Accent Strategy\n- **Primary (`#0066FE`):** Electric Andean Sky. Used for primary CTAs, active cloud nodes, critical system metrics, and hero interactions.\n- **Secondary (`#11243B`):** Deep Nautical Ink. Used for high-contrast headlines, primary text, prominent borders, and anchoring UI structures. Never wash down body text to illegible mid-greys.\n- **Tertiary (`#25D366`):** Direct Link Green. Dedicated to live conversational triggers, instant WhatsApp integration, verified uptime badges, and positive system states.\n- **Neutral Canvas (`#F8FAFC` to `#FFFFFF`):** High-key white canvas. Zero heavy dark-mode grids or murky digital noise.\n- **Chromatic Accents (Surface Tints & Spatial Backdrop Accents):**\n  - *Warm Coral (`#FF6B57`):* Special focus tags, latency alerts, and celebratory impact statistics.\n  - *Soft Mint (`#E8FBF2`):* Container fill for success metrics, operational health highlights, and client ROI metrics.\n  - *Soft Lavender (`#F1EFFF`):* Geometric backdrops, feature isolation cards, and structural pill highlights.\n\n## Typography\n\nThe typographic system fuses the bold, architectural geometry of **Outfit** for structural headings with the open, ergonomic legibility of **Plus Jakarta Sans** for running text, system data, and user actions.\n\n### Implementation Guidelines\n- **Optical Contrast:** Headings in Outfit are rendered in Deep Nautical Ink (`#11243B`) with tight letter-spacing to convey authority without visual bulk.\n- **Legibility First:** Body copy uses Plus Jakarta Sans in neutral ink tints (`#334155`), strictly avoiding low-contrast grey-on-grey degradation.\n- **Numbers and Metrology:** System stats, cloud latency counts, and architectural SLAs utilize tabular numbers and medium weights for instant scanning.\n- **Mobile Adaptations:** Display titles scale down fluidly past the 768px threshold to prevent awkward word wraps in Spanish and English technical titles.\n\n## Layout & Spacing\n\nThe layout is built upon an intentional, spacious 12-column responsive fluid grid structured inside a maximum content width of 1280px.\n\n### Spatial Rhythm\n- **Rhythm Model:** An 8px base unit drives all component padding and vertical margins, preventing micro-misalignments across technical dashboards and public agency pages.\n- **Air & Altitude:** Generous padding around feature blocks reinforces an uncluttered, modern cloud perspective. Containers breathe through wide internal padding (`space-xl` on desktop).\n- **Responsive Adaptations:**\n  - **Desktop (>= 1024px):** 12 columns, 24px gutters, 48px outer canvas margin. Complex cloud architecture diagrams and client results run side-by-side.\n  - **Tablet (768px - 1023px):** 8 columns, 20px gutters, 32px canvas margins. 3-column service cards wrap into balanced 2x2 grids.\n  - **Mobile (< 768px):** 4 columns, 16px gutters, 20px canvas margins. Linear, single-column vertical flow with full-width conversational CTAs docked or floating safely.\n\n## Elevation & Depth\n\nVisual hierarchy rejects heavy, murky drops and chaotic cyber overlays in favor of **Luminous Air & Crisp Ghost Borders**.\n\n### Depth Layers\n- **Level 0 (Canvas):** Ultra-clean, non-distracting `#F8FAFC` base.\n- **Level 1 (Card & Module Layer):** Pure white (`#FFFFFF`) surfaces defined by ultra-fine border definition (`1px solid #E2E8F0`) and diffused atmospheric lift: `0 4px 20px -2px rgba(17, 36, 59, 0.04)`.\n- **Level 2 (Hover & Active States):** Enhanced focus, translating -2px on the Y-axis with a subtle chromatic aura: `0 12px 32px -4px rgba(0, 102, 254, 0.08)`.\n- **Level 3 (Overlays, Modals, & Conversational Trays):** Semi-opaque floating surfaces with backdrop filter blur (`backdrop-filter: blur(12px)`) and crisp borders (`rgba(255, 255, 255, 0.8)`), backed by clean ambient shadow: `0 24px 48px -12px rgba(17, 36, 59, 0.12)`.\n\n## Shapes\n\nThe shape hierarchy is approachable and aerodynamic. Standard cards, form elements, and content modules use calibrated 8px (`0.5rem`) to 16px (`1rem`) radiuses to remain balanced and modern, while interactive meta-elements and actions lean intentionally into pill forms.\n\n### Usage Matrix\n- **Base Components (Cards, Inputs, Modals):** Rounded Level 2 (`0.5rem` / 8px inner, `1rem` / 16px container frames) to preserve clean technical alignment.\n- **Pill Badges & Buttons:** Fully rounded boundaries (`rounded-full` / 9999px) for service chips, cloud certification pills, status indicators, and main interactive buttons.\n- **Accent Geometry:** Structural backdrop shapes in lavender and mint use smooth hyper-ellipses (squircle geometry) or soft 24px corners to avoid harsh industrial points.\n\n## Components\n\n### Buttons\n- **Primary Electric Action:** Filled `#0066FE`, crisp white text, fully rounded pill shape (`border-radius: 9999px`), `font-weight: 600`. Hover state triggers a subtle elevation glow and an electric brightness shift (`#0056D6`).\n- **Secondary Agency Action:** White fill, `1.5px solid #11243B`, dark ink text. Sharp, high-contrast, confident.\n- **WhatsApp Concierge Action:** Tertiary green fill (`#25D366`), white typography and icon, pill-shaped. Accompanied by a gentle live ping indicator to denote immediate human availability.\n\n### Chips & Pill Badges\n- **Status & Tech Tags:** 9999px pill shapes, `space-xs` vertical by `space-sm` horizontal padding.\n- **Theme Accents:**\n  - *Cloud Metric Chip:* Soft lavender surface (`#F1EFFF`), Deep navy text (`#11243B`), border: `1px solid rgba(0, 102, 254, 0.1)`.\n  - *SLA Uptime Chip:* Soft mint surface (`#E8FBF2`), WhatsApp green text (`#1EAA52`), pulsing status dot.\n  - *Innovation Chip:* Soft coral tint (`#FFF0EE`), coral ink (`#FF6B57`).\n\n### Input Fields & Controls\n- **Form Fields:** Crisp white background, `1.5px` border in `#E2E8F0`, 8px corner radius. Focused state: Border transitions to `#0066FE` accompanied by an electric ring `0 0 0 3px rgba(0, 102, 254, 0.15)`.\n- **Checkboxes & Radios:** High-contrast Nautical Ink borders, snapping to filled `#0066FE` with crisp white check marks when selected.\n\n### Cards & Case Studies\n- **Architecture Showcase Cards:** Built on pure white base layers, framed with low-contrast borders (`#E2E8F0`). Cards feature soft lavender or mint geometric backdrops behind tech diagrams, avoiding cluttered screenshots.\n- **Interactive Metrics Cards:** Featuring large Outfit figures (`headline-lg`) in Deep Nautical Ink, accompanied by an electric blue micro-accent line along the top border.\n\n### Direct WhatsApp Floating Trigger\n- A permanent, unobtrusive floating pill stationed at the bottom-right viewport margin: `#25D366` background, luminous drop shadow (`0 8px 24px rgba(37, 211, 102, 0.3)`), providing instant access to cloud architects with clear micro-copy: \"Talk with an Engineer\".",
+            "colorVariant": "FIDELITY",
+            "overridePrimaryColor": "#0066fe",
+            "overrideSecondaryColor": "#11243b",
+            "overrideTertiaryColor": "#25d366",
+            "overrideNeutralColor": "#f8fafc",
+            "spacingScale": 2,
+            "typography": {
+              "headline-lg-mobile": {
+                "fontFamily": "Outfit",
+                "fontSize": "28px",
+                "fontWeight": "600",
+                "lineHeight": "36px",
+                "letterSpacing": "-0.015em"
+              },
+              "body-md": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px",
+                "letterSpacing": "-0.005em"
+              },
+              "label-md": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "lineHeight": "16px",
+                "letterSpacing": "0.02em"
+              },
+              "label-lg": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "20px",
+                "letterSpacing": "0.01em"
+              },
+              "label-sm": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "11px",
+                "fontWeight": "700",
+                "lineHeight": "14px",
+                "letterSpacing": "0.04em"
+              },
+              "headline-md": {
+                "fontFamily": "Outfit",
+                "fontSize": "28px",
+                "fontWeight": "600",
+                "lineHeight": "36px",
+                "letterSpacing": "-0.01em"
+              },
+              "display-hero-mobile": {
+                "fontFamily": "Outfit",
+                "fontSize": "36px",
+                "fontWeight": "700",
+                "lineHeight": "44px",
+                "letterSpacing": "-0.02em"
+              },
+              "body-sm": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "20px",
+                "letterSpacing": "0em"
+              },
+              "display-hero": {
+                "fontFamily": "Outfit",
+                "fontSize": "56px",
+                "fontWeight": "700",
+                "lineHeight": "64px",
+                "letterSpacing": "-0.03em"
+              },
+              "headline-sm": {
+                "fontFamily": "Outfit",
+                "fontSize": "20px",
+                "fontWeight": "600",
+                "lineHeight": "28px",
+                "letterSpacing": "0em"
+              },
+              "body-lg": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px",
+                "letterSpacing": "-0.01em"
+              },
+              "headline-lg": {
+                "fontFamily": "Outfit",
+                "fontSize": "40px",
+                "fontWeight": "600",
+                "lineHeight": "48px",
+                "letterSpacing": "-0.02em"
+              }
+            },
+            "spacing": {
+              "margin": "3rem",
+              "space-lg": "1.5rem",
+              "space-md": "1rem",
+              "margin-mobile": "1.25rem",
+              "space-xs": "0.25rem",
+              "gutter-mobile": "1rem",
+              "gutter": "1.5rem",
+              "space-xl": "2.5rem",
+              "space-sm": "0.5rem"
+            },
+            "headlineFontFamily": "Outfit",
+            "bodyFontFamily": "Plus Jakarta Sans",
+            "labelFontFamily": "Plus Jakarta Sans"
+          }
+        },
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "screenshot": {
+              "name": "projects/16495016585719256247/files/4950c5d87526461994fe043fc0dcbb9a",
+              "downloadUrl": "https://stitch.googleapis.com/v1/projects/16495016585719256247/files/4950c5d87526461994fe043fc0dcbb9a:download"
+            },
+            "htmlCode": {
+              "name": "projects/16495016585719256247/files/266526111b9147638b939a596f33eac4",
+              "downloadUrl": "https://stitch.googleapis.com/v1/projects/16495016585719256247/files/266526111b9147638b939a596f33eac4:download",
+              "mimeType": "text/html"
+            },
+            "id": "aa6f24c7df8f4b05a59e27beee89fab9",
+            "generatedBy": "figaro_agent",
+            "width": "2560",
+            "height": "4860",
+            "title": "ODISEACLOUD - Concept Board Carrusel Hero (3 Variantes)",
+            "prompt": "Design a polished desktop UI concept board screen for ODISEACLOUD, an agency in Peru specializing in web development, cloud solutions, and custom software. Spanish content.\nThe screen shows THREE alternative HERO CAROUSEL STATES stacked vertically on ONE page, each approximately 500px-540px in height, each with the exact same polished brand navigation bar at the top or represented with a consistent header style, showing how each slide functions in the carousel with understated carousel controls (progress bars/dots, prev/next arrows, 01/03, 02/03, 03/03 counters).\n\nBRAND IDENTITY & VISUAL RULES:\n- Primary colors: Clean luminous white canvas, Electric Blue #007bff / #0066fe, Navy Ink #11243b for typography, WhatsApp vibrant green #25D366.\n- Typography: Rounded modern sans, crystal-clear hierarchy, deep navy text #11243b on luminous surfaces.\n- Strictly NO dark gloomy backgrounds, NO matrix/cyber-network grids, NO ghostly translucent stock photos, NO generic datacenter racks, NO fake testimonials. Pure luminous, warm, inviting, premium tech agency aesthetic.\n\nSECTION BY SECTION BREAKDOWN:\n\nConcept Board Header:\nA clean presentation top bar indicating: 'ODISEACLOUD — Exploración de Estados de Carrusel Hero (Desktop Concept Board)', badge '3 Variantes Apiladas • 100% Luminous UI • Sin clichés cibernéticos'.\n\nCAROUSEL STATE 1 (Height ~520px) — 'Estado 01: Páginas Web & Software a Medida'\n- Header: Brand logo 'ODISEACLOUD' with cloud dot mark in electric blue. Nav links: Servicios, Soluciones Cloud, Dominios, Nosotros. Action: Green WhatsApp button 'Hablar por WhatsApp' with icon.\n- Layout: Asymmetrical editorial layout.\n- Left column:\n  * Pill badge: 'Agencia Digital en Lima, Perú' with small green status dot.\n  * H1 Headline: 'Diseño de páginas web y software a medida en Perú.' (bold, navy ink #11243b, high contrast).\n  * SEO descriptive body: 'Desarrollamos plataformas digitales de alto impacto, tiendas virtuales optimizadas y sistemas web escalables sobre infraestructura en la nube para potenciar empresas peruanas.'\n  * CTAs: Primary button 'Diseña tu página web' in electric blue (#007bff) with subtle arrow icon, secondary ghost button 'Ver portafolio de proyectos'.\n  * SEO micro-feature checklist: '✓ Código limpio y ultra veloz  ✓ Alojamiento en la nube  ✓ Soporte local 24/7'\n- Right column:\n  * Background: Soft organic flat sky-blue puddle shape (#E0F2FE / #EBF5FF) and a tiny warm coral accent badge (#FF6B6B / #FF7A59) stating 'Garantía 99.9% uptime'.\n  * Robot mascot: A friendly, polished placeholder vector illustration of a modern white and blue robot mascot with smiling visor eyes, rounded friendly body, waving enthusiastically.\n  * Two restrained, crisp floating UI browser preview cards:\n    - Card 1: 'E-commerce Perú' showing clean product layout & sales metric chip.\n    - Card 2: 'Plataforma Cloud' with clean response time '0.2s'.\n- Carousel controls at bottom: Elegant slide counter '01 / 03', active electric blue pill, 2 inactive dots, and subtle circle prev/next arrow buttons.\n\nCAROUSEL STATE 2 (Height ~520px) — 'Estado 02: Sistemas a Medida & Automatización'\n- Header: Same consistent ODISEACLOUD header.\n- Canvas & Backdrop: Warm ivory/porcelain canvas (#FAF9F6 / #F8F9FA) with an asymmetric soft lavender geometric backdrop (#EDE9FE / #F3E8FF). No photos.\n- Layout: Radically different architecture focused on systems & business efficiency.\n- Left column:\n  * Eyebrow label: 'SISTEMAS A MEDIDA' in bold uppercase with an indigo accent indicator.\n  * H2 Headline: 'Menos tareas repetitivas. Más control de tu negocio.' (Deep navy, impactful typography).\n  * Descriptive body: 'Digitalizamos tus procesos operativos reemplazando hojas de cálculo dispersas por plataformas web seguras, paneles de gestión y flujos de trabajo automatizados que ahorran horas hombre a tu equipo.'\n  * CTA: Primary button 'Cotizar sistema personalizado' + WhatsApp direct link.\n  * Key benefits tags: 'Paneles de Facturación', 'Gestión de Inventario', 'Integración SUNAT & Pasarelas'.\n- Right column:\n  * Crisp illustrative app workflow diagram with 3 connected visual nodes in an elegant horizontal/staggered layout:\n    - Node 1: '01. Captura de Datos' (Formulario Web / Leads) with SVG line document icon.\n    - Connecting animated/dashed arrow.\n    - Node 2: '02. Procesamiento Central' (CRM Inteligente en la Nube) with cloud database icon and status chip 'Automático'.\n    - Connecting arrow.\n    - Node 3: '03. Resultado & Analítica' (Reporte Ejecutivo en Tiempo Real) with metric chart card showing '+42% Productividad'.\n  * Ultra crisp borders, soft elevation, modern typography, zero dark clutter.\n- Carousel controls at bottom: Active slide '02 / 03', active indicator on middle position, prev/next arrows.\n\nCAROUSEL STATE 3 (Height ~520px) — 'Estado 03: Dominios & Tu Marca en Internet'\n- Header: Same consistent ODISEACLOUD header.\n- Canvas & Backdrop: Bright crisp white canvas with a soft mint/seafoam organic pill shape (#DCFCE7 / #ECFDF5) and a warm amber accent badge (#F59E0B).\n- Layout: Centered focal domain search experience with friendly mascot companion.\n- Center Content:\n  * Pill badge: 'Infraestructura & Nombres de Dominio' with mint dot.\n  * H2 Headline: 'Un nombre. Una marca. Tu lugar en internet.' (Centered, elegant, bold navy ink).\n  * Subtitle: 'Registra hoy tu dominio con activación inmediata, protección de datos y configuración DNS guiada por especialistas en Perú.'\n  * Domain Search Card: A prominent, polished search bar container with input placeholder 'miempresa.com' or 'tunegocio.pe', an extension selector dropdown, and a bold electric blue CTA button 'Buscar dominio' with magnifying glass icon.\n  * Extension chips below search bar with clear prices/styles: '.com ($12.99/año)', '.pe ($35.00/año)', '.net', '.org', '.store', '.tech' (clickable pill states).\n  * Friendly Robot Mascot: The cheerful white and blue robot mascot positioned playfully leaning alongside the search card, holding a magnifying glass or pointing enthusiastically at the search bar.\n  * Reassuring footer link: '¿Ya tienes un dominio con otro proveedor? Te ayudamos a trasladarlo sin costo.'\n- Carousel controls at bottom: Active slide '03 / 03', active indicator on 3rd position, prev/next arrows.\n\nBoard Footer / Spec summary:\nA compact technical summary row showing: Typography specifications (Outfit / Plus Jakarta Sans), Primary color tokens (#007bff, #11243b, #25D366, Sky, Lavender, Mint), and Carousel implementation guidelines.\n\nEnsure the entire layout is strictly responsive, pixel-perfect, accessible, and ready for production inspection.",
+            "name": "projects/16495016585719256247/screens/aa6f24c7df8f4b05a59e27beee89fab9",
+            "theme": {
+              "colorMode": "LIGHT",
+              "font": "OUTFIT",
+              "roundness": "ROUND_EIGHT",
+              "customColor": "#0066fe",
+              "headlineFont": "OUTFIT",
+              "bodyFont": "PLUS_JAKARTA_SANS",
+              "labelFont": "PLUS_JAKARTA_SANS",
+              "namedColors": {
+                "on_primary_fixed_variant": "#003fa4",
+                "inverse_primary": "#b3c5ff",
+                "surface_container_high": "#e6e8ea",
+                "tertiary_container": "#00833a",
+                "outline_variant": "#c2c6d8",
+                "surface_dim": "#d8dadc",
+                "primary": "#0050ca",
+                "surface": "#f7f9fb",
+                "error_container": "#ffdad6",
+                "on_secondary": "#ffffff",
+                "on_primary_container": "#f8f7ff",
+                "outline": "#727687",
+                "surface_bright": "#f7f9fb",
+                "on_secondary_fixed": "#081c33",
+                "on_tertiary": "#ffffff",
+                "surface_variant": "#e0e3e5",
+                "on_secondary_fixed_variant": "#364860",
+                "tertiary_fixed": "#66ff8e",
+                "surface_container_lowest": "#ffffff",
+                "error": "#ba1a1a",
+                "on_secondary_container": "#50627c",
+                "surface_container_low": "#f2f4f6",
+                "primary_fixed_dim": "#b3c5ff",
+                "surface_tint": "#0055d5",
+                "on_surface": "#191c1e",
+                "primary_container": "#0066fe",
+                "surface_container": "#eceef0",
+                "tertiary_fixed_dim": "#3de273",
+                "on_surface_variant": "#424655",
+                "inverse_on_surface": "#eff1f3",
+                "on_tertiary_fixed_variant": "#005322",
+                "on_error_container": "#93000a",
+                "secondary_container": "#cbdefd",
+                "secondary_fixed_dim": "#b5c8e6",
+                "on_primary": "#ffffff",
+                "surface_container_highest": "#e0e3e5",
+                "tertiary": "#00672c",
+                "inverse_surface": "#2d3133",
+                "background": "#f7f9fb",
+                "secondary_fixed": "#d3e3ff",
+                "on_primary_fixed": "#001849",
+                "primary_fixed": "#dae1ff",
+                "on_background": "#191c1e",
+                "on_tertiary_fixed": "#002109",
+                "secondary": "#4e5f79",
+                "on_tertiary_container": "#e1ffe0",
+                "on_error": "#ffffff"
+              },
+              "colorVariant": "FIDELITY",
+              "overridePrimaryColor": "#0066fe",
+              "overrideSecondaryColor": "#11243b",
+              "overrideTertiaryColor": "#25d366",
+              "overrideNeutralColor": "#f8fafc",
+              "spacingScale": 2,
+              "typography": {
+                "label-md": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "lineHeight": "16px",
+                  "letterSpacing": "0.02em"
+                },
+                "label-lg": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "14px",
+                  "fontWeight": "600",
+                  "lineHeight": "20px",
+                  "letterSpacing": "0.01em"
+                },
+                "display-hero-mobile": {
+                  "fontFamily": "Outfit",
+                  "fontSize": "36px",
+                  "fontWeight": "700",
+                  "lineHeight": "44px",
+                  "letterSpacing": "-0.02em"
+                },
+                "label-sm": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "11px",
+                  "fontWeight": "700",
+                  "lineHeight": "14px",
+                  "letterSpacing": "0.04em"
+                },
+                "headline-lg": {
+                  "fontFamily": "Outfit",
+                  "fontSize": "40px",
+                  "fontWeight": "600",
+                  "lineHeight": "48px",
+                  "letterSpacing": "-0.02em"
+                },
+                "body-lg": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "28px",
+                  "letterSpacing": "-0.01em"
+                },
+                "headline-sm": {
+                  "fontFamily": "Outfit",
+                  "fontSize": "20px",
+                  "fontWeight": "600",
+                  "lineHeight": "28px",
+                  "letterSpacing": "0em"
+                },
+                "headline-md": {
+                  "fontFamily": "Outfit",
+                  "fontSize": "28px",
+                  "fontWeight": "600",
+                  "lineHeight": "36px",
+                  "letterSpacing": "-0.01em"
+                },
+                "display-hero": {
+                  "fontFamily": "Outfit",
+                  "fontSize": "56px",
+                  "fontWeight": "700",
+                  "lineHeight": "64px",
+                  "letterSpacing": "-0.03em"
+                },
+                "body-md": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "24px",
+                  "letterSpacing": "-0.005em"
+                },
+                "body-sm": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "14px",
+                  "fontWeight": "400",
+                  "lineHeight": "20px",
+                  "letterSpacing": "0em"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Outfit",
+                  "fontSize": "28px",
+                  "fontWeight": "600",
+                  "lineHeight": "36px",
+                  "letterSpacing": "-0.015em"
+                }
+              },
+              "spacing": {
+                "space-sm": "0.5rem",
+                "space-xl": "2.5rem",
+                "margin-mobile": "1.25rem",
+                "gutter-mobile": "1rem",
+                "space-md": "1rem",
+                "space-lg": "1.5rem",
+                "gutter": "1.5rem",
+                "margin": "3rem",
+                "space-xs": "0.25rem"
+              },
+              "headlineFontFamily": "Outfit",
+              "bodyFontFamily": "Plus Jakarta Sans",
+              "labelFontFamily": "Plus Jakarta Sans"
+            },
+            "deviceType": "DESKTOP",
+            "screenType": "DESIGN",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "designSystem": {
+              "name": "assets/d5c76df5d75b43eabbdf31f2a46e9ea9",
+              "designSystem": {
+                "displayName": "Luminous Andean Cloud",
+                "styleGuidelines": "## Brand & Style\n\nThis design system defines an elite, modern cloud and web engineering agency rooted in Peru and operating globally. The visual identity breaks firmly away from cold, gloomy cyberpunk tropes and unapproachable enterprise monotony. Instead, it balances high-performance technical competence with optimism, radiant clarity, and warm human hospitality.\n\n### Target Audience & Emotional Impact\n- **Audience:** Forward-thinking founders, enterprise CTOs, Latin American tech leaders, and international scale-ups seeking premier cloud architecture and bespoke web craftsmanship.\n- **Tone:** Architecturally sound, luminous, precise, transparent, and effortlessly welcoming.\n- **Emotional Response:** Confidence, clarity of thought, momentum, and refined modern luxury.\n\n### Visual Style\nA tailored hybrid of **Luminous Minimalism** and **Tactile Glass-White Layers**. The interface utilizes a pristine canvas, generous airy whitespace, surgical line-work, vibrant electric blue energy, deliberate conversational triggers (such as WhatsApp green integrations), and gentle chromatic ambient washes (lavender, warm coral, and fresh mint) to signal optimism and boundless altitude.\n\n## Layout & Spacing\n\nThe layout is built upon an intentional, spacious 12-column responsive fluid grid structured inside a maximum content width of 1280px.\n\n### Spatial Rhythm\n- **Rhythm Model:** An 8px base unit drives all component padding and vertical margins, preventing micro-misalignments across technical dashboards and public agency pages.\n- **Air & Altitude:** Generous padding around feature blocks reinforces an uncluttered, modern cloud perspective. Containers breathe through wide internal padding (`space-xl` on desktop).\n- **Responsive Adaptations:**\n  - **Desktop (>= 1024px):** 12 columns, 24px gutters, 48px outer canvas margin. Complex cloud architecture diagrams and client results run side-by-side.\n  - **Tablet (768px - 1023px):** 8 columns, 20px gutters, 32px canvas margins. 3-column service cards wrap into balanced 2x2 grids.\n  - **Mobile (< 768px):** 4 columns, 16px gutters, 20px canvas margins. Linear, single-column vertical flow with full-width conversational CTAs docked or floating safely.\n\n## Elevation & Depth\n\nVisual hierarchy rejects heavy, murky drops and chaotic cyber overlays in favor of **Luminous Air & Crisp Ghost Borders**.\n\n### Depth Layers\n- **Level 0 (Canvas):** Ultra-clean, non-distracting `#F8FAFC` base.\n- **Level 1 (Card & Module Layer):** Pure white (`#FFFFFF`) surfaces defined by ultra-fine border definition (`1px solid #E2E8F0`) and diffused atmospheric lift: `0 4px 20px -2px rgba(17, 36, 59, 0.04)`.\n- **Level 2 (Hover & Active States):** Enhanced focus, translating -2px on the Y-axis with a subtle chromatic aura: `0 12px 32px -4px rgba(0, 102, 254, 0.08)`.\n- **Level 3 (Overlays, Modals, & Conversational Trays):** Semi-opaque floating surfaces with backdrop filter blur (`backdrop-filter: blur(12px)`) and crisp borders (`rgba(255, 255, 255, 0.8)`), backed by clean ambient shadow: `0 24px 48px -12px rgba(17, 36, 59, 0.12)`.\n\n## Components\n\n### Buttons\n- **Primary Electric Action:** Filled `#0066FE`, crisp white text, fully rounded pill shape (`border-radius: 9999px`), `font-weight: 600`. Hover state triggers a subtle elevation glow and an electric brightness shift (`#0056D6`).\n- **Secondary Agency Action:** White fill, `1.5px solid #11243B`, dark ink text. Sharp, high-contrast, confident.\n- **WhatsApp Concierge Action:** Tertiary green fill (`#25D366`), white typography and icon, pill-shaped. Accompanied by a gentle live ping indicator to denote immediate human availability.\n\n### Chips & Pill Badges\n- **Status & Tech Tags:** 9999px pill shapes, `space-xs` vertical by `space-sm` horizontal padding.\n- **Theme Accents:**\n  - *Cloud Metric Chip:* Soft lavender surface (`#F1EFFF`), Deep navy text (`#11243B`), border: `1px solid rgba(0, 102, 254, 0.1)`.\n  - *SLA Uptime Chip:* Soft mint surface (`#E8FBF2`), WhatsApp green text (`#1EAA52`), pulsing status dot.\n  - *Innovation Chip:* Soft coral tint (`#FFF0EE`), coral ink (`#FF6B57`).\n\n### Input Fields & Controls\n- **Form Fields:** Crisp white background, `1.5px` border in `#E2E8F0`, 8px corner radius. Focused state: Border transitions to `#0066FE` accompanied by an electric ring `0 0 0 3px rgba(0, 102, 254, 0.15)`.\n- **Checkboxes & Radios:** High-contrast Nautical Ink borders, snapping to filled `#0066FE` with crisp white check marks when selected.\n\n### Cards & Case Studies\n- **Architecture Showcase Cards:** Built on pure white base layers, framed with low-contrast borders (`#E2E8F0`). Cards feature soft lavender or mint geometric backdrops behind tech diagrams, avoiding cluttered screenshots.\n- **Interactive Metrics Cards:** Featuring large Outfit figures (`headline-lg`) in Deep Nautical Ink, accompanied by an electric blue micro-accent line along the top border.\n\n### Direct WhatsApp Floating Trigger\n- A permanent, unobtrusive floating pill stationed at the bottom-right viewport margin: `#25D366` background, luminous drop shadow (`0 8px 24px rgba(37, 211, 102, 0.3)`), providing instant access to cloud architects with clear micro-copy: \"Talk with an Engineer\".",
+                "theme": {
+                  "colorMode": "LIGHT",
+                  "font": "OUTFIT",
+                  "roundness": "ROUND_EIGHT",
+                  "customColor": "#0066fe",
+                  "headlineFont": "OUTFIT",
+                  "bodyFont": "PLUS_JAKARTA_SANS",
+                  "labelFont": "PLUS_JAKARTA_SANS",
+                  "namedColors": {
+                    "inverse_primary": "#b3c5ff",
+                    "on_background": "#191c1e",
+                    "primary_fixed": "#dae1ff",
+                    "secondary_container": "#cbdefd",
+                    "secondary_fixed_dim": "#b5c8e6",
+                    "secondary": "#4e5f79",
+                    "error_container": "#ffdad6",
+                    "outline": "#727687",
+                    "surface_bright": "#f7f9fb",
+                    "outline_variant": "#c2c6d8",
+                    "on_secondary_fixed": "#081c33",
+                    "tertiary_fixed": "#66ff8e",
+                    "surface_dim": "#d8dadc",
+                    "tertiary": "#00672c",
+                    "surface": "#f7f9fb",
+                    "surface_container_lowest": "#ffffff",
+                    "primary": "#0050ca",
+                    "on_tertiary_container": "#e1ffe0",
+                    "on_tertiary": "#ffffff",
+                    "on_primary_fixed_variant": "#003fa4",
+                    "surface_variant": "#e0e3e5",
+                    "on_error": "#ffffff",
+                    "on_primary_container": "#f8f7ff",
+                    "tertiary_container": "#00833a",
+                    "primary_fixed_dim": "#b3c5ff",
+                    "error": "#ba1a1a",
+                    "background": "#f7f9fb",
+                    "primary_container": "#0066fe",
+                    "on_secondary_fixed_variant": "#364860",
+                    "surface_container": "#eceef0",
+                    "surface_tint": "#0055d5",
+                    "surface_container_high": "#e6e8ea",
+                    "surface_container_low": "#f2f4f6",
+                    "inverse_surface": "#2d3133",
+                    "on_surface": "#191c1e",
+                    "secondary_fixed": "#d3e3ff",
+                    "on_secondary": "#ffffff",
+                    "on_tertiary_fixed_variant": "#005322",
+                    "on_primary_fixed": "#001849",
+                    "on_secondary_container": "#50627c",
+                    "on_tertiary_fixed": "#002109",
+                    "on_surface_variant": "#424655",
+                    "tertiary_fixed_dim": "#3de273",
+                    "inverse_on_surface": "#eff1f3",
+                    "on_error_container": "#93000a",
+                    "surface_container_highest": "#e0e3e5",
+                    "on_primary": "#ffffff"
+                  },
+                  "designMd": "---\nname: Luminous Andean Cloud\ncolors:\n  surface: '#f7f9fb'\n  surface-dim: '#d8dadc'\n  surface-bright: '#f7f9fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f2f4f6'\n  surface-container: '#eceef0'\n  surface-container-high: '#e6e8ea'\n  surface-container-highest: '#e0e3e5'\n  on-surface: '#191c1e'\n  on-surface-variant: '#424655'\n  inverse-surface: '#2d3133'\n  inverse-on-surface: '#eff1f3'\n  outline: '#727687'\n  outline-variant: '#c2c6d8'\n  surface-tint: '#0055d5'\n  primary: '#0050ca'\n  on-primary: '#ffffff'\n  primary-container: '#0066fe'\n  on-primary-container: '#f8f7ff'\n  inverse-primary: '#b3c5ff'\n  secondary: '#4e5f79'\n  on-secondary: '#ffffff'\n  secondary-container: '#cbdefd'\n  on-secondary-container: '#50627c'\n  tertiary: '#00672c'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#00833a'\n  on-tertiary-container: '#e1ffe0'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dae1ff'\n  primary-fixed-dim: '#b3c5ff'\n  on-primary-fixed: '#001849'\n  on-primary-fixed-variant: '#003fa4'\n  secondary-fixed: '#d3e3ff'\n  secondary-fixed-dim: '#b5c8e6'\n  on-secondary-fixed: '#081c33'\n  on-secondary-fixed-variant: '#364860'\n  tertiary-fixed: '#66ff8e'\n  tertiary-fixed-dim: '#3de273'\n  on-tertiary-fixed: '#002109'\n  on-tertiary-fixed-variant: '#005322'\n  background: '#f7f9fb'\n  on-background: '#191c1e'\n  surface-variant: '#e0e3e5'\ntypography:\n  display-hero:\n    fontFamily: Outfit\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: 64px\n    letterSpacing: -0.03em\n  display-hero-mobile:\n    fontFamily: Outfit\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Outfit\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: 48px\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Outfit\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n    letterSpacing: -0.015em\n  headline-md:\n    fontFamily: Outfit\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Outfit\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: 0em\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: -0.01em\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: -0.005em\n  body-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n    letterSpacing: 0em\n  label-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.01em\n  label-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 11px\n    fontWeight: '700'\n    lineHeight: 14px\n    letterSpacing: 0.04em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 1.5rem\n  gutter-mobile: 1rem\n  margin: 3rem\n  margin-mobile: 1.25rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.5rem\n---\n\n## Brand & Style\n\nThis design system defines an elite, modern cloud and web engineering agency rooted in Peru and operating globally. The visual identity breaks firmly away from cold, gloomy cyberpunk tropes and unapproachable enterprise monotony. Instead, it balances high-performance technical competence with optimism, radiant clarity, and warm human hospitality.\n\n### Target Audience & Emotional Impact\n- **Audience:** Forward-thinking founders, enterprise CTOs, Latin American tech leaders, and international scale-ups seeking premier cloud architecture and bespoke web craftsmanship.\n- **Tone:** Architecturally sound, luminous, precise, transparent, and effortlessly welcoming.\n- **Emotional Response:** Confidence, clarity of thought, momentum, and refined modern luxury.\n\n### Visual Style\nA tailored hybrid of **Luminous Minimalism** and **Tactile Glass-White Layers**. The interface utilizes a pristine canvas, generous airy whitespace, surgical line-work, vibrant electric blue energy, deliberate conversational triggers (such as WhatsApp green integrations), and gentle chromatic ambient washes (lavender, warm coral, and fresh mint) to signal optimism and boundless altitude.\n\n## Colors\n\nThe palette relies on absolute optical clarity. Pure light underpins the system, anchored by deep nautical navy ink for unyielding contrast and electric blue for digital momentum.\n\n### Roles & Accent Strategy\n- **Primary (`#0066FE`):** Electric Andean Sky. Used for primary CTAs, active cloud nodes, critical system metrics, and hero interactions.\n- **Secondary (`#11243B`):** Deep Nautical Ink. Used for high-contrast headlines, primary text, prominent borders, and anchoring UI structures. Never wash down body text to illegible mid-greys.\n- **Tertiary (`#25D366`):** Direct Link Green. Dedicated to live conversational triggers, instant WhatsApp integration, verified uptime badges, and positive system states.\n- **Neutral Canvas (`#F8FAFC` to `#FFFFFF`):** High-key white canvas. Zero heavy dark-mode grids or murky digital noise.\n- **Chromatic Accents (Surface Tints & Spatial Backdrop Accents):**\n  - *Warm Coral (`#FF6B57`):* Special focus tags, latency alerts, and celebratory impact statistics.\n  - *Soft Mint (`#E8FBF2`):* Container fill for success metrics, operational health highlights, and client ROI metrics.\n  - *Soft Lavender (`#F1EFFF`):* Geometric backdrops, feature isolation cards, and structural pill highlights.\n\n## Typography\n\nThe typographic system fuses the bold, architectural geometry of **Outfit** for structural headings with the open, ergonomic legibility of **Plus Jakarta Sans** for running text, system data, and user actions.\n\n### Implementation Guidelines\n- **Optical Contrast:** Headings in Outfit are rendered in Deep Nautical Ink (`#11243B`) with tight letter-spacing to convey authority without visual bulk.\n- **Legibility First:** Body copy uses Plus Jakarta Sans in neutral ink tints (`#334155`), strictly avoiding low-contrast grey-on-grey degradation.\n- **Numbers and Metrology:** System stats, cloud latency counts, and architectural SLAs utilize tabular numbers and medium weights for instant scanning.\n- **Mobile Adaptations:** Display titles scale down fluidly past the 768px threshold to prevent awkward word wraps in Spanish and English technical titles.\n\n## Layout & Spacing\n\nThe layout is built upon an intentional, spacious 12-column responsive fluid grid structured inside a maximum content width of 1280px.\n\n### Spatial Rhythm\n- **Rhythm Model:** An 8px base unit drives all component padding and vertical margins, preventing micro-misalignments across technical dashboards and public agency pages.\n- **Air & Altitude:** Generous padding around feature blocks reinforces an uncluttered, modern cloud perspective. Containers breathe through wide internal padding (`space-xl` on desktop).\n- **Responsive Adaptations:**\n  - **Desktop (>= 1024px):** 12 columns, 24px gutters, 48px outer canvas margin. Complex cloud architecture diagrams and client results run side-by-side.\n  - **Tablet (768px - 1023px):** 8 columns, 20px gutters, 32px canvas margins. 3-column service cards wrap into balanced 2x2 grids.\n  - **Mobile (< 768px):** 4 columns, 16px gutters, 20px canvas margins. Linear, single-column vertical flow with full-width conversational CTAs docked or floating safely.\n\n## Elevation & Depth\n\nVisual hierarchy rejects heavy, murky drops and chaotic cyber overlays in favor of **Luminous Air & Crisp Ghost Borders**.\n\n### Depth Layers\n- **Level 0 (Canvas):** Ultra-clean, non-distracting `#F8FAFC` base.\n- **Level 1 (Card & Module Layer):** Pure white (`#FFFFFF`) surfaces defined by ultra-fine border definition (`1px solid #E2E8F0`) and diffused atmospheric lift: `0 4px 20px -2px rgba(17, 36, 59, 0.04)`.\n- **Level 2 (Hover & Active States):** Enhanced focus, translating -2px on the Y-axis with a subtle chromatic aura: `0 12px 32px -4px rgba(0, 102, 254, 0.08)`.\n- **Level 3 (Overlays, Modals, & Conversational Trays):** Semi-opaque floating surfaces with backdrop filter blur (`backdrop-filter: blur(12px)`) and crisp borders (`rgba(255, 255, 255, 0.8)`), backed by clean ambient shadow: `0 24px 48px -12px rgba(17, 36, 59, 0.12)`.\n\n## Shapes\n\nThe shape hierarchy is approachable and aerodynamic. Standard cards, form elements, and content modules use calibrated 8px (`0.5rem`) to 16px (`1rem`) radiuses to remain balanced and modern, while interactive meta-elements and actions lean intentionally into pill forms.\n\n### Usage Matrix\n- **Base Components (Cards, Inputs, Modals):** Rounded Level 2 (`0.5rem` / 8px inner, `1rem` / 16px container frames) to preserve clean technical alignment.\n- **Pill Badges & Buttons:** Fully rounded boundaries (`rounded-full` / 9999px) for service chips, cloud certification pills, status indicators, and main interactive buttons.\n- **Accent Geometry:** Structural backdrop shapes in lavender and mint use smooth hyper-ellipses (squircle geometry) or soft 24px corners to avoid harsh industrial points.\n\n## Components\n\n### Buttons\n- **Primary Electric Action:** Filled `#0066FE`, crisp white text, fully rounded pill shape (`border-radius: 9999px`), `font-weight: 600`. Hover state triggers a subtle elevation glow and an electric brightness shift (`#0056D6`).\n- **Secondary Agency Action:** White fill, `1.5px solid #11243B`, dark ink text. Sharp, high-contrast, confident.\n- **WhatsApp Concierge Action:** Tertiary green fill (`#25D366`), white typography and icon, pill-shaped. Accompanied by a gentle live ping indicator to denote immediate human availability.\n\n### Chips & Pill Badges\n- **Status & Tech Tags:** 9999px pill shapes, `space-xs` vertical by `space-sm` horizontal padding.\n- **Theme Accents:**\n  - *Cloud Metric Chip:* Soft lavender surface (`#F1EFFF`), Deep navy text (`#11243B`), border: `1px solid rgba(0, 102, 254, 0.1)`.\n  - *SLA Uptime Chip:* Soft mint surface (`#E8FBF2`), WhatsApp green text (`#1EAA52`), pulsing status dot.\n  - *Innovation Chip:* Soft coral tint (`#FFF0EE`), coral ink (`#FF6B57`).\n\n### Input Fields & Controls\n- **Form Fields:** Crisp white background, `1.5px` border in `#E2E8F0`, 8px corner radius. Focused state: Border transitions to `#0066FE` accompanied by an electric ring `0 0 0 3px rgba(0, 102, 254, 0.15)`.\n- **Checkboxes & Radios:** High-contrast Nautical Ink borders, snapping to filled `#0066FE` with crisp white check marks when selected.\n\n### Cards & Case Studies\n- **Architecture Showcase Cards:** Built on pure white base layers, framed with low-contrast borders (`#E2E8F0`). Cards feature soft lavender or mint geometric backdrops behind tech diagrams, avoiding cluttered screenshots.\n- **Interactive Metrics Cards:** Featuring large Outfit figures (`headline-lg`) in Deep Nautical Ink, accompanied by an electric blue micro-accent line along the top border.\n\n### Direct WhatsApp Floating Trigger\n- A permanent, unobtrusive floating pill stationed at the bottom-right viewport margin: `#25D366` background, luminous drop shadow (`0 8px 24px rgba(37, 211, 102, 0.3)`), providing instant access to cloud architects with clear micro-copy: \"Talk with an Engineer\".",
+                  "colorVariant": "FIDELITY",
+                  "overridePrimaryColor": "#0066fe",
+                  "overrideSecondaryColor": "#11243b",
+                  "overrideTertiaryColor": "#25d366",
+                  "overrideNeutralColor": "#f8fafc",
+                  "spacingScale": 2,
+                  "typography": {
+                    "headline-lg-mobile": {
+                      "fontFamily": "Outfit",
+                      "fontSize": "28px",
+                      "fontWeight": "600",
+                      "lineHeight": "36px",
+                      "letterSpacing": "-0.015em"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Outfit",
+                      "fontSize": "40px",
+                      "fontWeight": "600",
+                      "lineHeight": "48px",
+                      "letterSpacing": "-0.02em"
+                    },
+                    "label-sm": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "11px",
+                      "fontWeight": "700",
+                      "lineHeight": "14px",
+                      "letterSpacing": "0.04em"
+                    },
+                    "body-lg": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "28px",
+                      "letterSpacing": "-0.01em"
+                    },
+                    "label-lg": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "14px",
+                      "fontWeight": "600",
+                      "lineHeight": "20px",
+                      "letterSpacing": "0.01em"
+                    },
+                    "label-md": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "lineHeight": "16px",
+                      "letterSpacing": "0.02em"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Outfit",
+                      "fontSize": "20px",
+                      "fontWeight": "600",
+                      "lineHeight": "28px",
+                      "letterSpacing": "0em"
+                    },
+                    "body-sm": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "14px",
+                      "fontWeight": "400",
+                      "lineHeight": "20px",
+                      "letterSpacing": "0em"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Outfit",
+                      "fontSize": "28px",
+                      "fontWeight": "600",
+                      "lineHeight": "36px",
+                      "letterSpacing": "-0.01em"
+                    },
+                    "display-hero-mobile": {
+                      "fontFamily": "Outfit",
+                      "fontSize": "36px",
+                      "fontWeight": "700",
+                      "lineHeight": "44px",
+                      "letterSpacing": "-0.02em"
+                    },
+                    "body-md": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "24px",
+                      "letterSpacing": "-0.005em"
+                    },
+                    "display-hero": {
+                      "fontFamily": "Outfit",
+                      "fontSize": "56px",
+                      "fontWeight": "700",
+                      "lineHeight": "64px",
+                      "letterSpacing": "-0.03em"
+                    }
+                  },
+                  "spacing": {
+                    "margin": "3rem",
+                    "gutter": "1.5rem",
+                    "space-sm": "0.5rem",
+                    "space-xl": "2.5rem",
+                    "space-xs": "0.25rem",
+                    "margin-mobile": "1.25rem",
+                    "space-md": "1rem",
+                    "gutter-mobile": "1rem",
+                    "space-lg": "1.5rem"
+                  },
+                  "headlineFontFamily": "Outfit",
+                  "bodyFontFamily": "Plus Jakarta Sans",
+                  "labelFontFamily": "Plus Jakarta Sans"
+                }
+              },
+              "version": "1"
+            }
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "He diseñado el **Concept Board de Carrusel Hero para ODISEACLOUD** (ODISEACLOUD - Concept Board Carrusel Hero (3 Variantes)), presentando en una sola pantalla tres estados de carrusel apilados verticalmente (~520px de alto cada uno) con navegación consistente, controles sobrios de diapositiva y una dirección de arte 100% luminosa y prémium, alejada de cualquier cliché cibernético o fondos oscuros.\n\n### Aspectos clave del diseño:\n\n1. **Estado 01: Páginas Web & Software a Medida (Enfoque Conversión & Artesanía)**\n   - **Jerarquía:** H1 editorial de alto impacto (*\"Diseño de páginas web y software a medida en Perú.\"*), cuerpo descriptivo optimizado para SEO y CTA primario en Azul Eléctrico (`#007bff`) junto a acceso a portafolio.\n   - **Composición:** Silueta orgánica celeste suave con acento cálido coral (*Garantía 99.9% uptime*), ilustración vectorizada del robot mascota en blanco y azul, y dos tarjetas flotantes de interfaz de usuario con métricas reales de rendimiento.\n\n2. **Estado 02: Sistemas a Medida & Automatización (Enfoque Arquitectura & Eficiencia)**\n   - **Jerarquía:** H2 enfocado en resultados de negocio (*\"Menos tareas repetitivas. Más control de tu negocio.\"*), etiqueta superior destacada y botón de cotización directa.\n   - **Diagrama de Procesos:** Flujo limpio y horizontal en 3 fases (*Captura de Datos & Leads → CRM Inteligente en la Nube → Reporte Ejecutivo & Decisión* con KPI de productividad), sobre un lienzo marfil con sutil panel geométrico lavanda sin fotos ni fondos oscuros.\n\n3. **Estado 03: Dominios & Tu Marca en Internet (Enfoque Registro Rápido & Confianza)**\n   - **Jerarquía:** H2 centrado (*\"Un nombre. Una marca. Tu lugar en internet.\"*), barra de búsqueda de dominio destacada con selector de extensión e input real (`miempresa.com`).\n   - **Detalles:** Selector de TLDs en píldoras interactivas con precios locales (`.com`, `.pe`, `.org`, `.store`, `.tech`), el robot mascota amigable asomándose junto al buscador, y el enlace de confianza para traslado de dominio sin costo.\n\n4. **Consistencia Global y Carrusel:**\n   - Cada estado mantiene la cabecera unificada de ODISEACLOUD con el botón verde de WhatsApp (`#25D366`), navegación activa correspondiente y controles discretos de carrusel (`01/03`, `02/03`, `03/03`, puntos de estado y flechas prev/next).\n   - Bloque inferior técnico con especificaciones de tipografía, tokens de color y reglas de animación recomendadas para su implementación final."
+    },
+    {
+      "suggestion": "Ver la versión móvil de los 3 estados de carrusel"
+    },
+    {
+      "suggestion": "Agregar animación interactiva con JavaScript para simular el paso automático de diapositivas"
+    },
+    {
+      "suggestion": "Desarrollar la sección siguiente de la página (Servicios detallados o Casos de éxito)"
+    }
+  ]
+}

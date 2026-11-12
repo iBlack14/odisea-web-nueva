@@ -1,0 +1,15 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"name\":\"projects/16495016585719256247\",\"title\":\"OdiseaCloud — Inicio luminoso y tres slides\",\"visibility\":\"PRIVATE\",\"projectType\":\"PROJECT_DESIGN\",\"origin\":\"MCP\"}"
+    }
+  ],
+  "structuredContent": {
+    "name": "projects/16495016585719256247",
+    "origin": "MCP",
+    "projectType": "PROJECT_DESIGN",
+    "title": "OdiseaCloud — Inicio luminoso y tres slides",
+    "visibility": "PRIVATE"
+  }
+}

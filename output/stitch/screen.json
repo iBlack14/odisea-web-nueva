@@ -1,0 +1,26 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"name\":\"projects/16495016585719256247/screens/aa6f24c7df8f4b05a59e27beee89fab9\",\"title\":\"ODISEACLOUD - Concept Board Carrusel Hero (3 Variantes)\",\"screenshot\":{\"name\":\"projects/16495016585719256247/files/4950c5d87526461994fe043fc0dcbb9a\",\"downloadUrl\":\"https://stitch.googleapis.com/v1/projects/16495016585719256247/files/4950c5d87526461994fe043fc0dcbb9a:download\",\"mimeType\":\"png\"},\"htmlCode\":{\"name\":\"projects/16495016585719256247/files/266526111b9147638b939a596f33eac4\",\"downloadUrl\":\"https://stitch.googleapis.com/v1/projects/16495016585719256247/files/266526111b9147638b939a596f33eac4:download\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"4860\",\"deviceType\":\"DESKTOP\",\"screenType\":\"DESIGN\"}"
+    }
+  ],
+  "structuredContent": {
+    "deviceType": "DESKTOP",
+    "height": "4860",
+    "htmlCode": {
+      "downloadUrl": "https://stitch.googleapis.com/v1/projects/16495016585719256247/files/266526111b9147638b939a596f33eac4:download",
+      "mimeType": "text/html",
+      "name": "projects/16495016585719256247/files/266526111b9147638b939a596f33eac4"
+    },
+    "name": "projects/16495016585719256247/screens/aa6f24c7df8f4b05a59e27beee89fab9",
+    "screenType": "DESIGN",
+    "screenshot": {
+      "downloadUrl": "https://stitch.googleapis.com/v1/projects/16495016585719256247/files/4950c5d87526461994fe043fc0dcbb9a:download",
+      "mimeType": "png",
+      "name": "projects/16495016585719256247/files/4950c5d87526461994fe043fc0dcbb9a"
+    },
+    "title": "ODISEACLOUD - Concept Board Carrusel Hero (3 Variantes)",
+    "width": "2560"
+  }
+}

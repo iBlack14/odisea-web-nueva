@@ -96,4 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
       contact.textContent = '¿Necesitas ayuda o trasladar tu dominio? Escríbenos'; contact.hidden = false;
     }
   });
+  const initialQuery = new URLSearchParams(window.location.search).get('q');
+  if (initialQuery) {
+    input.value = initialQuery.slice(0, 245);
+    form.requestSubmit();
+  }
 });

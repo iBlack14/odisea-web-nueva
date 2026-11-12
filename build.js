@@ -18,6 +18,9 @@ function renderServiceArt(service, prefix = '') {
 // Helper para iconos SVG oficiales y limpios
 function getSvgIcon(name) {
   const icons = {
+    code: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg>`,
+    'file-text': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm0 0v6h6M8 13h8m-8 4h6"/></svg>`,
+    layers: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg>`,
     globe: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
     'shopping-bag': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>`,
     'refresh-cw': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>`,
@@ -72,7 +75,8 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
     <div class="container navbar">
       <!-- Logotipo Oficial OdiseaCloud -->
       <a href="${homeUrl}" class="nav-brand" aria-label="OdiseaCloud - Inicio">
-        <img src="${relativePath}assets/images/logo.webp" alt="Logotipo OdiseaCloud" class="brand-logo" width="180" height="48">
+        <img src="${relativePath}assets/images/logo.webp" alt="" class="brand-logo" width="1180" height="780">
+        <span class="brand-wordmark" aria-hidden="true">Odisea<span>Cloud</span></span>
       </a>
 
       <!-- Menú de Navegación de Escritorio -->
@@ -142,7 +146,10 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
   <div class="mobile-menu-backdrop"></div>
   <aside class="mobile-menu" aria-label="Menú móvil">
     <div class="mobile-menu-header">
-      <img src="${relativePath}assets/images/logo.webp" alt="OdiseaCloud Logo" width="143" height="38" style="height: 38px; width: auto;">
+      <a href="${homeUrl}" class="nav-brand mobile-menu-brand" aria-label="OdiseaCloud - Inicio">
+        <img src="${relativePath}assets/images/logo.webp" alt="" class="brand-logo" width="1180" height="780">
+        <span class="brand-wordmark" aria-hidden="true">Odisea<span>Cloud</span></span>
+      </a>
       <button class="mobile-close-btn" aria-label="Cerrar menú">
         ${getSvgIcon('x')}
       </button>
@@ -1605,29 +1612,56 @@ const homeHtml = `<!DOCTYPE html>
             <a class="btn btn-primary" href="servicios/desarrollo-web/">Diseña tu página web ${getSvgIcon('arrowRight')}</a>
             <div class="home-slide-links"><a href="servicios/tiendas-virtuales/">Tiendas virtuales</a><a href="servicios/sistemas-web/">Sistemas a medida</a></div>
           </div>
-          <div class="home-slide-mascot"><img src="assets/images/mascota-izquierda.webp" alt="Mascota de OdiseaCloud presentando nuestras soluciones digitales" width="1213" height="1296" fetchpriority="high"><span>Diseño · Desarrollo · Cloud</span></div>
+          <div class="home-slide-mascot home-web-scene">
+            <div class="web-scene-orbit" aria-hidden="true"></div>
+            <img src="assets/images/mascota-izquierda.webp" alt="Mascota de OdiseaCloud presentando nuestras soluciones digitales" width="1213" height="1296" fetchpriority="high">
+            <div class="web-scene-card web-scene-card-top"><span class="scene-icon">${getSvgIcon('code')}</span><div><strong>Desarrollo web</strong><span>Código propio, a tu medida</span></div></div>
+            <div class="web-scene-card web-scene-card-bottom"><span class="scene-icon">${getSvgIcon('globe')}</span><div><strong>Tu negocio en línea</strong><span>Web · Tienda · Cloud</span></div></div>
+            <span class="web-scene-accent" aria-hidden="true"></span>
+          </div>
         </div>
       </div>
-      <div class="about-slide about-slide-centered" role="group" aria-roledescription="diapositiva" aria-label="2 de 3" hidden>
-        <div class="container about-slide-center-copy">
-          <span class="section-badge">Sistemas web y automatización</span>
-          <h2>Menos tareas repetitivas.<br><span>Más control de tu negocio.</span></h2>
-          <p>Creamos sistemas web a medida e integramos CRM y herramientas digitales para organizar información, conectar procesos y acompañar el crecimiento de tu empresa.</p>
-          <div class="about-slide-principles"><span>${getSvgIcon('check')} Desarrollo personalizado</span><span>${getSvgIcon('check')} Integración de CRM</span><span>${getSvgIcon('check')} Soporte continuo</span></div>
-          <a class="btn btn-primary" href="servicios/sistemas-web/">Explora los sistemas a medida ${getSvgIcon('arrowRight')}</a>
-          <div class="home-slide-links"><a href="servicios/integraciones-automatizaciones/">Automatización de procesos e integración de CRM</a></div>
+      <div class="about-slide home-slide-systems" role="group" aria-roledescription="diapositiva" aria-label="2 de 3" hidden>
+        <div class="container home-systems-layout">
+          <div class="about-slide-copy">
+            <span class="section-badge">Sistemas web y automatización</span>
+            <h2>Menos tareas repetitivas.<br><span>Más control de tu negocio.</span></h2>
+            <p>Creamos sistemas web a medida e integramos CRM y herramientas digitales para organizar información, conectar procesos y acompañar el crecimiento de tu empresa.</p>
+            <a class="btn btn-primary" href="servicios/sistemas-web/">Explora los sistemas a medida ${getSvgIcon('arrowRight')}</a>
+            <div class="home-slide-links"><a href="servicios/integraciones-automatizaciones/">Automatización de procesos e integración de CRM</a></div>
+          </div>
+          <div class="systems-flow" aria-label="Ejemplo de flujo de automatización">
+            <span class="systems-flow-label">Así pueden conectarse tus procesos</span>
+            <div class="systems-flow-step"><span class="systems-flow-icon">${getSvgIcon('file-text')}</span><div><small>PASO 01</small><h3>Recibe una solicitud</h3><p>Formulario de tu página web</p></div><span class="systems-flow-check" aria-hidden="true">${getSvgIcon('check')}</span></div>
+            <span class="systems-flow-arrow" aria-hidden="true">↓</span>
+            <div class="systems-flow-step systems-flow-step-active"><span class="systems-flow-icon">${getSvgIcon('cpu')}</span><div><small>PASO 02 · INTEGRACIÓN</small><h3>Organiza en tu CRM</h3><p>Información centralizada para tu equipo</p></div></div>
+            <span class="systems-flow-arrow" aria-hidden="true">↓</span>
+            <div class="systems-flow-step"><span class="systems-flow-icon">${getSvgIcon('layers')}</span><div><small>PASO 03</small><h3>Consulta tus reportes</h3><p>Datos útiles para tomar decisiones</p></div><span class="systems-flow-check" aria-hidden="true">${getSvgIcon('check')}</span></div>
+            <span class="systems-flow-caption">Ejemplo ilustrativo · Definimos el flujo según tu negocio</span>
+          </div>
         </div>
       </div>
       <div class="about-slide home-slide-domains" role="group" aria-roledescription="diapositiva" aria-label="3 de 3" hidden>
-        <div class="container about-slide-layout">
-          <div class="about-slide-copy">
-            <span class="section-badge">Registro y traslado de dominios</span>
-            <h2>Tu marca empieza<br><span>con un buen dominio.</span></h2>
-            <p>Busca la disponibilidad de tu dominio y solicita su registro. Si ya tienes uno, te acompañamos en su traslado y en la configuración de DNS, hosting y correo corporativo.</p>
-            <a class="btn btn-primary" href="servicios/dominios/">Busca o traslada tu dominio ${getSvgIcon('arrowRight')}</a>
-            <div class="home-slide-links"><a href="servicios/hosting-web/">Hosting web</a><a href="servicios/correo-corporativo/">Correo corporativo</a></div>
+        <div class="container domain-spotlight">
+          <div class="domain-spotlight-intro"><div>
+            <span class="section-badge">Tu próxima idea empieza aquí</span>
+            <h2>Un nombre. Una marca.<br><span>Tu lugar en internet.</span></h2>
+            <p>Encuentra el dominio de tu empresa. Consulta su disponibilidad y da el primer paso para hacerlo tuyo.</p>
+          </div></div>
+          <div class="domain-search-stage">
+            <div class="domain-spotlight-companion">
+              <img src="assets/images/mascotas/dominios.webp" alt="Mascota de OdiseaCloud acompañando la búsqueda de tu dominio" width="960" height="1200" loading="lazy">
+              <span class="domain-companion-icon domain-companion-web" aria-hidden="true">${getSvgIcon('globe')}</span>
+            </div>
+          <form class="domain-spotlight-search" action="servicios/dominios/" method="get">
+            <label class="domain-spotlight-label" for="home-domain-name">Nombre o dominio</label>
+            <span aria-hidden="true">www.</span><input id="home-domain-name" name="q" placeholder="miempresa.com" required maxlength="245" autocomplete="off" autocapitalize="none" spellcheck="false"><button class="btn btn-primary" type="submit">Buscar dominio ${getSvgIcon('arrowRight')}</button>
+          </form>
           </div>
-          <div class="home-slide-mascot"><img src="assets/images/mascotas/dominios.webp" alt="Robot de OdiseaCloud con un globo y una dirección web" width="960" height="1200" loading="lazy"><span>Registro · Traslado · Configuración DNS</span></div>
+          <div class="domain-spotlight-extensions" aria-label="Ejemplos de extensiones"><span>.com</span><span>.net</span><span>.org</span><span>.store</span><span>.tech</span></div>
+          <div class="domain-spotlight-benefits"><span>${getSvgIcon('globe')} Tu dominio</span><span>${getSvgIcon('server')} Gestión DNS</span><span>${getSvgIcon('mail')} Correo con tu marca</span></div>
+          <div class="domain-spotlight-footer"><span>¿Ya tienes un dominio?</span><a href="servicios/dominios/#traslado-dominio">Te ayudamos a trasladarlo ${getSvgIcon('arrowRight')}</a></div>
+          <a class="domain-spotlight-service" href="servicios/dominios/">Registro, renovación y gestión de dominios en Perú</a>
         </div>
       </div>
       <div class="container about-slider-controls">
@@ -1637,7 +1671,6 @@ const homeHtml = `<!DOCTYPE html>
     </section>
     <script src="assets/js/about-slider.js" defer></script>
 
-    <nav class="home-service-shortcuts" aria-label="Servicios principales"><div class="container"><a href="servicios/desarrollo-web/">Diseño de páginas web en Perú</a><a href="servicios/sistemas-web/">Desarrollo de sistemas a medida</a><a href="servicios/dominios/">Buscar y registrar dominios</a><a href="servicios/dominios/#traslado-dominio">Trasladar un dominio</a></div></nav>
 
     <!-- SECCIÓN 2 — SERVICIOS PRINCIPALES (9 Destacados) -->
     <section class="section section-light" id="servicios-destacados">

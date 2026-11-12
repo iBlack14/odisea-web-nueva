@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ODISEACLOUD — Exploración de Estados de Carrusel Hero (Desktop Concept Board)</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#191c1e",
+            "tertiary": "#00672c",
+            "tertiary-container": "#00833a",
+            "tertiary-fixed": "#66ff8e",
+            "outline-variant": "#c2c6d8",
+            "inverse-surface": "#2d3133",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed": "#081c33",
+            "on-tertiary-container": "#e1ffe0",
+            "error-container": "#ffdad6",
+            "surface-container": "#eceef0",
+            "surface-container-highest": "#e0e3e5",
+            "secondary-fixed": "#d3e3ff",
+            "on-primary-container": "#f8f7ff",
+            "surface": "#f7f9fb",
+            "secondary": "#4e5f79",
+            "surface-container-low": "#f2f4f6",
+            "secondary-fixed-dim": "#b5c8e6",
+            "primary-fixed": "#dae1ff",
+            "primary-container": "#0066fe",
+            "surface-tint": "#0055d5",
+            "tertiary-fixed-dim": "#3de273",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#364860",
+            "surface-container-high": "#e6e8ea",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#b3c5ff",
+            "on-tertiary-fixed-variant": "#005322",
+            "secondary-container": "#cbdefd",
+            "primary": "#0050ca",
+            "on-primary-fixed-variant": "#003fa4",
+            "outline": "#727687",
+            "primary-fixed-dim": "#b3c5ff",
+            "on-secondary-container": "#50627c",
+            "on-tertiary-fixed": "#002109",
+            "on-surface-variant": "#424655",
+            "on-primary-fixed": "#001849",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#191c1e",
+            "on-secondary": "#ffffff",
+            "background": "#f7f9fb",
+            "surface-bright": "#f7f9fb",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#eff1f3",
+            "surface-dim": "#d8dadc",
+            "surface-variant": "#e0e3e5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "3rem",
+            "space-xl": "2.5rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "body-md": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg-mobile": [
+              "Outfit"
+            ],
+            "display-hero-mobile": [
+              "Outfit"
+            ],
+            "headline-lg": [
+              "Outfit"
+            ],
+            "label-md": [
+              "Plus Jakarta Sans"
+            ],
+            "body-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "body-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "display-hero": [
+              "Outfit"
+            ],
+            "headline-md": [
+              "Outfit"
+            ],
+            "label-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-sm": [
+              "Outfit"
+            ]
+          },
+          "fontSize": {
+            "label-sm": [
+              "11px",
+              {
+                "lineHeight": "14px",
+                "letterSpacing": "0.04em",
+                "fontWeight": "700"
+              }
+            ],
+            "body-md": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "letterSpacing": "-0.005em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg-mobile": [
+              "28px",
+              {
+                "lineHeight": "36px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "600"
+              }
+            ],
+            "display-hero-mobile": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-lg": [
+              "40px",
+              {
+                "lineHeight": "48px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "label-md": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-sm": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "28px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "display-hero": [
+              "56px",
+              {
+                "lineHeight": "64px",
+                "letterSpacing": "-0.03em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-md": [
+              "28px",
+              {
+                "lineHeight": "36px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "label-lg": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-sm": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "letterSpacing": "0em",
+                "fontWeight": "600"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-shadow-luminous {
+      box-shadow: 0 4px 24px -2px rgba(17, 36, 59, 0.05), 0 2px 8px -1px rgba(0, 102, 254, 0.04);
+    }
+    .custom-shadow-card {
+      box-shadow: 0 12px 32px -4px rgba(17, 36, 59, 0.07);
+    }
+    .custom-shadow-green {
+      box-shadow: 0 8px 24px -2px rgba(37, 211, 102, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Concept Board Presentation Header Top Bar -->
+<header class="w-full bg-surface-container-lowest border-b border-outline-variant/30 sticky top-0 z-50 backdrop-blur-md bg-opacity-95 shadow-xs">
+<div class="max-w-7xl mx-auto px-margin py-space-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-3 h-3 rounded-full bg-primary-container animate-pulse"></div>
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">ODISEACLOUD</span>
+<span class="text-secondary font-label-md text-label-md ml-2 hidden sm:inline-block">— Exploración de Estados de Carrusel Hero (Desktop Concept Board)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/40">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+          3 Variantes Apiladas • 100% Luminous UI • Sin clichés cibernéticos
+        </span>
+<a class="font-label-md text-label-md px-2.5 py-1 rounded text-primary hover:bg-primary-fixed/40 transition-colors" href="#estado-01">01. Web &amp; Software</a>
+<a class="font-label-md text-label-md px-2.5 py-1 rounded text-primary hover:bg-primary-fixed/40 transition-colors" href="#estado-02">02. Sistemas</a>
+<a class="font-label-md text-label-md px-2.5 py-1 rounded text-primary hover:bg-primary-fixed/40 transition-colors" href="#estado-03">03. Dominios</a>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-14">
+<!-- ========================================================================= -->
+<!-- SLIDE VARIANT 01: PÁGINAS WEB & SOFTWARE A MEDIDA                         -->
+<!-- ========================================================================= -->
+<section class="scroll-mt-20" id="estado-01">
+<!-- Section State Meta Indicator -->
+<div class="flex items-center justify-between mb-3 px-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Estado 01: Páginas Web &amp; Software a Medida</h2>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Enfoque: Conversión &amp; Artesanía Web</span>
+</div>
+<!-- Hero Frame Container (~530px Desktop Height) -->
+<div class="relative bg-surface-container-lowest rounded-2xl border border-outline-variant/30 custom-shadow-luminous overflow-hidden min-h-[530px] flex flex-col justify-between">
+<!-- Replicated Top Navigation (Exact JSON & System compliance) -->
+<nav class="w-full bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 px-6 lg:px-10 py-3.5 flex items-center justify-between z-20">
+<div class="flex items-center gap-8">
+<a class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight flex items-center gap-1.5" href="#">
+<span>ODISEACLOUD</span>
+<span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-lg text-label-lg" href="#">Servicios</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Soluciones Cloud</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Dominios</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Nosotros</a>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#25D366] text-white font-label-lg text-label-lg font-semibold custom-shadow-green hover:brightness-105 active:scale-95 transition-all" href="https://wa.me/51999999999" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
+<span>Hablar por WhatsApp</span>
+</a>
+</div>
+</nav>
+<!-- Carousel Slide 1 Canvas Content -->
+<div class="relative px-6 lg:px-10 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1">
+<!-- Ambient Organic Backdrop Shape (Flat sky-blue puddle) -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-[460px] h-[460px] bg-[#E0F2FE]/60 rounded-full blur-3xl pointer-events-none -z-0"></div>
+<!-- Left Column (Text & CTAs) -->
+<div class="lg:col-span-7 z-10 flex flex-col items-start justify-center space-y-4">
+<!-- Pill badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF5FF] border border-[#BAE6FD]">
+<span class="w-2 h-2 rounded-full bg-[#1EAA52] animate-ping"></span>
+<span class="font-label-md text-label-md font-semibold text-primary">Agencia Digital en Lima, Perú</span>
+</div>
+<!-- H1 Headline -->
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight leading-tight max-w-xl">
+              Diseño de páginas web y software a medida en Perú.
+            </h1>
+<!-- Descriptive Body -->
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl leading-relaxed">
+              Desarrollamos plataformas digitales de alto impacto, tiendas virtuales optimizadas y sistemas web escalables sobre infraestructura en la nube para potenciar empresas peruanas.
+            </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-3 pt-1">
+<button class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary transition-all shadow-md active:scale-95">
+<span>Diseña tu página web</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold border border-outline-variant hover:bg-surface-container-low transition-all">
+<span>Ver portafolio de proyectos</span>
+</button>
+</div>
+<!-- SEO Micro-feature Checklist -->
+<div class="pt-2 flex flex-wrap items-center gap-4 text-secondary font-label-sm text-label-sm font-medium">
+<span class="inline-flex items-center gap-1.5"><span class="text-tertiary-container font-bold">✓</span> Código limpio y ultra veloz</span>
+<span class="inline-flex items-center gap-1.5"><span class="text-tertiary-container font-bold">✓</span> Alojamiento en la nube</span>
+<span class="inline-flex items-center gap-1.5"><span class="text-tertiary-container font-bold">✓</span> Soporte local 24/7</span>
+</div>
+</div>
+<!-- Right Column (Tactile UI + Friendly Mascot Vector Illustration) -->
+<div class="lg:col-span-5 relative flex items-center justify-center min-h-[300px] z-10">
+<!-- Organic Blue Splash Base -->
+<div class="absolute w-72 h-72 bg-gradient-to-tr from-[#DBEAFE] to-[#EFF6FF] rounded-full -rotate-6"></div>
+<!-- Coral Warranty Accent Pill -->
+<div class="absolute -top-1 right-6 z-20 bg-[#FFF0EE] border border-[#FFD2CC] px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-[#FF6B57]"></span>
+<span class="font-label-sm text-label-sm font-bold text-[#FF6B57]">Garantía 99.9% uptime</span>
+</div>
+<!-- Friendly Mascot Illustration (High-craft Luminous Vector) -->
+<div class="relative z-10 flex flex-col items-center select-none">
+<svg class="drop-shadow-lg" fill="none" height="230" viewbox="0 0 200 210" width="220" xmlns="http://www.w3.org/2000/svg">
+<!-- Shadow Base -->
+<ellipse cx="100" cy="195" fill="#CBD5E1" fill-opacity="0.5" rx="55" ry="10"></ellipse>
+<!-- Left Hand Wave -->
+<path d="M42 98C35 90 22 84 15 90C8 96 16 112 25 116C34 120 45 110 42 98Z" fill="#FFFFFF" stroke="#0066FE" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="16" cy="88" fill="#0066FE" r="6"></circle>
+<!-- Right Arm -->
+<path d="M158 108C166 114 176 122 182 130C186 135 178 142 172 138C166 134 155 122 155 116" stroke="#0066FE" stroke-linecap="round" stroke-width="4"></path>
+<!-- Body Capsule -->
+<rect fill="#FFFFFF" height="105" rx="48" stroke="#0066FE" stroke-width="3.5" width="96" x="52" y="70"></rect>
+<!-- Belly Screen with cloud icon -->
+<rect fill="#F0F7FF" height="42" rx="12" stroke="#BFDBFE" stroke-width="1.5" width="60" x="70" y="105"></rect>
+<path d="M86 128H114C117 128 119 126 119 123C119 120 117 118 114 118C114 114 110 111 106 111C103 111 100 113 99 115C98 114 96 113 94 113C90 113 87 116 87 120C84 120 83 123 84 126C84 127 85 128 86 128Z" fill="#0066FE"></path>
+<!-- Cute Head/Visor -->
+<rect fill="#11243B" height="48" rx="24" width="84" x="58" y="42"></rect>
+<!-- Visor Glasses Glowing Blue -->
+<rect fill="#0066FE" height="34" rx="17" width="70" x="65" y="49"></rect>
+<!-- Smiling Visor Eyes -->
+<path d="M78 66C78 62 82 60 86 62" stroke="#FFFFFF" stroke-linecap="round" stroke-width="3"></path>
+<path d="M114 66C114 62 118 60 122 62" stroke="#FFFFFF" stroke-linecap="round" stroke-width="3"></path>
+<!-- Cute Cheeks -->
+<circle cx="75" cy="73" fill="#FF8A7A" r="3.5"></circle>
+<circle cx="125" cy="73" fill="#FF8A7A" r="3.5"></circle>
+<!-- Antenna with luminous pearl -->
+<line stroke="#0066FE" stroke-linecap="round" stroke-width="3.5" x1="100" x2="100" y1="42" y2="24"></line>
+<circle cx="100" cy="20" fill="#25D366" r="7" stroke="#FFFFFF" stroke-width="2"></circle>
+<!-- Feet -->
+<rect fill="#0066FE" height="24" rx="9" width="18" x="74" y="168"></rect>
+<rect fill="#0066FE" height="24" rx="9" width="18" x="108" y="168"></rect>
+</svg>
+</div>
+<!-- Floating UI Card 1: E-commerce Perú -->
+<div class="absolute -bottom-3 -left-4 z-20 bg-surface-container-lowest border border-outline-variant/50 p-3.5 rounded-xl custom-shadow-card flex items-center gap-3 max-w-[210px]">
+<div class="w-9 h-9 rounded-lg bg-[#EBF5FF] text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div class="overflow-hidden">
+<div class="font-label-sm text-label-sm font-bold text-on-surface truncate">E-commerce Perú</div>
+<div class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container font-semibold">
+<span>+180% ventas</span>
+</div>
+</div>
+</div>
+<!-- Floating UI Card 2: Plataforma Cloud -->
+<div class="absolute top-10 -right-2 z-20 bg-surface-container-lowest border border-outline-variant/50 p-3 rounded-xl custom-shadow-card flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#E8FBF2] text-[#1EAA52] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="bolt">bolt</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-secondary font-medium">Latencia Cloud</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">0.2s</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Understated Carousel Navigation Bar (Bottom Docked) -->
+<div class="w-full bg-surface-container-low/70 border-t border-outline-variant/30 px-6 lg:px-10 py-2.5 flex items-center justify-between text-secondary">
+<div class="flex items-center gap-3">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">01 <span class="text-secondary font-normal text-body-sm">/ 03</span></span>
+<div class="h-3 w-px bg-outline-variant/50 mx-1"></div>
+<!-- Indicators: active pill on 01 -->
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-2 rounded-full bg-primary-container transition-all"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant/60"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant/60"></span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary hidden sm:inline-block mr-2">Deslizar soluciones</span>
+<button aria-label="Anterior slide" class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center hover:bg-surface-container-lowest text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="chevron_left">chevron_left</span>
+</button>
+<button aria-label="Siguiente slide" class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center hover:bg-surface-container-lowest text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SLIDE VARIANT 02: SISTEMAS A MEDIDA & AUTOMATIZACIÓN                       -->
+<!-- ========================================================================= -->
+<section class="scroll-mt-20" id="estado-02">
+<!-- Section State Meta Indicator -->
+<div class="flex items-center justify-between mb-3 px-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Estado 02: Sistemas a Medida &amp; Automatización</h2>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Enfoque: Arquitectura &amp; Eficiencia Operativa</span>
+</div>
+<!-- Hero Frame Container (~530px Desktop Height) -->
+<div class="relative bg-[#FAF9F6] rounded-2xl border border-outline-variant/30 custom-shadow-luminous overflow-hidden min-h-[530px] flex flex-col justify-between">
+<!-- Replicated Top Navigation (Exact JSON & System compliance) -->
+<nav class="w-full bg-[#FAF9F6]/95 backdrop-blur-md border-b border-outline-variant/30 px-6 lg:px-10 py-3.5 flex items-center justify-between z-20">
+<div class="flex items-center gap-8">
+<a class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight flex items-center gap-1.5" href="#">
+<span>ODISEACLOUD</span>
+<span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Servicios</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-lg text-label-lg" href="#">Soluciones Cloud</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Dominios</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Nosotros</a>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#25D366] text-white font-label-lg text-label-lg font-semibold custom-shadow-green hover:brightness-105 active:scale-95 transition-all" href="https://wa.me/51999999999" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
+<span>Hablar por WhatsApp</span>
+</a>
+</div>
+</nav>
+<!-- Carousel Slide 2 Canvas Content -->
+<div class="relative px-6 lg:px-10 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1">
+<!-- Asymmetric soft lavender geometric backdrop shape -->
+<div class="absolute right-8 top-1/2 -translate-y-1/2 w-[520px] h-[380px] bg-gradient-to-br from-[#EDE9FE] to-[#F5F3FF] rounded-3xl transform rotate-2 pointer-events-none -z-0 border border-[#DDD6FE]/40"></div>
+<!-- Left Column (High-impact business efficiency copy) -->
+<div class="lg:col-span-6 z-10 flex flex-col items-start justify-center space-y-4">
+<!-- Eyebrow label -->
+<div class="inline-flex items-center gap-2 font-label-sm text-label-sm font-bold tracking-wider text-[#4338CA] uppercase">
+<span class="w-2.5 h-1 rounded-full bg-[#4338CA]"></span>
+              SISTEMAS A MEDIDA
+            </div>
+<!-- H2 Headline -->
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight leading-tight max-w-lg">
+              Menos tareas repetitivas. Más control de tu negocio.
+            </h2>
+<!-- Descriptive Body -->
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg leading-relaxed">
+              Digitalizamos tus procesos operativos reemplazando hojas de cálculo dispersas por plataformas web seguras, paneles de gestión y flujos de trabajo automatizados que ahorran horas hombre a tu equipo.
+            </p>
+<!-- CTA -->
+<div class="flex flex-wrap items-center gap-3 pt-1">
+<button class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary transition-all shadow-md active:scale-95">
+<span>Cotizar sistema personalizado</span>
+<span class="material-symbols-outlined text-lg" data-icon="tune">tune</span>
+</button>
+<a class="inline-flex items-center gap-2 px-4 py-3 text-on-surface hover:text-[#00833a] font-label-lg text-label-lg font-medium transition-colors" href="https://wa.me/51999999999">
+<span class="material-symbols-outlined text-lg text-[#25D366]" data-icon="chat">chat</span>
+<span>Consulta técnica inmediata</span>
+</a>
+</div>
+<!-- Key Benefits Tags -->
+<div class="pt-2 flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest border border-outline-variant/40 font-label-sm text-label-sm text-on-surface font-medium shadow-xs">
+                Paneles de Facturación
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest border border-outline-variant/40 font-label-sm text-label-sm text-on-surface font-medium shadow-xs">
+                Gestión de Inventario
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest border border-outline-variant/40 font-label-sm text-label-sm text-on-surface font-medium shadow-xs">
+                Integración SUNAT &amp; Pasarelas
+              </span>
+</div>
+</div>
+<!-- Right Column: Crisp Illustrative App Workflow Diagram (Zero dark clutter) -->
+<div class="lg:col-span-6 z-10 flex flex-col justify-center gap-3.5 my-2">
+<!-- Node 1: Captura de Datos -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 p-4 custom-shadow-card flex items-center justify-between transition-transform hover:-translate-y-0.5">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-lg bg-[#EEF2FF] text-[#4F46E5] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wide text-secondary font-bold">Paso 01</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">Captura de Datos &amp; Leads</div>
+<div class="font-body-sm text-body-sm text-secondary">Formularios web sincronizados en tiempo real</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="check_circle">check_circle</span>
+</div>
+<!-- Connecting Visual Flow Indicator -->
+<div class="flex justify-center -my-2.5 z-10">
+<div class="w-6 h-6 rounded-full bg-[#EDE9FE] border border-[#DDD6FE] flex items-center justify-center text-[#4338CA]">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="south">south</span>
+</div>
+</div>
+<!-- Node 2: Procesamiento Central -->
+<div class="bg-surface-container-lowest rounded-xl border-2 border-primary-container/40 p-4 custom-shadow-card flex items-center justify-between relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-center gap-3.5 pl-2">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed/50 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="cloud_sync">cloud_sync</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-primary font-bold">Paso 02</span>
+<span class="px-2 py-0.5 rounded-full bg-[#E8FBF2] text-[#1EAA52] font-label-sm text-label-sm font-bold">Automático</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">CRM Inteligente en la Nube</div>
+<div class="font-body-sm text-body-sm text-secondary">Validación con SUNAT y asignación automática</div>
+</div>
+</div>
+<span class="px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono">24/7 API</span>
+</div>
+<!-- Connecting Visual Flow Indicator -->
+<div class="flex justify-center -my-2.5 z-10">
+<div class="w-6 h-6 rounded-full bg-[#EDE9FE] border border-[#DDD6FE] flex items-center justify-center text-[#4338CA]">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="south">south</span>
+</div>
+</div>
+<!-- Node 3: Resultado & Analítica -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 p-4 custom-shadow-card flex items-center justify-between transition-transform hover:-translate-y-0.5">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-lg bg-[#E0F2FE] text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wide text-secondary font-bold">Paso 03</div>
+<div class="font-headline-sm text-headline-sm font-semibold text-on-surface">Reporte Ejecutivo &amp; Decisión</div>
+<div class="font-body-sm text-body-sm text-secondary">KPIs actualizados sin hojas Excel duplicadas</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary-container">+42%</span>
+<span class="block font-label-sm text-label-sm text-secondary">Productividad</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Understated Carousel Navigation Bar (Bottom Docked) -->
+<div class="w-full bg-[#F3F2EE] border-t border-outline-variant/30 px-6 lg:px-10 py-2.5 flex items-center justify-between text-secondary">
+<div class="flex items-center gap-3">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">02 <span class="text-secondary font-normal text-body-sm">/ 03</span></span>
+<div class="h-3 w-px bg-outline-variant/50 mx-1"></div>
+<!-- Indicators: active pill on middle (02) -->
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant/60"></span>
+<span class="w-6 h-2 rounded-full bg-primary-container transition-all"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant/60"></span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary hidden sm:inline-block mr-2">Deslizar soluciones</span>
+<button aria-label="Anterior slide" class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center hover:bg-surface-container-lowest text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="chevron_left">chevron_left</span>
+</button>
+<button aria-label="Siguiente slide" class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center hover:bg-surface-container-lowest text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SLIDE VARIANT 03: DOMINIOS & TU MARCA EN INTERNET                         -->
+<!-- ========================================================================= -->
+<section class="scroll-mt-20" id="estado-03">
+<!-- Section State Meta Indicator -->
+<div class="flex items-center justify-between mb-3 px-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Estado 03: Dominios &amp; Tu Marca en Internet</h2>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Enfoque: Registro Rápido &amp; Identidad Web</span>
+</div>
+<!-- Hero Frame Container (~530px Desktop Height) -->
+<div class="relative bg-surface-container-lowest rounded-2xl border border-outline-variant/30 custom-shadow-luminous overflow-hidden min-h-[530px] flex flex-col justify-between">
+<!-- Replicated Top Navigation (Exact JSON & System compliance) -->
+<nav class="w-full bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 px-6 lg:px-10 py-3.5 flex items-center justify-between z-20">
+<div class="flex items-center gap-8">
+<a class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight flex items-center gap-1.5" href="#">
+<span>ODISEACLOUD</span>
+<span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Servicios</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Soluciones Cloud</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-lg text-label-lg" href="#">Dominios</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Nosotros</a>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#25D366] text-white font-label-lg text-label-lg font-semibold custom-shadow-green hover:brightness-105 active:scale-95 transition-all" href="https://wa.me/51999999999" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
+<span>Hablar por WhatsApp</span>
+</a>
+</div>
+</nav>
+<!-- Carousel Slide 3 Canvas Content (Centered Focal Experience) -->
+<div class="relative px-6 lg:px-12 py-8 flex flex-col items-center justify-center flex-1 text-center">
+<!-- Soft Mint / Seafoam Organic Ambient Backdrop -->
+<div class="absolute w-[640px] h-[340px] bg-gradient-to-r from-[#ECFDF5] via-[#DCFCE7]/60 to-[#F0FDF4] rounded-full blur-2xl pointer-events-none -z-0"></div>
+<!-- Amber Accent Floating Guarantee Badge -->
+<div class="absolute top-6 right-10 hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm text-[#D97706]" data-icon="verified">verified</span>
+<span>DNS Segura con Activación Rápida</span>
+</div>
+<div class="relative z-10 max-w-3xl flex flex-col items-center space-y-4">
+<!-- Pill badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8FBF2] border border-[#A7F3D0]">
+<span class="w-2 h-2 rounded-full bg-[#1EAA52]"></span>
+<span class="font-label-md text-label-md font-semibold text-[#065F46]">Infraestructura &amp; Nombres de Dominio</span>
+</div>
+<!-- H2 Headline -->
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+              Un nombre. Una marca. Tu lugar en internet.
+            </h2>
+<!-- Subtitle -->
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+              Registra hoy tu dominio con activación inmediata, protección de datos y configuración DNS guiada por especialistas en Perú.
+            </p>
+<!-- Domain Search Box Container + Mascot Floating Aside -->
+<div class="w-full relative pt-2">
+<!-- Cheerful Mascot Peeking from Left of Search Container -->
+<div class="hidden lg:block absolute -left-20 -top-8 z-20 select-none">
+<svg class="drop-shadow-md transform -rotate-6" fill="none" height="120" viewbox="0 0 110 120" width="110" xmlns="http://www.w3.org/2000/svg">
+<!-- Head -->
+<rect fill="#11243B" height="42" rx="20" width="66" x="22" y="24"></rect>
+<rect fill="#0066FE" height="28" rx="14" width="54" x="28" y="30"></rect>
+<!-- Winking Friendly Eyes -->
+<path d="M40 44C40 41 43 40 46 41" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M64 45H70" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Cheeks -->
+<circle cx="36" cy="48" fill="#FF8A7A" r="2.5"></circle>
+<circle cx="74" cy="48" fill="#FF8A7A" r="2.5"></circle>
+<!-- Antenna -->
+<line stroke="#0066FE" stroke-linecap="round" stroke-width="2.5" x1="55" x2="55" y1="24" y2="10"></line>
+<circle cx="55" cy="8" fill="#F59E0B" r="4.5"></circle>
+<!-- Body and Hand pointing to search bar -->
+<rect fill="#FFFFFF" height="40" rx="18" stroke="#0066FE" stroke-width="2.5" width="54" x="28" y="70"></rect>
+<circle cx="55" cy="88" fill="#0066FE" r="7"></circle>
+<!-- Arm extending right pointing -->
+<path d="M78 78C88 80 98 84 104 88" stroke="#0066FE" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="105" cy="89" fill="#25D366" r="4"></circle>
+</svg>
+</div>
+<!-- Main Polished Search Bar Container -->
+<div class="bg-surface-container-lowest border-2 border-outline-variant/60 rounded-2xl p-2 custom-shadow-card flex flex-col sm:flex-row items-center gap-2 max-w-2xl mx-auto focus-within:border-primary-container focus-within:ring-4 focus-within:ring-primary-container/10 transition-all">
+<div class="flex items-center gap-3 pl-3 flex-1 w-full">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none text-on-surface placeholder:text-outline focus:ring-0 font-body-md text-body-md p-0 outline-none" placeholder="Escribe el nombre de tu empresa (ej. miempresa)" type="text"/>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto shrink-0 justify-end">
+<select class="bg-surface-container border-none text-on-surface font-label-md text-label-md font-semibold rounded-xl py-2.5 px-3 focus:ring-0 cursor-pointer">
+<option value=".com">.com</option>
+<option selected="" value=".pe">.pe (Perú)</option>
+<option value=".com.pe">.com.pe</option>
+<option value=".org">.org</option>
+<option value=".tech">.tech</option>
+</select>
+<button class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary transition-all active:scale-95 shadow-sm whitespace-nowrap w-full sm:w-auto justify-center">
+<span class="material-symbols-outlined text-lg" data-icon="search">search</span>
+<span>Buscar dominio</span>
+</button>
+</div>
+</div>
+<!-- Clickable Extension Pricing Chips -->
+<div class="flex flex-wrap items-center justify-center gap-2 pt-3">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 hover:border-primary-container font-label-sm text-label-sm text-on-surface transition-all flex items-center gap-1.5 shadow-2xs">
+<span class="font-bold text-primary">.com</span>
+<span class="text-secondary">$12.99 / año</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-[#EBF5FF] border border-[#BAE6FD] font-label-sm text-label-sm text-primary transition-all flex items-center gap-1.5 shadow-2xs font-semibold">
+<span>.pe</span>
+<span class="text-on-surface-variant font-medium">$35.00 / año</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#0066fe]"></span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 hover:border-primary-container font-label-sm text-label-sm text-on-surface transition-all flex items-center gap-1.5">
+<span class="font-bold">.org</span>
+<span class="text-secondary">$14.50 / año</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 hover:border-primary-container font-label-sm text-label-sm text-on-surface transition-all flex items-center gap-1.5">
+<span class="font-bold">.store</span>
+<span class="text-secondary">$4.99 / año</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 hover:border-primary-container font-label-sm text-label-sm text-on-surface transition-all flex items-center gap-1.5">
+<span class="font-bold">.tech</span>
+<span class="text-secondary">$9.99 / año</span>
+</button>
+</div>
+</div>
+<!-- Reassuring Transfer Help Micro-copy -->
+<p class="font-body-sm text-body-sm text-secondary pt-1">
+              ¿Ya tienes un dominio con otro proveedor? <a class="text-primary font-semibold underline underline-offset-4 hover:text-primary-container" href="#">Te ayudamos a trasladarlo sin costo adicional.</a>
+</p>
+</div>
+</div>
+<!-- Understated Carousel Navigation Bar (Bottom Docked) -->
+<div class="w-full bg-surface-container-low/70 border-t border-outline-variant/30 px-6 lg:px-10 py-2.5 flex items-center justify-between text-secondary">
+<div class="flex items-center gap-3">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">03 <span class="text-secondary font-normal text-body-sm">/ 03</span></span>
+<div class="h-3 w-px bg-outline-variant/50 mx-1"></div>
+<!-- Indicators: active pill on 3rd position -->
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant/60"></span>
+<span class="w-2 h-2 rounded-full bg-outline-variant/60"></span>
+<span class="w-6 h-2 rounded-full bg-primary-container transition-all"></span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary hidden sm:inline-block mr-2">Deslizar soluciones</span>
+<button aria-label="Anterior slide" class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center hover:bg-surface-container-lowest text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="chevron_left">chevron_left</span>
+</button>
+<button aria-label="Siguiente slide" class="w-8 h-8 rounded-full border border-outline-variant/50 flex items-center justify-center hover:bg-surface-container-lowest text-on-surface transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- CONCEPT BOARD SPECIFICATIONS & DESIGN SYSTEM FOOTER SUMMARY               -->
+<!-- ========================================================================= -->
+<section class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 p-6 lg:p-8 custom-shadow-luminous">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Spec 1: Typography -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="text_fields">text_fields</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Tipografía &amp; Jerarquía</h3>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+            Headlines en <strong>Outfit</strong> (600/700) para máxima solidez arquitectónica. Cuerpos y microcopy en <strong>Plus Jakarta Sans</strong> para óptima legibilidad en español.
+          </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono text-label-sm font-bold">Outfit</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-mono text-label-sm font-bold">Plus Jakarta Sans</span>
+</div>
+</div>
+<!-- Spec 2: Paleta Cromática Limpia -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Colores Luminous</h3>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+            Sin fondos oscuros deprimentes. Base blanca y lavados sutiles (Sky, Lavender, Mint) con toques de acción en Electric Blue #0066fe y WhatsApp #25D366.
+          </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="w-6 h-6 rounded-full bg-[#0066FE] border border-black/10" title="Electric Blue"></span>
+<span class="w-6 h-6 rounded-full bg-[#11243B] border border-black/10" title="Deep Navy"></span>
+<span class="w-6 h-6 rounded-full bg-[#25D366] border border-black/10" title="WhatsApp Green"></span>
+<span class="w-6 h-6 rounded-full bg-[#E0F2FE] border border-black/10" title="Sky Wash"></span>
+<span class="w-6 h-6 rounded-full bg-[#EDE9FE] border border-black/10" title="Lavender Wash"></span>
+<span class="w-6 h-6 rounded-full bg-[#DCFCE7] border border-black/10" title="Mint Wash"></span>
+</div>
+</div>
+<!-- Spec 3: Carrusel Guidelines -->
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-[#4338CA]">
+<span class="material-symbols-outlined" data-icon="view_carousel">view_carousel</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Reglas de Carrusel</h3>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+            Transiciones fluidas cada 6.5s con pausa en hover. Cada slide mantiene la misma altura (~520px) para evitar saltos de layout (CLS = 0).
+          </p>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium pt-1">
+            ✓ Altura fija desktop: 520px • Mobile: Auto adaptativa
+          </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Canonical Shared Component: Footer (from Shared JSON) -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-xl px-margin flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto gap-space-md mt-12">
+<div class="flex flex-col sm:flex-row items-center gap-3">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">ODISEACLOUD</span>
+<span class="font-body-sm text-body-sm text-secondary">© 2025 ODISEACLOUD. Arquitectura de nube y software a medida en Perú.</span>
+</div>
+<div class="flex flex-wrap items-center gap-6">
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Términos de Servicio</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">Seguridad de Datos</a>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors" href="#">SLA de Disponibilidad</a>
+</div>
+</footer>
+<!-- Direct WhatsApp Floating Concierge Trigger (As specified in Design System) -->
+<aside class="fixed bottom-6 right-6 z-50">
+<a class="group flex items-center gap-3 px-4 py-3 rounded-full bg-[#25D366] text-white font-label-lg text-label-lg font-semibold custom-shadow-green hover:scale-105 active:scale-95 transition-all" href="https://wa.me/51999999999" rel="noopener noreferrer" target="_blank">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+</span>
+<span class="material-symbols-outlined text-2xl" data-icon="chat">chat</span>
+<span class="pr-1 tracking-tight">Hablar con un Ingeniero</span>
+</a>
+</aside>
+<!-- Lightweight Inline JavaScript for Subtle Micro-interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Interactive pill buttons on domain slide
+      const domainButtons = document.querySelectorAll('#estado-03 button');
+      domainButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          if (!btn.querySelector('.material-symbols-outlined')) {
+            domainButtons.forEach(b => {
+              if (!b.querySelector('.material-symbols-outlined')) {
+                b.classList.remove('bg-[#EBF5FF]', 'border-[#BAE6FD]', 'text-primary', 'font-semibold');
+              }
+            });
+            btn.classList.add('bg-[#EBF5FF]', 'border-[#BAE6FD]', 'text-primary', 'font-semibold');
+          }
+        });
+      });
+    });
+  </script>
+</body></html>
