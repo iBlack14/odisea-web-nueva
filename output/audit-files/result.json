@@ -1,0 +1,115 @@
+{
+  "unusedImages": [
+    {
+      "file": "assets/images/a_clean_modern_high_resolution_branding_mascot_i.png",
+      "bytes": 1570089
+    },
+    {
+      "file": "assets/images/automatizacion-crm.png",
+      "bytes": 1658846
+    },
+    {
+      "file": "assets/images/hero-cloud.png",
+      "bytes": 820787
+    },
+    {
+      "file": "assets/images/infra-datacenter.png",
+      "bytes": 810241
+    },
+    {
+      "file": "assets/images/infra-network.png",
+      "bytes": 810534
+    },
+    {
+      "file": "assets/images/infra-network.webp",
+      "bytes": 117870
+    },
+    {
+      "file": "assets/images/mascota-derecha.png",
+      "bytes": 1612338
+    },
+    {
+      "file": "assets/images/mascota-espacio.png",
+      "bytes": 2274382
+    },
+    {
+      "file": "assets/images/mascota-izquierda.png",
+      "bytes": 1020484
+    },
+    {
+      "file": "assets/images/mascota.png",
+      "bytes": 1570089
+    },
+    {
+      "file": "assets/images/mascota.webp",
+      "bytes": 65522
+    },
+    {
+      "file": "assets/images/portfolio-aula-virtual.png",
+      "bytes": 2043661
+    },
+    {
+      "file": "assets/images/portfolio-campus-ui.png",
+      "bytes": 1679063
+    },
+    {
+      "file": "assets/images/portfolio-corporativa-ui.png",
+      "bytes": 1834640
+    },
+    {
+      "file": "assets/images/portfolio-ecommerce.png",
+      "bytes": 1966577
+    },
+    {
+      "file": "assets/images/portfolio-rediseno.png",
+      "bytes": 1719072
+    },
+    {
+      "file": "assets/images/portfolio-tienda-ui.png",
+      "bytes": 1852674
+    },
+    {
+      "file": "assets/images/portfolio-wordpress.png",
+      "bytes": 1688410
+    },
+    {
+      "file": "assets/images/robot-asistente.png",
+      "bytes": 1040984
+    },
+    {
+      "file": "assets/images/robot-asistente.webp",
+      "bytes": 138700
+    },
+    {
+      "file": "assets/images/service-sys.png",
+      "bytes": 670994
+    },
+    {
+      "file": "assets/images/service-web.png",
+      "bytes": 611211
+    },
+    {
+      "file": "assets/images/tech/letsencrypt.svg",
+      "bytes": 1198
+    }
+  ],
+  "unusedBytes": 27578366,
+  "duplicates": [
+    [
+      "assets/images/a_clean_modern_high_resolution_branding_mascot_i.png",
+      "assets/images/mascota.png"
+    ]
+  ],
+  "trackedIgnored": [
+    ".agents/mcp_config.json",
+    ".agents/plugins/stitch/mcp_config.json",
+    ".agents/plugins/stitch/plugin.json",
+    ".agents/skills/stitch/SKILL.md",
+    ".mcp.json"
+  ],
+  "trackedArtifacts": {
+    "count": 19,
+    "bytes": 11188788
+  },
+  "trackedEnv": []
+}

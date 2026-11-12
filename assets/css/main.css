@@ -2087,6 +2087,21 @@ button:disabled { opacity: .55; cursor: not-allowed; }
   margin-bottom: 12px;
 }
 
+#traslado-dominio { scroll-margin-top: 104px; }
+#traslado-dominio .workflow-step-badge {
+  width: auto;
+  height: auto;
+  min-height: 34px;
+  padding: 7px 14px;
+  white-space: nowrap;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  border-radius: 9px;
+  box-shadow: none;
+  background: #eaf3ff;
+  color: #075bc5;
+}
+
 .workflow-desc {
   font-size: 0.92rem;
   color: var(--color-text-muted);

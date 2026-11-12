@@ -5,7 +5,7 @@ Propuesta generada mediante `generate_screen_from_text` el 12 de noviembre de 20
 - Proyecto: `16495016585719256247`.
 - Pantalla: `aa6f24c7df8f4b05a59e27beee89fab9`.
 - Sistema generado: Luminous Andean Cloud.
-- Código, imagen y respuestas MCP guardados en `output/stitch/`, excluido de Git.
+- Código, imagen y respuestas MCP guardados en `output/stitch/`. La revisión posterior de Git detectó que estos artefactos están versionados; se recomienda conservarlos solo localmente (ver `REVISION_ARCHIVOS_GIT.md`).
 
 ## Adaptación implementada
 
