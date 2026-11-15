@@ -22,6 +22,8 @@ module.exports = function finalizeSeo(urls) {
       if (existing.test(html)) html = html.replace(existing, () => tag);
       else tags.push(tag);
     }
+    // Replace generated Twitter metadata so repeated builds do not duplicate it.
+    html = html.replace(/<meta\s+name="twitter:(?:card|title|description|image)"[^>]*>\r?\n?/g, '');
     const socialImage = html.match(/property="og:image" content="([^"]+)"/);
     tags.push('<meta name="twitter:card" content="summary_large_image">',
       `<meta name="twitter:title" content="${title}">`,

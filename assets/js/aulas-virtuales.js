@@ -115,20 +115,6 @@
     });
   });
 
-  // Acordeón FAQ accesible
-  document.querySelectorAll('.av-faq .faq-item').forEach(item => {
-    const questionBtn = item.querySelector('.faq-question');
-    if (!questionBtn) return;
-    questionBtn.addEventListener('click', () => {
-      const wasActive = item.classList.contains('active');
-      // Opcional: cerrar los demás acordeones para mantener foco
-      document.querySelectorAll('.av-faq .faq-item').forEach(other => {
-        if (other !== item) other.classList.remove('active');
-      });
-      item.classList.toggle('active', !wasActive);
-    });
-  });
-
   // Interacciones de la clase en vivo tipo Google Meet / Zoom
   document.querySelectorAll('.av-dock-circle-btn, .av-hero-ctl, .av-meet-btn').forEach(btn => {
     btn.addEventListener('click', () => {

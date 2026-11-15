@@ -3103,3 +3103,203 @@
   .av-meet-slide-body { max-width: 100%; }
   .av-meet-pip-host { width: 110px; height: 78px; }
 }
+
+/* Layout corrections: keep every demo readable inside its available width. */
+.av-page .service-intro-grid > *,
+.av-demo-panel, .av-cert-stage-grid > *, .av-qr-data-info { min-width: 0; }
+.av-page .section-badge { max-width: 100%; white-space: normal; }
+.av-hero-livecard-top, .av-hero-present-banner, .av-hero-slide-preview .slide-header,
+.av-meet-header-bar, .av-meet-dock-bar, .av-eval-head, .av-eval-actions,
+.av-cert-bottom-row { flex-wrap: wrap; gap: 12px; }
+.av-hero-livecard-top .room-id { overflow-wrap: anywhere; white-space: normal; }
+.av-browser-url { min-width: 0; overflow-wrap: anywhere; text-align: center; }
+.av-browser-external { flex: 0 1 auto; overflow-wrap: anywhere; }
+.av-meet-presentation-stage { min-height: 360px; }
+.av-meet-sharing-toast { position: relative; top: auto; left: auto; align-self: flex-start; max-width: 100%; }
+.av-meet-slide-body { margin-top: 20px; max-width: 100%; }
+.av-meet-pip-host { position: relative; inset: auto; align-self: flex-end; flex-shrink: 0; margin-top: 20px; }
+.av-cert-stage-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+.av-qr-scanner-card { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 14px; }
+.av-qr-visual-box { width: 110px; height: 110px; }
+.av-cert-student-name { max-width: 100%; font-size: clamp(1.1rem, 2vw, 1.45rem); }
+.av-cert-student-name svg { flex-shrink: 0; }
+.av-qr-id-row { overflow-wrap: anywhere; }
+.av-page :is(button, a):focus-visible { outline: 3px solid #38bdf8; outline-offset: 4px; }
+.av-qr-toast { max-width: calc(100vw - 32px); right: 16px !important; bottom: 16px !important; overflow-wrap: anywhere; }
+.av-qr-toast > div { min-width: 0; }
+
+@media (max-width: 1024px) {
+  .av-page .av-hero-section .service-intro-grid { grid-template-columns: minmax(0, 1fr); }
+  .av-hero-livecard { margin-right: 0; }
+  .av-hero-scene { min-height: 0; padding-block: 52px; }
+  .av-hero-scene .mascot-orbit { width: min(100%, 440px); height: auto; aspect-ratio: 1; }
+  .av-hero-chip.top { top: 0; right: 0; }
+  .av-hero-chip.bottom { bottom: 0; left: 0; }
+  .av-cert-stage-grid { grid-template-columns: minmax(0, 1fr); }
+  .av-meet-sidebar-col { display: flex; min-width: 0; border-top: 1px solid #3c4043; }
+  .av-meet-chat-container { max-height: 420px; overflow-y: auto; }
+}
+
+@media (max-width: 640px) {
+  .av-page main > .section { padding-block: 56px; }
+  .av-page main > .service-intro { padding-block: 36px 48px; }
+  .av-page .service-intro-actions { align-items: stretch; }
+  .av-page .service-intro-actions .btn { width: 100%; min-width: 0; padding-inline: 16px; }
+  .av-page .stats-strip { margin-top: 0; }
+  .av-page .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .av-page .stat-cell { grid-template-columns: 1fr; padding: 18px 14px; gap: 8px; }
+  .av-page .stat-icon { grid-row: auto; }
+  .av-page .stat-cell b { font-size: 1.35rem; }
+  .av-demo-tabs { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .av-demo-tabs button { font-size: .88rem; padding: 12px 14px; text-align: left; }
+  .av-browser-bar { padding: 10px; gap: 8px; flex-wrap: wrap; }
+  .av-browser-url { font-size: .7rem; padding: 5px 8px; }
+  .av-browser-external { width: 100%; font-size: .7rem; text-align: center; }
+  .av-hero-livecard-top, .av-hero-stage-area, .av-hero-meet-dock { padding: 12px; }
+  .av-hero-livecard-top .room-id { order: 3; width: 100%; }
+  .av-hero-slide-preview { padding: 16px; }
+  .av-hero-slide-preview h4 { max-width: 100%; }
+  .av-hero-pip-teacher { position: relative; inset: auto; margin: 12px 0 0 auto; }
+  .av-hero-students-strip { gap: 8px; }
+  .av-hero-student-tile { min-width: 0; padding: 8px; gap: 6px; }
+  .av-hero-student-tile .avatar { flex-shrink: 0; }
+  .av-hero-meet-dock { flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .av-hero-meet-dock .controls-center { gap: 8px; }
+  .av-hero-chip { max-width: 100%; padding: 8px 12px; animation: none; }
+  .av-screen-grid { min-height: 0; }
+  .av-main { padding: 18px; gap: 16px; }
+  .av-topbar { align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+  .av-topbar h4 { font-size: 1.05rem; }
+  .av-topbar small { font-size: .8rem; }
+  .av-topbar-right { gap: 10px; }
+  .av-search { font-size: .75rem; padding: 8px 12px; }
+  .av-search svg, .av-bell svg { width: 16px; height: 16px; }
+  .av-bell, .av-avatar { width: 32px; height: 32px; font-size: .75rem; }
+  .av-quick { gap: 6px; }
+  .av-quick span { font-size: .72rem; padding: 7px 10px; gap: 6px; }
+  .av-quick svg { width: 14px; height: 14px; }
+  .av-courses-head b { font-size: .9rem; }
+  .av-courses-head span { font-size: .7rem; }
+  .av-courses { gap: 12px; }
+  .av-course { border-radius: 12px; }
+  .av-course-thumb { min-height: 90px; }
+  .av-course-badge { font-size: .65rem; top: 10px; left: 10px; padding: 4px 8px; }
+  .av-course-body { padding: 14px; }
+  .av-course-body b { font-size: .9rem; }
+  .av-course-body small, .av-progress-label { font-size: .75rem; }
+  .av-progress { height: 6px; margin-top: 12px; }
+  .av-progress-label { margin-top: 6px; }
+  .av-chat { display: flex; border-top: 1px solid #e6eef9; }
+  .av-chat-head, .av-chat-msgs { padding: 16px; gap: 12px; }
+  .av-chat-head b { font-size: .9rem; }
+  .av-chat-head small, .av-chat-input, .av-msg { font-size: .8rem; }
+  .av-msg { padding: 10px 12px; border-radius: 10px; }
+  .av-msg small { font-size: .7rem; }
+  .av-chat-input { margin: 0 16px 16px; padding: 10px 12px; }
+  .av-meet-main-col { padding: 12px; }
+  .av-meet-presentation-stage { padding: 16px; }
+  .av-meet-integrations-pill { flex-wrap: wrap; }
+  .av-meet-dock-bar { justify-content: center; padding: 12px 8px; }
+  .av-meet-dock-center { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .av-meet-tile { min-width: 0; }
+  .av-cert-stage-grid { padding: 12px; gap: 16px; }
+  .av-eval-card-pro, .av-cert-luxury-card { padding: 16px; }
+  .av-cert-parchment { padding: 24px 16px; }
+  .av-cert-header-tag { font-size: .6rem; letter-spacing: .06em; }
+  .av-cert-text-pro { max-width: 100%; }
+  .av-qr-scanner-card { grid-template-columns: minmax(0, 1fr); }
+  .av-eval-actions { align-items: stretch; }
+  .av-eval-btn-next { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .av-page main *, .av-page main *::before, .av-page main *::after { animation: none !important; transition: none !important; }
+}
+/* Reserve space for the teacher camera and keep the campus live notice legible. */
+@media (min-width: 641px) {
+  .av-hero-slide-preview .slide-header { flex-direction: column; align-items: flex-start; padding-right: 130px; }
+}
+@media (max-width: 640px) {
+  .av-live-banner { padding: 16px; gap: 12px; flex-wrap: wrap; border-radius: 12px; }
+  .av-live-video { width: 40px; height: 36px; border-radius: 8px; }
+  .av-live-video svg { width: 20px; height: 20px; }
+  .av-live-text { flex: 1 1 160px; }
+  .av-live-text .live-tag { font-size: .65rem; gap: 6px; margin-bottom: 5px; }
+  .av-live-text .live-tag::before { width: 6px; height: 6px; }
+  .av-live-text b { font-size: .88rem; }
+  .av-live-text span { font-size: .75rem; }
+  .av-live-join { margin-left: 0; font-size: .8rem; padding: 9px 14px; }
+}
+
+/* Capabilities: six balanced cards instead of a single stretched column. */
+.av-page .av-features .grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+.av-features .feature-card { min-width: 0; padding: 28px; }
+.av-features .feature-card h3 { color: #10243f; line-height: 1.4; }
+.av-features .feature-card p { color: #52637a; margin: 0; line-height: 1.75; }
+.av-features .feature-card-index { color: #64748b; }
+
+/* The process uses white headings, so it needs its own explicit dark surface. */
+.av-page .av-process {
+  background: radial-gradient(ellipse at top right, #153c70 0%, #0b2145 45%, #07162e 100%);
+  color: #fff;
+}
+.av-page .av-process .section-title { color: #fff; }
+.av-page .av-process .section-subtitle { color: #c2d2e8; }
+.av-page .av-process .workflow-grid { gap: 20px; align-items: stretch; }
+.av-page .av-process .workflow-card {
+  min-width: 0;
+  padding: 28px 24px;
+  background: #122b4d;
+  border: 1px solid #345071;
+  box-shadow: none;
+  text-align: left;
+}
+.av-page .av-process .workflow-card:hover { background: #19375e; border-color: #7cc0ff; }
+.av-page .av-process .workflow-step-badge {
+  position: static;
+  transform: none;
+  margin: 0 0 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #0866f5;
+  color: #fff;
+  border: 1px solid #5c9dff;
+  box-shadow: none;
+}
+.av-page .av-process .workflow-title { color: #fff; font-size: 1.08rem; line-height: 1.45; margin: 0 0 12px; }
+.av-page .av-process .workflow-desc { color: #c2d2e8; font-size: .9rem; line-height: 1.75; margin: 0; }
+@media (max-width: 1024px) {
+  .av-page .av-features .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+}
+@media (max-width: 600px) {
+  .av-page .av-features .grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .av-features .feature-card { padding: 24px; }
+  .av-page .av-process .workflow-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .av-page .av-process .workflow-card { padding: 24px; }
+  .av-page .av-process .workflow-step-badge { margin-bottom: 16px; }
+}
+
+/* FAQ: closed answers must take no space; open answers grow with their content. */
+.av-page main .av-faq .section-header { text-align: left; margin: 0; max-width: none; }
+.av-page .av-faq > .container { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 48px; }
+.av-faq .faq-answer { display: none; max-height: none; padding: 0; overflow: visible; }
+.av-faq .faq-item.active .faq-answer { display: block; max-height: none; padding: 0 22px 22px; }
+.av-faq .faq-answer p { margin: 0; }
+.av-faq .faq-question { line-height: 1.55; min-height: 72px; }
+.av-faq .faq-question > span:first-child { min-width: 0; }
+.av-faq .faq-icon { display: flex; align-items: center; }
+.av-faq .av-faq-help { text-align: left; align-items: flex-start; margin-top: 28px; }
+.av-faq .av-faq-help > div:last-child { min-width: 0; }
+@media (max-width: 900px) {
+  .av-page .av-faq > .container { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}
+@media (max-width: 600px) {
+  .av-faq .faq-question { padding: 18px; font-size: .9rem; gap: 12px; }
+  .av-faq .faq-item.active .faq-answer { padding: 0 18px 20px; }
+  .av-faq .av-faq-help { padding: 20px; gap: 12px; }
+}
