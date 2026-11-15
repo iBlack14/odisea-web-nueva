@@ -2587,20 +2587,19 @@ button:disabled { opacity: .55; cursor: not-allowed; }
 }
 
 .footer-libro-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.25s ease;
 }
 
 .footer-libro-card:hover {
-  background: rgba(8, 102, 245, 0.12);
-  border-color: var(--color-tech);
+  border-color: #00a6f5;
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
@@ -2616,6 +2615,13 @@ button:disabled { opacity: .55; cursor: not-allowed; }
   background: rgba(0, 157, 255, 0.1);
   border-radius: 8px;
 }
+
+.libro-card-icon img { width: 38px; height: 38px; object-fit: contain; border-radius: 5px; }
+.footer-libro-card .libro-card-image { display:block; width:100%; height:auto; aspect-ratio:1080/419; object-fit:contain; background:#061a38; }
+.footer-availability .info-icon { color: #45d89a; }
+.footer-availability .info-text strong { color: #86efac; }
+.footer-availability .info-text p { color: #a8bdd4; }
+.footer-support-hours .info-icon { color: #38bdf8; }
 
 .libro-card-text {
   display: flex;
@@ -2832,6 +2838,9 @@ button:disabled { opacity: .55; cursor: not-allowed; }
   justify-content: center;
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
   transition: var(--transition);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .floating-whatsapp:hover {
@@ -2843,6 +2852,39 @@ button:disabled { opacity: .55; cursor: not-allowed; }
   width: 32px;
   height: 32px;
 }
+
+.floating-contact { position: fixed; right: 28px; bottom: max(28px, env(safe-area-inset-bottom)); z-index: 999; display: flex; flex-direction: row; align-items: flex-end; gap: 14px; }
+.floating-contact .floating-whatsapp { position: relative; inset: auto; z-index: 2; flex: 0 0 60px; }
+.floating-whatsapp-open { display:grid; place-items:center; position:absolute; inset:0; }
+.floating-contact-panel { width:min(320px,calc(100vw - 92px)); padding:14px; border:1px solid #e1e9f3; border-radius:18px; background:#fff; color:#15263d; box-shadow:0 20px 56px #061b3625,0 3px 12px #061b3610; overflow:hidden; transform:translateY(10px) scale(.98); transform-origin:bottom right; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .32s ease,transform .36s cubic-bezier(.2,.8,.2,1),visibility .32s ease; }
+.floating-contact.is-open .floating-contact-panel { opacity:1; visibility:visible; pointer-events:auto; transform:translateY(0) scale(1); }
+.floating-contact.is-open .floating-whatsapp { width:0; height:0; flex-basis:0; margin:0; opacity:0; visibility:hidden; pointer-events:none; transform:scale(.6); }
+.floating-contact-panel-head { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:0 0 11px; color:#10223b; }
+.floating-contact-brand { display:flex!important; align-items:center; gap:11px; flex:1; min-width:0; }
+.floating-contact-brand>div { display:grid!important; gap:4px; flex:1!important; min-width:0; }
+.floating-contact-avatar { display:grid; place-items:center; width:38px; height:38px; border-radius:12px; background:transparent; color:#07985b; }
+.floating-contact-avatar svg { width:23px; height:23px; }
+.floating-contact-panel-head>div { display:grid; gap:4px; }
+.floating-contact-panel-head>div strong { font-size:.92rem; letter-spacing:-.02em; }
+.floating-contact-panel-head>div small { color:#72839a; font-size:.68rem; }
+.floating-contact-close { display:grid; place-items:center; width:30px; height:30px; padding:0; color:#718198; background:#f2f5f9; border:0; border-radius:50%; cursor:pointer; transition:color .2s,background .2s,transform .2s; }
+.floating-contact-close:hover { color:#132740; background:#e5ebf3; transform:rotate(90deg); }
+.floating-contact-close svg { width:16px; height:16px; }
+.floating-contact-message { margin:0 0 10px; padding:13px 14px; border-radius:12px; background:linear-gradient(140deg,#f5f8fc,#eef4fa); }
+.floating-contact-kicker { color:#56708f; font-size:.57rem; letter-spacing:.105em; font-weight:800; }
+.floating-contact-message p { margin:6px 0 3px; color:#162b47; font-size:.92rem; letter-spacing:-.025em; line-height:1.35; font-weight:750; }
+.floating-contact-message small { color:#687c95; font-size:.68rem; line-height:1.45; }
+.floating-contact-cta { display:flex; align-items:center; justify-content:center; gap:9px; min-height:44px; padding:10px 13px; border-radius:11px; background:#0ba968; color:#fff; font-size:.75rem; font-weight:750; text-decoration:none; box-shadow:0 6px 14px #0ba9682b; transition:background .2s ease,transform .2s ease,box-shadow .2s ease; }
+.floating-contact-cta:hover { background:#078954; transform:translateY(-2px); box-shadow:0 9px 18px #0ba96838; }
+.floating-contact-cta>span { display:grid; place-items:center; }
+.floating-contact-hours { display:block; text-align:center; color:#8694a6; font-size:.6rem; padding-top:8px; }
+.floating-contact-cta svg { width:18px; height:18px; }
+.floating-contact-cta svg:last-child { width:15px; height:15px; margin-left:auto; }
+.floating-contact [hidden] { display:none!important; }
+@media(max-width:600px) { .floating-contact { right:18px; bottom:18px; gap:10px; } .floating-contact .floating-whatsapp { width:56px; height:56px; flex-basis:56px; } .floating-contact-panel { width:min(320px,calc(100vw - 84px)); } }
+.floating-contact.is-open .floating-contact-avatar { animation:contact-avatar-pop .5s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes contact-avatar-pop { from { transform:scale(.7); opacity:.4; } to { transform:scale(1); opacity:1; } }
+@media(prefers-reduced-motion:reduce) { .floating-contact-panel,.floating-contact-cta { transition:none; } }
 
 /* ==========================================================================
    ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)

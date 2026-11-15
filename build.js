@@ -11,6 +11,7 @@ const renderCatalog = require('./catalog-page');
 const serviceMockups = require('./service-mockups');
 const renderDomainPanel = require('./domain-panel');
 const serviceSections = require('./service-sections');
+const renderSystemsPage = require('./systems-page');
 
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'servicios.json'), 'utf8'));
 
@@ -256,12 +257,8 @@ function renderFooter(relativePath = '') {
 
         <!-- Acceso al Libro de Reclamaciones Oficial -->
         <div class="footer-libro-wrap">
-          <a href="${relativePath}libro-de-reclamaciones/" class="footer-libro-card" title="Libro de Reclamaciones OdiseaCloud - Conforme a Ley N° 29571">
-            <span class="libro-card-icon">${getSvgIcon('book')}</span>
-            <div class="libro-card-text">
-              <strong>Libro de Reclamaciones</strong>
-              <small>Conforme a Ley N° 29571</small>
-            </div>
+          <a href="${relativePath}libro-de-reclamaciones/" class="footer-libro-card" title="Abrir Libro de Reclamaciones OdiseaCloud">
+            <img class="libro-card-image" src="${relativePath}assets/images/logo_libro_reclam.jpg" alt="Libro de Reclamaciones OdiseaCloud" width="1080" height="419" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
@@ -288,10 +285,18 @@ function renderFooter(relativePath = '') {
             </div>
           </a>
 
-          <div class="footer-info-item">
+          <div class="footer-info-item footer-availability">
             <span class="info-icon">${getSvgIcon('clock')}</span>
             <div class="info-text">
-              <strong>Horario de atención:</strong>
+              <strong>Servicios disponibles 24/7</strong>
+              <p>Plataformas y sistemas en línea todo el día.</p>
+            </div>
+          </div>
+
+          <div class="footer-info-item footer-support-hours">
+            <span class="info-icon">${getSvgIcon('users')}</span>
+            <div class="info-text">
+              <strong>Atención comercial</strong>
               <p>${data.company.schedule}</p>
             </div>
           </div>
@@ -332,14 +337,23 @@ function renderFooter(relativePath = '') {
     </div>
   </footer>
 
-  <!-- Botón Flotante Global de WhatsApp -->
-  <a href="#" class="floating-whatsapp" aria-label="Chatear con un asesor por WhatsApp" data-whatsapp="${data.company.name}: Hola, estoy navegando en su sitio web y quisiera hacer una consulta sobre sus servicios.">
-    ${getSvgIcon('whatsapp')}
-  </a>
+  <!-- Acceso flotante de WhatsApp con ventana de contacto -->
+  <div class="floating-contact" data-floating-contact>
+    <section class="floating-contact-panel" id="floating-contact-panel" aria-labelledby="floating-contact-title" aria-hidden="true" inert>
+      <div class="floating-contact-panel-head"><div class="floating-contact-brand"><span class="floating-contact-avatar">${getSvgIcon('whatsapp')}</span><div><strong id="floating-contact-title">Conversemos</strong><small>OdiseaCloud · disponibles 24/7</small></div></div><button type="button" class="floating-contact-close" aria-label="Cerrar ventana de contacto" data-floating-close>${getSvgIcon('x')}</button></div>
+      <div class="floating-contact-message"><span class="floating-contact-kicker">ATENCIÓN PERSONALIZADA</span><p>¿Qué proyecto tienes en mente?</p><small>Escríbenos y te ayudamos a encontrar el siguiente paso.</small></div>
+      <a href="#" class="floating-contact-cta" data-whatsapp="${data.company.name}: Hola, estoy navegando en su sitio web y quisiera hacer una consulta sobre sus servicios." data-cta="Abrir chat flotante de WhatsApp"><span>${getSvgIcon('whatsapp')}</span> Escribir por WhatsApp ${getSvgIcon('arrowRight')}</a>
+      <small class="floating-contact-hours">Atención comercial en horario de oficina</small>
+    </section>
+    <button type="button" class="floating-whatsapp" aria-label="Abrir ventana de contacto por WhatsApp" aria-controls="floating-contact-panel" aria-expanded="false" data-floating-toggle>
+      <span class="floating-whatsapp-open">${getSvgIcon('whatsapp')}</span>
+    </button>
+  </div>
 
   <!-- Scripts Globales -->
   <script src="${relativePath}assets/js/config.js"></script>
   <script src="${relativePath}assets/js/main.js"></script>
+  <script src="${relativePath}assets/js/floating-contact.js" defer></script>
   <script src="${relativePath}assets/js/page-motion.js?v=${require('crypto').createHash('sha256').update(fs.readFileSync(path.join(__dirname, 'assets/js/page-motion.js'))).digest('hex').slice(0, 10)}" defer></script>
   `;
 }
@@ -357,7 +371,7 @@ data.services.forEach(service => {
     ? explicitRelated.slice(0, 3)
     : data.services.filter(s => s.id !== service.id && (s.category === service.category || s.featured)).slice(0, 3);
 
-  const html = `<!DOCTYPE html>
+  let html = `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -682,6 +696,12 @@ ${service.slug === 'dominios' ? '<link rel="stylesheet" href="../../assets/css/d
 
 </body>
 </html>`;
+
+  if (service.slug === 'sistemas-web') {
+    html = html.replace('<body class="service-mock-page">', '<body class="service-mock-page systems-web-page">');
+    html = html.replace(/<main>[\s\S]*?<\/main>/, renderSystemsPage(service, related, getSvgIcon, renderTech));
+    html = html.replace('</head>', '<link rel="stylesheet" href="../../assets/css/sistemas-web.css">\n<script src="../../assets/js/sistemas-web.js" defer></script>\n</head>');
+  }
 
   // Si el servicio cuenta con arquitectura y diseño UI premium especializado, conservar su implementación
   const currentFilePath = path.join(serviceDir, 'index.html');

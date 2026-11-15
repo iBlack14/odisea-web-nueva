@@ -44,6 +44,42 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
   if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileMenu);
 
+  // 2. Ventana flotante de contacto: fallback sincronizado con el botón, incluso si el script defer se retrasa.
+  const floatingContact = document.querySelector('[data-floating-contact]');
+  if (floatingContact && !floatingContact.dataset.contactReady) {
+    floatingContact.dataset.contactReady = 'true';
+    const contactToggle = floatingContact.querySelector('[data-floating-toggle]');
+    const contactPanel = floatingContact.querySelector('.floating-contact-panel');
+    const contactClose = floatingContact.querySelector('[data-floating-close]');
+    const setContactOpen = (open, restoreFocus = false) => {
+      floatingContact.classList.toggle('is-open', open);
+      contactToggle?.setAttribute('aria-expanded', String(open));
+      contactToggle?.setAttribute('aria-label', open ? 'Cerrar ventana de contacto' : 'Abrir ventana de contacto por WhatsApp');
+      contactPanel?.setAttribute('aria-hidden', String(!open));
+      if (contactPanel) contactPanel.inert = !open;
+      if (restoreFocus) contactToggle?.focus({ preventScroll: true });
+    };
+    contactToggle?.addEventListener('click', () => setContactOpen(!floatingContact.classList.contains('is-open')));
+    contactClose?.addEventListener('click', () => {
+      floatingContact.dataset.contactDismissed = 'true';
+      setContactOpen(false, true);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && floatingContact.classList.contains('is-open')) setContactOpen(false, true);
+    });
+    document.addEventListener('click', event => {
+      if (floatingContact.classList.contains('is-open') && !floatingContact.contains(event.target)) setContactOpen(false);
+    });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.setTimeout(() => {
+        if (!floatingContact.dataset.contactDismissed && !floatingContact.classList.contains('is-open')) setContactOpen(true);
+      }, 2000);
+    }
+    contactToggle?.addEventListener('click', () => {
+      if (floatingContact.classList.contains('is-open')) floatingContact.dataset.contactDismissed = 'true';
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
       closeMobileMenu();
