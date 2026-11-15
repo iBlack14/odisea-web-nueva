@@ -789,6 +789,15 @@ data.services.forEach(service => {
 </body>
 </html>`;
 
+  // Si el servicio cuenta con arquitectura y diseño UI premium especializado, conservar su implementación
+  const currentFilePath = path.join(serviceDir, 'index.html');
+  if (fs.existsSync(currentFilePath)) {
+    const currentContent = fs.readFileSync(currentFilePath, 'utf8');
+    if (currentContent.includes('av-page') || currentContent.includes('shop-page') || currentContent.includes('web-motion-page') || currentContent.includes('mail-page')) {
+      return;
+    }
+  }
+
   fs.writeFileSync(path.join(serviceDir, 'index.html'), html, 'utf8');
 });
 

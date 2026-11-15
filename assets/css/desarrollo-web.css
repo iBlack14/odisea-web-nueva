@@ -1,0 +1,135 @@
+/* Page-specific refinement; shared services retain their own presentation. */
+.web-motion-page main > .section { padding-block: 88px; }
+.web-motion-page main > .web-motion-hero { padding-block: 58px 68px; }
+.web-motion-page main .section-header { max-width: 760px; margin-inline: auto; margin-bottom: 40px; }
+.web-motion-page main .section-title { font-size: clamp(1.85rem, 3.1vw, 2.65rem); line-height: 1.18; letter-spacing: -.035em; }
+.web-motion-page main .section-subtitle { font-size: 1.05rem; line-height: 1.75; }
+.web-motion-page main .btn { max-width: 100%; white-space: normal; text-align: center; line-height: 1.45; }
+.web-motion-page main .btn svg { flex-shrink: 0; }
+.web-motion-page main a:focus-visible,
+.web-motion-page main button:focus-visible { outline: 3px solid #60a5fa; outline-offset: 5px; }
+.web-motion-page .hero-note-icon svg { width: 19px; height: 19px; }
+.web-motion-page .hero-note-devices svg { width: 29px; height: 29px; }
+.preview-burger svg { display: block; width: 7cqw; height: 7cqw; }
+.preview-services i svg { display: block; width: 3cqw; height: 3cqw; }
+.preview-device:is(.preview-device--iphone,.preview-device--android) .preview-services i svg { width: 5cqw; height: 5cqw; }
+
+/* Quiet proof strip, with one consistent icon family. */
+.web-motion-page .stats-strip { margin-top: -22px; position: relative; z-index: 2; }
+.web-motion-page .stats-grid { background: #fff; border: 1px solid #e2eaf5; border-radius: 20px; box-shadow: 0 12px 32px #173c6b07; overflow: hidden; }
+.web-motion-page .stat-cell { display: grid; grid-template-columns: 34px 1fr; column-gap: 12px; align-content: start; padding: 28px 24px; text-align: left; }
+.web-motion-page .stat-icon { grid-row: 1 / 3; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: #f0f6ff; color: #0866f5; margin-top: 4px; }
+.web-motion-page .stat-icon svg { width: 19px; height: 19px; }
+.web-motion-page .stat-cell b { font-size: 1.8rem; line-height: 1.2; letter-spacing: -.04em; }
+.web-motion-page .stat-cell > span:last-child { font-size: .78rem; line-height: 1.6; margin-top: 6px; }
+.web-motion-page main > .web-showcase { padding-bottom: 62px; }
+.web-motion-page .device-chips { margin-top: 26px; gap: 10px; }
+.web-motion-page .device-chip { min-height: 44px; box-shadow: none; }
+
+/* Consistent, spacious service cards. */
+.web-motion-page .service-features-section { background: #f6f9fd; }
+.web-motion-page .feature-grid--four { gap: 18px; }
+.web-motion-page .feature-card { padding: 26px; border-radius: 16px; }
+.web-motion-page .feature-card h3 { font-size: 1.06rem; line-height: 1.4; }
+.web-motion-page .feature-card p { font-size: .9rem; line-height: 1.7; }
+.web-motion-page .features-summary { border: 1px solid #dae6f5; border-radius: 16px; padding: 20px 24px; background: #ffffffb3; }
+.web-motion-page .features-summary > span { font-size: 2.8rem; }
+
+/* Tool logos sit alongside the editorial heading. */
+.web-technologies > .container { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: 64px; }
+.web-motion-page .web-technologies .section-header { margin: 0; text-align: left; }
+.web-technologies .section-subtitle { margin: 16px 0 0; }
+.web-technologies .tech-cloud { display: grid; width: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.web-technologies .tech-badge { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px 12px; min-height: 116px; border: 1px solid #e0e9f5; border-radius: 14px; background: white; box-shadow: 0 4px 16px #153d6b04; font-size: .85rem; text-align: center; }
+.web-technologies .tech-logo { width: 34px; height: 34px; object-fit: contain; }
+
+/* A purpose-built vector replaces the repeated hero mascot. */
+.web-motion-page .service-guide-section { background: #f5f9ff; border-block: 1px solid #e8f0fa; }
+.web-motion-page .service-guide { max-width: 1240px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; }
+.web-motion-page .service-guide-visual { height: auto; background: none; align-items: center; }
+.web-motion-page .service-guide-visual img { height: auto; filter: none; max-width: 560px; }
+.web-motion-page .service-guide h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; letter-spacing: -.03em; }
+.web-motion-page .service-guide p { color: var(--color-text-muted); line-height: 1.75; }
+.web-motion-page .service-guide-points { list-style: none; padding: 0; display: grid; gap: 14px; margin: 24px 0 28px; }
+.web-motion-page .service-guide-points li { display: flex; gap: 12px; font-size: .95rem; line-height: 1.6; color: #425d7d; }
+.web-motion-page .service-guide-points li::before { content: ''; flex-shrink: 0; width: 7px; height: 7px; border: 2px solid #0866f5; border-radius: 50%; margin-top: 6px; }
+
+/* The process reads as a sequence, with a clear icon and number. */
+.web-process { background: radial-gradient(ellipse at 50% 0, #103766 0, #07172f 75%); }
+.web-process .workflow-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.web-process .workflow-card { padding: 28px 24px; border-radius: 18px; box-shadow: none; }
+.web-process .workflow-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+.web-process .workflow-step-badge { position: static; margin: 0; background: transparent; border: 1px solid #ffffff24; box-shadow: none; color: #b4d7ff; width: 38px; height: 38px; border-radius: 50%; font-size: .8rem; }
+.web-process .workflow-icon { color: #68c4ff; }
+.web-process .workflow-icon svg { display: block; width: 28px; height: 28px; }
+.web-process .workflow-title { font-size: 1.2rem; margin-bottom: 12px; }
+.web-process .workflow-desc { font-size: .91rem; line-height: 1.75; }
+.web-process .workflow-card::before,
+.web-process .workflow-card::after { display: none; }
+
+/* Split FAQ layout keeps long lists from taking the full screen width. */
+.web-faq > .container { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: start; gap: 64px; }
+.web-motion-page .web-faq .section-header { text-align: left; margin: 0; }
+.web-faq .section-subtitle { margin: 18px 0 0; }
+.web-faq .faq-list { width: 100%; max-width: none; margin: 0; gap: 12px; }
+.web-faq .faq-item { border: 1px solid #e1eaf5; border-radius: 14px; margin: 0; box-shadow: none; overflow: hidden; }
+.web-faq .faq-question { padding: 22px; gap: 20px; font-size: .98rem; line-height: 1.5; text-align: left; }
+.web-faq .faq-question > span:first-child { min-width: 0; }
+.web-faq .faq-icon { flex-shrink: 0; color: #0866f5; }
+.web-faq .faq-item.active { background: #f7faff; border-color: #bcd5f8; }
+.web-faq .faq-answer p { font-size: .94rem; line-height: 1.8; }
+.web-faq-help { display: flex; gap: 16px; margin-top: 32px; padding: 24px; background: #f4f8fe; border: 1px solid #e1ebf8; border-radius: 16px; }
+.web-help-icon { flex-shrink: 0; color: #0866f5; }
+.web-help-icon svg { width: 26px; height: 26px; }
+.web-faq-help h3 { font-size: 1rem; margin-bottom: 8px; }
+.web-faq-help p { color: #607795; font-size: .9rem; line-height: 1.7; margin-bottom: 14px; }
+.web-faq-help a { display: inline-flex; align-items: center; gap: 12px; color: #0866f5; font-size: .9rem; font-weight: 600; }
+
+.web-related .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.web-related .service-card { display: flex; flex-direction: column; padding: 30px; border: 1px solid #e0e9f5; box-shadow: none; border-radius: 18px; }
+.web-related .service-card-title { font-size: 1.2rem; line-height: 1.35; }
+.web-related .service-card-desc { font-size: .94rem; line-height: 1.7; }
+.web-related .service-card-icon { width: 48px; height: 48px; border-radius: 14px; }
+.web-related .service-card-link { margin-top: auto; padding-top: 22px; }
+
+/* A restrained grid adds depth to the closing panel. */
+.web-contact .cta-banner { padding: 64px 40px; background: radial-gradient(ellipse at 80% 0, #124774, transparent 65%), #081c37; }
+.web-contact .cta-banner::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(#73b4ff0a 1px, transparent 1px), linear-gradient(90deg, #73b4ff0a 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; mask-image: linear-gradient(90deg, black, transparent 40%, transparent 60%, black); }
+.web-contact .cta-content { max-width: 760px; }
+.web-contact .cta-desc { max-width: 600px; margin-inline: auto; font-size: 1.05rem; }
+
+@media (max-width: 1100px) {
+  .web-motion-page .stat-cell { padding: 24px 18px; grid-template-columns: 1fr; }
+  .web-motion-page .stat-icon { display: none; }
+  .web-technologies > .container, .web-faq > .container { gap: 32px; }
+  .web-process .workflow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .web-related .service-card { padding: 24px; }
+}
+@media (max-width: 800px) {
+  .web-motion-page main > .section { padding-block: 64px; }
+  .web-motion-page .web-technologies > .container,
+  .web-motion-page .web-faq > .container,
+  .web-motion-page .service-guide { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .web-motion-page .service-guide-visual { max-width: 440px; margin: auto; }
+  .web-related .services-grid { grid-template-columns: minmax(0, 1fr); }
+  .web-related .service-card { padding: 28px; }
+}
+@media (max-width: 480px) {
+  .web-motion-page main > .section { padding-block: 48px; }
+  .web-motion-page main > .web-motion-hero { padding-top: 36px; }
+  .web-motion-page main .section-header { margin-bottom: 28px; }
+  .web-motion-page .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); border-radius: 16px; }
+  .web-motion-page .stat-cell { padding: 20px 16px; }
+  .web-motion-page .stat-cell b { font-size: 1.5rem; }
+  .web-motion-page .stat-cell > span:last-child { font-size: .73rem; }
+  .web-technologies .tech-cloud { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .web-technologies .tech-badge { min-height: 100px; padding: 18px 10px; }
+  .web-process .workflow-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .web-process .workflow-card { padding: 24px; }
+  .web-process .workflow-card-top { margin-bottom: 18px; }
+  .web-faq .faq-question { padding: 18px; font-size: .93rem; }
+  .web-contact .cta-banner { padding: 36px 22px; border-radius: 20px; }
+  .web-contact .cta-title { font-size: 1.8rem; }
+  .web-contact .cta-buttons { flex-direction: column; align-items: stretch; }
+  .web-motion-page .features-closing a { font-size: .87rem; }
+}

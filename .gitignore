@@ -4,18 +4,21 @@ node_modules/
 .env.*
 !.env.example
 .playwright-cli/
-output/playwright/
-output/seo-*/
+output/
+mockups/
 
 # Configuración de agentes y MCP local
 .agents/
 .mcp.json
 
-# Registros y temporales
+# Registros, temporales y auditorías locales
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.tmp*
+seo-audit*
+seo-reporte*
 
 # Archivos del sistema operativo
 .DS_Store
