@@ -133,3 +133,9 @@
   .web-contact .cta-buttons { flex-direction: column; align-items: stretch; }
   .web-motion-page .features-closing a { font-size: .87rem; }
 }
+/* Place the help card directly below the intro, beside the FAQ list. */
+.web-faq > .container {grid-template-rows:auto 1fr;row-gap:24px;}
+.web-faq .section-header {grid-column:1;grid-row:1;}
+.web-faq .faq-list {display:grid;grid-column:2;grid-row:1 / 3;}
+.web-faq-help {grid-column:1;grid-row:2;margin-top:0;}
+@media(max-width:800px) {.web-faq > .container {grid-template-rows:auto;}.web-faq .section-header,.web-faq .faq-list,.web-faq-help {grid-column:auto;grid-row:auto;}}

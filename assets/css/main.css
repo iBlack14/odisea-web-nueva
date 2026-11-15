@@ -4137,3 +4137,26 @@ button:disabled { opacity: .55; cursor: not-allowed; }
 @media (max-width: 640px) {
   .av-quick { display: none; }
 }
+
+/* Shared layout and accordion safeguards across every page. */
+main .section-header { min-width: 0; }
+main .section-badge { max-width: 100%; white-space: normal; }
+main .about-grid > *, main .contact-grid > *, main .workflow-grid > *, main .services-grid > * { min-width: 0; }
+main .faq-item:not(.active) .faq-answer { display: none; }
+main .faq-item.active .faq-answer { display: block; max-height: none; }
+main .faq-question { gap: 16px; line-height: 1.6; }
+main .faq-icon { flex-shrink: 0; }
+main .cta-buttons { flex-wrap: wrap; }
+main .btn svg { flex-shrink: 0; }
+@media(max-width:600px) { main .cta-buttons .btn { max-width:100%; white-space:normal; text-align:center; } }
+/* Site review: balanced four-item grids and narrow-screen controls. */
+.company-policies-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+body:has(.filter-tabs) .portfolio-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+main .btn {max-width:100%;white-space:normal;text-align:center;line-height:1.5;}
+.contact-grid {grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);}
+.contact-info-card,.contact-form-card {min-width:0;}
+.contact-info-card :is(a,p,strong,span) {overflow-wrap:anywhere;}
+.form-input,.form-select,.form-textarea {min-width:0;max-width:100%;}
+@media(max-width:1080px) {.contact-grid {grid-template-columns:minmax(0,1fr);}}
+@media(max-width:700px) {.company-policies-grid,body:has(.filter-tabs) .portfolio-grid {grid-template-columns:minmax(0,1fr);}.contact-info-card,.contact-form-card {padding:26px;}}
+@media(max-width:600px) {main .portfolio-grid {grid-template-columns:minmax(0,1fr);}}

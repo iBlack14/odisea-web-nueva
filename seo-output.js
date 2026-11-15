@@ -3,12 +3,21 @@ const path = require('path');
 const crypto = require('crypto');
 
 module.exports = function finalizeSeo(urls) {
-  const cssVersion = crypto.createHash('sha256').update(fs.readFileSync(path.join(__dirname, 'assets/css/main.css'))).digest('hex').slice(0, 10);
+  const assets = ['assets/css/main.css', 'assets/css/catalogo.css', 'assets/js/main.js', 'assets/js/catalogo.js', 'assets/js/page-motion.js', 'assets/css/domain-panel.css', 'assets/js/domain-search.js', 'assets/css/service-sections.css', 'assets/css/desarrollo-web.css'];
+  const versions = Object.fromEntries(assets.map(asset => [asset, crypto.createHash('sha256').update(fs.readFileSync(path.join(__dirname, asset))).digest('hex').slice(0, 10)]));
   for (const url of urls) {
     const relative = new URL(url).pathname.replace(/^\//, '');
     const file = path.join(__dirname, relative, 'index.html');
     let html = fs.readFileSync(file, 'utf8');
-    html = html.replaceAll('assets/css/main.css"', `assets/css/main.css?v=${cssVersion}"`);
+    for (const [asset, version] of Object.entries(versions)) {
+      const reference = new RegExp(asset.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:\\?[^"\\s]*)?(?=")', 'g');
+      html = html.replace(reference, `${asset}?v=${version}`);
+    }
+    if (!html.includes('assets/js/page-motion.js')) {
+      const depth = relative.split('/').filter(Boolean).length;
+      const prefix = depth ? '../'.repeat(depth) : './';
+      html = html.replace('</head>', `<script src="${prefix}assets/js/page-motion.js?v=${versions['assets/js/page-motion.js']}" defer></script>\n</head>`);
+    }
     const title = html.match(/<title>(.*?)<\/title>/)[1];
     const description = html.match(/<meta name="description" content="([^"]*)"/)[1];
     const tags = [];

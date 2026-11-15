@@ -52,9 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
+  faqItems.forEach((item, index) => {
     const questionBtn = item.querySelector('.faq-question');
     if (questionBtn) {
+      const answer = item.querySelector('.faq-answer');
+      questionBtn.type = 'button';
+      questionBtn.id ||= 'faq-question-' + index;
+      questionBtn.setAttribute('aria-expanded', String(item.classList.contains('active')));
+      if (answer) {
+        answer.id ||= 'faq-answer-' + index;
+        questionBtn.setAttribute('aria-controls', answer.id);
+        answer.setAttribute('aria-labelledby', questionBtn.id);
+      }
       questionBtn.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         // Cerrar otros acordeones si se desea

@@ -7,6 +7,10 @@ const fs = require('fs');
 const path = require('path');
 const renderTech = require('./tech-icons');
 const renderFeatures = require('./service-features');
+const renderCatalog = require('./catalog-page');
+const serviceMockups = require('./service-mockups');
+const renderDomainPanel = require('./domain-panel');
+const serviceSections = require('./service-sections');
 
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'servicios.json'), 'utf8'));
 
@@ -18,6 +22,8 @@ function renderServiceArt(service, prefix = '') {
 // Helper para iconos SVG oficiales y limpios
 function getSvgIcon(name) {
   const icons = {
+    users: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5v2"/></svg>`,
+    search: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>`,
     code: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg>`,
     'file-text': `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm0 0v6h6M8 13h8m-8 4h6"/></svg>`,
     layers: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg>`,
@@ -334,6 +340,7 @@ function renderFooter(relativePath = '') {
   <!-- Scripts Globales -->
   <script src="${relativePath}assets/js/config.js"></script>
   <script src="${relativePath}assets/js/main.js"></script>
+  <script src="${relativePath}assets/js/page-motion.js?v=${require('crypto').createHash('sha256').update(fs.readFileSync(path.join(__dirname, 'assets/js/page-motion.js'))).digest('hex').slice(0, 10)}" defer></script>
   `;
 }
 
@@ -395,9 +402,12 @@ data.services.forEach(service => {
     ]
   }).replace(/</g, '\u003c')}
   </script>
+  <link rel="stylesheet" href="../../assets/css/catalogo.css">
+  <link rel="stylesheet" href="../../assets/css/service-sections.css">
+${service.slug === 'dominios' ? '<link rel="stylesheet" href="../../assets/css/domain-panel.css">' : ''}
   ${renderHeadAnalytics()}
 </head>
-<body>
+<body class="service-mock-page">
 
   ${renderHeader('servicios', '../../')}
 
@@ -411,14 +421,7 @@ data.services.forEach(service => {
         <p class="section-subtitle" style="margin: 0 0 32px;">
           ${service.slug === 'dominios' ? 'Registro y gestión de dominios para tu marca. Escribe un nombre y consulta su registro.' : service.heroTagline}
         </p>
-        ${service.slug === 'dominios' ? `        <form id="domain-search-form" class="domain-search-form">
-          <div><label for="domain-name">Nombre o dominio</label><input id="domain-name" name="domain" type="text" placeholder="miempresa.com" required maxlength="253" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="domain-search-hint"></div>
-          <button class="btn btn-primary" type="submit">Buscar dominio</button>
-        </form>
-        <p id="domain-search-hint" class="domain-search-hint">Escribe tu marca y te sugerimos 10 opciones con su disponibilidad. Si escribes un dominio completo, consultamos solo ese dominio.</p>
-        <div id="domain-search-result" class="domain-search-result" role="status" aria-live="polite" hidden></div>
-        <a id="domain-search-contact" class="domain-help-link" target="_blank" rel="noopener noreferrer" hidden>Consultar este dominio por WhatsApp</a>
-` : ''}
+        ${service.slug === 'dominios' ? `<ul class="domain-hero-points"><li>${getSvgIcon('search')}<span><b>Busca el nombre de tu marca</b>Consulta un dominio o compara varias extensiones.</span></li><li>${getSvgIcon('globe')}<span><b>Elige tu espacio online</b>Explora opciones como .com, .pe y .com.pe.</span></li><li>${getSvgIcon('shield-check')}<span><b>Te ayudamos con el registro</b>Asesoría para registrar, configurar o trasladar tu dominio.</span></li></ul><a class="domain-hero-link" href="#traslado-dominio">Ya tengo un dominio: quiero trasladarlo →</a>` : ''}
         ${service.slug !== 'dominios' ? `
         <div class="service-intro-actions">
           <a href="#" class="btn btn-whatsapp" data-whatsapp="${service.whatsappMessage}" data-cta="${service.primaryCta || 'Consultar por WhatsApp'}">
@@ -431,11 +434,11 @@ data.services.forEach(service => {
           </a>
         </div>` : ''}
         </div>
-        <div class="service-intro-art">
-          <span class="mascot-orbit" aria-hidden="true"></span>
-          <img src="../..${service.mascot.image}" alt="${service.mascot.alt}" width="${service.mascot.width}" height="${service.mascot.height}" fetchpriority="high">
-          <span class="mascot-service-label">${getSvgIcon(service.icon)} ${service.shortName}</span>
-        </div>
+        ${service.slug === 'dominios' ? renderDomainPanel(getSvgIcon) : `        <div class="service-intro-art">
+          <div aria-hidden="true">${serviceMockups.mockup(serviceMockups.details[service.slug][1], getSvgIcon)}</div>
+          <div class="service-mock-caption"><span>${serviceMockups.details[service.slug][2]}</span><span>${serviceMockups.details[service.slug][3]}</span></div>
+          <small class="service-mock-note">Vista ilustrativa · Adaptamos la solución a tu proyecto</small>
+        </div>`}
       </div>
     </section>
 
@@ -443,70 +446,7 @@ data.services.forEach(service => {
     ${service.image ? `<div class="container container-narrow" style="padding-top: 40px;">
       <img src="../..${service.image}" alt="${service.imageAlt}" width="1536" height="1024" style="display: block; width: 100%; height: auto; border-radius: 20px;" fetchpriority="high">
     </div>` : ''}
-    <!-- DESCRIPCIÓN Y BENEFICIOS -->
-    <section class="section">
-      <div class="container">
-        <div class="about-grid">
-          <div>
-            <span class="section-badge">Visión General</span>
-            <h2 style="margin-bottom: 20px;">${service.overviewTitle || service.name}</h2>
-            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
-              ${service.fullDesc}
-            </p>
-            ${service.selectionAdvice ? `
-            <aside class="service-meta-box service-selection-advice">
-              <h3 class="service-meta-title">${service.selectionAdvice.title}</h3>
-              <p class="service-meta-desc">${service.selectionAdvice.text}</p>
-            </aside>
-            ` : ''}
-            ${service.targetAudience ? `
-            <div class="service-meta-box">
-              <h4 class="service-meta-title">
-                ${getSvgIcon('check')} ¿A quién va dirigido este servicio?
-              </h4>
-              <p class="service-meta-desc">${service.targetAudience}</p>
-            </div>
-            ` : ''}
-            ${service.clientReceives ? `
-            <div class="service-meta-box receives">
-              <h4 class="service-meta-title">
-                ${getSvgIcon('check')} ¿Qué recibe tu empresa al finalizar?
-              </h4>
-              <p class="service-meta-desc">${service.clientReceives}</p>
-            </div>
-            ` : ''}
-            <h3 style="margin-bottom: 16px; font-size: 1.3rem;">Beneficios clave para tu empresa:</h3>
-            <ul style="display: flex; flex-direction: column; gap: 14px;">
-              ${service.benefits.map(b => `
-                <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 0.98rem; color: var(--color-text);">
-                  <span style="color: var(--color-primary); flex-shrink: 0; margin-top: 2px;">${getSvgIcon('check')}</span>
-                  <span>${b}</span>
-                </li>
-              `).join('')}
-            </ul>
-          </div>
-
-          <!-- Tarjeta destacada -->
-          <div>
-            <div class="about-card-banner">
-              <span class="section-badge section-badge-dark" style="margin-bottom: 16px;">Garantía OdiseaCloud</span>
-              <h3 style="color: var(--color-white); margin-bottom: 16px;">Compromiso y excelencia técnica</h3>
-              <p style="color: var(--color-text-light); margin-bottom: 24px; line-height: 1.6;">
-                Cada implementación de <strong>${service.shortName}</strong> incluye acompañamiento directo, rigurosas pruebas de funcionamiento y entrega lista para producción sin sorpresas técnicas.
-              </p>
-              <div style="padding: 16px; background-color: rgba(255, 255, 255, 0.08); border-radius: 12px; margin-bottom: 24px;">
-                <p style="font-size: 0.9rem; color: var(--color-white); margin-bottom: 4px;"><strong>Canal preferencial de atención:</strong></p>
-                <p style="font-size: 0.85rem; color: var(--color-tech);">Respuesta ágil por WhatsApp en horario comercial.</p>
-              </div>
-              <a href="#" class="btn btn-whatsapp" style="width: 100%;" data-whatsapp="${service.whatsappMessage}" data-cta="${service.primaryCta || 'Iniciar consulta técnica'}">
-                ${getSvgIcon('whatsapp')}
-                <span>${service.primaryCta || 'Iniciar consulta técnica'}</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    ${serviceSections.overview(service, getSvgIcon)}
 
     <!-- CARACTERÍSTICAS Y ALCANCE -->
     <section class="section service-features-section" aria-labelledby="features-heading">
@@ -709,55 +649,9 @@ data.services.forEach(service => {
       </div>
     </section>
 
-    <!-- PREGUNTAS FRECUENTES -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Respuestas Claras</span>
-          <h2 class="section-title">Preguntas frecuentes sobre ${service.shortName}</h2>
-          <p class="section-subtitle">Resolvemos las dudas más habituales antes de comenzar tu proyecto.</p>
-        </div>
+    ${serviceSections.faq(service, getSvgIcon)}
 
-        <div class="faq-list">
-          ${service.faqs.map(faq => `
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>${faq.q}</span>
-                <span class="faq-icon">${getSvgIcon('chevronDown')}</span>
-              </button>
-              <div class="faq-answer">
-                <p>${faq.a}</p>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICIOS RELACIONADOS -->
-    <section class="section section-light">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Soluciones Complementarias</span>
-          <h2 class="section-title">Servicios que potencian este proyecto</h2>
-        </div>
-
-        <div class="services-grid">
-          ${related.map(r => `
-            <div class="service-card">
-              <span class="service-card-number">SERVICIO ${r.number}</span>
-              <div class="service-card-icon">${getSvgIcon(r.icon)}</div>
-              <h3 class="service-card-title">${r.name}</h3>
-              <p class="service-card-desc">${r.shortDesc}</p>
-              <a href="../../servicios/${r.slug}/" class="service-card-link">
-                <span>Conocer detalles</span>
-                ${getSvgIcon('arrowRight')}
-              </a>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    </section>
+    ${serviceSections.related(related, getSvgIcon)}
 
     <!-- BANNER DE CONTACTO FINAL -->
     <section class="section">
@@ -794,6 +688,23 @@ data.services.forEach(service => {
   if (fs.existsSync(currentFilePath)) {
     const currentContent = fs.readFileSync(currentFilePath, 'utf8');
     if (currentContent.includes('av-page') || currentContent.includes('shop-page') || currentContent.includes('web-motion-page') || currentContent.includes('mail-page')) {
+      let preserved = currentContent;
+      const relatedBlock = '<!-- SERVICE-RELATED:START -->' + serviceSections.related(related, getSvgIcon) + '<!-- SERVICE-RELATED:END -->';
+      if (preserved.includes('<!-- SERVICE-RELATED:START -->')) {
+        preserved = preserved.replace(/<!-- SERVICE-RELATED:START -->[\s\S]*?<!-- SERVICE-RELATED:END -->/, () => relatedBlock);
+      } else if (preserved.includes('<!-- SERVICIOS RELACIONADOS -->')) {
+        const sectionStart = preserved.indexOf('<section', preserved.indexOf('<!-- SERVICIOS RELACIONADOS -->'));
+        const sectionEnd = preserved.indexOf('</section>', sectionStart) + '</section>'.length;
+        preserved = preserved.slice(0, sectionStart) + relatedBlock + preserved.slice(sectionEnd);
+      } else {
+        const mainEnd = preserved.indexOf('</main>');
+        const finalSection = preserved.lastIndexOf('<section', mainEnd);
+        preserved = preserved.slice(0, finalSection) + relatedBlock + '\n' + preserved.slice(finalSection);
+      }
+      for (const stylesheet of ['catalogo.css', 'service-sections.css']) {
+        if (!preserved.includes('assets/css/' + stylesheet)) preserved = preserved.replace('</head>', '<link rel="stylesheet" href="../../assets/css/' + stylesheet + '">\n</head>');
+      }
+      fs.writeFileSync(currentFilePath, preserved, 'utf8');
       return;
     }
   }
@@ -817,80 +728,15 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
 
   <!-- Estilos Corporativos -->
   <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/catalogo.css?v=${require('crypto').createHash('sha256').update(fs.readFileSync(path.join(__dirname, 'assets/css/catalogo.css'))).digest('hex').slice(0, 10)}">
+  <script src="../assets/js/catalogo.js?v=1" defer></script>
   ${renderHeadAnalytics()}
 </head>
-<body>
+<body class="catalog-page">
 
   ${renderHeader('servicios', '../')}
 
-  <main>
-    <!-- HERO DEL CATÁLOGO -->
-    <section class="section section-soft-blue" style="padding: 72px 0 56px 0;">
-      <div class="container container-narrow" style="text-align: center;">
-        <span class="section-badge">Catálogo Oficial 2026</span>
-        <h1 style="margin-bottom: 20px;">Soluciones digitales para cada etapa de tu negocio</h1>
-        <p class="section-subtitle">
-          Desde el desarrollo de tu primera página web hasta la implementación de plataformas empresariales y soluciones cloud, te acompañamos en tu transformación digital.
-        </p>
-      </div>
-    </section>
-
-    <!-- LISTADO CON FILTROS POR CATEGORÍA -->
-    <section class="section">
-      <div class="container">
-        <!-- Pestañas de Filtro -->
-        <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="all">Todos los servicios (15)</button>
-          <button class="filter-btn" data-filter="desarrollo-web">Desarrollo Web</button>
-          <button class="filter-btn" data-filter="plataformas-sistemas">Plataformas y Sistemas</button>
-          <button class="filter-btn" data-filter="infraestructura-cloud">Infraestructura Cloud</button>
-          <button class="filter-btn" data-filter="seguridad-mantenimiento">Seguridad y Mantenimiento</button>
-          <button class="filter-btn" data-filter="optimizacion-digital">Optimización Digital</button>
-        </div>
-
-        <!-- Rejilla de Servicios -->
-        <div class="services-grid" id="services-grid-container">
-          ${data.services.map(s => `
-            <div class="service-card" data-category="${s.category}">
-              <span class="service-card-number">SERVICIO ${s.number} &bull; ${s.categoryName.toUpperCase()}</span>
-              ${renderServiceArt(s, '../')}
-              <h3 class="service-card-title">${s.name}</h3>
-              <p class="service-card-desc">${s.shortDesc}</p>
-              <div style="margin-top: auto; pt: 16px;">
-                <a href="../servicios/${s.slug}/" class="service-card-link">
-                  <span>${s.primaryCta || 'Conocer más y cotizar'}</span>
-                  ${getSvgIcon('arrowRight')}
-                </a>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO DIRECTO -->
-    <section class="section section-light">
-      <div class="container">
-        <div class="cta-banner">
-          <div class="cta-content">
-            <h2 class="cta-title">¿Tienes un proyecto que requiere una solución a medida?</h2>
-            <p class="cta-desc">
-              Si tu empresa necesita una combinación de servicios o una integración especializada, estamos listos para asesorarte de manera personalizada.
-            </p>
-            <div class="cta-buttons">
-              <a href="#" class="btn btn-whatsapp btn-lg" data-whatsapp="${data.company.name}: Hola, revisé el catálogo de servicios y deseo solicitar una asesoría técnica para mi empresa.">
-                ${getSvgIcon('whatsapp')}
-                <span>Consultar por WhatsApp</span>
-              </a>
-              <a href="../contacto/" class="btn btn-outline-white btn-lg">
-                <span>Ir al formulario de contacto</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+  ${renderCatalog(data, getSvgIcon)}
 
   ${renderFooter('../')}
 
@@ -1591,6 +1437,8 @@ const homeHtml = `<!DOCTYPE html>
 
   <!-- Estilos Corporativos -->
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/catalogo.css">
+  <link rel="stylesheet" href="assets/css/service-sections.css">
 
   <!-- Schema.org Organization JSON-LD -->
   <script type="application/ld+json">
@@ -1616,7 +1464,7 @@ const homeHtml = `<!DOCTYPE html>
   </script>
   ${renderHeadAnalytics()}
 </head>
-<body>
+<body class="home-page">
 
   ${renderHeader('inicio', '')}
 
@@ -1692,42 +1540,7 @@ const homeHtml = `<!DOCTYPE html>
     <script src="assets/js/about-slider.js" defer></script>
 
 
-    <!-- SECCIÓN 2 — SERVICIOS PRINCIPALES (9 Destacados) -->
-    <section class="section section-light" id="servicios-destacados">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Nuestra Especialidad</span>
-          <h2 class="section-title">Soluciones tecnológicas para impulsar tu negocio</h2>
-          <p class="section-subtitle">
-            Desarrollamos herramientas digitales adaptadas a los objetivos y necesidades de cada proyecto.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          ${data.services.filter(s => s.featured).map(s => `
-            <div class="service-card">
-              <span class="service-card-number">SERVICIO ${s.number}</span>
-              ${renderServiceArt(s)}
-              <h3 class="service-card-title">${s.name}</h3>
-              <p class="service-card-desc">${s.shortDesc}</p>
-              <div style="margin-top: auto;">
-                <a href="servicios/${s.slug}/" class="service-card-link">
-                  <span>${s.primaryCta || 'Conocer más'}</span>
-                  ${getSvgIcon('arrowRight')}
-                </a>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-
-        <div style="text-align: center; margin-top: 56px;">
-          <a href="servicios/" class="btn btn-outline btn-lg">
-            <span>Explorar todos nuestros servicios (15)</span>
-            ${getSvgIcon('arrowRight')}
-          </a>
-        </div>
-      </div>
-    </section>
+    ${serviceSections.related(['desarrollo-web','tiendas-virtuales','aulas-virtuales','sistemas-web','hosting-web','correo-corporativo'].map(slug => data.services.find(service => service.slug === slug)), getSvgIcon, { home: true })}
 
     <!-- SECCIÓN 3 — NOSOTROS -->
     <section class="section" id="nosotros-section">
