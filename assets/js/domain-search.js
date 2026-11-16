@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let selectedExtension = '';
   const setLabel = text => { if (submitLabel) submitLabel.textContent = text; else submit.textContent = text; };
   const setStatus = text => { if (statusMessage) statusMessage.textContent = text; };
-  const extensions = ['com', 'pe', 'com.pe', 'net', 'org', 'online', 'store', 'tech', 'app', 'io'];
+  const extensions = ['com', 'pe', 'edu.pe', 'com.pe', 'net', 'org', 'online', 'store', 'tech', 'app', 'io'];
   document.querySelectorAll('[data-domain-extension]').forEach(button => {
     button.setAttribute('aria-pressed', 'false');
     button.addEventListener('click', () => {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (feedback) feedback.textContent = '';
     result.hidden = false; result.replaceChildren(); result.setAttribute('aria-busy', 'true');
     submit.disabled = true; setLabel('Consultando…'); form.setAttribute('aria-busy', 'true');
-    setStatus(exact ? 'Consultando ' + name + '…' : 'Consultando 10 extensiones para ' + name + '…');
+    setStatus(exact ? 'Consultando ' + name + '…' : 'Consultando ' + extensions.length + ' extensiones para ' + name + '…');
     const heading = document.createElement('p'); heading.className = 'domain-results-heading';
     heading.textContent = exact ? 'Resultado de tu búsqueda' : 'Opciones para tu marca'; result.append(heading);
     const filters = document.createElement('div'); filters.className = 'domain-result-filters';
@@ -61,8 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const rows = domains.map(domain => {
       const row = document.createElement('div'); row.className = 'domain-result-row'; row.dataset.state = 'pending';
       const title = document.createElement('strong'); title.textContent = domain;
-      const status = document.createElement('span'); status.textContent = 'Consultando…';
-      row.append(title, status); result.append(row); return { domain, row, status };
+      const extension = [...extensions].sort((a, b) => b.length - a.length).find(ext => domain.endsWith('.' + ext));
+      const price = document.createElement('span'); price.className = 'domain-result-price';
+      price.textContent = ['pe', 'edu.pe'].includes(extension) ? 'S/ 110 / año' : 'Cotizar';
+      const status = document.createElement('span'); status.className = 'domain-result-status'; status.textContent = 'Consultando…';
+      row.append(title, price, status); result.append(row); return { domain, row, status };
     });
     const empty = document.createElement('p'); empty.className = 'domain-filter-empty'; empty.hidden = true; result.append(empty);
     const applyFilter = () => {

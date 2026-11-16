@@ -37,6 +37,11 @@ for (const url of urls) {
     for (const offer of expectedOffers) {
       check(serviceSchema?.offers?.some(item => item.name === offer.name && item.price === offer.price && item.priceCurrency === 'PEN'), 'Service offer structured data: ' + url + ' -> ' + offer.name);
     }
+    if (service.slug === 'dominios') {
+      const searchScript = fs.readFileSync(path.join(root, 'assets', 'js', 'domain-search.js'), 'utf8');
+      check(html.includes('Dominio .pe / .edu.pe') && !html.includes('Dominio .pe / .com.pe'), 'Domain price applies only to .pe and .edu.pe: ' + url);
+      check(searchScript.includes("['pe', 'edu.pe'].includes(extension)"), 'Domain search price mapping: ' + url);
+    }
   }
   for (const m of html.matchAll(/<img\b[^>]*>/g)) {
     check(/\balt="[^"]*"/.test(m[0]), 'Image alt: ' + url);

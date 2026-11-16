@@ -1,4 +1,8 @@
 .domain-search-hero .service-intro-grid {align-items:start;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;}
+.domain-panel-pricing-note { margin: 13px 0 0; color: #768ba5; font-size: .65rem; line-height: 1.7; }
+.domain-panel-pricing-note strong { color: #1a426f; }
+.domain-panel .domain-result-row > .domain-result-price { color: #1760b5; background: #edf5ff; border-color: #d6e7fb; font-weight: 700; white-space: nowrap; }
+.domain-panel .domain-result-row > .domain-result-status { white-space: nowrap; }
 .domain-search-hero .service-intro-copy {padding-top:36px;}
 .domain-hero-points {list-style:none;padding:0;margin:28px 0;display:grid;gap:16px;}.domain-hero-points li {display:flex;gap:12px;color:#536c89;font-size:.9rem;line-height:1.65;}.domain-hero-points svg {width:19px;height:19px;flex-shrink:0;color:#0866f5;margin-top:3px;}.domain-hero-points b {display:block;color:#193453;font-size:.9rem;}.domain-hero-link {font-size:.85rem;color:#0866f5;font-weight:700;display:inline-flex;align-items:center;gap:8px;}
 .domain-panel {background:#fff;border:1px solid #d6e3f5;border-radius:18px;box-shadow:0 24px 65px -25px #123c7440;overflow:hidden;min-width:0;scroll-margin-top:110px;}.domain-panel [hidden] {display:none!important;}
@@ -12,3 +16,20 @@
 .domain-panel-footer {padding:16px 26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:#f8fbff;border-top:1px solid #e8f0fa;}.domain-panel-footer span {display:flex;align-items:center;gap:6px;font-size:.59rem;color:#7c93b0;}.domain-panel-footer svg {width:14px;height:14px;color:#4ba795;}.domain-panel-footer a {color:#507dae;font-size:.6rem;}.domain-panel :is(button,a,input):focus-visible {outline:3px solid #72adff;outline-offset:3px;}
 @media(max-width:1100px) {.domain-search-hero .service-intro-grid {grid-template-columns:minmax(0,1fr);gap:30px;}.domain-search-hero .service-intro-copy {padding-top:0;}.domain-panel {width:100%;max-width:740px;margin:auto;}.domain-hero-points {grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}.domain-hero-points li {font-size:.77rem;}.domain-hero-points b {font-size:.8rem;}}
 @media(max-width:600px) {.domain-search-hero .service-intro-grid {gap:24px;}.domain-hero-points {grid-template-columns:minmax(0,1fr);gap:14px;}.domain-panel-nav {padding:16px;gap:10px;flex-wrap:wrap;}.domain-panel-nav b {font-size:.85rem;}.domain-panel-content {padding:22px 18px;}.domain-panel-content h2 {font-size:1.65rem;}.domain-panel-input {flex-wrap:wrap;gap:4px;}.domain-panel .domain-panel-input input {flex:1 1 calc(100% - 44px);}.domain-panel .domain-panel-input button {width:100%;justify-content:center;}.domain-panel-chrome {padding:0 12px;}.domain-panel-chrome small {font-size:.53rem;}.domain-panel-live {font-size:.52rem;}.domain-panel-extensions button {padding:7px 10px;}.domain-panel-empty {padding:16px;gap:12px;}.domain-panel-footer {padding:16px 18px;}.domain-panel .domain-result-row strong {flex-basis:100%;}.domain-panel .domain-result-row {gap:10px;}.domain-register-link {margin-left:auto;}}
+
+/* Keep the search field and action aligned as one control; focus is shown once on the wrapper. */
+.domain-panel .domain-panel-input { display: grid; width: 100%; min-width: 0; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 6px 7px; transition: border-color .18s ease, box-shadow .18s ease; }
+.domain-panel .domain-panel-input > span { width: 30px; height: 42px; padding: 0; }
+.domain-panel .domain-panel-input input { display: block; width: 100%; min-width: 0; max-width: 100%; min-height: 44px; padding: 10px 8px; border: 0; outline: 0; box-shadow: none; color: #17385f; }
+.domain-panel .domain-panel-input input:focus-visible { outline: 0; box-shadow: none; }
+.domain-panel .domain-panel-input:focus-within { outline: 0; border-color: #3985f6; box-shadow: 0 0 0 3px #d8e9ff, 0 5px 18px #1d5eb01a; }
+.domain-panel .domain-panel-input > span { color: #7292b8; }
+.domain-panel .domain-panel-input button { min-height: 46px; border-radius: 8px; box-shadow: 0 5px 12px #0866f528; transition: transform .18s ease, box-shadow .18s ease; }
+.domain-panel .domain-panel-input button:hover { transform: translateY(-1px); box-shadow: 0 8px 16px #0866f533; }
+.domain-panel .domain-panel-input button { min-height: 44px; padding: 0 16px; white-space: nowrap; }
+@media(max-width:600px) {
+  .domain-panel .domain-panel-input { grid-template-columns: 30px minmax(0, 1fr); gap: 3px 6px; }
+  .domain-panel .domain-panel-input > span { width: 30px; }
+  .domain-panel .domain-panel-input input { min-height: 46px; }
+  .domain-panel .domain-panel-input button { grid-column: 1 / -1; width: 100%; min-height: 46px; justify-content: center; }
+}

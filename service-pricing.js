@@ -9,7 +9,7 @@ const offers = [
   { slug: 'integraciones-automatizaciones', category: 'desarrollo', name: 'Automatización de un proceso', price: 1425, regular: 1490, unit: 'desde', scope: 'Automatización de un flujo sencillo entre herramientas compatibles.', note: 'Licencias externas, consumo de APIs y mantenimiento se cotizan aparte.' },
   { slug: 'hosting-web', category: 'infraestructura', name: 'Hosting web empresarial', price: 377, regular: 389, unit: 'por año', scope: 'Plan inicial de alojamiento web empresarial.', note: 'Recursos, correo, copias y renovación se confirman antes de contratar.' },
   { slug: 'correo-corporativo', category: 'infraestructura', name: 'Correo corporativo', price: 47, regular: 49, unit: 'por cuenta · año', scope: 'Cuenta de correo profesional con dominio propio.', note: 'Espacio, licencias y migración dependen del proveedor elegido.' },
-  { slug: 'dominios', category: 'infraestructura', name: 'Dominio .pe / .com.pe', price: 110, regular: 110, unit: 'por año', scope: 'Registro o renovación de dominio .pe o .com.pe.', note: 'Otras extensiones tienen una tarifa distinta según disponibilidad.' },
+  { slug: 'dominios', category: 'infraestructura', name: 'Dominio .pe / .edu.pe', price: 110, regular: 110, unit: 'por año', heroLabel: 'Precio para dominios .pe y .edu.pe', scope: 'Registro o renovación de dominios .pe y .edu.pe por un año.', note: '.edu.pe está reservado para instituciones educativas. .com, .com.pe y otras extensiones se cotizan aparte a precios accesibles.' },
   { slug: 'servidores-vps', category: 'infraestructura', name: 'Servidor VPS', price: 47, regular: 50, unit: 'por mes · desde', scope: 'Servidor virtual de entrada con recursos definidos para tu proyecto.', note: 'Administración, respaldos y recursos adicionales se especifican al cotizar.' },
   { slug: 'mantenimiento-web', category: 'soporte', name: 'Mantenimiento web', price: 189, regular: 199, unit: 'por mes · desde', scope: 'Actualizaciones y revisión periódica de un sitio web.', note: 'Nuevas funciones, emergencias y cambios mayores no están incluidos.' },
   { slug: 'seo-tecnico', category: 'seo', name: 'Auditoría SEO técnica', price: 1425, regular: 1450, unit: 'pago único · desde', scope: 'Revisión técnica priorizada con hallazgos y recomendaciones.', note: 'La implementación de mejoras se cotiza por separado.' },
@@ -53,7 +53,7 @@ function renderHeroPrice(service) {
   }
   const lowest = Math.min(...prices);
   const offer = selected.find(item => item.price === lowest);
-  return `<a class="service-hero-price" href="#precios-servicio"><span>Precio de lanzamiento</span><strong><small>S/</small> ${money(lowest)} <small>${esc(offer.unit)}</small></strong><small>Ver qué incluye <span aria-hidden="true">↓</span></small></a>`;
+  return `<a class="service-hero-price" href="#precios-servicio"><span>${esc(offer.heroLabel || 'Precio de lanzamiento')}</span><strong><small>S/</small> ${money(lowest)} <small>${esc(offer.unit)}</small></strong><small>Ver qué incluye <span aria-hidden="true">↓</span></small></a>`;
 }
 
 module.exports = { offers, renderServicePricing, renderHeroPrice, money };

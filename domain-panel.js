@@ -10,7 +10,8 @@ module.exports = function renderDomainPanel(icon) {
         <div class="domain-panel-input"><span aria-hidden="true">${icon('search')}</span><input id="domain-name" name="domain" type="text" placeholder="tuempresa.com" required maxlength="253" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="domain-search-hint domain-search-status"><button class="btn btn-primary" type="submit"><span>Buscar dominio</span>${icon('arrowRight')}</button></div>
       </form>
       <p id="domain-search-hint" class="domain-search-hint">Escribe tu marca para ver opciones o un dominio completo para consultar esa extensión.</p>
-      <div class="domain-panel-extensions" role="group" aria-label="Elegir extensión para el dominio">${['com','pe','com.pe','net','org','store'].map(ext=>`<button type="button" data-domain-extension="${ext}" aria-label="Usar extensión .${ext}">.${ext}</button>`).join('')}</div>
+      <div class="domain-panel-extensions" role="group" aria-label="Elegir extensión para el dominio">${['com','pe','edu.pe','com.pe','net','org','store'].map(ext=>`<button type="button" data-domain-extension="${ext}" aria-label="Usar extensión .${ext}">.${ext}</button>`).join('')}</div>
+      <p class="domain-panel-pricing-note"><strong>.pe y .edu.pe: S/ 110 por año.</strong> .edu.pe es solo para instituciones educativas. Otras extensiones, como .com y .com.pe, se cotizan a precios accesibles.</p>
       <p class="domain-panel-extension-feedback" id="domain-extension-feedback" role="status"></p>
       <div class="domain-panel-empty" id="domain-search-empty"><span>${icon('globe')}</span><div><b>Un nombre para tu negocio.</b><p>Busca, compara extensiones y consulta el registro con nuestro equipo.</p></div></div>
       <p id="domain-search-status" class="domain-panel-status" role="status" aria-live="polite"></p>

@@ -767,16 +767,16 @@
           "a": "No. El traslado cambia el proveedor que administra el registro del dominio. Migrar archivos, bases de datos o buzones requiere un trabajo separado. Antes del traslado revisamos los DNS y coordinamos los cambios necesarios para tu web y tu correo."
         },
         {
-          "q": "¿Puedo consultar o trasladar un dominio .pe o .com.pe?",
-          "a": "Puedes escribir el dominio completo en el buscador. Si el proveedor no permite comprobar esa extensión, te ayudamos a revisarla por otra vía. La posibilidad y los requisitos del traslado se confirman para cada extensión y proveedor."
+          "q": "¿Qué extensiones cuestan S/ 110 al año?",
+          "a": "Ese precio aplica únicamente al registro o renovación anual de un dominio .pe o .edu.pe. El registro .edu.pe está reservado para instituciones educativas. Otras extensiones se cotizan por separado a precios accesibles."
         },
         {
           "q": "¿Cuánto cuesta registrar, renovar o trasladar un dominio?",
-          "a": "Depende de la extensión, el plazo, la disponibilidad y de si el dominio tiene precio premium. Confirmamos el importe del registro o traslado y las condiciones de renovación en la propuesta antes de realizar la operación."
+          "a": "El registro o renovación por un año de .pe y .edu.pe cuesta S/ 110. .edu.pe está reservado para instituciones educativas. Las demás extensiones se cotizan por separado a precios accesibles; el importe depende de la disponibilidad y de si el nombre es premium. Confirmamos el costo y la renovación antes de registrar."
         }
       ],
-      "seoTitle": "Dominio .pe desde S/ 110 al año | OdiseaCloud",
-      "seoDescription": "Dominio .pe o .com.pe a S/ 110 al año. Busca un nombre, consulta disponibilidad y solicita registro, renovación o traslado con soporte en Perú.",
+      "seoTitle": "Dominios .pe y .edu.pe desde S/ 110/año | OdiseaCloud",
+      "seoDescription": "Registra o renueva dominios .pe y .edu.pe por S/ 110 al año. .edu.pe es exclusivo para instituciones educativas. Cotiza .com, .com.pe y otras extensiones.",
       "overviewTitle": "Registro, renovación y traslado de dominios en Perú",
       "mascot": {
         "image": "/assets/images/mascotas/dominios.webp",
