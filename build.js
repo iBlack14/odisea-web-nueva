@@ -239,6 +239,12 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
 }
 
 // Generador de Footer Reutilizable con URLs Limpias y Diseño Corporativo Equilibrado
+function renderClaimsCard(relativePath = '') {
+  return `<a href="${relativePath}libro-de-reclamaciones/" class="footer-libro-card" title="Abrir Libro de Reclamaciones OdiseaCloud">
+            <img class="libro-card-image" src="${relativePath}assets/images/logo_libro_reclam.jpg" alt="Libro de Reclamaciones OdiseaCloud" width="1080" height="419" loading="lazy" decoding="async">
+          </a>`;
+}
+
 function renderFooter(relativePath = '') {
   return `
   <!-- FOOTER CORPORATIVO OFICIAL ODISEACLOUD -->
@@ -313,9 +319,7 @@ function renderFooter(relativePath = '') {
 
         <!-- Acceso al Libro de Reclamaciones Oficial -->
         <div class="footer-libro-wrap">
-          <a href="${relativePath}libro-de-reclamaciones/" class="footer-libro-card" title="Abrir Libro de Reclamaciones OdiseaCloud">
-            <img class="libro-card-image" src="${relativePath}assets/images/logo_libro_reclam.jpg" alt="Libro de Reclamaciones OdiseaCloud" width="1080" height="419" loading="lazy" decoding="async">
-          </a>
+          ${renderClaimsCard(relativePath)}
         </div>
       </div>
 
@@ -769,6 +773,8 @@ ${service.slug === 'dominios' ? '<link rel="stylesheet" href="../../assets/css/d
     const currentContent = fs.readFileSync(currentFilePath, 'utf8');
     if (currentContent.includes('av-page') || currentContent.includes('shop-page') || currentContent.includes('web-motion-page') || currentContent.includes('mail-page')) {
       let preserved = currentContent;
+      // Actualizar el acceso compartido sin reemplazar el diseño de estas páginas.
+      preserved = preserved.replace(/<a\b[^>]*class="footer-libro-card"[^>]*>[\s\S]*?<\/a>/g, () => renderClaimsCard('../../'));
       const relatedBlock = '<!-- SERVICE-RELATED:START -->' + serviceSections.related(related, getSvgIcon) + '<!-- SERVICE-RELATED:END -->';
       if (preserved.includes('<!-- SERVICE-RELATED:START -->')) {
         preserved = preserved.replace(/<!-- SERVICE-RELATED:START -->[\s\S]*?<!-- SERVICE-RELATED:END -->/, () => relatedBlock);
