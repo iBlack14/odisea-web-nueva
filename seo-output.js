@@ -3,7 +3,7 @@ const path = require('path');
 const crypto = require('crypto');
 
 module.exports = function finalizeSeo(urls) {
-  const assets = ['assets/css/main.css', 'assets/css/catalogo.css', 'assets/js/main.js', 'assets/js/catalogo.js', 'assets/js/page-motion.js', 'assets/css/domain-panel.css', 'assets/js/domain-search.js', 'assets/css/service-sections.css', 'assets/css/desarrollo-web.css', 'assets/css/sistemas-web.css', 'assets/js/sistemas-web.js', 'assets/js/floating-contact.js'];
+  const assets = ['assets/css/main.css', 'assets/css/catalogo.css', 'assets/js/main.js', 'assets/js/catalogo.js', 'assets/js/page-motion.js', 'assets/css/domain-panel.css', 'assets/js/domain-search.js', 'assets/css/service-sections.css', 'assets/css/service-pricing.css', 'assets/css/desarrollo-web.css', 'assets/css/sistemas-web.css', 'assets/js/sistemas-web.js', 'assets/js/floating-contact.js'];
   const versions = Object.fromEntries(assets.map(asset => [asset, crypto.createHash('sha256').update(fs.readFileSync(path.join(__dirname, asset))).digest('hex').slice(0, 10)]));
   for (const url of urls) {
     const relative = new URL(url).pathname.replace(/^\//, '');

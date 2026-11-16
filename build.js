@@ -12,8 +12,64 @@ const serviceMockups = require('./service-mockups');
 const renderDomainPanel = require('./domain-panel');
 const serviceSections = require('./service-sections');
 const renderSystemsPage = require('./systems-page');
+const { offers: serviceOffers, renderServicePricing, renderHeroPrice } = require('./service-pricing');
 
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'servicios.json'), 'utf8'));
+
+function ensureServicePricing(html, service) {
+  const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+  const title = service.seoTitle || `${service.name} en Perú | OdiseaCloud`;
+  const description = service.seoDescription || service.shortDesc;
+  html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(title)}</title>`);
+  html = html.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/?\s*>/i, `<meta name="description" content="${escapeHtml(description)}">`);
+
+  const canonical = `https://odiseacloud.com/servicios/${service.slug}/`;
+  const schemaOffers = serviceOffers.filter(offer => offer.slug === service.slug && offer.price).map(offer => ({
+    '@type': 'Offer', name: offer.name, url: canonical, priceCurrency: 'PEN', price: offer.price,
+    description: `${offer.unit}. ${offer.scope}${offer.note ? ` ${offer.note}` : ''}`
+  }));
+  let serviceSchemaUpdated = false;
+  html = html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (tag, source) => {
+    try {
+      const schema = JSON.parse(source);
+      const nodes = Array.isArray(schema['@graph']) ? schema['@graph'] : [schema];
+      const target = nodes.find(node => node['@type'] === 'Service' && node.url === canonical);
+      if (!target) return tag;
+      if (schemaOffers.length) target.offers = schemaOffers;
+      serviceSchemaUpdated = true;
+      return `<script type="application/ld+json">\n${JSON.stringify(schema).replace(/</g, '\\u003c')}\n</script>`;
+    } catch { return tag; }
+  });
+  if (!serviceSchemaUpdated) {
+    const schema = {
+      '@context': 'https://schema.org', '@type': 'Service', '@id': `${canonical}#service`,
+      name: service.name, serviceType: service.shortName, url: canonical, description: service.shortDesc,
+      areaServed: { '@type': 'Country', name: 'Perú' },
+      provider: { '@type': 'Organization', '@id': 'https://odiseacloud.com/#organization', name: 'OdiseaCloud', url: 'https://odiseacloud.com/' },
+      ...(schemaOffers.length ? { offers: schemaOffers } : {})
+    };
+    html = html.replace('</head>', `<script type="application/ld+json">\n${JSON.stringify(schema).replace(/</g, '\\u003c')}\n</script>\n</head>`);
+  }
+  if (html.includes('id="precios-servicio"')) return html;
+  const stylesheet = '<link rel="stylesheet" href="../../assets/css/service-pricing.css?v=1">';
+  if (!html.includes('assets/css/service-pricing.css')) html = html.replace('</head>', `${stylesheet}\n</head>`);
+
+  const mainStart = html.indexOf('<main');
+  if (mainStart < 0) return html;
+  const headingEnd = html.indexOf('</h1>', mainStart);
+  if (headingEnd >= 0) {
+    const introEnd = html.indexOf('</p>', headingEnd);
+    const sectionEnd = html.indexOf('</section>', mainStart);
+    if (introEnd >= 0 && (sectionEnd < 0 || introEnd < sectionEnd)) {
+      html = html.slice(0, introEnd + 4) + `\n${renderHeroPrice(service)}\n` + html.slice(introEnd + 4);
+    }
+  }
+
+  const sectionEnd = html.indexOf('</section>', mainStart);
+  const insertAt = sectionEnd >= 0 ? sectionEnd + '</section>'.length : html.indexOf('</main>', mainStart);
+  if (insertAt >= 0) html = html.slice(0, insertAt) + `\n<!-- SERVICE-PRICING:START -->\n${renderServicePricing(service)}\n<!-- SERVICE-PRICING:END -->\n` + html.slice(insertAt);
+  return html;
+}
 
 function renderServiceArt(service, prefix = '') {
   const mascot = service.mascot;
@@ -418,6 +474,7 @@ data.services.forEach(service => {
   </script>
   <link rel="stylesheet" href="../../assets/css/catalogo.css">
   <link rel="stylesheet" href="../../assets/css/service-sections.css">
+  <link rel="stylesheet" href="../../assets/css/service-pricing.css?v=1">
 ${service.slug === 'dominios' ? '<link rel="stylesheet" href="../../assets/css/domain-panel.css">' : ''}
   ${renderHeadAnalytics()}
 </head>
@@ -435,6 +492,7 @@ ${service.slug === 'dominios' ? '<link rel="stylesheet" href="../../assets/css/d
         <p class="section-subtitle" style="margin: 0 0 32px;">
           ${service.slug === 'dominios' ? 'Registro y gestión de dominios para tu marca. Escribe un nombre y consulta su registro.' : service.heroTagline}
         </p>
+        ${renderHeroPrice(service)}
         ${service.slug === 'dominios' ? `<ul class="domain-hero-points"><li>${getSvgIcon('search')}<span><b>Busca el nombre de tu marca</b>Consulta un dominio o compara varias extensiones.</span></li><li>${getSvgIcon('globe')}<span><b>Elige tu espacio online</b>Explora opciones como .com, .pe y .com.pe.</span></li><li>${getSvgIcon('shield-check')}<span><b>Te ayudamos con el registro</b>Asesoría para registrar, configurar o trasladar tu dominio.</span></li></ul><a class="domain-hero-link" href="#traslado-dominio">Ya tengo un dominio: quiero trasladarlo →</a>` : ''}
         ${service.slug !== 'dominios' ? `
         <div class="service-intro-actions">
@@ -455,6 +513,8 @@ ${service.slug === 'dominios' ? '<link rel="stylesheet" href="../../assets/css/d
         </div>`}
       </div>
     </section>
+
+    ${renderServicePricing(service)}
 
     ${service.slug === 'dominios' ? '<script src="../../assets/js/domain-search.js" defer></script>' : ''}
     ${service.image ? `<div class="container container-narrow" style="padding-top: 40px;">
@@ -724,12 +784,12 @@ ${service.slug === 'dominios' ? '<link rel="stylesheet" href="../../assets/css/d
       for (const stylesheet of ['catalogo.css', 'service-sections.css']) {
         if (!preserved.includes('assets/css/' + stylesheet)) preserved = preserved.replace('</head>', '<link rel="stylesheet" href="../../assets/css/' + stylesheet + '">\n</head>');
       }
-      fs.writeFileSync(currentFilePath, preserved, 'utf8');
+      fs.writeFileSync(currentFilePath, ensureServicePricing(preserved, service), 'utf8');
       return;
     }
   }
 
-  fs.writeFileSync(path.join(serviceDir, 'index.html'), html, 'utf8');
+  fs.writeFileSync(path.join(serviceDir, 'index.html'), ensureServicePricing(html, service), 'utf8');
 });
 
 console.log(`✅ Generadas 15 páginas individuales de servicios.`);
@@ -741,8 +801,8 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios web y soluciones tecnológicas en Perú | OdiseaCloud</title>
-  <meta name="description" content="Soluciones digitales para cada etapa de tu negocio: desarrollo web, tiendas virtuales, aulas virtuales, hosting, VPS, ciberseguridad y optimización de velocidad.">
+  <title>Servicios web y cloud en Perú | OdiseaCloud</title>
+  <meta name="description" content="Landing pages desde S/ 656 y webs corporativas desde S/ 713. Conoce nuestros servicios web, e-commerce y cloud; consulta alcance y cotiza en Perú.">
   <link rel="canonical" href="https://odiseacloud.com/servicios/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
 
@@ -1443,8 +1503,8 @@ const homeHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diseño de páginas web en Perú | OdiseaCloud</title>
-  <meta name="description" content="Diseño de páginas web en Perú, tiendas virtuales y sistemas a medida. Busca, registra o traslada tu dominio con OdiseaCloud.">
+  <title>Diseño de páginas web en Perú desde S/ 656 | OdiseaCloud</title>
+  <meta name="description" content="Landing page desde S/ 656 y web corporativa desde S/ 713. Diseño web, tiendas virtuales y sistemas a medida para empresas en Perú. Revisa el alcance y cotiza.">
   <link rel="canonical" href="https://odiseacloud.com/">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
@@ -1470,7 +1530,7 @@ const homeHtml = `<!DOCTYPE html>
     "email": "${data.company.email}",
     "areaServed": {"@type": "Country", "name": "Perú"},
     "url": "https://odiseacloud.com",
-    "logo": "https://odiseacloud.com/assets/images/logo.png",
+    "logo": "https://odiseacloud.com/assets/images/logo.webp",
     "slogan": "Tu proyecto, sin límites",
     "description": "Desarrollo de páginas web, tiendas virtuales, aulas virtuales e infraestructura tecnológica para empresas.",
     "contactPoint": {
@@ -1482,6 +1542,7 @@ const homeHtml = `<!DOCTYPE html>
     }
   }
   </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://odiseacloud.com/#website","url":"https://odiseacloud.com/","name":"OdiseaCloud","inLanguage":"es-PE","publisher":{"@id":"https://odiseacloud.com/#organization"}}</script>
   ${renderHeadAnalytics()}
 </head>
 <body class="home-page">
@@ -1498,7 +1559,7 @@ const homeHtml = `<!DOCTYPE html>
             <h1>Diseño de páginas web y <span>software a medida en Perú.</span></h1>
             <p>Desarrollamos páginas web empresariales, tiendas virtuales y sistemas personalizados para digitalizar tus ventas y automatizar procesos, con código propio y soporte desde Lima.</p>
             <a class="btn btn-primary" href="servicios/desarrollo-web/">Diseña tu página web ${getSvgIcon('arrowRight')}</a>
-            <div class="home-slide-links"><a href="servicios/tiendas-virtuales/">Tiendas virtuales</a><a href="servicios/sistemas-web/">Sistemas a medida</a></div>
+            <div class="home-slide-links"><a href="servicios/desarrollo-web/#precios-servicio">Landing page desde S/ 656</a><a href="servicios/desarrollo-web/#precios-servicio">Web corporativa desde S/ 713</a><a href="servicios/tiendas-virtuales/">Tiendas virtuales</a><a href="servicios/sistemas-web/">Sistemas a medida</a></div>
           </div>
           <div class="home-slide-mascot home-web-scene">
             <div class="web-scene-orbit" aria-hidden="true"></div>

@@ -34,7 +34,7 @@
   // Avoid duplicating the dedicated animations on web, shop, and campus pages.
   if (!document.body.matches('.web-motion-page, .shop-page, .av-page')) {
     document.querySelectorAll('main > section:not(:first-of-type)').forEach(section => {
-      const cards = [...section.querySelectorAll('.service-card, .feature-card, .workflow-card, .service-related-card, .sector-card, .portfolio-card, .company-policy-card, .cat-journey-steps > li')];
+      const cards = [...section.querySelectorAll('.service-card, .feature-card, .workflow-card, .service-related-card, .service-price-card, .sector-card, .portfolio-card, .company-policy-card, .cat-journey-steps > li')];
       if (cards.length) {
         const heading = section.querySelector('.section-header, .cat-section-heading, .cat-journey-heading');
         if (heading) observer.observe(heading);
