@@ -1,7 +1,12 @@
 # ==============================================================================
 # ODISEACLOUD — Dockerfile para Easypanel / Servidores VPS
-# Servidor Apache + PHP optimizado con mod_rewrite y URLs limpias
+# Genera las páginas estáticas y las sirve con Apache + PHP.
 # ==============================================================================
+
+FROM node:20-alpine AS site-builder
+WORKDIR /src
+COPY . .
+RUN node build.js
 
 FROM php:8.2-apache
 
@@ -18,8 +23,9 @@ RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
 
-# Copiar archivos del proyecto
-COPY . /var/www/html/
+# Copiar el proyecto con las páginas ya regeneradas. Esto evita desplegar un
+# index.html obsoleto si los archivos generados no se actualizaron en Git.
+COPY --from=site-builder /src/ /var/www/html/
 
 # Excluir archivos innecesarios para producción y fijar permisos
 RUN rm -rf /var/www/html/node_modules \
