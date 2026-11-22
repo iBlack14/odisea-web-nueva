@@ -434,6 +434,18 @@ p {
   transition: var(--transition);
 }
 
+/* Ilustración de marca en el espacio que queda visible junto al menú móvil. */
+.mobile-menu-backdrop::after {
+  content: "";
+  position: fixed;
+  inset: 0 340px 0 0;
+  background: url("../images/mobile-menu-cloud.svg") center / min(100%, 460px) auto no-repeat;
+  opacity: 0;
+  transform: translateY(14px) scale(.97);
+  transition: opacity .35s ease, transform .5s cubic-bezier(.2,.75,.25,1);
+  pointer-events: none;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -458,6 +470,29 @@ p {
 .mobile-menu-backdrop.open {
   opacity: 1;
   pointer-events: auto;
+}
+
+.mobile-menu-backdrop.open::after {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: mobileCloudFloat 6s ease-in-out .5s infinite;
+}
+
+@keyframes mobileCloudFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.015); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-backdrop::after,
+  .mobile-menu-backdrop.open::after {
+    animation: none;
+    transition: opacity .01ms linear;
+  }
+}
+
+@media (max-width: 340px) {
+  .mobile-menu-backdrop::after { right: 100%; }
 }
 
 .mobile-menu-header {
