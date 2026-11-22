@@ -7,5 +7,4 @@ output
 .agents
 .mcp.json
 server.js
-build.js
 *.log
