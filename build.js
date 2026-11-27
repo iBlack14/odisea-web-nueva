@@ -221,6 +221,12 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
       <a href="${homeUrl}" class="mobile-nav-link">Inicio</a>
       <a href="${relativePath}nosotros/" class="mobile-nav-link">Nosotros</a>
       <a href="${relativePath}servicios/" class="mobile-nav-link">Catálogo de Servicios</a>
+      <details class="mobile-services-dropdown">
+        <summary class="mobile-nav-link">Ver servicios individuales <span class="mobile-services-chevron" aria-hidden="true">⌄</span></summary>
+        <div class="mobile-services-list">
+          ${data.services.map(service => `<a href="${relativePath}servicios/${service.slug}/">${service.name}</a>`).join('')}
+        </div>
+      </details>
       <a href="${relativePath}portafolio/" class="mobile-nav-link">Portafolio</a>
       <a href="${relativePath}soluciones/" class="mobile-nav-link">Soluciones por Sector</a>
       <a href="${relativePath}contacto/" class="mobile-nav-link">Contacto</a>

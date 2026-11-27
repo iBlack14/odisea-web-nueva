@@ -536,6 +536,15 @@ p {
   color: var(--color-primary);
 }
 
+.mobile-services-dropdown { border-bottom: 1px solid var(--color-light-gray); }
+.mobile-services-dropdown > .mobile-nav-link { border: 0; cursor: pointer; list-style: none; }
+.mobile-services-dropdown > .mobile-nav-link::-webkit-details-marker { display: none; }
+.mobile-services-chevron { transition: transform .2s ease; }
+.mobile-services-dropdown[open] .mobile-services-chevron { transform: rotate(180deg); }
+.mobile-services-list { display: grid; gap: 2px; padding: 0 0 12px 14px; }
+.mobile-services-list a { padding: 8px 6px; color: var(--color-text-muted); font-size: .92rem; line-height: 1.4; }
+.mobile-services-list a:hover,.mobile-services-list a:focus-visible { color: var(--color-primary); }
+
 .mobile-cta {
   margin-top: auto;
   padding-top: 24px;
