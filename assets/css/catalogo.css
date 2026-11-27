@@ -61,6 +61,20 @@
 .cat-card-tags span { font-size:.6rem; padding:5px 8px; border-radius:5px; background:#f3f6fa; color:#60718a; }
 .cat-card-link { display:flex; align-items:center; justify-content:space-between; padding-top:16px; border-top:1px solid #e9eef5; font-size:.78rem; font-weight:700; color:#0866f5; }
 .cat-card-link svg { width:17px; height:17px; }
+.catalog-page .cat-card { transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,opacity .24s ease; transform:translateY(0); }
+.catalog-page .cat-card:hover { transform:translateY(-6px); border-color:#c5d8f2; box-shadow:0 18px 38px #153c7418; }
+.catalog-page .cat-card-preview { isolation:isolate; }
+.catalog-page .cat-card-preview::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(115deg,transparent 28%,#ffffff35 48%,transparent 68%); transform:translateX(-110%); transition:transform .65s ease; pointer-events:none; }
+.catalog-page .cat-card:hover .cat-card-preview::after { transform:translateX(110%); }
+.catalog-page .cat-card-preview .cat-window { transition:transform .4s cubic-bezier(.2,.75,.25,1),box-shadow .4s ease; }
+.catalog-page .cat-card:hover .cat-card-preview .cat-window { transform:translateY(-5px) scale(1.015); box-shadow:0 18px 30px -10px #12346155; }
+.catalog-page .cat-preview-arrow { transition:transform .25s ease,background .25s ease,color .25s ease; }
+.catalog-page .cat-card:hover .cat-preview-arrow { transform:translate(2px,-2px); background:#fff; color:#0866f5; }
+.catalog-page .cat-card.is-entering { animation:catalog-card-in .42s both cubic-bezier(.2,.7,.25,1); animation-delay:var(--card-delay,0ms); }
+.catalog-page .cat-card[hidden] { display:none!important; }
+@keyframes catalog-card-in { from {opacity:0;transform:translateY(14px) scale(.985)} to {opacity:1;transform:translateY(0) scale(1)} }
+@media(hover:none) { .catalog-page .cat-card:active { transform:scale(.99); } }
+@media(prefers-reduced-motion:reduce) { .catalog-page .cat-card,.catalog-page .cat-card * { animation:none!important;transition:none!important; } }
 .cat-guidance { background:#edf4ff; padding-block:44px; border-block:1px solid #dfeaf9; }
 .cat-guidance .container { display:flex; align-items:center; gap:28px; }
 .cat-guidance-icon { display:grid; place-items:center; width:64px; height:64px; flex-shrink:0; background:#fff; border:1px solid #d7e6fb; color:#0866f5; border-radius:18px; }
