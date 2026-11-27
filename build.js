@@ -1502,8 +1502,8 @@ const homeHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desarrollo web y software para Latinoamérica | OdiseaCloud</title>
-  <meta name="description" content="Diseño web, tiendas virtuales y software a medida para empresas de Latinoamérica. Equipo en Perú, atención remota en español y propuesta según tu proyecto.">
+  <title>Diseño web, tiendas y software en Perú | OdiseaCloud</title>
+  <meta name="description" content="Diseño de páginas web, tiendas virtuales y software a medida en Lima, Perú y Latinoamérica. Atención remota en español y propuesta según tu proyecto.">
   <meta name="keywords" content="desarrollo web perú, diseño de páginas web lima, tiendas virtuales, software a medida, hosting cloud, odiseacloud">
   <link rel="canonical" href="https://odiseacloud.com/">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -1980,10 +1980,12 @@ const sitemapUrls = [
 
 require('./seo-output')(sitemapUrls);
 
+const buildDate = new Date().toISOString().slice(0, 10);
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls.map(url => `  <url>
     <loc>${url}</loc>
+    <lastmod>${buildDate}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${url === 'https://odiseacloud.com/' ? '1.0' : '0.8'}</priority>
   </url>`).join('\n')}

@@ -40,6 +40,7 @@ module.exports = function finalizeSeo(urls) {
     for (const [property, content] of Object.entries({
       'og:title': title, 'og:description': description, 'og:type': 'website',
       'og:url': url, 'og:image': 'https://odiseacloud.com/assets/images/social-preview.jpg',
+      'og:image:width': '1200', 'og:image:height': '800', 'og:image:alt': title,
       'og:locale': 'es_PE', 'og:site_name': 'OdiseaCloud'
     })) {
       const tag = `<meta property="${property}" content="${content}">`;
@@ -57,6 +58,31 @@ module.exports = function finalizeSeo(urls) {
     // Ensure robots index/follow and rich-snippet directives are present on all indexable pages.
     if (!/<meta\s+name="robots"/i.test(html)) {
       tags.push('<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">');
+    }
+    if (!/<meta\s+name="theme-color"/i.test(html)) {
+      tags.push('<meta name="theme-color" content="#0f172a">');
+    }
+    if ((!relative || relative === 'contacto/') && !html.includes('"@type":"ProfessionalService"') && !html.includes('"@type": "ProfessionalService"')) {
+      const localSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'ProfessionalService',
+        '@id': 'https://odiseacloud.com/#localbusiness',
+        name: 'OdiseaCloud',
+        url: 'https://odiseacloud.com/',
+        image: 'https://odiseacloud.com/assets/images/social-preview.jpg',
+        priceRange: 'S/ 656 - S/ 3,325+',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Lima',
+          addressRegion: 'Lima',
+          addressCountry: 'PE'
+        },
+        areaServed: [
+          { '@type': 'Country', name: 'Perú' },
+          { '@type': 'Place', name: 'Latinoamérica' }
+        ]
+      };
+      tags.push(`<script type="application/ld+json">${JSON.stringify(localSchema).replace(/</g, '\\u003c')}</script>`);
     }
     // Add WebPage and BreadcrumbList JSON-LD for pages that do not already define them.
     if (!html.includes('"@type":"BreadcrumbList"') && !html.includes('"@type": "BreadcrumbList"')) {
