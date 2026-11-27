@@ -35,6 +35,7 @@ function ensureServicePricing(html, service) {
       const nodes = Array.isArray(schema['@graph']) ? schema['@graph'] : [schema];
       const target = nodes.find(node => node['@type'] === 'Service' && node.url === canonical);
       if (!target) return tag;
+      target.areaServed = [{ '@type': 'Country', name: 'Perú' }, { '@type': 'Place', name: 'Latinoamérica' }];
       if (schemaOffers.length) target.offers = schemaOffers;
       serviceSchemaUpdated = true;
       return `<script type="application/ld+json">\n${JSON.stringify(schema).replace(/</g, '\\u003c')}\n</script>`;
@@ -44,13 +45,17 @@ function ensureServicePricing(html, service) {
     const schema = {
       '@context': 'https://schema.org', '@type': 'Service', '@id': `${canonical}#service`,
       name: service.name, serviceType: service.shortName, url: canonical, description: service.shortDesc,
-      areaServed: { '@type': 'Country', name: 'Perú' },
+      areaServed: [{ '@type': 'Country', name: 'Perú' }, { '@type': 'Place', name: 'Latinoamérica' }],
       provider: { '@type': 'Organization', '@id': 'https://odiseacloud.com/#organization', name: 'OdiseaCloud', url: 'https://odiseacloud.com/' },
       ...(schemaOffers.length ? { offers: schemaOffers } : {})
     };
     html = html.replace('</head>', `<script type="application/ld+json">\n${JSON.stringify(schema).replace(/</g, '\\u003c')}\n</script>\n</head>`);
   }
-  if (html.includes('id="precios-servicio"')) return html;
+  if (html.includes('id="precios-servicio"')) {
+    const currencyNote = '<p>Precios en soles peruanos (PEN). Si nos escribes desde otro país de Latinoamérica, confirmamos la moneda y la forma de pago en tu propuesta.</p>';
+    if (!html.includes(currencyNote)) html = html.replace('<div class="service-pricing-assurance">', `${currencyNote}<div class="service-pricing-assurance">`);
+    return html;
+  }
   const stylesheet = '<link rel="stylesheet" href="../../assets/css/service-pricing.css?v=1">';
   if (!html.includes('assets/css/service-pricing.css')) html = html.replace('</head>', `${stylesheet}\n</head>`);
 
@@ -813,8 +818,8 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios web y cloud en Perú | OdiseaCloud</title>
-  <meta name="description" content="Landing pages desde S/ 656 y webs corporativas desde S/ 713. Conoce nuestros servicios web, e-commerce y cloud; consulta alcance y cotiza en Perú.">
+  <title>Servicios web y cloud para Latinoamérica | OdiseaCloud</title>
+  <meta name="description" content="Explora servicios de desarrollo web, tiendas virtuales, software e infraestructura cloud para Latinoamérica. Atención remota desde Perú y alcance definido contigo.">
   <link rel="canonical" href="https://odiseacloud.com/servicios/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
 
@@ -1335,7 +1340,7 @@ const contactoHtml = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto Comercial | ODISEACLOUD</title>
-  <meta name="description" content="Comunícate directamente con el equipo de ODISEACLOUD por WhatsApp o correo electrónico para solicitar cotizaciones y asesoría en proyectos digitales.">
+  <meta name="description" content="Cotiza tu página web, tienda virtual o software desde cualquier país de Latinoamérica. Contacta a OdiseaCloud: equipo en Perú y atención remota en español.">
   <link rel="canonical" href="https://odiseacloud.com/contacto/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
@@ -1515,8 +1520,8 @@ const homeHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diseño de páginas web en Perú desde S/ 656 | OdiseaCloud</title>
-  <meta name="description" content="Landing page desde S/ 656 y web corporativa desde S/ 713. Diseño web, tiendas virtuales y sistemas a medida para empresas en Perú. Revisa el alcance y cotiza.">
+  <title>Desarrollo web y software para Latinoamérica | OdiseaCloud</title>
+  <meta name="description" content="Diseño web, tiendas virtuales y software a medida para empresas de Latinoamérica. Equipo en Perú, atención remota en español y propuesta según tu proyecto.">
   <link rel="canonical" href="https://odiseacloud.com/">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
@@ -1540,7 +1545,7 @@ const homeHtml = `<!DOCTYPE html>
     "@id": "https://odiseacloud.com/#organization",
     "name": "ODISEACLOUD",
     "email": "${data.company.email}",
-    "areaServed": {"@type": "Country", "name": "Perú"},
+    "areaServed": [{"@type": "Country", "name": "Perú"}, {"@type": "Place", "name": "Latinoamérica"}],
     "url": "https://odiseacloud.com",
     "logo": "https://odiseacloud.com/assets/images/logo.webp",
     "slogan": "Tu proyecto, sin límites",
@@ -1567,9 +1572,9 @@ const homeHtml = `<!DOCTYPE html>
       <div class="about-slide about-slide-split" role="group" aria-roledescription="diapositiva" aria-label="1 de 3">
         <div class="container about-slide-layout">
           <div class="about-slide-copy">
-            <span class="section-badge">Desarrollo web en Perú · OdiseaCloud</span>
-            <h1>Diseño de páginas web y <span>software a medida en Perú.</span></h1>
-            <p>Desarrollamos páginas web empresariales, tiendas virtuales y sistemas personalizados para digitalizar tus ventas y automatizar procesos, con código propio y soporte desde Lima.</p>
+            <span class="section-badge">Desde Perú · Para Latinoamérica</span>
+            <h1>Diseño web y software <span>para llevar tu negocio más lejos.</span></h1>
+            <p>Desarrollamos páginas web, tiendas virtuales y sistemas a medida para empresas de Latinoamérica. Trabajamos contigo a distancia, en español, desde la primera reunión hasta la entrega.</p>
             <a class="btn btn-primary" href="servicios/desarrollo-web/">Diseña tu página web ${getSvgIcon('arrowRight')}</a>
             <div class="home-slide-links"><a href="servicios/desarrollo-web/#precios-servicio">Landing page desde S/ 656</a><a href="servicios/desarrollo-web/#precios-servicio">Web corporativa desde S/ 713</a><a href="servicios/tiendas-virtuales/">Tiendas virtuales</a><a href="servicios/sistemas-web/">Sistemas a medida</a></div>
           </div>
@@ -1632,6 +1637,15 @@ const homeHtml = `<!DOCTYPE html>
     </section>
     <script src="assets/js/about-slider.js" defer></script>
 
+    <section class="section latam-section" id="proyectos-latinoamerica" aria-labelledby="latam-title">
+      <div class="container">
+        <div class="latam-heading"><div><span class="section-badge">DESARROLLO WEB PARA LATINOAMÉRICA</span><h2 id="latam-title">Tu proyecto avanza.<br>Estés donde estés.</h2></div><p>Un equipo en Perú para construir la web o el sistema de tu empresa, con coordinación remota y una propuesta que puedas revisar antes de empezar.</p></div>
+        <div class="latam-grid">
+          <div class="latam-project"><span class="latam-project-label">DE TU IDEA A LA ENTREGA</span><h3>Hablemos de tu próximo proyecto.</h3><p>Cuéntanos qué necesitas y desde qué país nos escribes. Definimos contigo el alcance, los plazos, la moneda y las condiciones de contratación.</p><a class="btn btn-primary" href="contacto/">Solicitar una propuesta ${getSvgIcon('arrowRight')}</a><a class="latam-secondary" href="portafolio/">Explorar proyectos realizados ↗</a><span class="latam-origin">Equipo en Perú · Atención en español</span></div>
+          <ol class="latam-steps"><li><span>01</span><div><h3>Una conversación, a tu horario</h3><p>Coordinamos una reunión considerando tu zona horaria para conocer tu negocio y lo que quieres resolver.</p></div></li><li><span>02</span><div><h3>Una propuesta que se entiende</h3><p>Detallamos entregables, etapas y costos. Los precios publicados en soles (PEN) son una referencia; confirmamos moneda y forma de pago en tu propuesta.</p></div></li><li><span>03</span><div><h3>Avances y entrega acompañada</h3><p>Acordamos revisiones durante el desarrollo y te orientamos para utilizar tu web o sistema al finalizar.</p></div></li></ol>
+        </div>
+      </div>
+    </section>
 
     ${serviceSections.related(['desarrollo-web','tiendas-virtuales','aulas-virtuales','sistemas-web','hosting-web','correo-corporativo'].map(slug => data.services.find(service => service.slug === slug)), getSvgIcon, { home: true })}
 

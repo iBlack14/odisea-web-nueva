@@ -4246,3 +4246,23 @@ main .btn {max-width:100%;white-space:normal;text-align:center;line-height:1.5;}
 @media(max-width:1080px) {.contact-grid {grid-template-columns:minmax(0,1fr);}}
 @media(max-width:700px) {.company-policies-grid,body:has(.filter-tabs) .portfolio-grid {grid-template-columns:minmax(0,1fr);}.contact-info-card,.contact-form-card {padding:26px;}}
 @media(max-width:600px) {main .portfolio-grid {grid-template-columns:minmax(0,1fr);}}
+
+/* Remote projects: a clear path from first contact to delivery. */
+.latam-section { background:#f4f7fc; color:#10294c; }
+.latam-heading { display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:32px; }
+.latam-heading h2 { font-size:clamp(2rem,3.7vw,3rem);line-height:1.12;letter-spacing:-.04em;margin:16px 0 0; }
+.latam-heading > p { max-width:490px;margin:0;color:#5e7089;line-height:1.8; }
+.latam-grid { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px; }
+.latam-project { display:flex;flex-direction:column;align-items:flex-start;padding:clamp(24px,4vw,44px);border:1px solid #d8e6fa;border-radius:20px;background:radial-gradient(ellipse at 100% 0,#dbeaff,transparent 65%),#fff; }
+.latam-project-label { font-size:.67rem;font-weight:700;letter-spacing:.12em;color:#0866f5; }
+.latam-project h3 { font-size:clamp(1.6rem,2.5vw,2.1rem);line-height:1.2;letter-spacing:-.03em;margin:22px 0 16px; }
+.latam-project p { color:#5e7089;line-height:1.8;margin:0 0 24px; }
+.latam-secondary { font-size:.88rem;font-weight:600;margin-top:18px; }
+.latam-origin { font-size:.76rem;color:#687a92;margin-top:32px;padding-top:18px;border-top:1px solid #dfe7f2;width:100%; }
+.latam-steps { list-style:none;padding:0;margin:0;display:flex;flex-direction:column;justify-content:center;background:#fff;border:1px solid #e0e7f1;border-radius:20px; }
+.latam-steps li { display:flex;gap:20px;padding:28px; }
+.latam-steps li + li { border-top:1px solid #edf1f7; }
+.latam-steps li > span { color:#0866f5;font-size:.76rem;font-weight:700;padding-top:3px; }
+.latam-steps h3 { font-size:1.08rem;line-height:1.4;margin:0 0 8px; }
+.latam-steps p { font-size:.9rem;line-height:1.75;color:#5e7089;margin:0; }
+@media(max-width:760px) { .latam-heading,.latam-grid { grid-template-columns:minmax(0,1fr);gap:24px; }.latam-heading { margin-bottom:24px; }.latam-steps li { padding:24px;gap:14px; } }

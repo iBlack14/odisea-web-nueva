@@ -38,7 +38,7 @@ function renderServicePricing(service) {
   const title = selected.length > 1 ? 'Elige cómo quieres empezar' : 'Una inversión clara para empezar';
   return `<section class="section service-pricing-section" id="precios-servicio" aria-labelledby="service-pricing-title"><div class="container service-pricing-layout">
     <div class="service-pricing-copy"><span class="section-badge">Precio de lanzamiento</span><h2 id="service-pricing-title">${title}</h2>
-      <p>Te mostramos un punto de partida y qué incluye. Antes de comenzar confirmamos contigo el alcance, los plazos y cualquier costo de terceros.</p>
+      <p>Te mostramos un punto de partida y qué incluye. Antes de comenzar confirmamos contigo el alcance, los plazos y cualquier costo de terceros.</p><p>Precios en soles peruanos (PEN). Si nos escribes desde otro país de Latinoamérica, confirmamos la moneda y la forma de pago en tu propuesta.</p>
       <div class="service-pricing-assurance"><span aria-hidden="true">✓</span><span>La propuesta final deja claros los entregables y costos antes de contratar.</span></div>
     </div><div class="service-pricing-cards">${cards}</div>
   </div></section>`;
