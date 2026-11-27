@@ -26,6 +26,14 @@ function ensureServicePricing(html, service) {
   const description = service.seoDescription || service.shortDesc;
   html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(title)}</title>`);
   html = html.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/?\s*>/i, `<meta name="description" content="${escapeHtml(description)}">`);
+  if (service.seoKeywords) {
+    const kwTag = `<meta name="keywords" content="${escapeHtml(service.seoKeywords)}">`;
+    if (/<meta\s+name="keywords"\s+content="[^"]*"\s*\/?\s*>/i.test(html)) {
+      html = html.replace(/<meta\s+name="keywords"\s+content="[^"]*"\s*\/?\s*>/i, kwTag);
+    } else {
+      html = html.replace(/(<meta\s+name="description"\s+content="[^"]*"\s*\/?\s*>)/i, `$1\n  ${kwTag}`);
+    }
+  }
 
   const canonical = `https://odiseacloud.com/servicios/${service.slug}/`;
   const schemaOffers = serviceOffers.filter(offer => offer.slug === service.slug && offer.price).map(offer => ({
@@ -411,7 +419,7 @@ data.services.forEach(service => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${service.seoTitle || `${service.name} en Perú | OdiseaCloud`}</title>
   <meta name="description" content="${service.seoDescription || service.shortDesc}">
-  <meta name="keywords" content="${escapeHtml(service.seoKeywords || '')}">
+  <meta name="keywords" content="${service.seoKeywords || ''}">
   <link rel="canonical" href="https://odiseacloud.com/servicios/${service.slug}/">
   <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
   
