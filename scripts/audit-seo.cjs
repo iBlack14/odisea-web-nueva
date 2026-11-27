@@ -14,15 +14,21 @@ for (const url of urls) {
   const html = fs.readFileSync(file, 'utf8');
   const title = html.match(/<title>(.*?)<\/title>/s)?.[1];
   const description = html.match(/name="description" content="([^"]+)"/)?.[1];
+  const keywords = html.match(/name="keywords" content="([^"]+)"/)?.[1];
   check(title && !titles.has(title), 'Missing/duplicate title: ' + url); titles.add(title);
+  check(title && title.length <= 60, `Title too long (${title?.length}): ` + url);
   check(description && !descriptions.has(description), 'Missing/duplicate description: ' + url); descriptions.add(description);
+  check(description && description.length <= 155, `Description too long (${description?.length}): ` + url);
+  check(keywords && keywords.trim().length > 0, 'Missing keywords: ' + url);
   check((html.match(/<h1\b/g) || []).length === 1, 'H1 count: ' + url);
   check(html.includes(`rel="canonical" href="${url}"`), 'Canonical: ' + url);
   check(html.includes(`<meta property="og:title" content="${title}">`), 'Open Graph title differs: ' + url);
   check(html.includes(`<meta property="og:description" content="${description}">`), 'Open Graph description differs: ' + url);
-  check(!/<meta[^>]+name="robots"[^>]+noindex/i.test(html), 'Noindex: ' + url);
+  check(/<meta[^>]+name="robots"[^>]+index/i.test(html) && !/<meta[^>]+name="robots"[^>]+noindex/i.test(html), 'Robots index: ' + url);
   check(html.includes('<html lang="es">'), 'Language: ' + url);
-  for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+  const ldJsonMatches = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  check(ldJsonMatches.length > 0, 'Missing JSON-LD: ' + url);
+  for (const m of ldJsonMatches) {
     try { JSON.parse(m[1]); } catch { errors.push('Invalid JSON-LD: ' + url); }
   }
   const service = serviceData.find(item => `/servicios/${item.slug}/` === pathname);

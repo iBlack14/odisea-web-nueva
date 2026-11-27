@@ -15,6 +15,10 @@ const renderSystemsPage = require('./systems-page');
 const { offers: serviceOffers, renderServicePricing, renderHeroPrice } = require('./service-pricing');
 
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'servicios.json'), 'utf8'));
+// Locally bundled Lucide SVGs; provenance and license live alongside the assets.
+const serviceMenuIcons = Object.fromEntries(data.services.map(service => [service.slug,
+  fs.readFileSync(path.join(__dirname, 'assets', 'icons', 'services', `${service.slug}.svg`), 'utf8')
+]));
 
 function ensureServicePricing(html, service) {
   const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
@@ -153,42 +157,15 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
         <a href="${relativePath}nosotros/" class="nav-link ${activePage === 'nosotros' ? 'active' : ''}">Nosotros</a>
         
         <!-- Dropdown Servicios -->
-        <div class="has-dropdown">
-          <a href="${relativePath}servicios/" class="nav-link ${activePage === 'servicios' ? 'active' : ''}">
+        <div class="has-dropdown services-mega">
+          <button type="button" class="nav-link ${activePage === 'servicios' ? 'active' : ''}" aria-expanded="false" aria-controls="desktop-services-menu" data-mega-toggle>
             Servicios
             ${getSvgIcon('chevronDown')}
-          </a>
-          <div class="dropdown-menu">
-            <a href="${relativePath}servicios/desarrollo-web/" class="dropdown-item">
-              <span class="dropdown-icon">${getSvgIcon('globe')}</span>
-              <span>Desarrollo Web</span>
-            </a>
-            <a href="${relativePath}servicios/tiendas-virtuales/" class="dropdown-item">
-              <span class="dropdown-icon">${getSvgIcon('shopping-bag')}</span>
-              <span>Tiendas Virtuales</span>
-            </a>
-            <a href="${relativePath}servicios/aulas-virtuales/" class="dropdown-item">
-              <span class="dropdown-icon">${getSvgIcon('book-open')}</span>
-              <span>Aulas Virtuales</span>
-            </a>
-            <a href="${relativePath}servicios/sistemas-web/" class="dropdown-item">
-              <span class="dropdown-icon">${getSvgIcon('cpu')}</span>
-              <span>Sistemas a Medida</span>
-            </a>
-            <a href="${relativePath}servicios/hosting-web/" class="dropdown-item">
-              <span class="dropdown-icon">${getSvgIcon('server')}</span>
-              <span>Hosting y Servidores</span>
-            </a>
-            <a href="${relativePath}servicios/correo-corporativo/" class="dropdown-item">
-              <span class="dropdown-icon">${getSvgIcon('mail')}</span>
-              <span>Correo Corporativo</span>
-            </a>
-            <div class="dropdown-footer">
-              <a href="${relativePath}servicios/" class="dropdown-footer-link">
-                <span>Ver catálogo completo (15)</span>
-                ${getSvgIcon('arrowRight')}
-              </a>
-            </div>
+          </button>
+          <div class="dropdown-menu services-mega-panel" id="desktop-services-menu" inert>
+            <div class="mega-heading"><div><span>EXPLORA NUESTRAS SOLUCIONES</span><p>De tu próxima web a toda tu operación digital.</p></div><a href="${relativePath}servicios/">Ver los 15 servicios ${getSvgIcon('arrowRight')}</a></div>
+            <div class="mega-grid">${data.categories.map(category => `<section class="mega-group" data-service-area="${category.id}" aria-labelledby="mega-area-${category.id}"><h3 id="mega-area-${category.id}">${category.name}</h3>${data.services.filter(service => service.category === category.id).map(service => `<a href="${relativePath}servicios/${service.slug}/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true">${serviceMenuIcons[service.slug]}</span><span>${service.shortName}</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a>`).join('')}</section>`).join('')}<div class="mega-help"><span>¿POR DÓNDE EMPEZAR?</span><h3>Tu idea tiene un siguiente paso.</h3><p>Cuéntanos qué necesita tu negocio y definimos contigo la solución.</p><a href="${relativePath}contacto/">Conversemos ${getSvgIcon('arrowRight')}</a></div></div>
+            <div class="mega-bottom"><span>Desde Perú · Atención remota en Latinoamérica</span><a href="${relativePath}portafolio/">Conoce nuestros proyectos ↗</a></div>
           </div>
         </div>
 
@@ -225,13 +202,12 @@ function renderHeader(activePage = 'inicio', relativePath = '') {
     <nav class="mobile-nav-links">
       <a href="${homeUrl}" class="mobile-nav-link">Inicio</a>
       <a href="${relativePath}nosotros/" class="mobile-nav-link">Nosotros</a>
-      <a href="${relativePath}servicios/" class="mobile-nav-link">Catálogo de Servicios</a>
-      <details class="mobile-services-dropdown">
-        <summary class="mobile-nav-link">Ver servicios individuales <span class="mobile-services-chevron" aria-hidden="true">⌄</span></summary>
-        <div class="mobile-services-list">
-          ${data.services.map(service => `<a href="${relativePath}servicios/${service.slug}/">${service.name}</a>`).join('')}
+      <div class="mobile-services-dropdown">
+        <div class="mobile-services-row"><a href="${relativePath}servicios/" class="mobile-nav-link">Catálogo de Servicios</a><button type="button" class="mobile-services-toggle" aria-label="Desplegar servicios" aria-expanded="false" aria-controls="mobile-services-list">${getSvgIcon('chevronDown')}</button></div>
+        <div class="mobile-services-list" id="mobile-services-list" hidden>
+          ${data.categories.map(category => `<section class="mobile-service-group" data-service-area="${category.id}" aria-labelledby="mobile-area-${category.id}"><h3 id="mobile-area-${category.id}">${category.name}</h3>${data.services.filter(service => service.category === category.id).map(service => `<a href="${relativePath}servicios/${service.slug}/"><span class="mobile-service-icon" aria-hidden="true">${serviceMenuIcons[service.slug]}</span><span class="mobile-service-name">${service.shortName}</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a>`).join('')}</section>`).join('')}
         </div>
-      </details>
+      </div>
       <a href="${relativePath}portafolio/" class="mobile-nav-link">Portafolio</a>
       <a href="${relativePath}soluciones/" class="mobile-nav-link">Soluciones por Sector</a>
       <a href="${relativePath}contacto/" class="mobile-nav-link">Contacto</a>
@@ -264,18 +240,12 @@ function renderFooter(relativePath = '') {
       <!-- Columna 1: Marca, Misión y Medios de Pago -->
       <div class="footer-brand-col">
         <a href="${relativePath || './'}" class="footer-logo-link" aria-label="OdiseaCloud - Inicio">
-          <img src="${relativePath}assets/images/logo.webp" alt="OdiseaCloud" class="footer-logo" width="170" height="44" loading="lazy">
+          <img src="${relativePath}assets/images/logo.webp" alt="" class="footer-logo" width="1180" height="780" loading="lazy"><span class="footer-wordmark" aria-hidden="true">Odisea<span>Cloud</span></span>
         </a>
         <p class="footer-slogan">✦ ${data.company.slogan}</p>
         <p class="footer-desc">
           Agencia tecnológica especializada en desarrollo web de alto rendimiento, comercio electrónico, sistemas cloud y automatización de procesos para empresas en Perú y Latinoamérica.
         </p>
-
-        <!-- Indicador de Estado Operativo en Vivo -->
-        <div class="footer-status-indicator">
-          <span class="status-pulse-dot"></span>
-          <span class="status-text">Sistemas & Cloud: <strong>100% Operativos</strong></span>
-        </div>
 
         <!-- Métodos de Pago y Seguridad -->
         <div class="footer-trust-box">
@@ -364,19 +334,11 @@ function renderFooter(relativePath = '') {
             </div>
           </div>
 
-          <div class="footer-info-item footer-support-hours">
-            <span class="info-icon">${getSvgIcon('users')}</span>
-            <div class="info-text">
-              <strong>Atención comercial</strong>
-              <p>${data.company.schedule}</p>
-            </div>
-          </div>
-
           <div class="footer-info-item">
             <span class="info-icon">${getSvgIcon('mapPin')}</span>
             <div class="info-text">
               <strong>Sede principal:</strong>
-              <p>Lima, Perú 🇵🇪 • Cobertura en toda Latinoamérica</p>
+              <p class="footer-location">Lima, Perú 🇵🇪 • Cobertura en toda Latinoamérica</p>
             </div>
           </div>
         </div>
@@ -449,6 +411,7 @@ data.services.forEach(service => {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${service.seoTitle || `${service.name} en Perú | OdiseaCloud`}</title>
   <meta name="description" content="${service.seoDescription || service.shortDesc}">
+  <meta name="keywords" content="${escapeHtml(service.seoKeywords || '')}">
   <link rel="canonical" href="https://odiseacloud.com/servicios/${service.slug}/">
   <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
   
@@ -784,6 +747,12 @@ ${service.slug === 'dominios' ? '<link rel="stylesheet" href="../../assets/css/d
     const currentContent = fs.readFileSync(currentFilePath, 'utf8');
     if (currentContent.includes('av-page') || currentContent.includes('shop-page') || currentContent.includes('web-motion-page') || currentContent.includes('mail-page')) {
       let preserved = currentContent;
+      // Custom service layouts share the same navigation and footer as every page.
+      const sharedHeader = renderHeader('servicios', '../../');
+      const sharedFooter = renderFooter('../../');
+      preserved = preserved.replace(/<header\b[^>]*class="site-header"[^>]*>[\s\S]*?<\/header>/, () => sharedHeader.match(/<header\b[\s\S]*?<\/header>/)[0]);
+      preserved = preserved.replace(/<aside\b[^>]*class="mobile-menu"[^>]*>[\s\S]*?<\/aside>/, () => sharedHeader.match(/<aside\b[\s\S]*?<\/aside>/)[0]);
+      preserved = preserved.replace(/<footer\b[^>]*class="site-footer"[^>]*>[\s\S]*?<\/footer>/, () => sharedFooter.match(/<footer\b[\s\S]*?<\/footer>/)[0]);
       // Actualizar el acceso compartido sin reemplazar el diseño de estas páginas.
       preserved = preserved.replace(/<a\b[^>]*class="footer-libro-card"[^>]*>[\s\S]*?<\/a>/g, () => renderClaimsCard('../../'));
       const relatedBlock = '<!-- SERVICE-RELATED:START -->' + serviceSections.related(related, getSvgIcon) + '<!-- SERVICE-RELATED:END -->';
@@ -818,8 +787,9 @@ const serviciosCatalogHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios web y cloud para Latinoamérica | OdiseaCloud</title>
-  <meta name="description" content="Explora servicios de desarrollo web, tiendas virtuales, software e infraestructura cloud para Latinoamérica. Atención remota desde Perú y alcance definido contigo.">
+  <title>Servicios web, software y cloud en Perú | OdiseaCloud</title>
+  <meta name="description" content="Servicios de desarrollo web, tiendas virtuales, software a medida e infraestructura cloud para empresas en Perú y Latinoamérica. Cotiza tu proyecto hoy.">
+  <meta name="keywords" content="servicios web, desarrollo web perú, tiendas virtuales, software a medida, hosting cloud, odiseacloud">
   <link rel="canonical" href="https://odiseacloud.com/servicios/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
 
@@ -851,8 +821,9 @@ const nosotrosHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Nosotros | ODISEACLOUD</title>
-  <meta name="description" content="Conoce la filosofía, enfoque, valores y compromiso de ODISEACLOUD. Tecnología, creatividad y soluciones digitales que generan valor empresarial.">
+  <title>Sobre Nosotros | Agencia web y cloud OdiseaCloud Perú</title>
+  <meta name="description" content="Conoce OdiseaCloud: equipo en Lima, Perú especializado en desarrollo web, software a medida e infraestructura cloud para empresas de Latinoamérica.">
+  <meta name="keywords" content="sobre odiseacloud, agencia desarrollo web perú, empresa tecnología lima, soluciones digitales">
   <link rel="canonical" href="https://odiseacloud.com/nosotros/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
@@ -1118,8 +1089,9 @@ const portafolioHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Proyectos | ODISEACLOUD</title>
-  <meta name="description" content="Conoce proyectos de aulas virtuales, tiendas virtuales, sitios web y rediseños desarrollados por OdiseaCloud. Revisa soluciones y tecnologías aplicadas.">
+  <title>Portafolio de proyectos web y sistemas | OdiseaCloud</title>
+  <meta name="description" content="Explora proyectos reales de páginas web, tiendas virtuales, aulas virtuales y sistemas desarrollados por OdiseaCloud para empresas e instituciones.">
+  <meta name="keywords" content="portafolio desarrollo web, proyectos tiendas virtuales, casos de éxito aulas virtuales, odiseacloud">
   <link rel="canonical" href="https://odiseacloud.com/portafolio/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
@@ -1244,8 +1216,9 @@ const solucionesHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soluciones Tecnológicas por Sector | ODISEACLOUD</title>
-  <meta name="description" content="Soluciones tecnológicas a la medida de empresas, emprendedores, tiendas comerciales, centros educativos, institutos y profesionales independientes.">
+  <title>Soluciones digitales por sector | OdiseaCloud Perú</title>
+  <meta name="description" content="Soluciones web y software a medida para pymes, emprendedores, comercios, institutos educativos y profesionales en Perú y Latinoamérica.">
+  <meta name="keywords" content="soluciones digitales empresas, software por sector, páginas web pymes, plataformas educativas perú">
   <link rel="canonical" href="https://odiseacloud.com/soluciones/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
@@ -1339,8 +1312,9 @@ const contactoHtml = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto Comercial | ODISEACLOUD</title>
-  <meta name="description" content="Cotiza tu página web, tienda virtual o software desde cualquier país de Latinoamérica. Contacta a OdiseaCloud: equipo en Perú y atención remota en español.">
+  <title>Contacto y cotización web en Perú | OdiseaCloud</title>
+  <meta name="description" content="Cotiza tu página web, tienda virtual o sistema a medida con OdiseaCloud. Atención remota en español desde Lima, Perú para toda Latinoamérica.">
+  <meta name="keywords" content="contacto odiseacloud, cotizar página web perú, presupuesto tienda virtual, asesoría desarrollo web">
   <link rel="canonical" href="https://odiseacloud.com/contacto/">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
   <link rel="stylesheet" href="../assets/css/main.css">
@@ -1447,7 +1421,7 @@ const contactoHtml = `<!DOCTYPE html>
                 <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Carlos Mendoza / Empresa SAC" required>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="contact-fields-row">
                 <div class="form-group">
                   <label for="email" class="form-label">Correo electrónico *</label>
                   <input type="email" id="email" name="email" class="form-input" placeholder="correo@empresa.com" required>
@@ -1522,6 +1496,7 @@ const homeHtml = `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desarrollo web y software para Latinoamérica | OdiseaCloud</title>
   <meta name="description" content="Diseño web, tiendas virtuales y software a medida para empresas de Latinoamérica. Equipo en Perú, atención remota en español y propuesta según tu proyecto.">
+  <meta name="keywords" content="desarrollo web perú, diseño de páginas web lima, tiendas virtuales, software a medida, hosting cloud, odiseacloud">
   <link rel="canonical" href="https://odiseacloud.com/">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
@@ -1576,7 +1551,7 @@ const homeHtml = `<!DOCTYPE html>
             <h1>Diseño web y software <span>para llevar tu negocio más lejos.</span></h1>
             <p>Desarrollamos páginas web, tiendas virtuales y sistemas a medida para empresas de Latinoamérica. Trabajamos contigo a distancia, en español, desde la primera reunión hasta la entrega.</p>
             <a class="btn btn-primary" href="servicios/desarrollo-web/">Diseña tu página web ${getSvgIcon('arrowRight')}</a>
-            <div class="home-slide-links"><a href="servicios/desarrollo-web/#precios-servicio">Landing page desde S/ 656</a><a href="servicios/desarrollo-web/#precios-servicio">Web corporativa desde S/ 713</a><a href="servicios/tiendas-virtuales/">Tiendas virtuales</a><a href="servicios/sistemas-web/">Sistemas a medida</a></div>
+            <div class="home-slide-links hero-service-options" aria-label="Elige una solución para tu negocio"><a href="servicios/desarrollo-web/#precios-servicio">${getSvgIcon('file-text')}<span><strong>Landing page</strong><small>Diseño para tus campañas<br><b>Desde S/ 656</b></small></span><span class="hero-option-arrow" aria-hidden="true">↗</span></a><a href="servicios/desarrollo-web/#precios-servicio">${getSvgIcon('globe')}<span><strong>Página web corporativa</strong><small>Presenta tu empresa en línea<br><b>Desde S/ 713</b></small></span><span class="hero-option-arrow" aria-hidden="true">↗</span></a><a href="servicios/tiendas-virtuales/">${getSvgIcon('shopping-bag')}<span><strong>Tiendas virtuales</strong><small>Catálogo, pedidos y pagos online</small></span><span class="hero-option-arrow" aria-hidden="true">↗</span></a><a href="servicios/sistemas-web/">${getSvgIcon('cpu')}<span><strong>Software a medida</strong><small>Gestión y procesos de tu empresa</small></span><span class="hero-option-arrow" aria-hidden="true">↗</span></a></div>
           </div>
           <div class="home-slide-mascot home-web-scene">
             <div class="web-scene-orbit" aria-hidden="true"></div>
@@ -1594,7 +1569,7 @@ const homeHtml = `<!DOCTYPE html>
             <h2>Menos tareas repetitivas.<br><span>Más control de tu negocio.</span></h2>
             <p>Creamos sistemas web a medida e integramos CRM y herramientas digitales para organizar información, conectar procesos y acompañar el crecimiento de tu empresa.</p>
             <a class="btn btn-primary" href="servicios/sistemas-web/">Explora los sistemas a medida ${getSvgIcon('arrowRight')}</a>
-            <div class="home-slide-links"><a href="servicios/integraciones-automatizaciones/">Automatización de procesos e integración de CRM</a></div>
+            <div class="home-slide-links hero-service-options hero-service-options-single"><a href="servicios/integraciones-automatizaciones/">${getSvgIcon('git-merge')}<span><strong>Conecta tus herramientas</strong><small>Automatización e integración de CRM</small></span><span class="hero-option-arrow" aria-hidden="true">↗</span></a></div>
           </div>
           <div class="systems-flow" aria-label="Ejemplo de flujo de automatización">
             <span class="systems-flow-label">Así pueden conectarse tus procesos</span>

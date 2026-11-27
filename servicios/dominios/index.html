@@ -16,12 +16,12 @@
   <meta property="og:image" content="https://odiseacloud.com/assets/images/social-preview.jpg">
 
   <!-- Estilos Corporativos -->
-  <link rel="stylesheet" href="../../assets/css/main.css?v=23293fe41e">
+  <link rel="stylesheet" href="../../assets/css/main.css?v=ad3eb15bca">
 
   <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Service","@id":"https://odiseacloud.com/servicios/dominios/#service","name":"Registro y gestión de dominios","serviceType":"Dominios","url":"https://odiseacloud.com/servicios/dominios/","description":"Registro, renovación y administración técnica de dominios .com, .pe, .org y extensiones globales.","areaServed":[{"@type":"Country","name":"Perú"},{"@type":"Place","name":"Latinoamérica"}],"provider":{"@type":"Organization","@id":"https://odiseacloud.com/#organization","name":"OdiseaCloud","url":"https://odiseacloud.com/"},"offers":[{"@type":"Offer","name":"Dominio .pe / .edu.pe","url":"https://odiseacloud.com/servicios/dominios/","priceCurrency":"PEN","price":110,"description":"por año. Registro o renovación de dominios .pe y .edu.pe por un año. .edu.pe está reservado para instituciones educativas. .com, .com.pe y otras extensiones se cotizan aparte a precios accesibles."}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://odiseacloud.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://odiseacloud.com/servicios/"},{"@type":"ListItem","position":3,"name":"Dominios","item":"https://odiseacloud.com/servicios/dominios/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo funciona el buscador de dominios?","acceptedAnswer":{"@type":"Answer","text":"Si escribes solo el nombre de tu marca, consultamos diez opciones de extensión mediante Spaceship. Si escribes un dominio completo, consultamos ese nombre exacto. Un resultado disponible puede cambiar hasta completar el registro; si no podemos comprobarlo o la extensión no está soportada, mostramos Sin verificar."}},{"@type":"Question","name":"¿El dominio queda registrado a mi nombre?","acceptedAnswer":{"@type":"Answer","text":"El registro se prepara con los datos del titular acordado contigo. Confirmamos la información de contacto, la administración y las condiciones de renovación antes de completar el servicio."}},{"@type":"Question","name":"¿Qué necesito para trasladar un dominio .com?","acceptedAnswer":{"@type":"Answer","text":"Revisamos la elegibilidad del dominio, el acceso al correo del titular, su desbloqueo y el código EPP o Auth-Code. Pueden existir bloqueos por registro, traslado o cambios recientes del titular. Las condiciones dependen de la extensión y del proveedor de destino."}},{"@type":"Question","name":"¿Trasladar el dominio también mueve mi página web y mis correos?","acceptedAnswer":{"@type":"Answer","text":"No. El traslado cambia el proveedor que administra el registro del dominio. Migrar archivos, bases de datos o buzones requiere un trabajo separado. Antes del traslado revisamos los DNS y coordinamos los cambios necesarios para tu web y tu correo."}},{"@type":"Question","name":"¿Qué extensiones cuestan S/ 110 al año?","acceptedAnswer":{"@type":"Answer","text":"Ese precio aplica únicamente al registro o renovación anual de un dominio .pe o .edu.pe. El registro .edu.pe está reservado para instituciones educativas. Otras extensiones se cotizan por separado a precios accesibles."}},{"@type":"Question","name":"¿Cuánto cuesta registrar, renovar o trasladar un dominio?","acceptedAnswer":{"@type":"Answer","text":"El registro o renovación por un año de .pe y .edu.pe cuesta S/ 110. .edu.pe está reservado para instituciones educativas. Las demás extensiones se cotizan por separado a precios accesibles; el importe depende de la disponibilidad y de si el nombre es premium. Confirmamos el costo y la renovación antes de registrar."}}]}]}
 </script>
-  <link rel="stylesheet" href="../../assets/css/catalogo.css?v=c144e2ac68">
+  <link rel="stylesheet" href="../../assets/css/catalogo.css?v=c9ff561412">
   <link rel="stylesheet" href="../../assets/css/service-sections.css?v=d1fceb8363">
   <link rel="stylesheet" href="../../assets/css/service-pricing.css?v=ad0c73b42a">
 <link rel="stylesheet" href="../../assets/css/domain-panel.css?v=7150e0567a">
@@ -40,12 +40,15 @@
     gtag('js', new Date());
     gtag('config', 'G-Q2XZR2ZQEZ');
   </script>
+<link rel="stylesheet" href="../../assets/css/service-hierarchy.css?v=61516dd39b">
+<link rel="stylesheet" href="../../assets/css/card-motion.css?v=91999cecde">
 <meta property="og:locale" content="es_PE">
 <meta property="og:site_name" content="OdiseaCloud">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dominios .pe y .edu.pe desde S/ 110/año | OdiseaCloud">
 <meta name="twitter:description" content="Registra o renueva dominios .pe y .edu.pe por S/ 110 al año. .edu.pe es exclusivo para instituciones educativas. Cotiza .com, .com.pe y otras extensiones.">
 <meta name="twitter:image" content="https://odiseacloud.com/assets/images/social-preview.jpg">
+<link rel="stylesheet" href="../../assets/css/interactions.css?v=3c367b5105">
 </head>
 <body class="service-mock-page">
 
@@ -65,42 +68,247 @@
         <a href="../../nosotros/" class="nav-link ">Nosotros</a>
         
         <!-- Dropdown Servicios -->
-        <div class="has-dropdown">
-          <a href="../../servicios/" class="nav-link active">
+        <div class="has-dropdown services-mega">
+          <button type="button" class="nav-link active" aria-expanded="false" aria-controls="desktop-services-menu" data-mega-toggle>
             Servicios
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          </a>
-          <div class="dropdown-menu">
-            <a href="../../servicios/desarrollo-web/" class="dropdown-item">
-              <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-              <span>Desarrollo Web</span>
-            </a>
-            <a href="../../servicios/tiendas-virtuales/" class="dropdown-item">
-              <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
-              <span>Tiendas Virtuales</span>
-            </a>
-            <a href="../../servicios/aulas-virtuales/" class="dropdown-item">
-              <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
-              <span>Aulas Virtuales</span>
-            </a>
-            <a href="../../servicios/sistemas-web/" class="dropdown-item">
-              <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg></span>
-              <span>Sistemas a Medida</span>
-            </a>
-            <a href="../../servicios/hosting-web/" class="dropdown-item">
-              <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span>
-              <span>Hosting y Servidores</span>
-            </a>
-            <a href="../../servicios/correo-corporativo/" class="dropdown-item">
-              <span class="dropdown-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-              <span>Correo Corporativo</span>
-            </a>
-            <div class="dropdown-footer">
-              <a href="../../servicios/" class="dropdown-footer-link">
-                <span>Ver catálogo completo (15)</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
+          </button>
+          <div class="dropdown-menu services-mega-panel" id="desktop-services-menu" inert>
+            <div class="mega-heading"><div><span>EXPLORA NUESTRAS SOLUCIONES</span><p>De tu próxima web a toda tu operación digital.</p></div><a href="../../servicios/">Ver los 15 servicios <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+            <div class="mega-grid"><section class="mega-group" data-service-area="desarrollo-web" aria-labelledby="mega-area-desarrollo-web"><h3 id="mega-area-desarrollo-web">Desarrollo Web</h3><a href="../../servicios/desarrollo-web/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+</span><span>Desarrollo Web</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/tiendas-virtuales/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+  <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+  <circle cx="18" cy="20" r="2" />
+  <circle cx="8" cy="20" r="2" />
+</svg>
+</span><span>Tiendas Virtuales</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/rediseno-web/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m14.622 17.897-10.68-2.913" />
+  <path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z" />
+  <path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15" />
+</svg>
+</span><span>Rediseño Web</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a></section><section class="mega-group" data-service-area="plataformas-sistemas" aria-labelledby="mega-area-plataformas-sistemas"><h3 id="mega-area-plataformas-sistemas">Plataformas y Sistemas</h3><a href="../../servicios/sistemas-web/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" />
+  <rect x="14" y="2" width="8" height="8" rx="1" />
+</svg>
+</span><span>Sistemas a Medida</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/aulas-virtuales/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+  <path d="M22 10v6" />
+  <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+</svg>
+</span><span>Aulas Virtuales</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/integraciones-automatizaciones/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+</span><span>Automatización y CRM</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a></section><section class="mega-group" data-service-area="infraestructura-cloud" aria-labelledby="mega-area-infraestructura-cloud"><h3 id="mega-area-infraestructura-cloud">Infraestructura Cloud</h3><a href="../../servicios/hosting-web/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+</span><span>Hosting Web</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/correo-corporativo/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+</svg>
+</span><span>Correo Corporativo</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/dominios/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+  <path d="M2 12h20" />
+</svg>
+</span><span>Dominios</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/servidores-vps/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m10.852 14.772-.383.923" />
+  <path d="M13.148 14.772a3 3 0 1 0-2.296-5.544l-.383-.923" />
+  <path d="m13.148 9.228.383-.923" />
+  <path d="m13.53 15.696-.382-.924a3 3 0 1 1-2.296-5.544" />
+  <path d="m14.772 10.852.923-.383" />
+  <path d="m14.772 13.148.923.383" />
+  <path d="M4.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5" />
+  <path d="M4.5 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-.5" />
+  <path d="M6 18h.01" />
+  <path d="M6 6h.01" />
+  <path d="m9.228 10.852-.923-.383" />
+  <path d="m9.228 13.148-.923.383" />
+</svg>
+</span><span>Servidores VPS</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a></section><section class="mega-group" data-service-area="seguridad-mantenimiento" aria-labelledby="mega-area-seguridad-mantenimiento"><h3 id="mega-area-seguridad-mantenimiento">Seguridad y Mantenimiento</h3><a href="../../servicios/mantenimiento-web/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+</span><span>Mantenimiento Web</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/seguridad-web/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg>
+</span><span>Seguridad Web</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/migracion-web/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 3 4 4-4 4" />
+  <path d="M20 7H4" />
+  <path d="m8 21-4-4 4-4" />
+  <path d="M4 17h16" />
+</svg>
+</span><span>Migración Web</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a></section><section class="mega-group" data-service-area="optimizacion-digital" aria-labelledby="mega-area-optimizacion-digital"><h3 id="mega-area-optimizacion-digital">Optimización Digital</h3><a href="../../servicios/optimizacion-velocidad/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 14 4-4" />
+  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+</svg>
+</span><span>Optimización Web</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/seo-tecnico/" class="mega-service"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 16v5" />
+  <path d="M16 14.639V21" />
+  <path d="M20 10.656V21" />
+  <path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15" />
+  <path d="M4 18.463V21" />
+  <path d="M8 14.656V21" />
+</svg>
+</span><span>SEO Técnico</span><span class="mega-service-arrow" aria-hidden="true">↗</span></a></section><div class="mega-help"><span>¿POR DÓNDE EMPEZAR?</span><h3>Tu idea tiene un siguiente paso.</h3><p>Cuéntanos qué necesita tu negocio y definimos contigo la solución.</p><a href="../../contacto/">Conversemos <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div>
+            <div class="mega-bottom"><span>Desde Perú · Atención remota en Latinoamérica</span><a href="../../portafolio/">Conoce nuestros proyectos ↗</a></div>
           </div>
         </div>
 
@@ -137,13 +345,244 @@
     <nav class="mobile-nav-links">
       <a href="../../" class="mobile-nav-link">Inicio</a>
       <a href="../../nosotros/" class="mobile-nav-link">Nosotros</a>
-      <a href="../../servicios/" class="mobile-nav-link">Catálogo de Servicios</a>
-      <details class="mobile-services-dropdown">
-        <summary class="mobile-nav-link">Ver servicios individuales <span class="mobile-services-chevron" aria-hidden="true">⌄</span></summary>
-        <div class="mobile-services-list">
-          <a href="../../servicios/desarrollo-web/">Diseño y creación de páginas web en Perú</a><a href="../../servicios/tiendas-virtuales/">Tiendas virtuales y eCommerce</a><a href="../../servicios/rediseno-web/">Reestructuración y rediseño web</a><a href="../../servicios/sistemas-web/">Sistemas web personalizados</a><a href="../../servicios/aulas-virtuales/">Aulas virtuales y eLearning</a><a href="../../servicios/integraciones-automatizaciones/">Automatización de procesos e integración de CRM</a><a href="../../servicios/hosting-web/">Hosting web de alto rendimiento</a><a href="../../servicios/correo-corporativo/">Correo corporativo profesional</a><a href="../../servicios/dominios/">Registro y gestión de dominios</a><a href="../../servicios/servidores-vps/">Servidores VPS y Cloud</a><a href="../../servicios/mantenimiento-web/">Mantenimiento web continuo</a><a href="../../servicios/seguridad-web/">Seguridad web y desinfección</a><a href="../../servicios/migracion-web/">Migración de páginas web</a><a href="../../servicios/optimizacion-velocidad/">Optimización de velocidad y Core Web Vitals</a><a href="../../servicios/seo-tecnico/">SEO técnico y posicionamiento web</a>
+      <div class="mobile-services-dropdown">
+        <div class="mobile-services-row"><a href="../../servicios/" class="mobile-nav-link">Catálogo de Servicios</a><button type="button" class="mobile-services-toggle" aria-label="Desplegar servicios" aria-expanded="false" aria-controls="mobile-services-list"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button></div>
+        <div class="mobile-services-list" id="mobile-services-list" hidden>
+          <section class="mobile-service-group" data-service-area="desarrollo-web" aria-labelledby="mobile-area-desarrollo-web"><h3 id="mobile-area-desarrollo-web">Desarrollo Web</h3><a href="../../servicios/desarrollo-web/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+  <path d="M10 4v4" />
+  <path d="M2 8h20" />
+  <path d="M6 4v4" />
+</svg>
+</span><span class="mobile-service-name">Desarrollo Web</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/tiendas-virtuales/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+  <path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+  <circle cx="18" cy="20" r="2" />
+  <circle cx="8" cy="20" r="2" />
+</svg>
+</span><span class="mobile-service-name">Tiendas Virtuales</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/rediseno-web/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m14.622 17.897-10.68-2.913" />
+  <path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z" />
+  <path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15" />
+</svg>
+</span><span class="mobile-service-name">Rediseño Web</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a></section><section class="mobile-service-group" data-service-area="plataformas-sistemas" aria-labelledby="mobile-area-plataformas-sistemas"><h3 id="mobile-area-plataformas-sistemas">Plataformas y Sistemas</h3><a href="../../servicios/sistemas-web/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" />
+  <rect x="14" y="2" width="8" height="8" rx="1" />
+</svg>
+</span><span class="mobile-service-name">Sistemas a Medida</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/aulas-virtuales/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+  <path d="M22 10v6" />
+  <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+</svg>
+</span><span class="mobile-service-name">Aulas Virtuales</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/integraciones-automatizaciones/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+</span><span class="mobile-service-name">Automatización y CRM</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a></section><section class="mobile-service-group" data-service-area="infraestructura-cloud" aria-labelledby="mobile-area-infraestructura-cloud"><h3 id="mobile-area-infraestructura-cloud">Infraestructura Cloud</h3><a href="../../servicios/hosting-web/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+</span><span class="mobile-service-name">Hosting Web</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/correo-corporativo/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+  <rect x="2" y="4" width="20" height="16" rx="2" />
+</svg>
+</span><span class="mobile-service-name">Correo Corporativo</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/dominios/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+  <path d="M2 12h20" />
+</svg>
+</span><span class="mobile-service-name">Dominios</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/servidores-vps/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m10.852 14.772-.383.923" />
+  <path d="M13.148 14.772a3 3 0 1 0-2.296-5.544l-.383-.923" />
+  <path d="m13.148 9.228.383-.923" />
+  <path d="m13.53 15.696-.382-.924a3 3 0 1 1-2.296-5.544" />
+  <path d="m14.772 10.852.923-.383" />
+  <path d="m14.772 13.148.923.383" />
+  <path d="M4.5 10H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-.5" />
+  <path d="M4.5 14H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-.5" />
+  <path d="M6 18h.01" />
+  <path d="M6 6h.01" />
+  <path d="m9.228 10.852-.923-.383" />
+  <path d="m9.228 13.148-.923.383" />
+</svg>
+</span><span class="mobile-service-name">Servidores VPS</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a></section><section class="mobile-service-group" data-service-area="seguridad-mantenimiento" aria-labelledby="mobile-area-seguridad-mantenimiento"><h3 id="mobile-area-seguridad-mantenimiento">Seguridad y Mantenimiento</h3><a href="../../servicios/mantenimiento-web/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+</svg>
+</span><span class="mobile-service-name">Mantenimiento Web</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/seguridad-web/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg>
+</span><span class="mobile-service-name">Seguridad Web</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/migracion-web/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 3 4 4-4 4" />
+  <path d="M20 7H4" />
+  <path d="m8 21-4-4 4-4" />
+  <path d="M4 17h16" />
+</svg>
+</span><span class="mobile-service-name">Migración Web</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a></section><section class="mobile-service-group" data-service-area="optimizacion-digital" aria-labelledby="mobile-area-optimizacion-digital"><h3 id="mobile-area-optimizacion-digital">Optimización Digital</h3><a href="../../servicios/optimizacion-velocidad/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 14 4-4" />
+  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+</svg>
+</span><span class="mobile-service-name">Optimización Web</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a><a href="../../servicios/seo-tecnico/"><span class="mobile-service-icon" aria-hidden="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 16v5" />
+  <path d="M16 14.639V21" />
+  <path d="M20 10.656V21" />
+  <path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15" />
+  <path d="M4 18.463V21" />
+  <path d="M8 14.656V21" />
+</svg>
+</span><span class="mobile-service-name">SEO Técnico</span><span class="mobile-service-arrow" aria-hidden="true">↗</span></a></section>
         </div>
-      </details>
+      </div>
       <a href="../../portafolio/" class="mobile-nav-link">Portafolio</a>
       <a href="../../soluciones/" class="mobile-nav-link">Soluciones por Sector</a>
       <a href="../../contacto/" class="mobile-nav-link">Contacto</a>
@@ -162,7 +601,7 @@
 
   <main>
     <!-- HERO DEL SERVICIO -->
-    <section class="section section-soft-blue service-intro domain-search-hero">
+    <section class="section section-soft-blue service-intro domain-search-hero" data-service-order="0">
       <div class="container service-intro-grid ">
         <div class="service-intro-copy">
         <span class="section-badge">Infraestructura Cloud &bull; Servicio 09</span>
@@ -196,23 +635,11 @@
     <div class="domain-panel-footer"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Tu consulta no realiza ninguna compra.</span><a href="#traslado-dominio">¿Ya tienes un dominio? →</a></div>
   </div>
       </div>
-    </section>
-
-    <section class="section service-pricing-section" id="precios-servicio" aria-labelledby="service-pricing-title"><div class="container service-pricing-layout">
-    <div class="service-pricing-copy"><span class="section-badge">Precio de lanzamiento</span><h2 id="service-pricing-title">Una inversión clara para empezar</h2>
-      <p>Te mostramos un punto de partida y qué incluye. Antes de comenzar confirmamos contigo el alcance, los plazos y cualquier costo de terceros.</p><p>Precios en soles peruanos (PEN). Si nos escribes desde otro país de Latinoamérica, confirmamos la moneda y la forma de pago en tu propuesta.</p>
-      <div class="service-pricing-assurance"><span aria-hidden="true">✓</span><span>La propuesta final deja claros los entregables y costos antes de contratar.</span></div>
-    </div><div class="service-pricing-cards"><article class="service-price-card">
-      <div class="service-price-label">Alcance referencial</div>
-      <h3>Dominio .pe / .edu.pe</h3><p class="service-price-scope">Registro o renovación de dominios .pe y .edu.pe por un año.</p>
-      <div class="service-price-amount"><span>S/</span> 110 <small>por año</small></div><p class="service-price-regular">Precio regular: <s>S/ 110</s></p>
-      <p class="service-price-note">.edu.pe está reservado para instituciones educativas. .com, .com.pe y otras extensiones se cotizan aparte a precios accesibles.</p><a class="service-price-cta" href="#" data-whatsapp="Hola, OdiseaCloud. Quiero consultar por Dominio .pe / .edu.pe (precio de lanzamiento S/ 110). ¿Me pueden ayudar a revisar el alcance?" data-cta="Cotizar Dominio .pe / .edu.pe">Cotizar por WhatsApp <span aria-hidden="true">→</span></a>
-    </article></div>
-  </div></section>
+    </section><!-- SERVICE-NAV:START --><nav class="service-chapter-nav" aria-label="Secciones de este servicio"><div class="container"><span class="service-chapter-label">Explora este servicio</span><ol><li><a href="#servicio-seccion-20"><span aria-hidden="true">01</span>Resumen</a></li><li><a href="#servicio-seccion-30"><span aria-hidden="true">02</span>Qué incluye</a></li><li><a href="#servicio-seccion-70"><span aria-hidden="true">03</span>Cómo trabajamos</a></li><li><a href="#precios-servicio"><span aria-hidden="true">04</span>Precios</a></li><li><a href="#servicio-seccion-90"><span aria-hidden="true">05</span>Preguntas</a></li></ol></div></nav><!-- SERVICE-NAV:END -->
 
     <script src="../../assets/js/domain-search.js?v=46fbbe50b4" defer></script>
     
-    <section class="section service-overview"><div class="container">
+    <section class="section service-overview" data-service-order="20" id="servicio-seccion-20"><div class="container">
   <div class="service-overview-heading"><div><span class="section-badge">Pensado para tu proyecto</span><h2>Registro, renovación y traslado de dominios en Perú</h2></div><p>Te ayudamos a elegir y registrar un dominio para tu empresa y a administrar su renovación y DNS. Si ya tienes un dominio, revisamos si puede trasladarse al proveedor de destino y coordinamos el proceso contigo. El dominio, el hosting y el correo son servicios diferentes: antes de cambiar servidores de nombres, revisamos los registros que utiliza tu web y tu correo para planificar la continuidad del servicio.</p></div>
   <div class="service-overview-layout"><div class="service-overview-details">
     <div class="service-overview-meta"><article><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5v2"/></svg></span><h3>¿Para quién es?</h3><p>Negocios que van a lanzar su marca o desean asegurar y proteger extensiones estratégicas (.com, .pe, .com.pe) para su presencia en internet.</p></article><article><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg></span><h3>¿Qué te llevas?</h3><p>Registro oficial a nombre de tu empresa, panel de administración de DNS y configuración de registros de correo y hosting.</p></article></div>
@@ -221,7 +648,7 @@
 </div></section>
 
     <!-- CARACTERÍSTICAS Y ALCANCE -->
-    <section class="section service-features-section" aria-labelledby="features-heading">
+    <section class="section service-features-section" aria-labelledby="features-heading" data-service-order="30" id="servicio-seccion-30">
       <div class="container">
         <div class="features-heading">
           <div><span class="section-badge">Alcance y funcionalidades</span>
@@ -258,37 +685,13 @@
         <div class="features-closing"><p>Revisamos contigo las funciones y prioridades para definir el alcance de tu propuesta.</p><a href="#" data-whatsapp="Hola, OdiseaCloud. Quisiera consultar sobre el registro y configuración de dominios.">Conversemos sobre tu proyecto <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
       </div>
     </section>
-
-    
-    <!-- TECNOLOGÍAS COMPATIBLES -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Stack Tecnológico</span>
-          <h2 class="section-title">Tecnologías e integraciones aplicables</h2>
-          <p class="section-subtitle">Herramientas robustas y estándares de la industria que garantizan compatibilidad y escalabilidad.</p>
-        </div>
-
-        <div class="tech-cloud">
-          <div class="tech-badge"><svg class="tech-logo tech-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="3"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></svg><span>DNS Management</span></div><div class="tech-badge"><img class="tech-logo" src="../../assets/images/tech/cloudflare.svg" alt="Logo de Cloudflare, DNS y protección DDoS para dominios web" width="28" height="28" loading="lazy" decoding="async"><span>Cloudflare DNS</span></div><div class="tech-badge"><svg class="tech-logo tech-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span>ICANN</span></div><div class="tech-badge"><svg class="tech-logo tech-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span>Punto PE</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section service-guide-section"><div class="container service-guide ">
-      <div class="service-guide-visual"><img src="../../assets/images/mascotas/dominios.webp" alt="Robot de OdiseaCloud presentando un globo y una dirección web" width="960" height="1200" loading="lazy"></div>
-      <div><span class="section-badge">Tecnología con acompañamiento</span><h2>Tu proyecto, con un equipo que te acompaña</h2>
-        <p>Te ayudamos a definir el alcance de dominios, resolver dudas y elegir una solución acorde con tu negocio.</p>
-        <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
-        <a href="#" class="btn btn-primary" data-whatsapp="Hola, OdiseaCloud. Quisiera consultar sobre el registro y configuración de dominios." data-cta="Registra o traslada tu dominio">Registra o traslada tu dominio</a>
-      </div></div></section>
     
 
     
 
     
     <!-- GUÍA DE TRANSFERENCIA DE DOMINIO -->
-    <section class="section section-soft-blue" id="traslado-dominio">
+    <section class="section section-soft-blue" id="traslado-dominio" data-service-order="35">
       <div class="container">
         <div class="section-header" style="text-align: center; max-width: 750px; margin: 0 auto 40px auto;">
           <span class="section-badge">Traslado Fácil</span>
@@ -318,10 +721,34 @@
         </div>
       </div>
     </section>
+
+    
+    <!-- TECNOLOGÍAS COMPATIBLES -->
+    <section class="section" data-service-order="50">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Stack Tecnológico</span>
+          <h2 class="section-title">Tecnologías e integraciones aplicables</h2>
+          <p class="section-subtitle">Herramientas robustas y estándares de la industria que garantizan compatibilidad y escalabilidad.</p>
+        </div>
+
+        <div class="tech-cloud">
+          <div class="tech-badge"><svg class="tech-logo tech-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="3"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></svg><span>DNS Management</span></div><div class="tech-badge"><img class="tech-logo" src="../../assets/images/tech/cloudflare.svg" alt="Logo de Cloudflare, DNS y protección DDoS para dominios web" width="28" height="28" loading="lazy" decoding="async"><span>Cloudflare DNS</span></div><div class="tech-badge"><svg class="tech-logo tech-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span>ICANN</span></div><div class="tech-badge"><svg class="tech-logo tech-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span>Punto PE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section service-guide-section" data-service-order="60"><div class="container service-guide ">
+      <div class="service-guide-visual"><img src="../../assets/images/mascotas/dominios.webp" alt="Robot de OdiseaCloud presentando un globo y una dirección web" width="960" height="1200" loading="lazy"></div>
+      <div><span class="section-badge">Tecnología con acompañamiento</span><h2>Tu proyecto, con un equipo que te acompaña</h2>
+        <p>Te ayudamos a definir el alcance de dominios, resolver dudas y elegir una solución acorde con tu negocio.</p>
+        <ul class="service-guide-points"><li>Evaluamos tus necesidades antes de proponer.</li><li>Definimos entregables y prioridades contigo.</li><li>Probamos la solución y te orientamos en su uso.</li></ul>
+        <a href="#" class="btn btn-primary" data-whatsapp="Hola, OdiseaCloud. Quisiera consultar sobre el registro y configuración de dominios." data-cta="Registra o traslada tu dominio">Registra o traslada tu dominio</a>
+      </div></div></section>
     
 
     <!-- PROCESO DE TRABAJO -->
-    <section class="section section-dark">
+    <section class="section section-dark" data-service-order="70" id="servicio-seccion-70">
       <div class="container">
         <div class="section-header">
           <span class="section-badge section-badge-dark">Metodología</span>
@@ -359,12 +786,22 @@
       </div>
     </section>
 
-    <section class="section service-faq"><div class="container"><div class="service-faq-heading"><span class="section-badge">Antes de empezar</span><h2>Resolvemos tus dudas sobre dominios</h2><p>Lo que necesitas saber para dar el siguiente paso con claridad.</p><a href="#" data-whatsapp="Hola, OdiseaCloud. Quisiera consultar sobre el registro y configuración de dominios.">¿Tienes otra consulta? Conversemos <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div><div class="faq-list"><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-0" aria-controls="service-faq-a-0"><span>¿Cómo funciona el buscador de dominios?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-0" aria-labelledby="service-faq-q-0"><p>Si escribes solo el nombre de tu marca, consultamos diez opciones de extensión mediante Spaceship. Si escribes un dominio completo, consultamos ese nombre exacto. Un resultado disponible puede cambiar hasta completar el registro; si no podemos comprobarlo o la extensión no está soportada, mostramos Sin verificar.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-1" aria-controls="service-faq-a-1"><span>¿El dominio queda registrado a mi nombre?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-1" aria-labelledby="service-faq-q-1"><p>El registro se prepara con los datos del titular acordado contigo. Confirmamos la información de contacto, la administración y las condiciones de renovación antes de completar el servicio.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-2" aria-controls="service-faq-a-2"><span>¿Qué necesito para trasladar un dominio .com?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-2" aria-labelledby="service-faq-q-2"><p>Revisamos la elegibilidad del dominio, el acceso al correo del titular, su desbloqueo y el código EPP o Auth-Code. Pueden existir bloqueos por registro, traslado o cambios recientes del titular. Las condiciones dependen de la extensión y del proveedor de destino.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-3" aria-controls="service-faq-a-3"><span>¿Trasladar el dominio también mueve mi página web y mis correos?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-3" aria-labelledby="service-faq-q-3"><p>No. El traslado cambia el proveedor que administra el registro del dominio. Migrar archivos, bases de datos o buzones requiere un trabajo separado. Antes del traslado revisamos los DNS y coordinamos los cambios necesarios para tu web y tu correo.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-4" aria-controls="service-faq-a-4"><span>¿Qué extensiones cuestan S/ 110 al año?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-4" aria-labelledby="service-faq-q-4"><p>Ese precio aplica únicamente al registro o renovación anual de un dominio .pe o .edu.pe. El registro .edu.pe está reservado para instituciones educativas. Otras extensiones se cotizan por separado a precios accesibles.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-5" aria-controls="service-faq-a-5"><span>¿Cuánto cuesta registrar, renovar o trasladar un dominio?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-5" aria-labelledby="service-faq-q-5"><p>El registro o renovación por un año de .pe y .edu.pe cuesta S/ 110. .edu.pe está reservado para instituciones educativas. Las demás extensiones se cotizan por separado a precios accesibles; el importe depende de la disponibilidad y de si el nombre es premium. Confirmamos el costo y la renovación antes de registrar.</p></div></div></div></div></section>
+    <section class="section service-pricing-section" id="precios-servicio" aria-labelledby="service-pricing-title" data-service-order="80"><div class="container service-pricing-layout">
+    <div class="service-pricing-copy"><span class="section-badge">Precio de lanzamiento</span><h2 id="service-pricing-title">Una inversión clara para empezar</h2>
+      <p>Te mostramos un punto de partida y qué incluye. Antes de comenzar confirmamos contigo el alcance, los plazos y cualquier costo de terceros.</p><p>Precios en soles peruanos (PEN). Si nos escribes desde otro país de Latinoamérica, confirmamos la moneda y la forma de pago en tu propuesta.</p>
+      <div class="service-pricing-assurance"><span aria-hidden="true">✓</span><span>La propuesta final deja claros los entregables y costos antes de contratar.</span></div>
+    </div><div class="service-pricing-cards"><article class="service-price-card">
+      <div class="service-price-label">Alcance referencial</div>
+      <h3>Dominio .pe / .edu.pe</h3><p class="service-price-scope">Registro o renovación de dominios .pe y .edu.pe por un año.</p>
+      <div class="service-price-amount"><span>S/</span> 110 <small>por año</small></div><p class="service-price-regular">Precio regular: <s>S/ 110</s></p>
+      <p class="service-price-note">.edu.pe está reservado para instituciones educativas. .com, .com.pe y otras extensiones se cotizan aparte a precios accesibles.</p><a class="service-price-cta" href="#" data-whatsapp="Hola, OdiseaCloud. Quiero consultar por Dominio .pe / .edu.pe (precio de lanzamiento S/ 110). ¿Me pueden ayudar a revisar el alcance?" data-cta="Cotizar Dominio .pe / .edu.pe">Cotizar por WhatsApp <span aria-hidden="true">→</span></a>
+    </article></div>
+  </div></section>
 
-    <section class="section service-related"><div class="container"><div class="section-header"><span class="section-badge">Conecta tus soluciones</span><h2 class="section-title">El siguiente paso para tu proyecto</h2><p class="section-subtitle">Servicios que pueden complementar lo que estás construyendo.</p></div><div class="service-related-grid"><article class="service-related-card"><a href="../hosting-web/" class="service-related-preview preview-hosting" aria-label="Conocer Hosting web"><div aria-hidden="true"><div class="cat-window"><div class="cat-window-bar"><i></i><i></i><i></i><span>odisea / hosting</span></div><div class="cat-hosting"><header><b>Mis sitios web</b><span>+ Añadir sitio</span></header><div class="cat-host-site"><i>W</i><div><b>tuempresa.pe</b><small>WordPress · Hosting administrado</small></div><em>Activo</em></div><div class="cat-host-tools"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm0 0v6h6M8 13h8m-8 4h6"/></svg><b>Archivos</b></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg><b>Bases de datos</b></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><b>Certificado SSL</b></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg><b>Respaldos</b></div></div><footer><span>Almacenamiento</span><b>8.2 / 30 GB</b><i></i></footer></div></div></div></a><div class="service-related-copy"><small>Infraestructura Cloud</small><h3><a href="../hosting-web/">Hosting web</a></h3><p>Alojamiento confiable con cPanel, discos SSD NVMe, certificados SSL gratuitos y soporte técnico.</p><a class="service-related-link" href="../hosting-web/">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class="service-related-card"><a href="../correo-corporativo/" class="service-related-preview preview-mail" aria-label="Conocer Correo corporativo"><div aria-hidden="true"><div class="cat-window"><div class="cat-window-bar"><i></i><i></i><i></i><span>odisea / mail</span></div><div class="cat-mail"><aside><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><b>Redactar +</b><span>Recibidos</span><span>Destacados</span><span>Enviados</span></aside><div><b>Tu equipo, conectado.</b><p><i></i><span>Propuesta de proyecto<small>contacto@tuempresa.pe</small></span></p><p><i></i><span>Bienvenido al equipo<small>contacto@tuempresa.pe</small></span></p><p><i></i><span>Reunión de coordinación<small>contacto@tuempresa.pe</small></span></p></div></div></div></div></a><div class="service-related-copy"><small>Infraestructura Cloud</small><h3><a href="../correo-corporativo/">Correo corporativo</a></h3><p>Buzones con dominio propio (@tuempresa.com), configuración SPF/DKIM y entrega segura en bandeja de entrada.</p><a class="service-related-link" href="../correo-corporativo/">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class="service-related-card"><a href="../migracion-web/" class="service-related-preview preview-migration" aria-label="Conocer Migración de páginas web"><div aria-hidden="true"><div class="cat-window"><div class="cat-window-bar"><i></i><i></i><i></i><span>odisea / migration</span></div><div class="cat-migration"><header><b>Tu web, en su nuevo hogar.</b><small>MIGRACIÓN ASISTIDA</small></header><div class="cat-transfer"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg><b>Servidor actual</b><small>Origen</small></div><span><i>→</i><i>→</i><i>→</i></span><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><b>Nuevo servidor</b><small>Destino</small></div></div><footer><span>Archivos <b>✓</b></span><span>Base de datos <b>✓</b></span><span>DNS <b>✓</b></span></footer></div></div></div></a><div class="service-related-copy"><small>Seguridad y Mantenimiento</small><h3><a href="../migracion-web/">Migración de páginas web</a></h3><p>Traslado seguro de sitios web, tiendas y bases de datos a un nuevo hosting sin pérdida de datos ni caídas.</p><a class="service-related-link" href="../migracion-web/">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article></div></div></section>
+    <section class="section service-faq" data-service-order="90" id="servicio-seccion-90"><div class="container"><div class="service-faq-heading"><span class="section-badge">Antes de empezar</span><h2>Resolvemos tus dudas sobre dominios</h2><p>Lo que necesitas saber para dar el siguiente paso con claridad.</p><a href="#" data-whatsapp="Hola, OdiseaCloud. Quisiera consultar sobre el registro y configuración de dominios.">¿Tienes otra consulta? Conversemos <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div><div class="faq-list"><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-0" aria-controls="service-faq-a-0"><span>¿Cómo funciona el buscador de dominios?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-0" aria-labelledby="service-faq-q-0"><p>Si escribes solo el nombre de tu marca, consultamos diez opciones de extensión mediante Spaceship. Si escribes un dominio completo, consultamos ese nombre exacto. Un resultado disponible puede cambiar hasta completar el registro; si no podemos comprobarlo o la extensión no está soportada, mostramos Sin verificar.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-1" aria-controls="service-faq-a-1"><span>¿El dominio queda registrado a mi nombre?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-1" aria-labelledby="service-faq-q-1"><p>El registro se prepara con los datos del titular acordado contigo. Confirmamos la información de contacto, la administración y las condiciones de renovación antes de completar el servicio.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-2" aria-controls="service-faq-a-2"><span>¿Qué necesito para trasladar un dominio .com?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-2" aria-labelledby="service-faq-q-2"><p>Revisamos la elegibilidad del dominio, el acceso al correo del titular, su desbloqueo y el código EPP o Auth-Code. Pueden existir bloqueos por registro, traslado o cambios recientes del titular. Las condiciones dependen de la extensión y del proveedor de destino.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-3" aria-controls="service-faq-a-3"><span>¿Trasladar el dominio también mueve mi página web y mis correos?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-3" aria-labelledby="service-faq-q-3"><p>No. El traslado cambia el proveedor que administra el registro del dominio. Migrar archivos, bases de datos o buzones requiere un trabajo separado. Antes del traslado revisamos los DNS y coordinamos los cambios necesarios para tu web y tu correo.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-4" aria-controls="service-faq-a-4"><span>¿Qué extensiones cuestan S/ 110 al año?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-4" aria-labelledby="service-faq-q-4"><p>Ese precio aplica únicamente al registro o renovación anual de un dominio .pe o .edu.pe. El registro .edu.pe está reservado para instituciones educativas. Otras extensiones se cotizan por separado a precios accesibles.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" id="service-faq-q-5" aria-controls="service-faq-a-5"><span>¿Cuánto cuesta registrar, renovar o trasladar un dominio?</span><span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></button><div class="faq-answer" id="service-faq-a-5" aria-labelledby="service-faq-q-5"><p>El registro o renovación por un año de .pe y .edu.pe cuesta S/ 110. .edu.pe está reservado para instituciones educativas. Las demás extensiones se cotizan por separado a precios accesibles; el importe depende de la disponibilidad y de si el nombre es premium. Confirmamos el costo y la renovación antes de registrar.</p></div></div></div></div></section>
 
     <!-- BANNER DE CONTACTO FINAL -->
-    <section class="section">
+    <section class="section" data-service-order="100">
       <div class="container">
         <div class="cta-banner">
           <div class="cta-content">
@@ -386,6 +823,8 @@
         </div>
       </div>
     </section>
+
+    <!-- SERVICE-RELATED:START --><section class="section service-related" data-service-order="110"><div class="container"><div class="section-header"><span class="section-badge">Conecta tus soluciones</span><h2 class="section-title">El siguiente paso para tu proyecto</h2><p class="section-subtitle">Servicios que pueden complementar lo que estás construyendo.</p></div><div class="service-related-grid"><article class="service-related-card"><a href="../hosting-web/" class="service-related-preview preview-hosting" aria-label="Conocer Hosting web"><div aria-hidden="true"><div class="cat-window"><div class="cat-window-bar"><i></i><i></i><i></i><span>odisea / hosting</span></div><div class="cat-hosting"><header><b>Mis sitios web</b><span>+ Añadir sitio</span></header><div class="cat-host-site"><i>W</i><div><b>tuempresa.pe</b><small>WordPress · Hosting administrado</small></div><em>Activo</em></div><div class="cat-host-tools"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm0 0v6h6M8 13h8m-8 4h6"/></svg><b>Archivos</b></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg><b>Bases de datos</b></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><b>Certificado SSL</b></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg><b>Respaldos</b></div></div><footer><span>Almacenamiento</span><b>8.2 / 30 GB</b><i></i></footer></div></div></div></a><div class="service-related-copy"><small>Infraestructura Cloud</small><h3><a href="../hosting-web/">Hosting web</a></h3><p>Alojamiento confiable con cPanel, discos SSD NVMe, certificados SSL gratuitos y soporte técnico.</p><a class="service-related-link" href="../hosting-web/">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class="service-related-card"><a href="../correo-corporativo/" class="service-related-preview preview-mail" aria-label="Conocer Correo corporativo"><div aria-hidden="true"><div class="cat-window"><div class="cat-window-bar"><i></i><i></i><i></i><span>odisea / mail</span></div><div class="cat-mail"><aside><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><b>Redactar +</b><span>Recibidos</span><span>Destacados</span><span>Enviados</span></aside><div><b>Tu equipo, conectado.</b><p><i></i><span>Propuesta de proyecto<small>contacto@tuempresa.pe</small></span></p><p><i></i><span>Bienvenido al equipo<small>contacto@tuempresa.pe</small></span></p><p><i></i><span>Reunión de coordinación<small>contacto@tuempresa.pe</small></span></p></div></div></div></div></a><div class="service-related-copy"><small>Infraestructura Cloud</small><h3><a href="../correo-corporativo/">Correo corporativo</a></h3><p>Buzones con dominio propio (@tuempresa.com), configuración SPF/DKIM y entrega segura en bandeja de entrada.</p><a class="service-related-link" href="../correo-corporativo/">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article><article class="service-related-card"><a href="../migracion-web/" class="service-related-preview preview-migration" aria-label="Conocer Migración de páginas web"><div aria-hidden="true"><div class="cat-window"><div class="cat-window-bar"><i></i><i></i><i></i><span>odisea / migration</span></div><div class="cat-migration"><header><b>Tu web, en su nuevo hogar.</b><small>MIGRACIÓN ASISTIDA</small></header><div class="cat-transfer"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg><b>Servidor actual</b><small>Origen</small></div><span><i>→</i><i>→</i><i>→</i></span><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><b>Nuevo servidor</b><small>Destino</small></div></div><footer><span>Archivos <b>✓</b></span><span>Base de datos <b>✓</b></span><span>DNS <b>✓</b></span></footer></div></div></div></a><div class="service-related-copy"><small>Seguridad y Mantenimiento</small><h3><a href="../migracion-web/">Migración de páginas web</a></h3><p>Traslado seguro de sitios web, tiendas y bases de datos a un nuevo hosting sin pérdida de datos ni caídas.</p><a class="service-related-link" href="../migracion-web/">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></article></div></div></section><!-- SERVICE-RELATED:END -->
   </main>
 
   
@@ -395,18 +834,12 @@
       <!-- Columna 1: Marca, Misión y Medios de Pago -->
       <div class="footer-brand-col">
         <a href="../../" class="footer-logo-link" aria-label="OdiseaCloud - Inicio">
-          <img src="../../assets/images/logo.webp" alt="OdiseaCloud" class="footer-logo" width="170" height="44" loading="lazy">
+          <img src="../../assets/images/logo.webp" alt="" class="footer-logo" width="1180" height="780" loading="lazy"><span class="footer-wordmark" aria-hidden="true">Odisea<span>Cloud</span></span>
         </a>
         <p class="footer-slogan">✦ Tu proyecto, sin límites</p>
         <p class="footer-desc">
           Agencia tecnológica especializada en desarrollo web de alto rendimiento, comercio electrónico, sistemas cloud y automatización de procesos para empresas en Perú y Latinoamérica.
         </p>
-
-        <!-- Indicador de Estado Operativo en Vivo -->
-        <div class="footer-status-indicator">
-          <span class="status-pulse-dot"></span>
-          <span class="status-text">Sistemas & Cloud: <strong>100% Operativos</strong></span>
-        </div>
 
         <!-- Métodos de Pago y Seguridad -->
         <div class="footer-trust-box">
@@ -497,19 +930,11 @@
             </div>
           </div>
 
-          <div class="footer-info-item footer-support-hours">
-            <span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5v2"/></svg></span>
-            <div class="info-text">
-              <strong>Atención comercial</strong>
-              <p>Lunes a Viernes: 9:00 am - 7:00 pm | Sábados: 9:00 am - 1:00 pm</p>
-            </div>
-          </div>
-
           <div class="footer-info-item">
             <span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
             <div class="info-text">
               <strong>Sede principal:</strong>
-              <p>Lima, Perú 🇵🇪 • Cobertura en toda Latinoamérica</p>
+              <p class="footer-location">Lima, Perú 🇵🇪 • Cobertura en toda Latinoamérica</p>
             </div>
           </div>
         </div>
@@ -556,9 +981,9 @@
 
   <!-- Scripts Globales -->
   <script src="../../assets/js/config.js"></script>
-  <script src="../../assets/js/main.js?v=ca008c62d2"></script>
+  <script src="../../assets/js/main.js?v=1cef15d268"></script>
   <script src="../../assets/js/floating-contact.js?v=eb6e58ed72" defer></script>
-  <script src="../../assets/js/page-motion.js?v=d6f147c1e2" defer></script>
+  <script src="../../assets/js/page-motion.js?v=bb8a59204c" defer></script>
   
 
 </body>

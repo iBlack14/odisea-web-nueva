@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/lucide-icons/lucide",
+  "commit": "9cb3934c3628dfe3fbb34bc4c12209b2cee3a49f",
+  "icons": {
+    "desarrollo-web": "app-window",
+    "tiendas-virtuales": "shopping-cart",
+    "rediseno-web": "paintbrush",
+    "sistemas-web": "blocks",
+    "aulas-virtuales": "graduation-cap",
+    "integraciones-automatizaciones": "workflow",
+    "hosting-web": "cloud",
+    "correo-corporativo": "mail",
+    "dominios": "globe",
+    "servidores-vps": "server-cog",
+    "mantenimiento-web": "wrench",
+    "seguridad-web": "shield-check",
+    "migracion-web": "arrow-right-left",
+    "optimizacion-velocidad": "gauge",
+    "seo-tecnico": "chart-no-axes-combined"
+  }
+}

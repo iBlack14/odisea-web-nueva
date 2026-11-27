@@ -1,0 +1,76 @@
+/* Individual illustrative demos. Real service text and prices stay still. */
+.card-motion-control { display:block;margin:0 0 20px auto;padding:9px 14px;border:1px solid #cfdef0;border-radius:24px;background:#fff;color:#365577;font:inherit;font-size:.76rem;cursor:pointer; }
+.card-motion-control:hover {background:#edf5ff;}
+.card-motion-control:focus-visible {outline:3px solid #0866f5;outline-offset:3px;}
+@media(prefers-reduced-motion:no-preference) {
+  /* Web: interlocking sculpture; shop: a product presentation in sequence. */
+  .motion-in-view.preview-web .cat-sculpture {animation:card-orbit 8s ease-in-out infinite;}
+  .motion-in-view.preview-shop .cat-product-shape i {animation:card-product 8s ease-in-out infinite;}
+  .motion-in-view.preview-shop .cat-products > div:nth-child(2) i {animation-delay:-5.3s;}
+  .motion-in-view.preview-shop .cat-products > div:nth-child(3) i {animation-delay:-2.6s;}
+  /* Redesign: reveal the new interface without shifting its label. */
+  .motion-in-view.preview-redesign .cat-after {animation:card-redesign 8s cubic-bezier(.23,1,.32,1) infinite;}
+  /* Systems: one project card moves forward within its own column. */
+  .motion-in-view.preview-dashboard .cat-kanban article:first-of-type {animation:card-task 8s ease-in-out infinite;}
+  .motion-in-view.preview-dashboard .cat-kanban > div:nth-child(2) article {animation-delay:-5.3s;}
+  .motion-in-view.preview-dashboard .cat-kanban > div:nth-child(3) article {animation-delay:-2.6s;}
+  /* Campus: playback and course progress. */
+  .motion-in-view.preview-campus .cat-lesson > span {animation:card-play 8s ease-in-out infinite;}
+  .motion-in-view.preview-campus .cat-course-row i {animation:card-progress 8s ease-in-out infinite;transform-origin:left;}
+  /* Integrations: travel from form to CRM to mail. */
+  .motion-in-view.preview-flow .cat-flow > div > b {animation:card-node 8s ease-in-out infinite;}
+  .motion-in-view.preview-flow .cat-flow > div > b:nth-of-type(2) {animation-delay:.45s;}
+  .motion-in-view.preview-flow .cat-flow > div > b:nth-of-type(3) {animation-delay:.9s;}
+  .motion-in-view.preview-flow .cat-flow > div > i {animation:card-transfer 8s ease-in-out infinite;}
+  /* Hosting: backup and storage activity. */
+  .motion-in-view.preview-hosting .cat-host-tools > div:last-child svg {animation:card-backup 8s ease-in-out infinite;transform-origin:center;transform-box:fill-box;}
+  .motion-in-view.preview-hosting .cat-hosting footer > i {animation:card-progress 8s ease-in-out infinite;transform-origin:left;}
+  /* Mail: arrival of messages, not movement of the whole browser. */
+  .motion-in-view.preview-mail .cat-mail p {animation:card-message 8s cubic-bezier(.23,1,.32,1) infinite;}
+  .motion-in-view.preview-mail .cat-mail p:nth-of-type(2) {animation-delay:.25s;}
+  .motion-in-view.preview-mail .cat-mail p:nth-of-type(3) {animation-delay:.5s;}
+  /* Domain: sweep inside the search field. */
+  .preview-domain .cat-domain > div {position:relative;overflow:hidden;}
+  .motion-in-view.preview-domain .cat-domain > div::after {content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent,#b9acff55,transparent);pointer-events:none;animation:card-search 8s ease-in-out infinite;}
+  /* VPS: a terminal cursor, with the resource values left intact. */
+  .motion-in-view.preview-vps .cat-terminal p:last-child i {animation:card-cursor 1.4s steps(2,end) infinite;}
+  /* Maintenance: completed tasks appear in sequence. */
+  .motion-in-view.preview-maintenance .cat-maint-tasks p i {animation:card-check 8s ease-in-out infinite;}
+  .motion-in-view.preview-maintenance .cat-maint-tasks p:nth-child(2) i {animation-delay:.4s;}
+  .motion-in-view.preview-maintenance .cat-calendar .scheduled {animation:card-node 8s ease-in-out infinite;}
+  /* Security: a scan passing over the shield. */
+  .preview-security .cat-shield {position:relative;overflow:hidden;}
+  .motion-in-view.preview-security .cat-shield::after {content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,#39c69755 50%,transparent 65%);animation:card-scan 8s ease-in-out infinite;pointer-events:none;}
+  /* Migration: packets travel toward the destination. */
+  .motion-in-view.preview-migration .cat-transfer > span i {animation:card-transfer 8s ease-in-out infinite;}
+  .motion-in-view.preview-migration .cat-transfer > span i:nth-child(2) {animation-delay:.25s;}
+  .motion-in-view.preview-migration .cat-transfer > span i:nth-child(3) {animation-delay:.5s;}
+  /* Speed: rotate only the gauge ring, keeping its number upright. */
+  .motion-in-view.preview-speed .cat-gauge {animation:card-gauge 8s ease-in-out infinite;}
+  .motion-in-view.preview-speed .cat-gauge > b {animation:card-gauge-label 8s ease-in-out infinite;}
+  /* SEO: the illustrative search result surfaces in the results list. */
+  .motion-in-view.preview-chart .cat-search-result {animation:card-result 8s cubic-bezier(.23,1,.32,1) infinite;}
+  .motion-in-view.preview-chart .cat-seo footer b {animation:card-check 8s ease-in-out infinite;}
+  .cards-motion-paused :is(.cat-card-preview,.service-related-preview) *,
+  .cards-motion-paused :is(.cat-card-preview,.service-related-preview) *::after,
+  :is(.cat-card-preview,.service-related-preview):hover *,
+  :is(.cat-card-preview,.service-related-preview):hover *::after {animation-play-state:paused!important;}
+}
+@keyframes card-orbit {0%,100% {translate:0 0;rotate:0deg;}30% {translate:3px -8px;rotate:12deg;}60% {translate:-3px -3px;rotate:-5deg;}}
+@keyframes card-product {0%,70%,100% {translate:0 0;rotate:0deg;}20%,40% {translate:0 -9px;rotate:-5deg;}}
+@keyframes card-redesign {0%,100% {opacity:.65;clip-path:inset(0 20% 0 0);}25%,80% {opacity:1;clip-path:inset(0);}}
+@keyframes card-task {0%,65%,100% {translate:0 0;}20%,40% {translate:0 -5px;}}
+@keyframes card-play {0%,70%,100% {scale:1;}20%,40% {scale:1.1;}}
+@keyframes card-progress {0%,100% {scale:.65 1;}35%,80% {scale:1 1;}}
+@keyframes card-node {0%,60%,100% {translate:0 0;}15%,30% {translate:0 -5px;}}
+@keyframes card-transfer {0%,60%,100% {translate:0 0;opacity:.5;}20%,35% {translate:5px 0;opacity:1;}}
+@keyframes card-backup {0%,55%,100% {rotate:0deg;}35% {rotate:360deg;}}
+@keyframes card-message {0%,100% {translate:10px 0;opacity:.45;}18%,85% {translate:0 0;opacity:1;}}
+@keyframes card-search {0%,60%,100% {translate:-110% 0;}40%,55% {translate:110% 0;}}
+@keyframes card-cursor {50% {opacity:0;}}
+@keyframes card-check {0%,100% {opacity:.35;scale:.95;}20%,85% {opacity:1;scale:1;}}
+@keyframes card-scan {0%,65%,100% {translate:0 -100%;}40%,55% {translate:0 100%;}}
+@keyframes card-gauge {0%,100% {rotate:-18deg;}30%,80% {rotate:0deg;}}
+@keyframes card-gauge-label {0%,100% {rotate:18deg;}30%,80% {rotate:0deg;}}
+@keyframes card-result {0%,100% {translate:0 6px;opacity:.6;}25%,85% {translate:0 0;opacity:1;}}
+@media(prefers-reduced-motion:reduce) { :is(.cat-card-preview,.service-related-preview) *,:is(.cat-card-preview,.service-related-preview) *::after {animation:none!important;} }

@@ -72,6 +72,18 @@
 .catalog-page .cat-card:hover .cat-preview-arrow { transform:translate(2px,-2px); background:#fff; color:#0866f5; }
 .catalog-page .cat-card.is-entering { animation:catalog-card-in .42s both cubic-bezier(.2,.7,.25,1); animation-delay:var(--card-delay,0ms); }
 .catalog-page .cat-card[hidden] { display:none!important; }
+@media(prefers-reduced-motion:no-preference) {
+  :is(.cat-card-preview,.service-related-preview).motion-in-view .cat-sculpture { animation:catalog-preview-float 4s ease-in-out infinite; }
+  :is(.cat-card-preview,.service-related-preview).motion-in-view .cat-product-shape i { animation:catalog-preview-float 4s ease-in-out infinite; }
+  .motion-in-view .cat-products > div:nth-child(2) i {animation-delay:-1.3s;}
+  .motion-in-view .cat-products > div:nth-child(3) i {animation-delay:-2.6s;}
+  .motion-in-view .cat-chart i {animation:catalog-bar-breathe 3.5s ease-in-out infinite;transform-origin:bottom;}
+  .motion-in-view .cat-chart i:nth-child(even) {animation-delay:-1.5s;}
+  .motion-in-view .cat-rack i {animation:catalog-status-glow 2s ease-in-out infinite;}
+}
+@keyframes catalog-preview-float {0%,100% {translate:0 0;}50% {translate:0 -6px;}}
+@keyframes catalog-bar-breathe {0%,100% {scale:1 1;}50% {scale:1 .7;}}
+@keyframes catalog-status-glow {50% {opacity:.35;}}
 @keyframes catalog-card-in { from {opacity:0;transform:translateY(14px) scale(.985)} to {opacity:1;transform:translateY(0) scale(1)} }
 @media(hover:none) { .catalog-page .cat-card:active { transform:scale(.99); } }
 @media(prefers-reduced-motion:reduce) { .catalog-page .cat-card,.catalog-page .cat-card * { animation:none!important;transition:none!important; } }

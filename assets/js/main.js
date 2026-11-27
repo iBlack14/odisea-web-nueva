@@ -19,6 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 2. Mobile Menu Toggle
+  const mega = document.querySelector('.services-mega');
+  const megaToggle = mega?.querySelector('[data-mega-toggle]');
+  const megaPanel = mega?.querySelector('.services-mega-panel');
+  if (mega && megaToggle && megaPanel) {
+    let closeTimer, openTimer;
+    const setMega = open => {
+      clearTimeout(closeTimer);
+      clearTimeout(openTimer);
+      mega.classList.toggle('is-open', open);
+      megaToggle.setAttribute('aria-expanded', String(open));
+      megaPanel.inert = !open;
+    };
+    megaToggle.addEventListener('click', () => setMega(!mega.classList.contains('is-open')));
+    mega.addEventListener('pointerenter', event => { clearTimeout(closeTimer); if (event.pointerType === 'mouse') openTimer = setTimeout(() => setMega(true), 120); });
+    mega.addEventListener('pointerleave', () => { clearTimeout(openTimer); closeTimer = setTimeout(() => { if (!mega.contains(document.activeElement)) setMega(false); }, 180); });
+    mega.addEventListener('focusout', () => { setTimeout(() => { if (!mega.contains(document.activeElement)) setMega(false); }, 0); });
+    megaToggle.addEventListener('keydown', event => {
+      if (event.key === 'ArrowDown') { event.preventDefault(); setMega(true); megaPanel.querySelector('a')?.focus(); }
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && mega.classList.contains('is-open')) { setMega(false); megaToggle.focus(); }
+    });
+    document.addEventListener('click', event => { if (!mega.contains(event.target)) setMega(false); });
+    matchMedia('(max-width: 1100px)').addEventListener('change', () => setMega(false));
+  }
+
   const mobileToggle = document.querySelector('.mobile-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileBackdrop = document.querySelector('.mobile-menu-backdrop');
@@ -43,6 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileToggle) mobileToggle.addEventListener('click', openMobileMenu);
   if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
   if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileMenu);
+  const servicesToggle = document.querySelector('.mobile-services-toggle');
+  const servicesList = document.getElementById('mobile-services-list');
+  servicesToggle?.addEventListener('click', () => {
+    const expanded = servicesToggle.getAttribute('aria-expanded') !== 'true';
+    servicesToggle.setAttribute('aria-expanded', String(expanded));
+    servicesToggle.setAttribute('aria-label', expanded ? 'Contraer servicios' : 'Desplegar servicios');
+    if (servicesList) servicesList.hidden = !expanded;
+  });
 
   // 2. Ventana flotante de contacto: fallback sincronizado con el botón, incluso si el script defer se retrasa.
   const floatingContact = document.querySelector('[data-floating-contact]');

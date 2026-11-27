@@ -1,0 +1,31 @@
+/* Shared interaction states across generated pages. */
+body .btn-primary {border:1px solid #0866f5;}
+body .btn-primary:is(:hover,:focus-visible) {background:#fff;color:#0866f5;border-color:#0866f5;box-shadow:0 6px 18px #0866f51a;}
+body .btn-outline:is(:hover,:focus-visible) {background:#0866f5;color:#fff;border-color:#0866f5;}
+body .btn-whatsapp {border:1px solid #168444;}
+body .btn-whatsapp:is(:hover,:focus-visible) {background:#fff;color:#168444;border-color:#168444;box-shadow:0 6px 18px #16844418;}
+body .btn-outline-white:is(:hover,:focus-visible) {background:#fff;color:#10294c;border-color:#fff;}
+:where(a,button,input,select,textarea,summary):focus-visible {outline:2px solid #0866f5;outline-offset:4px;}
+.site-footer :where(a,button):focus-visible {outline-color:#38bdf8;}
+
+:is(.latam-secondary,.cat-text-link,.service-related-link,.cat-card-link,.service-related-copy h3 a,.cat-card h3 a,.about-slide-link,.domain-spotlight-footer a,.domain-spotlight-service,.mega-heading > a,.mega-help a,.mega-bottom a,.cat-next-actions > a:not(.btn)):is(:hover,:focus-visible) {color:#075bc5;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;}
+:is(.service-related-link,.cat-card-link,.about-slide-link) svg {transition:translate .18s ease;}
+:is(.service-related-link,.cat-card-link,.about-slide-link):is(:hover,:focus-visible) svg {translate:3px 0;}
+.service-related-card:focus-within {border-color:#96bff4;box-shadow:0 12px 28px #153c7418;}
+.catalog-page .cat-card:focus-within {border-color:#96bff4;box-shadow:0 12px 28px #153c7418;}
+:is(.portfolio-card,.sector-card,.service-price-card):focus-within {outline:2px solid #9cc6fc;outline-offset:3px;}
+.filter-btn:not(.active):is(:hover,:focus-visible) {background:#e9f2ff;color:#075bc5;border-color:#a5c8f5;}
+.card-motion-control:is(:hover,:focus-visible) {background:#0866f5;color:#fff;border-color:#0866f5;}
+.footer-link:focus-visible {color:#38bdf8;}
+.footer-legal-link:focus-visible {color:#fff;text-decoration:underline;}
+.footer-contact-box:focus-visible .contact-card-main {color:#38bdf8;}
+.btn-scroll-top:is(:hover,:focus-visible) {background:#0866f5;color:#fff;border-color:#0866f5;}
+.nav-link:focus-visible {color:#0866f5;}
+.mobile-nav-link:focus-visible {color:#0866f5;}
+@media(hover:none) {
+  :is(.btn,.mega-service,.mobile-services-list a,.card-motion-control):active {opacity:.85;}
+}
+@media(prefers-reduced-motion:reduce) {
+  :is(.btn,.service-related-card,.cat-card,.sector-card,.portfolio-card,.footer-link,.filter-btn) {transition:none!important;}
+  :is(.service-related-link,.cat-card-link,.about-slide-link) svg {transition:none;translate:none!important;}
+}

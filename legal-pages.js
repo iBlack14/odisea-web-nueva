@@ -58,8 +58,31 @@ module.exports = ({renderHeader, renderFooter, renderHeadAnalytics}) => {
       <p>Orientación: <a href="https://consumidor.gob.pe/libro-de-reclamaciones/" target="_blank" rel="noopener">Libro de Reclamaciones de Indecopi</a>.</p>
       <script src="../assets/js/reclamaciones.js" defer></script>`]
   };
+  const seoMeta = {
+    privacidad: {
+      seoTitle: 'Política de privacidad y datos | OdiseaCloud Perú',
+      seoDescription: 'Conoce cómo OdiseaCloud recopila, protege y trata tus datos personales conforme a la normativa peruana de protección de datos.',
+      seoKeywords: 'política de privacidad odiseacloud, protección de datos personales perú, tratamiento de datos'
+    },
+    terminos: {
+      seoTitle: 'Términos de servicio y políticas | OdiseaCloud Perú',
+      seoDescription: 'Consulta los términos de servicio, modalidad de pago 50/50, garantía técnica de 30 días y titularidad del código en proyectos de OdiseaCloud.',
+      seoKeywords: 'términos de servicio odiseacloud, políticas de trabajo desarrollo web, garantía técnica'
+    },
+    cookies: {
+      seoTitle: 'Política de cookies y navegación | OdiseaCloud Perú',
+      seoDescription: 'Información sobre el uso de cookies técnicas de sesión y almacenamiento local en OdiseaCloud. Sin rastreadores publicitarios ni venta de datos.',
+      seoKeywords: 'política de cookies odiseacloud, cookies técnicas, privacidad navegador'
+    },
+    'libro-de-reclamaciones': {
+      seoTitle: 'Libro de Reclamaciones Virtual | OdiseaCloud Perú',
+      seoDescription: 'Registra tu reclamo o queja en el Libro de Reclamaciones virtual de OdiseaCloud Perú. Atención en un plazo máximo de 15 días hábiles según Indecopi.',
+      seoKeywords: 'libro de reclamaciones odiseacloud, reclamos y quejas perú, indecopi libro virtual'
+    }
+  };
   for (const [slug, [title, content]] of Object.entries(pages)) {
+    const seo = seoMeta[slug];
     fs.mkdirSync(path.join(__dirname, slug), {recursive: true});
-    fs.writeFileSync(path.join(__dirname, slug, 'index.html'), `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title} | OdiseaCloud</title><meta name="description" content="${title} de OdiseaCloud. Información sobre nuestros servicios, tus datos y canales de atención."><link rel="canonical" href="https://odiseacloud.com/${slug}/"><link rel="stylesheet" href="../assets/css/main.css">${renderHeadAnalytics()}</head><body>${renderHeader('', '../')}<main class="section section-soft-blue"><article class="container legal-page"><span class="section-badge">Información y atención</span><h1>${title}</h1><p class="legal-date">Actualización: 28 de octubre de 2026</p>${content}</article></main>${renderFooter('../')}</body></html>`);
+    fs.writeFileSync(path.join(__dirname, slug, 'index.html'), `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${seo.seoTitle}</title><meta name="description" content="${seo.seoDescription}"><meta name="keywords" content="${seo.seoKeywords}"><link rel="canonical" href="https://odiseacloud.com/${slug}/"><link rel="stylesheet" href="../assets/css/main.css">${renderHeadAnalytics()}</head><body>${renderHeader('', '../')}<main class="section section-soft-blue"><article class="container legal-page"><span class="section-badge">Información y atención</span><h1>${title}</h1><p class="legal-date">Actualización: 28 de octubre de 2026</p>${content}</article></main>${renderFooter('../')}</body></html>`);
   }
 };
